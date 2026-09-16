@@ -5,19 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CyFI: Semiautonomous Cycling for Blind and Low-Vision Riders</title>
+  <title>CyFI — Semiautonomous Cycling</title>
+
+  <meta
+    name="description"
+    content="CyFI is a semiautonomous cycling platform designed to support blind and low-vision riders through shared autonomy and multimodal feedback."
+  >
 
   <style>
     :root {
-      --bg: #f7f7f7;
+      --bg: #f5f4ef;
       --surface: #ffffff;
-      --text: #1f2a37;
-      --muted: #5b6470;
-      --line: #d8dde6;
-      --accent: #1f4b8f;
-      --shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-      --radius: 16px;
-      --maxw: 1120px;
+      --surface-soft: #eceee7;
+
+      --text: #18201b;
+      --text-soft: #5d665f;
+
+      --green-dark: #173d2d;
+      --green: #285b42;
+      --green-soft: #dfe8df;
+
+      --sand: #d5b978;
+      --sand-soft: #eee4cc;
+
+      --border: rgba(24, 32, 27, 0.10);
+
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 30px;
+
+      --shadow:
+        0 18px 50px rgba(20, 39, 29, 0.08);
+
+      --max-width: 1180px;
     }
 
     * {
@@ -30,790 +50,1713 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
+      font-family:
+        Inter,
+        ui-sans-serif,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background:
+        linear-gradient(
+          180deg,
+          #f8f7f2 0%,
+          var(--bg) 35%,
+          #f1f2ed 100%
+        );
+
       color: var(--text);
       line-height: 1.65;
     }
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(247, 247, 247, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
+    img,
+    video {
+      display: block;
+      width: 100%;
     }
 
-    .topbar-inner {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: flex-end;
-      font-size: 14px;
-    }
-
-    .nav a {
-      color: var(--muted);
-      font-weight: 600;
+    a {
+      color: inherit;
       text-decoration: none;
     }
 
-    .nav a:hover {
-      color: var(--accent);
-    }
-
     .container {
-      max-width: var(--maxw);
+      width: min(var(--max-width), calc(100% - 40px));
       margin: 0 auto;
-      padding: 36px 20px 80px;
     }
 
-    .section {
-      padding: 54px 0 8px;
-      margin-top: 42px;
-      border-top: 1px solid var(--line);
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(248, 247, 242, 0.88);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid var(--border);
     }
 
-    .section h2 {
-      margin: 0 0 14px;
-      font-size: 42px;
-      line-height: 1.15;
-      font-weight: 800;
+    .nav {
+      min-height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 24px;
     }
 
-    .section h3 {
-      margin: 34px 0 12px;
-      font-size: 26px;
-      line-height: 1.25;
-    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
 
-    .section-intro {
-      max-width: 920px;
-      margin: 0 0 26px;
-      font-size: 18px;
-      color: var(--muted);
-    }
-
-    /* Hero */
-
-    .hero {
-      text-align: center;
-      padding: 64px 0 42px;
-    }
-
-    .hero h1 {
-      max-width: 1000px;
-      margin: 0 auto;
-      font-size: clamp(40px, 5vw, 64px);
-      line-height: 1.08;
+      font-size: 1.05rem;
       font-weight: 800;
       letter-spacing: -0.02em;
     }
 
-    .hero-description {
-      max-width: 850px;
-      margin: 24px auto 0;
-      font-size: 20px;
-      color: var(--muted);
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+
+      object-fit: contain;
     }
 
-    /* Overview */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
 
-    .grid-3 {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-soft);
+    }
+
+    .nav-links a {
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--green-dark);
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      padding: 72px 0 56px;
+    }
+
+    .hero-shell {
+      position: relative;
+      overflow: hidden;
+
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 18px;
-    }
+      grid-template-columns: 1.02fr 0.98fr;
 
-    .card {
-      padding: 22px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
+      min-height: 560px;
+
+      background: var(--green-dark);
+      color: white;
+
+      border-radius: 36px;
       box-shadow: var(--shadow);
     }
 
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 23px;
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: 64px 54px;
     }
 
-    .card p {
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      width: fit-content;
+
+      margin-bottom: 24px;
+
+      padding: 7px 12px;
+
+      border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+
+      color: #e3eadf;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+      background: var(--sand);
+    }
+
+    .hero h1 {
       margin: 0;
-      color: var(--muted);
-      font-size: 16px;
+
+      max-width: 720px;
+
+      font-size:
+        clamp(2.6rem, 5.2vw, 5.4rem);
+
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+
+      font-weight: 800;
     }
 
-    /* Participant table */
+    .hero h1 span {
+      display: block;
+      margin-top: 14px;
 
-    .table-wrapper {
-      margin: 20px 0 42px;
-      overflow-x: auto;
+      color: #cfdcce;
+
+      font-size: 0.46em;
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+      font-weight: 600;
+    }
+
+    .hero-description {
+      max-width: 650px;
+
+      margin: 30px 0 0;
+
+      font-size: 1.1rem;
+      line-height: 1.75;
+
+      color: rgba(255,255,255,0.76);
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      margin-top: 34px;
+    }
+
+    .hero-tag {
+      padding: 8px 13px;
+
+      border-radius: 999px;
+
+      background:
+        rgba(255,255,255,0.08);
+
+      border:
+        1px solid rgba(255,255,255,0.12);
+
+      font-size: 0.82rem;
+      color: #e6ebe6;
+    }
+
+    .hero-media {
+      position: relative;
+      min-height: 520px;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          145deg,
+          #476554,
+          #8d997d
+        );
+    }
+
+    .hero-media img {
+      height: 100%;
+      min-height: 560px;
+
+      object-fit: cover;
+    }
+
+    .hero-media::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(23,61,45,0.62) 0%,
+          rgba(23,61,45,0.08) 40%,
+          rgba(23,61,45,0.02) 100%
+        );
+    }
+
+    .hero-note {
+      position: absolute;
+      z-index: 3;
+
+      right: 24px;
+      bottom: 24px;
+
+      max-width: 260px;
+
+      padding: 16px 18px;
+
+      border-radius: 18px;
+
+      background:
+        rgba(255,255,255,0.88);
+
+      color: var(--text);
+
+      backdrop-filter: blur(12px);
+
+      font-size: 0.84rem;
+      line-height: 1.5;
+
+      box-shadow:
+        0 14px 34px rgba(20,30,24,0.16);
+    }
+
+
+    /* =========================
+       SECTION
+    ========================== */
+
+    .section {
+      padding: 74px 0;
+    }
+
+    .section-label {
+      margin-bottom: 9px;
+
+      font-size: 0.77rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+
+      color: var(--green);
+    }
+
+    .section h2 {
+      max-width: 800px;
+
+      margin: 0;
+
+      font-size:
+        clamp(2rem, 3.5vw, 3.4rem);
+
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+    }
+
+    .section-intro {
+      max-width: 760px;
+
+      margin: 18px 0 0;
+
+      font-size: 1.05rem;
+      color: var(--text-soft);
+    }
+
+
+    /* =========================
+       ABSTRACT
+    ========================== */
+
+    .abstract-shell {
+      display: grid;
+      grid-template-columns: 0.34fr 0.66fr;
+      gap: 50px;
+
+      padding: 46px;
+
+      border-radius: var(--radius-lg);
+
       background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
+      border: 1px solid var(--border);
+
+      box-shadow:
+        0 12px 36px rgba(25, 42, 31, 0.045);
+    }
+
+    .abstract-number {
+      font-size: 5rem;
+      line-height: 1;
+      font-weight: 800;
+
+      letter-spacing: -0.07em;
+
+      color: var(--green-soft);
+    }
+
+    .abstract-text {
+      margin: 0;
+
+      font-size: 1.12rem;
+      line-height: 1.82;
+    }
+
+
+    /* =========================
+       FEATURES
+    ========================== */
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+
+      margin-top: 34px;
+    }
+
+    .feature-card {
+      min-height: 235px;
+
+      padding: 28px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      border-radius: var(--radius-md);
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
       box-shadow: var(--shadow);
     }
 
-    .participant-table {
-      width: 100%;
-      min-width: 900px;
-      border-collapse: collapse;
-      font-size: 14px;
-    }
+    .feature-index {
+      width: 42px;
+      height: 42px;
 
-    .participant-table caption {
-      padding: 18px 20px;
-      text-align: left;
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--text);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .participant-table th,
-    .participant-table td {
-      padding: 9px 12px;
-      text-align: left;
-      border-bottom: 1px solid #e5e7eb;
-      white-space: nowrap;
-    }
-
-    .participant-table th {
-      background: #f3f4f6;
-      font-weight: 700;
-    }
-
-    .participant-table tbody tr:nth-child(even):not(.site-row) {
-      background: #fafafa;
-    }
-
-    .participant-table .site-row td {
-      padding-top: 14px;
-      padding-bottom: 10px;
-      background: #ffffff;
-      font-weight: 700;
-      border-top: 2px solid var(--line);
-    }
-
-    /* Gallery */
-
-    .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 18px;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--green-soft);
+
+      color: var(--green-dark);
+
+      font-weight: 800;
+    }
+
+    .feature-card h3 {
+      margin:
+        28px 0 7px;
+
+      font-size: 1.22rem;
+      letter-spacing: -0.025em;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: var(--text-soft);
+      font-size: 0.94rem;
+    }
+
+
+    /* =========================
+       RIDING GALLERY
+    ========================== */
+
+    .gallery {
+      display: grid;
+
+      grid-template-columns:
+        1.3fr 0.7fr;
+
+      grid-template-rows:
+        300px 300px;
+
+      gap: 16px;
+
+      margin-top: 36px;
     }
 
     .gallery-card {
-      margin: 0;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      position: relative;
+
       overflow: hidden;
+
+      border-radius: var(--radius-md);
+
+      background: #ddd;
     }
 
     .gallery-card img {
-      display: block;
       width: 100%;
-      height: 350px;
+      height: 100%;
+
       object-fit: cover;
-      object-position: center;
+
+      transition:
+        transform 0.35s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.025);
+    }
+
+    .gallery-card.large {
+      grid-row: span 2;
     }
 
     .gallery-caption {
-      padding: 12px 15px 15px;
-      font-size: 14px;
-      color: var(--muted);
+      position: absolute;
+
+      left: 18px;
+      bottom: 18px;
+
+      padding: 8px 12px;
+
+      border-radius: 999px;
+
+      background: rgba(20, 30, 25, 0.72);
+      color: white;
+
+      backdrop-filter: blur(8px);
+
+      font-size: 0.78rem;
+      font-weight: 600;
     }
 
-    /* Evaluation */
 
-    .evaluation-card {
-      margin-top: 18px;
-      padding: 24px;
+    /* =========================
+       PARTICIPANT TABLE
+    ========================== */
+
+    .table-shell {
+      margin-top: 34px;
+
+      overflow-x: auto;
+
+      border-radius: var(--radius-md);
+
+      border: 1px solid var(--border);
+
       background: var(--surface);
-      border: 1px solid var(--line);
-      border-left: 5px solid var(--accent);
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-      color: var(--muted);
-      font-size: 17px;
     }
 
-    .evaluation-card strong {
-      color: var(--text);
+    table {
+      width: 100%;
+      min-width: 900px;
+
+      border-collapse: collapse;
+
+      font-size: 0.9rem;
     }
 
-    /* Videos */
+    thead {
+      background: var(--green-dark);
+      color: white;
+    }
+
+    th,
+    td {
+      padding: 13px 15px;
+
+      text-align: left;
+
+      border-bottom:
+        1px solid var(--border);
+    }
+
+    th {
+      font-size: 0.79rem;
+      letter-spacing: 0.02em;
+    }
+
+    tbody tr:hover {
+      background:
+        rgba(40,91,66,0.035);
+    }
+
+    .site-row {
+      background: var(--sand-soft);
+
+      font-weight: 800;
+
+      color: #544520;
+    }
+
+
+    /* =========================
+       EVALUATION
+    ========================== */
+
+    .evaluation-shell {
+      display: grid;
+
+      grid-template-columns:
+        0.9fr 1.1fr;
+
+      gap: 28px;
+
+      margin-top: 34px;
+    }
+
+    .evaluation-message {
+      padding: 38px;
+
+      border-radius: var(--radius-lg);
+
+      background: var(--green-dark);
+      color: white;
+    }
+
+    .evaluation-message h3 {
+      margin: 0 0 16px;
+
+      font-size: 2rem;
+      line-height: 1.15;
+
+      letter-spacing: -0.035em;
+    }
+
+    .evaluation-message p {
+      margin: 0;
+
+      color: rgba(255,255,255,0.72);
+    }
+
+    .evaluation-points {
+      display: grid;
+      gap: 14px;
+    }
+
+    .evaluation-point {
+      padding: 24px;
+
+      border-radius: var(--radius-md);
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+    }
+
+    .evaluation-point strong {
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: var(--green-dark);
+    }
+
+    .evaluation-point span {
+      color: var(--text-soft);
+      font-size: 0.93rem;
+    }
+
+
+    /* =========================
+       VIDEOS
+    ========================== */
+
+    .videos-section {
+      padding-top: 80px;
+      padding-bottom: 96px;
+    }
 
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 22px;
-      margin-top: 22px;
+
+      margin-top: 36px;
     }
 
     .video-card {
       margin: 0;
-      background: #000000;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+
       overflow: hidden;
+
+      border-radius: var(--radius-md);
+
+      background: var(--surface);
+
+      border:
+        1px solid var(--border);
+
+      box-shadow:
+        0 10px 28px rgba(30,45,34,0.05);
     }
 
     .video-card video {
-      display: block;
       width: 100%;
+
       aspect-ratio: 16 / 9;
-      object-fit: contain;
-      background: #000000;
+
+      object-fit: cover;
+
+      background: #111;
     }
 
     .video-caption {
-      padding: 16px 18px 18px;
-      background: var(--surface);
-      color: var(--muted);
-      font-size: 15px;
+      padding: 20px 22px 22px;
     }
 
     .video-caption strong {
       display: block;
+
       margin-bottom: 5px;
-      color: var(--text);
-      font-size: 16px;
+
+      font-size: 1.04rem;
     }
 
-    /* Footer */
+    .video-caption span {
+      color: var(--text-soft);
 
-    .footer {
-      margin-top: 60px;
-      padding-top: 22px;
-      border-top: 1px solid var(--line);
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
+      font-size: 0.9rem;
     }
 
-    /* Responsive */
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding:
+        30px 0 46px;
+
+      border-top:
+        1px solid var(--border);
+
+      color: var(--text-soft);
+
+      font-size: 0.86rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-weight: 800;
+      color: var(--green-dark);
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
 
     @media (max-width: 900px) {
 
-      .topbar-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav {
-        justify-content: flex-start;
-      }
-
-      .grid-3,
-      .gallery-grid,
-      .video-grid {
+      .hero-shell {
         grid-template-columns: 1fr;
       }
 
-      .gallery-card img {
-        height: auto;
+      .hero-media {
+        min-height: 420px;
       }
 
-      .hero h1 {
-        font-size: 42px;
+      .hero-media img {
+        min-height: 420px;
       }
 
-      .section h2 {
-        font-size: 32px;
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .abstract-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .abstract-number {
+        font-size: 3.5rem;
+      }
+
+      .evaluation-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 260px 260px;
+      }
+
+      .gallery-card.large {
+        grid-row: span 1;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
       }
     }
+
+    @media (max-width: 680px) {
+
+      .container {
+        width:
+          min(100% - 24px, var(--max-width));
+      }
+
+      .nav {
+        min-height: 64px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 26px;
+      }
+
+      .hero-shell {
+        border-radius: 24px;
+      }
+
+      .hero-content {
+        padding: 44px 26px;
+      }
+
+      .hero-media {
+        min-height: 300px;
+      }
+
+      .hero-media img {
+        min-height: 300px;
+      }
+
+      .hero-note {
+        right: 14px;
+        bottom: 14px;
+
+        max-width: 220px;
+      }
+
+      .section {
+        padding: 54px 0;
+      }
+
+      .abstract-shell {
+        padding: 28px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 250px);
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
   </style>
 </head>
 
 
 <body>
 
-  <!-- Navigation -->
 
-  <header class="topbar">
+<!-- =========================
+     NAVIGATION
+========================== -->
 
-    <div class="topbar-inner">
+<header class="topbar">
 
-      <div class="brand">
-        CyFI
+  <div class="container nav">
+
+    <a href="#top" class="brand">
+
+      <img
+        src="cyfi-icon.png"
+        alt="CyFI icon"
+        class="brand-icon"
+      >
+
+      <span>CyFI</span>
+
+    </a>
+
+    <nav class="nav-links">
+
+      <a href="#overview">Overview</a>
+
+      <a href="#study">Study</a>
+
+      <a href="#evaluation">Evaluation</a>
+
+      <a href="#videos">Videos</a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<main id="top">
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="hero-shell">
+
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+
+          <span class="eyebrow-dot"></span>
+
+          Human-Centered Shared Autonomy
+
+        </div>
+
+
+        <h1>
+
+          CyFI
+
+          <span>
+            Semiautonomous Cycling for
+            Blind and Low-Vision Riders
+          </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+          A human-powered cycling platform that combines
+          autonomous steering, safety support, and multimodal
+          rider feedback to enable more accessible real-world
+          cycling experiences.
+
+        </p>
+
+
+        <div class="hero-tags">
+
+          <span class="hero-tag">
+            Shared Autonomy
+          </span>
+
+          <span class="hero-tag">
+            Multimodal Feedback
+          </span>
+
+          <span class="hero-tag">
+            Real-World Cycling
+          </span>
+
+        </div>
+
       </div>
 
-      <nav class="nav">
-        <a href="#overview">Overview</a>
-        <a href="#study">Study</a>
-        <a href="#evaluation">Evaluation</a>
-        <a href="#videos">Videos</a>
-      </nav>
+
+      <div class="hero-media">
+
+        <img
+          src="cyfi-hero.jpg"
+          alt="CyFI rider during an outdoor cycling evaluation"
+        >
+
+        <div class="hero-note">
+
+          Designed around the rider:
+          human-powered motion,
+          autonomous steering assistance,
+          and multimodal environmental feedback.
+
+        </div>
+
+      </div>
+
 
     </div>
 
-  </header>
+  </div>
+
+</section>
 
 
-  <main class="container">
 
-    <!-- Hero -->
+<!-- =========================
+     OVERVIEW
+========================== -->
 
-    <section class="hero">
+<section
+  class="section"
+  id="overview"
+>
 
-      <h1>
-        CyFI: Semiautonomous Cycling for Blind and Low-Vision Riders
-      </h1>
-
-      <p class="hero-description">
-        CyFI is a semi-autonomous, human-powered recumbent tricycle designed
-        to support blind and low-vision riders through shared autonomy,
-        multimodal feedback, and real-world cycling evaluation.
-      </p>
-
-    </section>
+  <div class="container">
 
 
-    <!-- Overview -->
-
-    <section id="overview" class="section">
-
-      <h2>Overview</h2>
-
-      <p class="section-intro">
-        Cycling provides transportation, exercise, recreation, and independent
-        exploration, but visually demanding tasks such as steering and obstacle
-        avoidance can limit access for blind and low-vision riders. CyFI explores
-        how shared autonomy can support these tasks while preserving rider
-        propulsion, agency, and active participation.
-      </p>
+    <div class="section-label">
+      Overview
+    </div>
 
 
-      <div class="grid-3">
+    <h2>
+      Supporting independent mobility
+      through shared autonomy.
+    </h2>
 
-        <div class="card">
-          <h3>Shared Autonomy</h3>
-          <p>
-            The rider provides propulsion and retains manual braking while
-            CyFI can autonomously steer and initiate safety braking.
-          </p>
-        </div>
 
-        <div class="card">
-          <h3>Multimodal Feedback</h3>
-          <p>
-            Audio and vibrotactile feedback communicate upcoming autonomous
-            actions, while riders can request spoken descriptions of their
-            surroundings.
-          </p>
-        </div>
+    <p class="section-intro">
 
-        <div class="card">
-          <h3>Real-World Evaluation</h3>
-          <p>
-            CyFI was developed through longitudinal co-design and iterative
-            evaluations with blind and low-vision riders across increasingly
-            realistic cycling environments.
-          </p>
+      CyFI explores how semiautonomous cycling can support
+      blind and low-vision riders while keeping the rider
+      actively engaged in propulsion, braking, and interaction
+      with the surrounding environment.
+
+    </p>
+
+
+    <div
+      class="abstract-shell"
+      style="margin-top: 36px;"
+    >
+
+      <div>
+
+        <div class="abstract-number">
+          CyFI
         </div>
 
       </div>
 
-    </section>
 
+      <p class="abstract-text">
 
-    <!-- Study -->
+        CyFI is a semiautonomous, human-powered recumbent
+        tricycle with onboard sensing and computation,
+        actuated steering and braking, and multimodal rider
+        feedback. The system can autonomously steer and
+        initiate safety braking while the rider provides
+        propulsion and retains manual braking control.
+        Audio and vibrotactile feedback communicate system
+        behavior and environmental information, supporting
+        evaluation across progressively more realistic
+        cycling environments.
 
-    <section id="study" class="section">
-
-      <h2>Study</h2>
-
-      <p class="section-intro">
-        Participant demographics for the formative studies are summarized below.
       </p>
 
-
-      <!-- Formative Participants -->
-
-      <h3>Formative Study Participants</h3>
-
-      <div class="table-wrapper">
-
-        <table class="participant-table">
-
-          <caption>
-            Participant demographics in formative studies.
-          </caption>
-
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Age</th>
-              <th>Gender</th>
-              <th>Race / Ethnicity</th>
-              <th>Blindness</th>
-              <th>Prior Cycling</th>
-              <th>Physical Activity</th>
-              <th>Days / week</th>
-            </tr>
-          </thead>
-
-          <tbody>
-
-            <tr class="site-row">
-              <td colspan="8">
-                Site 1: Campus (n = 9)
-              </td>
-            </tr>
-
-            <tr>
-              <td>P26</td>
-              <td>64</td>
-              <td>Man</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P27</td>
-              <td>26</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P28</td>
-              <td>29</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Moderate</td>
-              <td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P29</td>
-              <td>52</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Moderate</td>
-              <td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P30</td>
-              <td>64</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Legally blind</td>
-              <td>Yes</td>
-              <td>High</td>
-              <td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P31</td>
-              <td>52</td>
-              <td>Man</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Moderate</td>
-              <td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P32</td>
-              <td>36</td>
-              <td>Man</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Moderate</td>
-              <td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P33</td>
-              <td>73</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Moderate</td>
-              <td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P34</td>
-              <td>63</td>
-              <td>Woman</td>
-              <td>Black</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>3–4</td>
-            </tr>
+    </div>
 
 
-            <tr class="site-row">
-              <td colspan="8">
-                Site 2: Community Organization (n = 5)
-              </td>
-            </tr>
+    <div class="feature-grid">
 
-            <tr>
-              <td>P35</td>
-              <td>67</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>1–2</td>
-            </tr>
 
-            <tr>
-              <td>P36</td>
-              <td>64</td>
-              <td>Man</td>
-              <td>Hispanic</td>
-              <td>Legally Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>1–2</td>
-            </tr>
+      <article class="feature-card">
 
-            <tr>
-              <td>P37</td>
-              <td>63</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>1–2</td>
-            </tr>
+        <div class="feature-index">
+          01
+        </div>
 
-            <tr>
-              <td>P38</td>
-              <td>52</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Moderate</td>
-              <td>1–2</td>
-            </tr>
+        <div>
 
-            <tr>
-              <td>P39</td>
-              <td>21</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>3–4</td>
-            </tr>
+          <h3>
+            Shared Autonomy
+          </h3>
 
-          </tbody>
+          <p>
 
-        </table>
+            The rider remains physically engaged while
+            CyFI assists with steering and safety-critical
+            intervention.
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="feature-card">
+
+        <div class="feature-index">
+          02
+        </div>
+
+        <div>
+
+          <h3>
+            Multimodal Feedback
+          </h3>
+
+          <p>
+
+            Audio and vibrotactile feedback communicate
+            system state and environmental information
+            during riding.
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="feature-card">
+
+        <div class="feature-index">
+          03
+        </div>
+
+        <div>
+
+          <h3>
+            Real-World Evaluation
+          </h3>
+
+          <p>
+
+            The platform was evaluated through iterative
+            studies and progressively more realistic
+            riding scenarios.
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     RIDING SCENARIOS
+========================== -->
+
+<section class="section">
+
+  <div class="container">
+
+
+    <div class="section-label">
+      CyFI in Action
+    </div>
+
+
+    <h2>
+      From structured courses
+      to real-world riding.
+    </h2>
+
+
+    <p class="section-intro">
+
+      Selected riding scenarios illustrate the platform
+      operating across different environmental conditions
+      and cycling contexts.
+
+    </p>
+
+
+    <div class="gallery">
+
+
+      <div class="gallery-card large">
+
+        <img
+          src="rider-07.png"
+          alt="CyFI riding scenario"
+        >
+
+        <div class="gallery-caption">
+          Outdoor riding
+        </div>
 
       </div>
 
 
-      <!-- Riding Scenarios -->
+      <div class="gallery-card">
 
-      <h3>Selected Riding Scenarios</h3>
+        <img
+          src="rider-08.png"
+          alt="CyFI participant riding"
+        >
 
-      <p class="section-intro">
-        Representative study scenes illustrate CyFI operation across different
-        riders and real-world evaluation scenarios.
-      </p>
-
-
-      <div class="gallery-grid">
-
-        <figure class="gallery-card">
-
-          <img
-            src="rider-07.png"
-            alt="Participant operating CyFI during an outdoor evaluation">
-
-          <figcaption class="gallery-caption">
-            Representative outdoor riding evaluation.
-          </figcaption>
-
-        </figure>
-
-
-        <figure class="gallery-card">
-
-          <img
-            src="rider-08.png"
-            alt="Participant riding CyFI during an outdoor evaluation">
-
-          <figcaption class="gallery-caption">
-            Representative outdoor riding session.
-          </figcaption>
-
-        </figure>
-
-
-        <figure class="gallery-card">
-
-          <img
-            src="rider-10.png"
-            alt="Participant riding CyFI during an outdoor evaluation">
-
-          <figcaption class="gallery-caption">
-            Outdoor riding evaluation.
-          </figcaption>
-
-        </figure>
-
-
-        <figure class="gallery-card">
-
-          <img
-            src="rider-12.png"
-            alt="Participant operating CyFI during an outdoor evaluation">
-
-          <figcaption class="gallery-caption">
-            Representative outdoor evaluation scenario.
-          </figcaption>
-
-        </figure>
+        <div class="gallery-caption">
+          Participant evaluation
+        </div>
 
       </div>
 
-    </section>
 
+      <div class="gallery-card">
 
-    <!-- Evaluation -->
+        <img
+          src="rider-10.png"
+          alt="CyFI evaluation environment"
+        >
 
-    <section id="evaluation" class="section">
-
-      <h2>Evaluation</h2>
-
-      <p class="section-intro">
-        CyFI was evaluated across progressively more realistic riding
-        conditions, including structured riding courses, community settings,
-        and sustained neighborhood operation.
-      </p>
-
-      <div class="evaluation-card">
-
-        <strong>Real-world operation.</strong>
-
-        Evaluation scenarios included continuous riding, turns, intersections,
-        interactions with roadway infrastructure and vehicles, and changing
-        roadway geometry.
+        <div class="gallery-caption">
+          Real-world operation
+        </div>
 
       </div>
 
-    </section>
 
+      <div class="gallery-card">
 
-    <!-- Videos -->
+        <img
+          src="rider-12.png"
+          alt="CyFI cycling scenario"
+        >
 
-    <section id="videos" class="section">
-
-      <h2>Videos</h2>
-
-      <p class="section-intro">
-        Representative clips illustrate CyFI during sustained real-world riding
-        and participant evaluation sessions.
-      </p>
-
-      <div class="video-grid">
-
-        <figure class="video-card">
-
-          <video controls preload="metadata" playsinline>
-
-            <source
-              src="Dan_long-route_clip.mp4"
-              type="video/mp4">
-
-            Your browser does not support HTML5 video.
-
-          </video>
-
-          <figcaption class="video-caption">
-
-            <strong>Long-Route Evaluation</strong>
-
-            Representative clip from a sustained real-world riding route.
-
-          </figcaption>
-
-        </figure>
-
-
-        <figure class="video-card">
-
-          <video controls preload="metadata" playsinline>
-
-            <source
-              src="Georgia_clip.mp4"
-              type="video/mp4">
-
-            Your browser does not support HTML5 video.
-
-          </video>
-
-          <figcaption class="video-caption">
-
-            <strong>Participant Evaluation</strong>
-
-            Representative participant riding session during an outdoor evaluation.
-
-          </figcaption>
-
-        </figure>
+        <div class="gallery-caption">
+          Community riding
+        </div>
 
       </div>
 
-    </section>
+
+    </div>
+
+  </div>
+
+</section>
 
 
-    <footer class="footer">
-      CyFI supplementary project website.
-    </footer>
 
-  </main>
+<!-- =========================
+     STUDY
+========================== -->
+
+<section
+  class="section"
+  id="study"
+>
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Study
+    </div>
+
+
+    <h2>
+      Formative study participants.
+    </h2>
+
+
+    <p class="section-intro">
+
+      Participant demographics from the formative studies
+      are summarized below.
+
+    </p>
+
+
+    <div class="table-shell">
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>ID</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Race / Ethnicity</th>
+            <th>Blindness</th>
+            <th>Prior Cycling</th>
+            <th>Physical Activity</th>
+            <th>Days / week</th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody>
+
+
+          <tr class="site-row">
+
+            <td colspan="8">
+              Site 1: Campus (n=9)
+            </td>
+
+          </tr>
+
+
+          <tr>
+            <td>P26</td>
+            <td>64</td>
+            <td>Man</td>
+            <td>White</td>
+            <td>Blind</td>
+            <td>Yes</td>
+            <td>Low</td>
+            <td>1–2</td>
+          </tr>
+
+          <tr>
+            <td>P27</td>
+            <td>26</td>
+            <td>Woman</td>
+            <td>White</td>
+            <td>Blind</td>
+            <td>Yes</td>
+            <td>Low</td>
+            <td>3–4</td>
+          </tr>
+
+          <tr>
+            <td>P28</td>
+            <td>29</td>
+            <td>Woman</td>
+            <td>White</td>
+            <td>Blind</td>
+            <td>Yes</td>
+            <td>Moderate</td>
+            <td>3–4</td>
+          </tr>
+
+          <tr>
+            <td>P29</td>
+            <td>52</td>
+            <td>Woman</td>
+            <td>White</td>
+            <td>Blind</td>
+            <td>Yes</td>
+            <td>Moderate</td>
+            <td>3–4</td>
+          </tr>
+
+          <tr>
+            <td>P30</td>
+            <td>64</td>
+            <td>Woman</td>
+            <td>White</td>
+            <td>Legally blind</td>
+            <td>Yes</td>
+            <td>High</td>
+            <td>1–2</td>
+          </tr>
+
+          <tr>
+            <td>P31</td>
+            <td>52</td>
+            <td>Man</td>
+            <td>White</td>
+            <td>Blind</td>
+            <td>Yes</td>
+            <td>Moderate</td>
+            <td>1–2</td>
+          </tr>
+
+          <tr>
+            <td>P32</td>
+            <td>36</td>
+            <td>Man</td>
+            <td>White</td>
+            <td>Blind</td>
+            <td>Yes</td>
+            <td>Moderate</td>
+            <td>3–4</td>
+          </tr>
+
+          <tr>
+            <td>P33</td>
+            <td>73</td>
+            <td>Woman</td>
+            <td>White</td>
+            <td>Blind</td>
+            <td>Yes</td>
+            <td>Moderate</td>
+            <td>3–4</td>
+          </tr>
+
+          <tr>
+            <td>P34</td>
+            <td>63</td>
+            <td>Woman</td>
+            <td>Black</td>
+            <td>Blind</td>
+            <td>Yes</td>
+            <td>Low</td>
+            <td>3–4</td>
+          </tr>
+
+
+          <tr class="site-row">
+
+            <td colspan="8">
+
+              Site 2: Community Organization (n=5)
+
+            </td>
+
+          </tr>
+
+
+          <tr>
+            <td>P35</td>
+            <td>67</td>
+            <td>Woman</td>
+            <td>White</td>
+            <td>Blind</td>
+            <td>Yes</td>
+            <td>Low</td>
+            <td>1–2</td>
+          </tr>
+
+          <tr>
+            <td>P36</td>
+            <td>64</td>
+            <td>Man</td>
+            <td>Hispanic</td>
+            <td>Legally Blind</td>
+            <td>Yes</td>
+            <td>Low</td>
+            <td>1–2</td>
+          </tr>
+
+          <tr>
+            <td>P37</td>
+            <td>63</td>
+            <td>Woman</td>
+            <td>White</td>
+            <td>Blind</td>
+            <td>Yes</td>
+            <td>Low</td>
+            <td>1–2</td>
+          </tr>
+
+          <tr>
+            <td>P38</td>
+            <td>52</td>
+            <td>Woman</td>
+            <td>White</td>
+            <td>Blind</td>
+            <td>Yes</td>
+            <td>Moderate</td>
+            <td>1–2</td>
+          </tr>
+
+          <tr>
+            <td>P39</td>
+            <td>21</td>
+            <td>Woman</td>
+            <td>White</td>
+            <td>Blind</td>
+            <td>Yes</td>
+            <td>Low</td>
+            <td>3–4</td>
+          </tr>
+
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     EVALUATION
+========================== -->
+
+<section
+  class="section"
+  id="evaluation"
+>
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Evaluation
+    </div>
+
+
+    <h2>
+      Designed to move beyond
+      controlled demonstrations.
+    </h2>
+
+
+    <p class="section-intro">
+
+      CyFI was evaluated across progressively more realistic
+      riding conditions, including structured riding courses,
+      community settings, and sustained neighborhood operation.
+
+    </p>
+
+
+    <div class="evaluation-shell">
+
+
+      <div class="evaluation-message">
+
+        <h3>
+          Real-world operation.
+        </h3>
+
+        <p>
+
+          Evaluation focused on sustained riding behavior
+          rather than isolated system demonstrations.
+
+        </p>
+
+      </div>
+
+
+      <div class="evaluation-points">
+
+
+        <div class="evaluation-point">
+
+          <strong>
+            Continuous riding
+          </strong>
+
+          <span>
+
+            Extended operation across real riding environments.
+
+          </span>
+
+        </div>
+
+
+        <div class="evaluation-point">
+
+          <strong>
+            Roadway interaction
+          </strong>
+
+          <span>
+
+            Turns, intersections, vehicles, roadway
+            infrastructure, and changing geometry.
+
+          </span>
+
+        </div>
+
+
+        <div class="evaluation-point">
+
+          <strong>
+            Rider-centered interaction
+          </strong>
+
+          <span>
+
+            Shared control and multimodal feedback remain
+            integrated throughout the riding experience.
+
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     VIDEOS
+========================== -->
+
+<section
+  class="section videos-section"
+  id="videos"
+>
+
+  <div class="container">
+
+
+    <div class="section-label">
+      Videos
+    </div>
+
+
+    <h2>
+      CyFI in motion.
+    </h2>
+
+
+    <p class="section-intro">
+
+      Full-length anonymized recordings show CyFI operating
+      during real-world participant evaluation sessions.
+
+    </p>
+
+
+    <div class="video-grid">
+
+
+      <figure class="video-card">
+
+        <video
+          controls
+          preload="metadata"
+          playsinline
+        >
+
+          <source
+            src="GeorgiaV1_anonymous.mp4"
+            type="video/mp4"
+          >
+
+          Your browser does not support HTML5 video.
+
+        </video>
+
+
+        <figcaption class="video-caption">
+
+          <strong>
+            Evaluation Video 1
+          </strong>
+
+          <span>
+
+            Full-length anonymized recording from a
+            real-world participant evaluation session.
+
+          </span>
+
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="video-card">
+
+        <video
+          controls
+          preload="metadata"
+          playsinline
+        >
+
+          <source
+            src="GeorgiaV2_anonymous.mp4"
+            type="video/mp4"
+          >
+
+          Your browser does not support HTML5 video.
+
+        </video>
+
+
+        <figcaption class="video-caption">
+
+          <strong>
+            Evaluation Video 2
+          </strong>
+
+          <span>
+
+            Full-length anonymized recording from a
+            real-world participant evaluation session.
+
+          </span>
+
+        </figcaption>
+
+      </figure>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <span class="footer-brand">
+      CyFI
+    </span>
+
+    <span>
+      Supplementary project website.
+    </span>
+
+  </div>
+
+</footer>
+
 
 </body>
 

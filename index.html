@@ -2,42 +2,44 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>CyFI — Semiautonomous Cycling</title>
+  <title>CyFI: Semiautonomous Cycling for Blind and Low-Vision Riders</title>
 
   <meta
     name="description"
-    content="CyFI is a semiautonomous cycling platform designed to support blind and low-vision riders through shared autonomy and multimodal feedback."
-  >
+    content="CyFI is a semiautonomous cycling platform supporting blind and low-vision riders through shared autonomy, multimodal feedback, and real-world cycling evaluation."
+  />
+
+  <!-- Browser tab icon -->
+  <link rel="icon" type="image/png" href="cyfi-logo.png" />
 
   <style>
     :root {
-      --bg: #f5f4ef;
-      --surface: #ffffff;
-      --surface-soft: #eceee7;
+      --bg: #ffffff;
+      --bg-soft: #f7f9fb;
+      --card: #ffffff;
 
-      --text: #18201b;
-      --text-soft: #5d665f;
+      --text: #172033;
+      --text-soft: #5f6978;
 
-      --green-dark: #173d2d;
-      --green: #285b42;
-      --green-soft: #dfe8df;
+      --navy: #123e70;
+      --blue: #3d86c6;
+      --blue-soft: #eaf3fb;
 
-      --sand: #d5b978;
-      --sand-soft: #eee4cc;
+      --red: #d43c3c;
 
-      --border: rgba(24, 32, 27, 0.10);
-
-      --radius-sm: 12px;
-      --radius-md: 20px;
-      --radius-lg: 30px;
+      --border: #e2e7ec;
 
       --shadow:
-        0 18px 50px rgba(20, 39, 29, 0.08);
+        0 12px 32px rgba(24, 39, 58, 0.07);
 
-      --max-width: 1180px;
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+
+      --max-width: 1100px;
     }
 
     * {
@@ -50,23 +52,19 @@
 
     body {
       margin: 0;
+      background: var(--bg);
+      color: var(--text);
+
       font-family:
         Inter,
-        ui-sans-serif,
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
         sans-serif;
 
-      background:
-        linear-gradient(
-          180deg,
-          #f8f7f2 0%,
-          var(--bg) 35%,
-          #f1f2ed 100%
-        );
-
-      color: var(--text);
       line-height: 1.65;
     }
 
@@ -87,8 +85,8 @@
     }
 
 
-    /* =========================
-       NAVIGATION
+    /* ==========================
+       NAV
     ========================== */
 
     .topbar {
@@ -96,36 +94,32 @@
       top: 0;
       z-index: 100;
 
-      background: rgba(248, 247, 242, 0.88);
-      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.93);
+      backdrop-filter: blur(16px);
 
       border-bottom: 1px solid var(--border);
     }
 
     .nav {
-      min-height: 72px;
+      height: 64px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-      gap: 24px;
     }
 
-    .brand {
+    .nav-brand {
       display: flex;
       align-items: center;
       gap: 10px;
 
-      font-size: 1.05rem;
       font-weight: 800;
       letter-spacing: -0.02em;
     }
 
-    .brand-icon {
-      width: 38px;
-      height: 38px;
-
+    .nav-brand img {
+      width: 34px;
+      height: 34px;
       object-fit: contain;
     }
 
@@ -134,226 +128,138 @@
       align-items: center;
       gap: 26px;
 
-      font-size: 0.92rem;
-      font-weight: 600;
       color: var(--text-soft);
+      font-size: 0.88rem;
+      font-weight: 600;
     }
 
     .nav-links a {
-      transition: 0.2s ease;
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: var(--green-dark);
+      color: var(--navy);
     }
 
 
-    /* =========================
+    /* ==========================
        HERO
     ========================== */
 
     .hero {
-      padding: 72px 0 56px;
+      padding: 72px 0 58px;
+      text-align: center;
     }
 
-    .hero-shell {
-      position: relative;
-      overflow: hidden;
+    .project-logo {
+      width: 108px;
+      height: 108px;
 
-      display: grid;
-      grid-template-columns: 1.02fr 0.98fr;
+      margin: 0 auto 26px;
 
-      min-height: 560px;
-
-      background: var(--green-dark);
-      color: white;
-
-      border-radius: 36px;
-      box-shadow: var(--shadow);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      padding: 64px 54px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-
-      width: fit-content;
-
-      margin-bottom: 24px;
-
-      padding: 7px 12px;
-
-      border-radius: 999px;
-      background: rgba(255,255,255,0.10);
-
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-
-      color: #e3eadf;
-    }
-
-    .eyebrow-dot {
-      width: 8px;
-      height: 8px;
-
-      border-radius: 50%;
-      background: var(--sand);
+      object-fit: contain;
     }
 
     .hero h1 {
-      margin: 0;
+      max-width: 900px;
 
-      max-width: 720px;
+      margin: 0 auto;
 
       font-size:
-        clamp(2.6rem, 5.2vw, 5.4rem);
+        clamp(2.5rem, 5vw, 4.8rem);
 
-      line-height: 0.98;
+      line-height: 1.03;
+
       letter-spacing: -0.055em;
-
       font-weight: 800;
     }
 
-    .hero h1 span {
-      display: block;
-      margin-top: 14px;
+    .hero-subtitle {
+      max-width: 760px;
 
-      color: #cfdcce;
+      margin: 22px auto 0;
 
-      font-size: 0.46em;
-      line-height: 1.15;
-      letter-spacing: -0.035em;
-      font-weight: 600;
-    }
+      font-size: 1.12rem;
+      line-height: 1.7;
 
-    .hero-description {
-      max-width: 650px;
-
-      margin: 30px 0 0;
-
-      font-size: 1.1rem;
-      line-height: 1.75;
-
-      color: rgba(255,255,255,0.76);
+      color: var(--text-soft);
     }
 
     .hero-tags {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
 
-      margin-top: 34px;
+      margin-top: 26px;
     }
 
     .hero-tag {
-      padding: 8px 13px;
+      padding: 7px 13px;
 
       border-radius: 999px;
 
-      background:
-        rgba(255,255,255,0.08);
+      background: var(--blue-soft);
+      color: var(--navy);
 
-      border:
-        1px solid rgba(255,255,255,0.12);
-
-      font-size: 0.82rem;
-      color: #e6ebe6;
+      font-size: 0.8rem;
+      font-weight: 700;
     }
 
-    .hero-media {
-      position: relative;
-      min-height: 520px;
+    .hero-image {
+      margin-top: 46px;
 
       overflow: hidden;
 
-      background:
-        linear-gradient(
-          145deg,
-          #476554,
-          #8d997d
-        );
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+
+      background: #eee;
     }
 
-    .hero-media img {
-      height: 100%;
-      min-height: 560px;
-
+    .hero-image img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
     }
 
-    .hero-media::after {
-      content: "";
+    .hero-caption {
+      padding: 13px 18px;
 
-      position: absolute;
-      inset: 0;
+      text-align: left;
 
-      background:
-        linear-gradient(
-          90deg,
-          rgba(23,61,45,0.62) 0%,
-          rgba(23,61,45,0.08) 40%,
-          rgba(23,61,45,0.02) 100%
-        );
-    }
+      color: var(--text-soft);
+      background: #fff;
 
-    .hero-note {
-      position: absolute;
-      z-index: 3;
+      border:
+        1px solid var(--border);
+      border-top: none;
 
-      right: 24px;
-      bottom: 24px;
-
-      max-width: 260px;
-
-      padding: 16px 18px;
-
-      border-radius: 18px;
-
-      background:
-        rgba(255,255,255,0.88);
-
-      color: var(--text);
-
-      backdrop-filter: blur(12px);
-
-      font-size: 0.84rem;
-      line-height: 1.5;
-
-      box-shadow:
-        0 14px 34px rgba(20,30,24,0.16);
+      font-size: 0.82rem;
     }
 
 
-    /* =========================
-       SECTION
+    /* ==========================
+       GENERAL SECTION
     ========================== */
 
     .section {
-      padding: 74px 0;
+      padding: 72px 0;
+    }
+
+    .section-soft {
+      background: var(--bg-soft);
     }
 
     .section-label {
-      margin-bottom: 9px;
+      margin-bottom: 8px;
 
-      font-size: 0.77rem;
+      color: var(--blue);
+
+      font-size: 0.75rem;
       font-weight: 800;
-      letter-spacing: 0.12em;
       text-transform: uppercase;
-
-      color: var(--green);
+      letter-spacing: 0.14em;
     }
 
     .section h2 {
@@ -362,61 +268,54 @@
       margin: 0;
 
       font-size:
-        clamp(2rem, 3.5vw, 3.4rem);
+        clamp(2rem, 4vw, 3.1rem);
 
       line-height: 1.08;
+
       letter-spacing: -0.045em;
     }
 
     .section-intro {
-      max-width: 760px;
+      max-width: 790px;
 
       margin: 18px 0 0;
 
-      font-size: 1.05rem;
       color: var(--text-soft);
+
+      font-size: 1.02rem;
     }
 
 
-    /* =========================
+    /* ==========================
        ABSTRACT
     ========================== */
 
-    .abstract-shell {
-      display: grid;
-      grid-template-columns: 0.34fr 0.66fr;
-      gap: 50px;
+    .abstract-box {
+      margin-top: 34px;
 
-      padding: 46px;
+      padding: 38px 42px;
 
       border-radius: var(--radius-lg);
 
-      background: var(--surface);
+      background: white;
+
       border: 1px solid var(--border);
 
       box-shadow:
-        0 12px 36px rgba(25, 42, 31, 0.045);
+        0 8px 24px rgba(24, 39, 58, 0.035);
     }
 
-    .abstract-number {
-      font-size: 5rem;
-      line-height: 1;
-      font-weight: 800;
-
-      letter-spacing: -0.07em;
-
-      color: var(--green-soft);
-    }
-
-    .abstract-text {
+    .abstract-box p {
       margin: 0;
 
-      font-size: 1.12rem;
-      line-height: 1.82;
+      font-size: 1.08rem;
+      line-height: 1.85;
+
+      color: #2f3947;
     }
 
 
-    /* =========================
+    /* ==========================
        FEATURES
     ========================== */
 
@@ -430,141 +329,114 @@
     }
 
     .feature-card {
-      min-height: 235px;
-
-      padding: 28px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      padding: 26px;
 
       border-radius: var(--radius-md);
 
-      background: var(--surface);
-
+      background: white;
       border: 1px solid var(--border);
 
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+      box-shadow:
+        0 7px 20px rgba(20, 40, 60, 0.025);
     }
 
-    .feature-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow);
-    }
-
-    .feature-index {
-      width: 42px;
-      height: 42px;
+    .feature-number {
+      width: 38px;
+      height: 38px;
 
       display: grid;
       place-items: center;
 
+      margin-bottom: 24px;
+
       border-radius: 50%;
 
-      background: var(--green-soft);
+      background: var(--blue-soft);
 
-      color: var(--green-dark);
+      color: var(--navy);
 
       font-weight: 800;
     }
 
     .feature-card h3 {
-      margin:
-        28px 0 7px;
+      margin: 0 0 8px;
 
-      font-size: 1.22rem;
-      letter-spacing: -0.025em;
+      font-size: 1.14rem;
+      letter-spacing: -0.02em;
     }
 
     .feature-card p {
       margin: 0;
+
       color: var(--text-soft);
-      font-size: 0.94rem;
+
+      font-size: 0.92rem;
     }
 
 
-    /* =========================
-       RIDING GALLERY
+    /* ==========================
+       GALLERY
     ========================== */
 
     .gallery {
       display: grid;
 
       grid-template-columns:
-        1.3fr 0.7fr;
+        repeat(2, 1fr);
 
-      grid-template-rows:
-        300px 300px;
+      gap: 18px;
 
-      gap: 16px;
-
-      margin-top: 36px;
+      margin-top: 34px;
     }
 
     .gallery-card {
-      position: relative;
+      margin: 0;
 
       overflow: hidden;
 
       border-radius: var(--radius-md);
 
-      background: #ddd;
+      background: white;
+
+      border: 1px solid var(--border);
     }
 
     .gallery-card img {
-      width: 100%;
-      height: 100%;
+      aspect-ratio: 16 / 10;
 
       object-fit: cover;
 
       transition:
-        transform 0.35s ease;
+        transform 0.3s ease;
     }
 
     .gallery-card:hover img {
-      transform: scale(1.025);
+      transform: scale(1.02);
     }
 
-    .gallery-card.large {
-      grid-row: span 2;
-    }
+    .gallery-card figcaption {
+      padding: 13px 16px;
 
-    .gallery-caption {
-      position: absolute;
+      color: var(--text-soft);
 
-      left: 18px;
-      bottom: 18px;
-
-      padding: 8px 12px;
-
-      border-radius: 999px;
-
-      background: rgba(20, 30, 25, 0.72);
-      color: white;
-
-      backdrop-filter: blur(8px);
-
-      font-size: 0.78rem;
-      font-weight: 600;
+      font-size: 0.83rem;
     }
 
 
-    /* =========================
-       PARTICIPANT TABLE
+    /* ==========================
+       TABLE
     ========================== */
 
-    .table-shell {
+    .table-wrapper {
       margin-top: 34px;
 
       overflow-x: auto;
 
       border-radius: var(--radius-md);
 
-      border: 1px solid var(--border);
+      background: white;
 
-      background: var(--surface);
+      border: 1px solid var(--border);
     }
 
     table {
@@ -573,17 +445,17 @@
 
       border-collapse: collapse;
 
-      font-size: 0.9rem;
+      font-size: 0.87rem;
     }
 
     thead {
-      background: var(--green-dark);
+      background: var(--navy);
       color: white;
     }
 
     th,
     td {
-      padding: 13px 15px;
+      padding: 12px 14px;
 
       text-align: left;
 
@@ -592,100 +464,70 @@
     }
 
     th {
-      font-size: 0.79rem;
-      letter-spacing: 0.02em;
+      font-size: 0.78rem;
+      font-weight: 700;
     }
 
     tbody tr:hover {
       background:
-        rgba(40,91,66,0.035);
+        rgba(61, 134, 198, 0.035);
     }
 
     .site-row {
-      background: var(--sand-soft);
+      background: #eef4f8;
+
+      color: var(--navy);
 
       font-weight: 800;
-
-      color: #544520;
     }
 
 
-    /* =========================
+    /* ==========================
        EVALUATION
     ========================== */
 
-    .evaluation-shell {
+    .evaluation-grid {
       display: grid;
 
       grid-template-columns:
-        0.9fr 1.1fr;
+        repeat(3, 1fr);
 
-      gap: 28px;
+      gap: 18px;
 
       margin-top: 34px;
     }
 
-    .evaluation-message {
-      padding: 38px;
-
-      border-radius: var(--radius-lg);
-
-      background: var(--green-dark);
-      color: white;
-    }
-
-    .evaluation-message h3 {
-      margin: 0 0 16px;
-
-      font-size: 2rem;
-      line-height: 1.15;
-
-      letter-spacing: -0.035em;
-    }
-
-    .evaluation-message p {
-      margin: 0;
-
-      color: rgba(255,255,255,0.72);
-    }
-
-    .evaluation-points {
-      display: grid;
-      gap: 14px;
-    }
-
-    .evaluation-point {
-      padding: 24px;
+    .evaluation-card {
+      padding: 26px;
 
       border-radius: var(--radius-md);
 
-      background: var(--surface);
+      background: white;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
     }
 
-    .evaluation-point strong {
-      display: block;
+    .evaluation-card h3 {
+      margin: 0 0 8px;
 
-      margin-bottom: 5px;
+      color: var(--navy);
 
-      color: var(--green-dark);
+      font-size: 1.04rem;
     }
 
-    .evaluation-point span {
+    .evaluation-card p {
+      margin: 0;
+
       color: var(--text-soft);
-      font-size: 0.93rem;
+
+      font-size: 0.91rem;
     }
 
 
-    /* =========================
-       VIDEOS
+    /* ==========================
+       VIDEO
     ========================== */
-
-    .videos-section {
-      padding-top: 80px;
-      padding-bottom: 96px;
-    }
 
     .video-grid {
       display: grid;
@@ -695,7 +537,7 @@
 
       gap: 22px;
 
-      margin-top: 36px;
+      margin-top: 34px;
     }
 
     .video-card {
@@ -705,13 +547,13 @@
 
       border-radius: var(--radius-md);
 
-      background: var(--surface);
+      background: white;
 
       border:
         1px solid var(--border);
 
       box-shadow:
-        0 10px 28px rgba(30,45,34,0.05);
+        0 8px 24px rgba(20, 40, 60, 0.04);
     }
 
     .video-card video {
@@ -725,111 +567,88 @@
     }
 
     .video-caption {
-      padding: 20px 22px 22px;
+      padding: 17px 18px 19px;
     }
 
     .video-caption strong {
       display: block;
 
-      margin-bottom: 5px;
+      margin-bottom: 4px;
 
-      font-size: 1.04rem;
+      font-size: 0.98rem;
     }
 
     .video-caption span {
       color: var(--text-soft);
 
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
 
-    /* =========================
+    /* ==========================
        FOOTER
     ========================== */
 
     footer {
-      padding:
-        30px 0 46px;
+      padding: 32px 0 42px;
 
       border-top:
         1px solid var(--border);
 
       color: var(--text-soft);
 
-      font-size: 0.86rem;
+      font-size: 0.82rem;
     }
 
     .footer-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
 
       gap: 20px;
     }
 
     .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      color: var(--navy);
+
       font-weight: 800;
-      color: var(--green-dark);
+    }
+
+    .footer-brand img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
     }
 
 
-    /* =========================
-       RESPONSIVE
+    /* ==========================
+       MOBILE
     ========================== */
 
-    @media (max-width: 900px) {
+    @media (max-width: 850px) {
 
-      .hero-shell {
+      .feature-grid,
+      .evaluation-grid {
         grid-template-columns: 1fr;
-      }
-
-      .hero-media {
-        min-height: 420px;
-      }
-
-      .hero-media img {
-        min-height: 420px;
-      }
-
-      .feature-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .abstract-shell {
-        grid-template-columns: 1fr;
-      }
-
-      .abstract-number {
-        font-size: 3.5rem;
-      }
-
-      .evaluation-shell {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 260px 260px;
-      }
-
-      .gallery-card.large {
-        grid-row: span 1;
       }
 
       .video-grid {
         grid-template-columns: 1fr;
       }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
     }
 
-    @media (max-width: 680px) {
+    @media (max-width: 650px) {
 
       .container {
-        width:
-          min(100% - 24px, var(--max-width));
-      }
-
-      .nav {
-        min-height: 64px;
+        width: calc(100% - 24px);
       }
 
       .nav-links {
@@ -837,48 +656,41 @@
       }
 
       .hero {
-        padding-top: 26px;
+        padding-top: 48px;
       }
 
-      .hero-shell {
-        border-radius: 24px;
+      .project-logo {
+        width: 84px;
+        height: 84px;
+
+        margin-bottom: 20px;
       }
 
-      .hero-content {
-        padding: 44px 26px;
+      .hero h1 {
+        font-size: 2.45rem;
       }
 
-      .hero-media {
-        min-height: 300px;
+      .hero-subtitle {
+        font-size: 1rem;
       }
 
-      .hero-media img {
-        min-height: 300px;
-      }
+      .hero-image {
+        margin-top: 34px;
 
-      .hero-note {
-        right: 14px;
-        bottom: 14px;
-
-        max-width: 220px;
+        border-radius: 20px;
       }
 
       .section {
         padding: 54px 0;
       }
 
-      .abstract-shell {
-        padding: 28px;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 250px);
+      .abstract-box {
+        padding: 28px 24px;
       }
 
       .footer-inner {
-        align-items: flex-start;
         flex-direction: column;
+        align-items: flex-start;
       }
     }
 
@@ -889,7 +701,7 @@
 <body>
 
 
-<!-- =========================
+<!-- ==========================
      NAVIGATION
 ========================== -->
 
@@ -897,27 +709,35 @@
 
   <div class="container nav">
 
-    <a href="#top" class="brand">
+    <a href="#top" class="nav-brand">
 
       <img
-        src="cyfi-icon.png"
-        alt="CyFI icon"
-        class="brand-icon"
-      >
+        src="cyfi-logo.png"
+        alt="CyFI project icon"
+      />
 
       <span>CyFI</span>
 
     </a>
 
+
     <nav class="nav-links">
 
-      <a href="#overview">Overview</a>
+      <a href="#overview">
+        Overview
+      </a>
 
-      <a href="#study">Study</a>
+      <a href="#study">
+        Study
+      </a>
 
-      <a href="#evaluation">Evaluation</a>
+      <a href="#evaluation">
+        Evaluation
+      </a>
 
-      <a href="#videos">Videos</a>
+      <a href="#videos">
+        Videos
+      </a>
 
     </nav>
 
@@ -930,7 +750,7 @@
 <main id="top">
 
 
-<!-- =========================
+<!-- ==========================
      HERO
 ========================== -->
 
@@ -938,81 +758,64 @@
 
   <div class="container">
 
-    <div class="hero-shell">
+
+    <img
+      src="cyfi-logo.png"
+      alt="CyFI project logo"
+      class="project-logo"
+    />
 
 
-      <div class="hero-content">
+    <h1>
 
-        <div class="eyebrow">
+      CyFI: Semiautonomous Cycling
+      for Blind and Low-Vision Riders
 
-          <span class="eyebrow-dot"></span>
-
-          Human-Centered Shared Autonomy
-
-        </div>
+    </h1>
 
 
-        <h1>
+    <p class="hero-subtitle">
 
-          CyFI
+      A human-centered shared-autonomy cycling platform
+      supporting accessible outdoor mobility through
+      autonomous steering, safety support, and multimodal
+      rider feedback.
 
-          <span>
-            Semiautonomous Cycling for
-            Blind and Low-Vision Riders
-          </span>
-
-        </h1>
+    </p>
 
 
-        <p class="hero-description">
+    <div class="hero-tags">
 
-          A human-powered cycling platform that combines
-          autonomous steering, safety support, and multimodal
-          rider feedback to enable more accessible real-world
-          cycling experiences.
+      <span class="hero-tag">
+        Shared Autonomy
+      </span>
 
-        </p>
+      <span class="hero-tag">
+        Accessible Mobility
+      </span>
 
-
-        <div class="hero-tags">
-
-          <span class="hero-tag">
-            Shared Autonomy
-          </span>
-
-          <span class="hero-tag">
-            Multimodal Feedback
-          </span>
-
-          <span class="hero-tag">
-            Real-World Cycling
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <div class="hero-media">
-
-        <img
-          src="cyfi-hero.jpg"
-          alt="CyFI rider during an outdoor cycling evaluation"
-        >
-
-        <div class="hero-note">
-
-          Designed around the rider:
-          human-powered motion,
-          autonomous steering assistance,
-          and multimodal environmental feedback.
-
-        </div>
-
-      </div>
-
+      <span class="hero-tag">
+        Real-World Cycling
+      </span>
 
     </div>
+
+
+    <figure class="hero-image">
+
+      <img
+        src="cyfi-hero.png"
+        alt="CyFI operating during an outdoor riding session"
+      />
+
+      <figcaption class="hero-caption">
+
+        CyFI operating during an outdoor riding evaluation.
+
+      </figcaption>
+
+    </figure>
+
 
   </div>
 
@@ -1020,12 +823,12 @@
 
 
 
-<!-- =========================
+<!-- ==========================
      OVERVIEW
 ========================== -->
 
 <section
-  class="section"
+  class="section section-soft"
   id="overview"
 >
 
@@ -1038,47 +841,36 @@
 
 
     <h2>
-      Supporting independent mobility
-      through shared autonomy.
+      Human-powered cycling with shared autonomy.
     </h2>
 
 
     <p class="section-intro">
 
-      CyFI explores how semiautonomous cycling can support
-      blind and low-vision riders while keeping the rider
-      actively engaged in propulsion, braking, and interaction
-      with the surrounding environment.
+      CyFI explores how autonomous assistance can support
+      blind and low-vision riders while preserving active
+      rider participation in propulsion, braking, and
+      interaction with the environment.
 
     </p>
 
 
-    <div
-      class="abstract-shell"
-      style="margin-top: 36px;"
-    >
+    <div class="abstract-box">
 
-      <div>
-
-        <div class="abstract-number">
-          CyFI
-        </div>
-
-      </div>
-
-
-      <p class="abstract-text">
+      <p>
 
         CyFI is a semiautonomous, human-powered recumbent
         tricycle with onboard sensing and computation,
         actuated steering and braking, and multimodal rider
-        feedback. The system can autonomously steer and
-        initiate safety braking while the rider provides
-        propulsion and retains manual braking control.
-        Audio and vibrotactile feedback communicate system
-        behavior and environmental information, supporting
-        evaluation across progressively more realistic
-        cycling environments.
+        feedback. The rider provides propulsion and retains
+        manual braking, while the system assists with
+        navigation steering and can initiate safety braking.
+        Audio and vibrotactile feedback communicate upcoming
+        system actions, and riders can request spoken
+        descriptions of their surroundings. The platform was
+        developed through longitudinal co-design and
+        iterative evaluation with blind and low-vision riders
+        across increasingly realistic cycling environments.
 
       </p>
 
@@ -1090,75 +882,61 @@
 
       <article class="feature-card">
 
-        <div class="feature-index">
+        <div class="feature-number">
           01
         </div>
 
-        <div>
+        <h3>
+          Shared Autonomy
+        </h3>
 
-          <h3>
-            Shared Autonomy
-          </h3>
+        <p>
 
-          <p>
+          The rider remains physically engaged while CyFI
+          assists with steering and safety-critical braking.
 
-            The rider remains physically engaged while
-            CyFI assists with steering and safety-critical
-            intervention.
-
-          </p>
-
-        </div>
+        </p>
 
       </article>
 
 
       <article class="feature-card">
 
-        <div class="feature-index">
+        <div class="feature-number">
           02
         </div>
 
-        <div>
+        <h3>
+          Multimodal Feedback
+        </h3>
 
-          <h3>
-            Multimodal Feedback
-          </h3>
+        <p>
 
-          <p>
+          Audio and vibrotactile feedback communicate system
+          actions and environmental information during riding.
 
-            Audio and vibrotactile feedback communicate
-            system state and environmental information
-            during riding.
-
-          </p>
-
-        </div>
+        </p>
 
       </article>
 
 
       <article class="feature-card">
 
-        <div class="feature-index">
+        <div class="feature-number">
           03
         </div>
 
-        <div>
+        <h3>
+          Real-World Evaluation
+        </h3>
 
-          <h3>
-            Real-World Evaluation
-          </h3>
+        <p>
 
-          <p>
+          Evaluation progressed from structured riding
+          environments toward community and sustained
+          neighborhood operation.
 
-            The platform was evaluated through iterative
-            studies and progressively more realistic
-            riding scenarios.
-
-          </p>
-
-        </div>
+        </p>
 
       </article>
 
@@ -1171,8 +949,8 @@
 
 
 
-<!-- =========================
-     RIDING SCENARIOS
+<!-- ==========================
+     CYFI IN ACTION
 ========================== -->
 
 <section class="section">
@@ -1186,16 +964,15 @@
 
 
     <h2>
-      From structured courses
-      to real-world riding.
+      Riding across real-world environments.
     </h2>
 
 
     <p class="section-intro">
 
-      Selected riding scenarios illustrate the platform
-      operating across different environmental conditions
-      and cycling contexts.
+      Selected scenes illustrate CyFI operating with
+      participants across outdoor riding and evaluation
+      scenarios.
 
     </p>
 
@@ -1203,60 +980,60 @@
     <div class="gallery">
 
 
-      <div class="gallery-card large">
+      <figure class="gallery-card">
 
         <img
           src="rider-07.png"
-          alt="CyFI riding scenario"
-        >
+          alt="CyFI outdoor riding session"
+        />
 
-        <div class="gallery-caption">
-          Outdoor riding
-        </div>
+        <figcaption>
+          Outdoor riding evaluation.
+        </figcaption>
 
-      </div>
+      </figure>
 
 
-      <div class="gallery-card">
+      <figure class="gallery-card">
 
         <img
           src="rider-08.png"
-          alt="CyFI participant riding"
-        >
+          alt="CyFI participant riding outdoors"
+        />
 
-        <div class="gallery-caption">
-          Participant evaluation
-        </div>
+        <figcaption>
+          Participant riding session.
+        </figcaption>
 
-      </div>
+      </figure>
 
 
-      <div class="gallery-card">
+      <figure class="gallery-card">
 
         <img
           src="rider-10.png"
-          alt="CyFI evaluation environment"
-        >
+          alt="CyFI operating on a roadway"
+        />
 
-        <div class="gallery-caption">
-          Real-world operation
-        </div>
+        <figcaption>
+          Real-world cycling environment.
+        </figcaption>
 
-      </div>
+      </figure>
 
 
-      <div class="gallery-card">
+      <figure class="gallery-card">
 
         <img
           src="rider-12.png"
-          alt="CyFI cycling scenario"
-        >
+          alt="CyFI outdoor evaluation"
+        />
 
-        <div class="gallery-caption">
-          Community riding
-        </div>
+        <figcaption>
+          Community riding scenario.
+        </figcaption>
 
-      </div>
+      </figure>
 
 
     </div>
@@ -1267,12 +1044,12 @@
 
 
 
-<!-- =========================
+<!-- ==========================
      STUDY
 ========================== -->
 
 <section
-  class="section"
+  class="section section-soft"
   id="study"
 >
 
@@ -1297,9 +1074,10 @@
     </p>
 
 
-    <div class="table-shell">
+    <div class="table-wrapper">
 
       <table>
+
 
         <thead>
 
@@ -1325,7 +1103,7 @@
           <tr class="site-row">
 
             <td colspan="8">
-              Site 1: Campus (n=9)
+              Site 1: Campus (n = 9)
             </td>
 
           </tr>
@@ -1434,9 +1212,7 @@
           <tr class="site-row">
 
             <td colspan="8">
-
-              Site 2: Community Organization (n=5)
-
+              Site 2: Community Organization (n = 5)
             </td>
 
           </tr>
@@ -1510,7 +1286,7 @@
 
 
 
-<!-- =========================
+<!-- ==========================
      EVALUATION
 ========================== -->
 
@@ -1528,8 +1304,7 @@
 
 
     <h2>
-      Designed to move beyond
-      controlled demonstrations.
+      Moving beyond controlled demonstrations.
     </h2>
 
 
@@ -1542,76 +1317,57 @@
     </p>
 
 
-    <div class="evaluation-shell">
+    <div class="evaluation-grid">
 
 
-      <div class="evaluation-message">
+      <article class="evaluation-card">
 
         <h3>
-          Real-world operation.
+          Continuous Riding
         </h3>
 
         <p>
 
-          Evaluation focused on sustained riding behavior
-          rather than isolated system demonstrations.
+          Evaluation included sustained operation rather than
+          isolated system demonstrations.
 
         </p>
 
-      </div>
+      </article>
 
 
-      <div class="evaluation-points">
+      <article class="evaluation-card">
+
+        <h3>
+          Roadway Interaction
+        </h3>
+
+        <p>
+
+          Riding scenarios included turns, intersections,
+          roadway infrastructure, vehicles, and changing
+          road geometry.
+
+        </p>
+
+      </article>
 
 
-        <div class="evaluation-point">
+      <article class="evaluation-card">
 
-          <strong>
-            Continuous riding
-          </strong>
+        <h3>
+          Rider-Centered Interaction
+        </h3>
 
-          <span>
+        <p>
 
-            Extended operation across real riding environments.
+          Shared control and multimodal feedback remain
+          integrated throughout the rider experience.
 
-          </span>
+        </p>
 
-        </div>
+      </article>
 
-
-        <div class="evaluation-point">
-
-          <strong>
-            Roadway interaction
-          </strong>
-
-          <span>
-
-            Turns, intersections, vehicles, roadway
-            infrastructure, and changing geometry.
-
-          </span>
-
-        </div>
-
-
-        <div class="evaluation-point">
-
-          <strong>
-            Rider-centered interaction
-          </strong>
-
-          <span>
-
-            Shared control and multimodal feedback remain
-            integrated throughout the riding experience.
-
-          </span>
-
-        </div>
-
-
-      </div>
 
     </div>
 
@@ -1621,12 +1377,12 @@
 
 
 
-<!-- =========================
+<!-- ==========================
      VIDEOS
 ========================== -->
 
 <section
-  class="section videos-section"
+  class="section section-soft"
   id="videos"
 >
 
@@ -1645,8 +1401,8 @@
 
     <p class="section-intro">
 
-      Full-length anonymized recordings show CyFI operating
-      during real-world participant evaluation sessions.
+      Representative clips illustrate CyFI during sustained
+      real-world riding and participant evaluation sessions.
 
     </p>
 
@@ -1663,9 +1419,9 @@
         >
 
           <source
-            src="GeorgiaV1_anonymous.mp4"
+            src="Dan_long-route_clip.mp4"
             type="video/mp4"
-          >
+          />
 
           Your browser does not support HTML5 video.
 
@@ -1675,13 +1431,13 @@
         <figcaption class="video-caption">
 
           <strong>
-            Evaluation Video 1
+            Long-Route Evaluation
           </strong>
 
           <span>
 
-            Full-length anonymized recording from a
-            real-world participant evaluation session.
+            Representative clip from a sustained
+            real-world riding route.
 
           </span>
 
@@ -1699,9 +1455,9 @@
         >
 
           <source
-            src="GeorgiaV2_anonymous.mp4"
+            src="Georgia_clip.mp4"
             type="video/mp4"
-          >
+          />
 
           Your browser does not support HTML5 video.
 
@@ -1711,13 +1467,13 @@
         <figcaption class="video-caption">
 
           <strong>
-            Evaluation Video 2
+            Participant Evaluation
           </strong>
 
           <span>
 
-            Full-length anonymized recording from a
-            real-world participant evaluation session.
+            Representative outdoor participant riding
+            session.
 
           </span>
 
@@ -1737,7 +1493,7 @@
 
 
 
-<!-- =========================
+<!-- ==========================
      FOOTER
 ========================== -->
 
@@ -1745,13 +1501,25 @@
 
   <div class="container footer-inner">
 
-    <span class="footer-brand">
-      CyFI
-    </span>
+
+    <div class="footer-brand">
+
+      <img
+        src="cyfi-logo.png"
+        alt=""
+      />
+
+      <span>
+        CyFI
+      </span>
+
+    </div>
+
 
     <span>
       Supplementary project website.
     </span>
+
 
   </div>
 

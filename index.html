@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>RideOn | Anonymous Research Project</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RideOn — Anonymous Project Website</title>
 
   <style>
     :root {
-      --text: #1f2933;
-      --muted: #667085;
-      --line: #e5e7eb;
-      --soft: #f7f8fa;
-      --soft-blue: #f3f7fb;
-      --accent: #315f8f;
-      --max-width: 1160px;
+      --bg: #f7f7f7;
+      --surface: #ffffff;
+      --text: #1f2a37;
+      --muted: #5b6470;
+      --line: #d8dde6;
+      --accent: #1f4b8f;
+      --shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+      --radius: 16px;
+      --maxw: 1120px;
     }
 
     * {
@@ -29,8 +29,8 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
       color: var(--text);
-      background: #ffffff;
       line-height: 1.65;
     }
 
@@ -43,333 +43,251 @@
       text-decoration: underline;
     }
 
-    img {
-      max-width: 100%;
-    }
-
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-
-    /* =========================================================
-       Navigation
-       ========================================================= */
-
-    nav {
+    .topbar {
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
+      background: rgba(247, 247, 247, 0.95);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.96);
     }
 
-    .nav-inner {
-      max-width: var(--max-width);
+    .topbar-inner {
+      max-width: var(--maxw);
       margin: 0 auto;
-      padding: 15px 32px;
-
+      padding: 12px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 28px;
+      gap: 20px;
     }
 
-    .nav-title {
+    .brand {
+      font-size: 24px;
       font-weight: 700;
-      font-size: 17px;
+      color: var(--text);
       white-space: nowrap;
     }
 
-    .nav-links {
+    .nav {
       display: flex;
-      gap: 22px;
       flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
       font-size: 14px;
     }
 
-    .nav-links a {
-      color: #344054;
-    }
-
-    /* =========================================================
-       Hero
-       ========================================================= */
-
-    header {
-      padding: 72px 0 58px;
-      text-align: center;
-    }
-
-    h1 {
-      max-width: 950px;
-      margin: 0 auto 20px;
-
-      font-size: clamp(34px, 5vw, 54px);
-      line-height: 1.12;
-      letter-spacing: -0.03em;
-    }
-
-    .subtitle {
-      margin: 0 auto 18px;
+    .nav a {
       color: var(--muted);
-      font-size: 18px;
       font-weight: 600;
     }
 
-    .summary {
-      max-width: 850px;
+    .nav a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: var(--maxw);
       margin: 0 auto;
-
-      color: #475467;
-      font-size: 19px;
-      line-height: 1.7;
+      padding: 36px 20px 80px;
     }
 
-    .hero-media {
-      margin: 46px auto 0;
-      width: 100%;
-
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: #ffffff;
-
-      overflow: hidden;
+    .hero {
+      text-align: center;
+      padding: 28px 0 12px;
     }
 
-    .hero-media img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-    }
-
-    .hero-caption {
-      padding: 14px 22px 18px;
-      color: var(--muted);
-      font-size: 14px;
-      text-align: left;
-      border-top: 1px solid var(--line);
-    }
-
-    /* =========================================================
-       General sections
-       ========================================================= */
-
-    section {
-      padding: 62px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    h2 {
-      margin: 0 0 24px;
-      font-size: 32px;
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1.08;
+      font-weight: 800;
       letter-spacing: -0.02em;
     }
 
-    h3 {
-      margin-top: 0;
+    .hero .subtitle {
+      margin-top: 18px;
+      font-size: 28px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .hero .description {
+      max-width: 860px;
+      margin: 18px auto 0;
       font-size: 21px;
+      color: var(--muted);
+    }
+
+    .section {
+      padding: 54px 0 8px;
+      border-top: 1px solid var(--line);
+      margin-top: 42px;
+    }
+
+    .section:first-of-type {
+      border-top: none;
+      margin-top: 0;
+    }
+
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: 42px;
+      line-height: 1.15;
+      font-weight: 800;
+      color: var(--text);
     }
 
     .section-intro {
-      max-width: 880px;
-      margin-bottom: 34px;
-
-      color: #475467;
-      font-size: 17px;
+      max-width: 920px;
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 26px;
     }
 
-    .placeholder {
-      min-height: 260px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 28px;
-
-      text-align: center;
-      color: #7a8491;
-
-      border: 1px dashed #cfd4dc;
-      border-radius: 12px;
-      background: var(--soft);
+    .figure-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      margin: 22px 0 30px;
     }
 
-    /* =========================================================
-       Cards / grids
-       ========================================================= */
+    .figure-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #fff;
+    }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 28px;
+    .caption {
+      padding: 14px 18px 18px;
+      font-size: 15px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      background: #fcfcfd;
     }
 
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
+      gap: 18px;
+      margin-top: 14px;
     }
 
     .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .placeholder {
+      background: var(--surface);
+      border: 2px dashed var(--line);
+      border-radius: var(--radius);
       padding: 26px;
-
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #ffffff;
-    }
-
-    .card p:last-child {
-      margin-bottom: 0;
-    }
-
-    .media-card {
-      overflow: hidden;
-
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #ffffff;
-    }
-
-    .media-placeholder {
-      min-height: 230px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 20px;
-
-      color: #7a8491;
-      text-align: center;
-      background: var(--soft);
-    }
-
-    .media-caption {
-      padding: 18px 20px 22px;
-
-      color: #475467;
-      font-size: 14px;
-    }
-
-    /* =========================================================
-       Quotes
-       ========================================================= */
-
-    .quote {
-      padding: 20px 24px;
-
-      border-left: 4px solid #c8d8e8;
-      border-radius: 0 10px 10px 0;
-      background: var(--soft-blue);
-
+      margin-top: 18px;
+      color: var(--muted);
       font-size: 17px;
     }
 
-    .quote-source {
-      margin-top: 10px;
-
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* =========================================================
-       Paper
-       ========================================================= */
-
-    .paper-box {
-      padding: 30px;
-
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: var(--soft);
-    }
-
-    .paper-title {
+    .placeholder strong {
+      display: block;
+      color: var(--text);
       margin-bottom: 8px;
-
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 18px;
     }
 
-    .paper-meta {
-      margin-bottom: 0;
+    .quote-block {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-top: 18px;
       color: var(--muted);
+      box-shadow: var(--shadow);
     }
 
-    /* =========================================================
-       Footer
-       ========================================================= */
+    .quote-block p {
+      margin: 0;
+      font-size: 17px;
+    }
 
-    footer {
-      margin-top: 30px;
-      padding: 34px 0 48px;
+    .quote-block + .quote-block {
+      margin-top: 14px;
+    }
 
+    .list {
+      margin: 8px 0 0 0;
+      padding-left: 22px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .list li + li {
+      margin-top: 8px;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 22px;
       border-top: 1px solid var(--line);
-
-      color: #7a8491;
-      font-size: 14px;
       text-align: center;
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    /* =========================================================
-       Responsive
-       ========================================================= */
-
-    @media (max-width: 820px) {
-
-      .nav-inner {
-        align-items: flex-start;
+    @media (max-width: 900px) {
+      .topbar-inner {
         flex-direction: column;
-        gap: 10px;
-
-        padding-left: 20px;
-        padding-right: 20px;
+        align-items: flex-start;
       }
 
-      .nav-links {
-        gap: 14px;
+      .nav {
+        justify-content: flex-start;
       }
 
-      header {
-        padding-top: 52px;
-      }
-
-      .grid-2,
       .grid-3 {
         grid-template-columns: 1fr;
       }
 
-      section {
-        padding: 46px 0;
+      .hero h1 {
+        font-size: 44px;
       }
 
-      .container {
-        padding: 0 20px;
+      .hero .subtitle {
+        font-size: 22px;
       }
 
+      .section h2 {
+        font-size: 32px;
+      }
     }
   </style>
 </head>
 
-
 <body>
-
-  <!-- =========================================================
-       Navigation
-       ========================================================= -->
-
-  <nav>
-    <div class="nav-inner">
-
-      <div class="nav-title">
-        RideOn
-      </div>
-
-      <div class="nav-links">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">RideOn</div>
+      <nav class="nav">
         <a href="#overview">Overview</a>
         <a href="#system">System</a>
         <a href="#study">Study</a>
@@ -377,395 +295,194 @@
         <a href="#analysis">Additional Analysis</a>
         <a href="#videos">Videos</a>
         <a href="#paper">Paper</a>
-      </div>
-
+      </nav>
     </div>
-  </nav>
+  </header>
 
+  <main class="container">
+    <section class="hero">
+      <h1>RideOn: Designing Semiautonomous Cycling for Blind and Low-Vision Riders</h1>
+      <div class="subtitle">Anonymous Research Project</div>
+      <p class="description">
+        This project investigates a semi-autonomous, human-powered cycling platform
+        designed to support blind and low-vision riders through shared autonomy,
+        multimodal feedback, and real-world evaluation.
+      </p>
 
-  <main>
-
-    <!-- =========================================================
-         Hero
-         ========================================================= -->
-
-    <header>
-      <div class="container">
-
-        <h1>
-          RideOn: Designing Semiautonomous Cycling for Blind and Low-Vision Riders
-        </h1>
-
-        <p class="subtitle">
-          Anonymous Research Project
-        </p>
-
-        <p class="summary">
-          This project explores a semi-autonomous, human-powered cycling system
-          designed to support blind and low-vision riders through autonomous
-          steering, safety interventions, multimodal feedback, and environmental
-          awareness.
-        </p>
-
-        <div class="hero-media">
-
-          <img
-            src="rideon-teaser.png"
-            alt="Annotated overview of the semi-autonomous cycling platform">
-
-          <div class="hero-caption">
-            Semi-autonomous cycling platform with onboard sensing,
-            computation, steering and braking actuation, rider controls,
-            and multimodal feedback.
-          </div>
-
-        </div>
-
-      </div>
-    </header>
-
-
-    <!-- =========================================================
-         Overview
-         ========================================================= -->
-
-    <section id="overview">
-      <div class="container">
-
-        <h2>Overview</h2>
-
-        <p class="section-intro">
-          Cycling provides transportation, recreation, exercise, and independent
-          mobility, but many cycling tasks depend heavily on visual perception.
-          This project investigates how shared autonomy can support blind and
-          low-vision riders while preserving meaningful rider participation and
-          control.
-        </p>
-
-        <div class="grid-3">
-
-          <div class="card">
-            <h3>Shared Autonomy</h3>
-
-            <p>
-              The rider provides propulsion while the system assists with
-              steering and safety-critical interventions.
-            </p>
-          </div>
-
-
-          <div class="card">
-            <h3>Multimodal Feedback</h3>
-
-            <p>
-              Audio and vibrotactile feedback communicate system actions and
-              support awareness of the surrounding environment.
-            </p>
-          </div>
-
-
-          <div class="card">
-            <h3>Real-World Evaluation</h3>
-
-            <p>
-              The system was iteratively evaluated with blind and low-vision
-              riders in real-world cycling environments.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
+      <figure class="figure-card">
+        <img src="rideon-teaser.png" alt="Annotated overview of the semi-autonomous cycling platform" />
+        <figcaption class="caption">
+          <strong>Teaser / platform overview.</strong>
+          Annotated view of the semi-autonomous cycling platform with onboard sensing,
+          computation, steering and braking actuation, rider controls, and multimodal feedback.
+        </figcaption>
+      </figure>
     </section>
 
-
-    <!-- =========================================================
-         System
-         ========================================================= -->
-
-    <section id="system">
-      <div class="container">
-
-        <h2>System</h2>
-
-        <p class="section-intro">
-          The platform integrates sensing, onboard computation, actuated
-          steering and braking, rider input, and multimodal feedback into a
-          semi-autonomous recumbent cycle.
-        </p>
-
-        <div class="placeholder">
-          System architecture figure will be added here.
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =========================================================
-         Study
-         ========================================================= -->
-
-    <section id="study">
-      <div class="container">
-
-        <h2>Co-design & Participant Study</h2>
-
-        <p class="section-intro">
-          The system was developed through iterative co-design and evaluation
-          with blind and low-vision participants. This section summarizes the
-          study process, participant coverage, and qualitative feedback.
-        </p>
-
-        <div class="grid-2">
-
-          <div class="card">
-
-            <h3>Study Overview</h3>
-
-            <p>
-              Study-design details and longitudinal evaluation information
-              will be added from the anonymous manuscript.
-            </p>
-
-          </div>
-
-
-          <div class="card">
-
-            <h3>Participant Characteristics</h3>
-
-            <p>
-              An anonymized participant summary table will be added here.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div style="margin-top: 28px;">
-
-          <div class="quote">
-
-            Selected anonymous participant quotation will be placed here.
-
-            <div class="quote-source">
-              — Participant ID
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =========================================================
-         Evaluation
-         ========================================================= -->
-
-    <section id="evaluation">
-      <div class="container">
-
-        <h2>Evaluation</h2>
-
-        <p class="section-intro">
-          Quantitative evaluation examines rider interaction, system behavior,
-          and participant-level system performance. Final values and figures
-          will be synchronized with the anonymous manuscript.
-        </p>
-
-        <div class="grid-2">
-
-          <div class="media-card">
-
-            <div class="media-placeholder">
-              Primary quantitative result figure
-            </div>
-
-            <div class="media-caption">
-              Caption will be synchronized with the final anonymous manuscript.
-            </div>
-
-          </div>
-
-
-          <div class="media-card">
-
-            <div class="media-placeholder">
-              Participant-level system performance
-            </div>
-
-            <div class="media-caption">
-              Re-verified participant-level analysis will be added here.
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =========================================================
-         Additional Analysis
-         ========================================================= -->
-
-    <section id="analysis">
-      <div class="container">
-
-        <h2>Additional Analysis & Ablations</h2>
-
-        <p class="section-intro">
-          This section provides additional analyses, ablations, and supporting
-          evidence that complement the main paper.
-        </p>
-
-        <div class="grid-2">
-
-          <div class="card">
-
-            <h3>Additional Analysis</h3>
-
-            <p>
-              Supplemental quantitative analyses will be added here.
-            </p>
-
-          </div>
-
-
-          <div class="card">
-
-            <h3>Ablations</h3>
-
-            <p>
-              Additional system and analysis ablations will be added here.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =========================================================
-         Videos
-         ========================================================= -->
-
-    <section id="videos">
-      <div class="container">
-
-        <h2>Videos</h2>
-
-        <p class="section-intro">
-          Representative study clips will illustrate system behavior across
-          diverse riders, roadway conditions, and autonomy interactions.
-        </p>
-
-        <div class="grid-2">
-
-          <div class="media-card">
-
-            <div class="media-placeholder">
-              Video clip 1
-            </div>
-
-            <div class="media-caption">
-              Representative navigation scenario.
-            </div>
-
-          </div>
-
-
-          <div class="media-card">
-
-            <div class="media-placeholder">
-              Video clip 2
-            </div>
-
-            <div class="media-caption">
-              Representative system interaction scenario.
-            </div>
-
-          </div>
-
-
-          <div class="media-card">
-
-            <div class="media-placeholder">
-              Video clip 3
-            </div>
-
-            <div class="media-caption">
-              Representative roadway or obstacle scenario.
-            </div>
-
-          </div>
-
-
-          <div class="media-card">
-
-            <div class="media-placeholder">
-              Video clip 4
-            </div>
-
-            <div class="media-caption">
-              Representative autonomy or safety intervention scenario.
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =========================================================
-         Paper
-         ========================================================= -->
-
-    <section id="paper">
-      <div class="container">
-
-        <h2>Paper</h2>
-
-        <div class="paper-box">
-
-          <div class="paper-title">
-            RideOn: Designing Semiautonomous Cycling for Blind and Low-Vision Riders
-          </div>
-
-          <p class="paper-meta">
-            Anonymous Authors<br>
-            Under Review
+    <section id="overview" class="section">
+      <h2>Overview</h2>
+      <p class="section-intro">
+        Cycling provides transportation, recreation, exercise, and independent mobility,
+        but many cycling tasks rely heavily on visual perception. This project explores
+        how semi-autonomous assistance can support blind and low-vision riders while
+        preserving meaningful rider participation and control.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Shared Autonomy</h3>
+          <p>
+            The rider provides propulsion and remains actively engaged, while the system
+            assists with steering and safety-critical braking when needed.
           </p>
-
         </div>
 
+        <div class="card">
+          <h3>Multimodal Feedback</h3>
+          <p>
+            Audio and vibrotactile feedback communicate system actions and support rider
+            awareness of the surrounding environment.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Real-World Evaluation</h3>
+          <p>
+            The platform was iteratively developed and evaluated in authentic cycling
+            environments across formative studies and later-stage evaluation.
+          </p>
+        </div>
       </div>
     </section>
 
+    <section id="system" class="section">
+      <h2>System</h2>
+      <p class="section-intro">
+        The platform integrates onboard sensing, computation, actuation, rider input,
+        and multimodal feedback into a semi-autonomous recumbent cycle. The diagram
+        below summarizes the hardware architecture and major subsystem connections.
+      </p>
+
+      <figure class="figure-card">
+        <img src="system-architecture.png" alt="System architecture diagram showing sensors, compute, actuation, and rider interface" />
+        <figcaption class="caption">
+          <strong>System architecture.</strong>
+          Hardware overview of the semi-autonomous cycling platform, including sensing,
+          onboard compute, power conversion, steering and braking actuation, rider input,
+          and audio / haptic output channels.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="study" class="section">
+      <h2>Study</h2>
+      <p class="section-intro">
+        The project followed a longitudinal, iterative process including formative
+        prototyping and later evaluation in increasingly realistic riding contexts.
+        The timeline below summarizes the progression of study settings and routes.
+      </p>
+
+      <figure class="figure-card">
+        <img src="study-timeline-cropped-pad30.png" alt="Timeline of formative and evaluation studies across multiple riding contexts" />
+        <figcaption class="caption">
+          <strong>Study progression timeline.</strong>
+          Overview of the formative and evaluation process across design activities,
+          campus tests, community organization settings, and neighborhood riding scenarios.
+        </figcaption>
+      </figure>
+
+      <div class="placeholder">
+        <strong>Participant table placeholder</strong>
+        Add the participant table here after final anonymity review.
+        You can paste the table directly as HTML later, or add a PDF / image snapshot if needed.
+      </div>
+
+      <div class="quote-block">
+        <p>
+          <strong>Participant quote placeholder 1.</strong><br />
+          Add an anonymized rider or stakeholder quote here after final review.
+        </p>
+      </div>
+
+      <div class="quote-block">
+        <p>
+          <strong>Participant quote placeholder 2.</strong><br />
+          Add an anonymized quote here to highlight perceived safety, trust, or usability.
+        </p>
+      </div>
+    </section>
+
+    <section id="evaluation" class="section">
+      <h2>Evaluation</h2>
+      <p class="section-intro">
+        Quantitative and qualitative evaluation focuses on rider interaction, system
+        behavior, and real-world performance. This section can include participant-level
+        plots, summary tables, and short interpretations of key findings.
+      </p>
+
+      <div class="placeholder">
+        <strong>Quantitative results placeholder</strong>
+        Add revised figures here (for example participant-level performance plots,
+        intervention rate plots, or summary results tables).
+      </div>
+
+      <div class="placeholder">
+        <strong>Interpretation placeholder</strong>
+        Add 2–4 short bullet points summarizing the main takeaways from the evaluation.
+      </div>
+    </section>
+
+    <section id="analysis" class="section">
+      <h2>Additional Analysis</h2>
+      <p class="section-intro">
+        This section can host supplementary figures, ablations, implementation notes,
+        or additional findings that support the main paper but are useful to present
+        in more detail on the website.
+      </p>
+
+      <ul class="list">
+        <li>Additional figures or ablations</li>
+        <li>Method details not fully expanded in the paper</li>
+        <li>Implementation notes and design rationale</li>
+        <li>Supplementary tables</li>
+      </ul>
+
+      <div class="placeholder">
+        <strong>Supplementary material placeholder</strong>
+        Add any additional analysis figures, tables, or brief text summaries here.
+      </div>
+    </section>
+
+    <section id="videos" class="section">
+      <h2>Videos</h2>
+      <p class="section-intro">
+        This section can host selected study clips after anonymity review. Please ensure
+        all videos are checked for faces, names, badges, license plates, location cues,
+        and metadata before publication.
+      </p>
+
+      <div class="placeholder">
+        <strong>Video placeholder</strong>
+        Add embedded videos or linked video thumbnails here after final selection and
+        anonymity review.
+      </div>
+    </section>
+
+    <section id="paper" class="section">
+      <h2>Paper</h2>
+      <p class="section-intro">
+        Add the anonymized paper materials here once the submission-ready version is finalized.
+      </p>
+
+      <div class="placeholder">
+        <strong>Paper link placeholder</strong>
+        Add the anonymous PDF link, citation, and any supplementary download links here.
+      </div>
+    </section>
+
+    <footer class="footer">
+      Anonymous research project website.
+    </footer>
   </main>
-
-
-  <!-- =========================================================
-       Footer
-       ========================================================= -->
-
-  <footer>
-
-    <div class="container">
-      Anonymous research project page.
-    </div>
-
-  </footer>
-
-
 </body>
 </html>

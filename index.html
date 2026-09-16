@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,26 +43,33 @@
       text-decoration: underline;
     }
 
+    img {
+      max-width: 100%;
+    }
+
     .container {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0 32px;
     }
 
-    /* ---------- Navigation ---------- */
+    /* =========================================================
+       Navigation
+       ========================================================= */
 
     nav {
-      border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.96);
       position: sticky;
       top: 0;
       z-index: 100;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.96);
     }
 
     .nav-inner {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 15px 32px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -85,16 +93,19 @@
       color: #344054;
     }
 
-    /* ---------- Hero ---------- */
+    /* =========================================================
+       Hero
+       ========================================================= */
 
     header {
-      padding: 76px 0 48px;
+      padding: 72px 0 58px;
       text-align: center;
     }
 
     h1 {
-      max-width: 920px;
+      max-width: 950px;
       margin: 0 auto 20px;
+
       font-size: clamp(34px, 5vw, 54px);
       line-height: 1.12;
       letter-spacing: -0.03em;
@@ -110,6 +121,7 @@
     .summary {
       max-width: 850px;
       margin: 0 auto;
+
       color: #475467;
       font-size: 19px;
       line-height: 1.7;
@@ -118,26 +130,36 @@
     .hero-media {
       margin: 46px auto 0;
       width: 100%;
-      min-height: 420px;
+
       border: 1px solid var(--line);
       border-radius: 14px;
-      background: var(--soft);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #7a8491;
-      padding: 30px;
+      background: #ffffff;
+
+      overflow: hidden;
     }
 
-    /* ---------- General sections ---------- */
+    .hero-media img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .hero-caption {
+      padding: 14px 22px 18px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: left;
+      border-top: 1px solid var(--line);
+    }
+
+    /* =========================================================
+       General sections
+       ========================================================= */
 
     section {
       padding: 62px 0;
       border-top: 1px solid var(--line);
-    }
-
-    section:first-of-type {
-      border-top: none;
     }
 
     h2 {
@@ -152,26 +174,33 @@
     }
 
     .section-intro {
-      max-width: 850px;
+      max-width: 880px;
       margin-bottom: 34px;
+
       color: #475467;
       font-size: 17px;
     }
 
     .placeholder {
-      border: 1px dashed #cfd4dc;
-      border-radius: 12px;
-      background: var(--soft);
       min-height: 260px;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
+
       padding: 28px;
+
+      text-align: center;
       color: #7a8491;
+
+      border: 1px dashed #cfd4dc;
+      border-radius: 12px;
+      background: var(--soft);
     }
 
-    /* ---------- Grid ---------- */
+    /* =========================================================
+       Cards / grids
+       ========================================================= */
 
     .grid-2 {
       display: grid;
@@ -186,9 +215,10 @@
     }
 
     .card {
+      padding: 26px;
+
       border: 1px solid var(--line);
       border-radius: 12px;
-      padding: 26px;
       background: #ffffff;
     }
 
@@ -198,82 +228,106 @@
 
     .media-card {
       overflow: hidden;
+
       border: 1px solid var(--line);
       border-radius: 12px;
-      background: #fff;
+      background: #ffffff;
     }
 
     .media-placeholder {
       min-height: 230px;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #7a8491;
-      background: var(--soft);
+
       padding: 20px;
+
+      color: #7a8491;
       text-align: center;
+      background: var(--soft);
     }
 
     .media-caption {
       padding: 18px 20px 22px;
-      font-size: 14px;
+
       color: #475467;
+      font-size: 14px;
     }
 
-    /* ---------- Quotes ---------- */
+    /* =========================================================
+       Quotes
+       ========================================================= */
 
     .quote {
-      border-left: 4px solid #c8d8e8;
-      background: var(--soft-blue);
-      border-radius: 0 10px 10px 0;
       padding: 20px 24px;
+
+      border-left: 4px solid #c8d8e8;
+      border-radius: 0 10px 10px 0;
+      background: var(--soft-blue);
+
       font-size: 17px;
     }
 
     .quote-source {
       margin-top: 10px;
+
       color: var(--muted);
       font-size: 14px;
     }
 
-    /* ---------- Paper ---------- */
+    /* =========================================================
+       Paper
+       ========================================================= */
 
     .paper-box {
+      padding: 30px;
+
       border: 1px solid var(--line);
       border-radius: 12px;
-      padding: 30px;
       background: var(--soft);
     }
 
     .paper-title {
+      margin-bottom: 8px;
+
       font-size: 20px;
       font-weight: 700;
-      margin-bottom: 8px;
     }
 
     .paper-meta {
-      color: var(--muted);
       margin-bottom: 0;
+      color: var(--muted);
     }
 
-    /* ---------- Footer ---------- */
+    /* =========================================================
+       Footer
+       ========================================================= */
 
     footer {
-      border-top: 1px solid var(--line);
       margin-top: 30px;
       padding: 34px 0 48px;
+
+      border-top: 1px solid var(--line);
+
       color: #7a8491;
       font-size: 14px;
       text-align: center;
     }
 
-    /* ---------- Responsive ---------- */
+    /* =========================================================
+       Responsive
+       ========================================================= */
 
     @media (max-width: 820px) {
+
       .nav-inner {
         align-items: flex-start;
         flex-direction: column;
         gap: 10px;
+
+        padding-left: 20px;
+        padding-right: 20px;
       }
 
       .nav-links {
@@ -282,10 +336,6 @@
 
       header {
         padding-top: 52px;
-      }
-
-      .hero-media {
-        min-height: 280px;
       }
 
       .grid-2,
@@ -301,19 +351,23 @@
         padding: 0 20px;
       }
 
-      .nav-inner {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
     }
   </style>
 </head>
 
+
 <body>
+
+  <!-- =========================================================
+       Navigation
+       ========================================================= -->
 
   <nav>
     <div class="nav-inner">
-      <div class="nav-title">RideOn</div>
+
+      <div class="nav-title">
+        RideOn
+      </div>
 
       <div class="nav-links">
         <a href="#overview">Overview</a>
@@ -324,13 +378,15 @@
         <a href="#videos">Videos</a>
         <a href="#paper">Paper</a>
       </div>
+
     </div>
   </nav>
+
 
   <main>
 
     <!-- =========================================================
-         HERO
+         Hero
          ========================================================= -->
 
     <header>
@@ -352,7 +408,17 @@
         </p>
 
         <div class="hero-media">
-          Teaser figure or system overview figure will be placed here.
+
+          <img
+            src="rideon-teaser.png"
+            alt="Annotated overview of the semi-autonomous cycling platform">
+
+          <div class="hero-caption">
+            Semi-autonomous cycling platform with onboard sensing,
+            computation, steering and braking actuation, rider controls,
+            and multimodal feedback.
+          </div>
+
         </div>
 
       </div>
@@ -360,7 +426,7 @@
 
 
     <!-- =========================================================
-         OVERVIEW
+         Overview
          ========================================================= -->
 
     <section id="overview">
@@ -380,22 +446,27 @@
 
           <div class="card">
             <h3>Shared Autonomy</h3>
+
             <p>
               The rider provides propulsion while the system assists with
               steering and safety-critical interventions.
             </p>
           </div>
 
+
           <div class="card">
             <h3>Multimodal Feedback</h3>
+
             <p>
               Audio and vibrotactile feedback communicate system actions and
               support awareness of the surrounding environment.
             </p>
           </div>
 
+
           <div class="card">
             <h3>Real-World Evaluation</h3>
+
             <p>
               The system was iteratively evaluated with blind and low-vision
               riders in real-world cycling environments.
@@ -409,7 +480,7 @@
 
 
     <!-- =========================================================
-         SYSTEM
+         System
          ========================================================= -->
 
     <section id="system">
@@ -424,7 +495,7 @@
         </p>
 
         <div class="placeholder">
-          System architecture / hardware overview figure
+          System architecture figure will be added here.
         </div>
 
       </div>
@@ -432,7 +503,7 @@
 
 
     <!-- =========================================================
-         STUDY
+         Study
          ========================================================= -->
 
     <section id="study">
@@ -442,36 +513,49 @@
 
         <p class="section-intro">
           The system was developed through iterative co-design and evaluation
-          with blind and low-vision participants. This section will summarize
-          the study process, participant coverage, and qualitative feedback.
+          with blind and low-vision participants. This section summarizes the
+          study process, participant coverage, and qualitative feedback.
         </p>
 
         <div class="grid-2">
 
           <div class="card">
+
             <h3>Study Overview</h3>
+
             <p>
-              Participant and study-design details will be added from the
-              anonymous manuscript.
+              Study-design details and longitudinal evaluation information
+              will be added from the anonymous manuscript.
             </p>
+
           </div>
 
+
           <div class="card">
+
             <h3>Participant Characteristics</h3>
+
             <p>
-              An anonymized participant table will be added here.
+              An anonymized participant summary table will be added here.
             </p>
+
           </div>
 
         </div>
 
+
         <div style="margin-top: 28px;">
+
           <div class="quote">
+
             Selected anonymous participant quotation will be placed here.
+
             <div class="quote-source">
               — Participant ID
             </div>
+
           </div>
+
         </div>
 
       </div>
@@ -479,7 +563,7 @@
 
 
     <!-- =========================================================
-         EVALUATION
+         Evaluation
          ========================================================= -->
 
     <section id="evaluation">
@@ -496,21 +580,28 @@
         <div class="grid-2">
 
           <div class="media-card">
+
             <div class="media-placeholder">
               Primary quantitative result figure
             </div>
+
             <div class="media-caption">
               Caption will be synchronized with the final anonymous manuscript.
             </div>
+
           </div>
 
+
           <div class="media-card">
+
             <div class="media-placeholder">
               Participant-level system performance
             </div>
+
             <div class="media-caption">
               Re-verified participant-level analysis will be added here.
             </div>
+
           </div>
 
         </div>
@@ -520,7 +611,7 @@
 
 
     <!-- =========================================================
-         ADDITIONAL ANALYSIS
+         Additional Analysis
          ========================================================= -->
 
     <section id="analysis">
@@ -536,17 +627,24 @@
         <div class="grid-2">
 
           <div class="card">
+
             <h3>Additional Analysis</h3>
+
             <p>
               Supplemental quantitative analyses will be added here.
             </p>
+
           </div>
 
+
           <div class="card">
+
             <h3>Ablations</h3>
+
             <p>
               Additional system and analysis ablations will be added here.
             </p>
+
           </div>
 
         </div>
@@ -556,7 +654,7 @@
 
 
     <!-- =========================================================
-         VIDEOS
+         Videos
          ========================================================= -->
 
     <section id="videos">
@@ -572,39 +670,54 @@
         <div class="grid-2">
 
           <div class="media-card">
+
             <div class="media-placeholder">
               Video clip 1
             </div>
+
             <div class="media-caption">
               Representative navigation scenario.
             </div>
+
           </div>
 
+
           <div class="media-card">
+
             <div class="media-placeholder">
               Video clip 2
             </div>
+
             <div class="media-caption">
               Representative system interaction scenario.
             </div>
+
           </div>
 
+
           <div class="media-card">
+
             <div class="media-placeholder">
               Video clip 3
             </div>
+
             <div class="media-caption">
               Representative roadway or obstacle scenario.
             </div>
+
           </div>
 
+
           <div class="media-card">
+
             <div class="media-placeholder">
               Video clip 4
             </div>
+
             <div class="media-caption">
               Representative autonomy or safety intervention scenario.
             </div>
+
           </div>
 
         </div>
@@ -614,7 +727,7 @@
 
 
     <!-- =========================================================
-         PAPER
+         Paper
          ========================================================= -->
 
     <section id="paper">
@@ -641,11 +754,18 @@
   </main>
 
 
+  <!-- =========================================================
+       Footer
+       ========================================================= -->
+
   <footer>
+
     <div class="container">
       Anonymous research project page.
     </div>
+
   </footer>
+
 
 </body>
 </html>

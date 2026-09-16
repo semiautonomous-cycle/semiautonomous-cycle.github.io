@@ -45,18 +45,12 @@
       text-decoration: underline;
     }
 
-    /* =========================================================
-       Navigation
-       ========================================================= */
-
     .topbar {
       position: sticky;
       top: 0;
       z-index: 1000;
-
       background: rgba(247, 247, 247, 0.95);
       backdrop-filter: blur(10px);
-
       border-bottom: 1px solid var(--line);
     }
 
@@ -64,7 +58,6 @@
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 12px 20px;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -83,7 +76,6 @@
       flex-wrap: wrap;
       gap: 18px;
       justify-content: flex-end;
-
       font-size: 14px;
     }
 
@@ -97,19 +89,11 @@
       text-decoration: none;
     }
 
-    /* =========================================================
-       Main layout
-       ========================================================= */
-
     .container {
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 36px 20px 80px;
     }
-
-    /* =========================================================
-       Hero
-       ========================================================= */
 
     .hero {
       text-align: center;
@@ -118,7 +102,6 @@
 
     .hero h1 {
       margin: 0;
-
       font-size: clamp(38px, 5vw, 64px);
       line-height: 1.08;
       font-weight: 800;
@@ -127,7 +110,6 @@
 
     .hero .subtitle {
       margin-top: 18px;
-
       font-size: 28px;
       color: var(--accent);
       font-weight: 700;
@@ -136,18 +118,12 @@
     .hero .description {
       max-width: 900px;
       margin: 18px auto 0;
-
       font-size: 20px;
       color: var(--muted);
     }
 
-    /* =========================================================
-       Sections
-       ========================================================= */
-
     .section {
       padding: 54px 0 8px;
-
       border-top: 1px solid var(--line);
       margin-top: 42px;
     }
@@ -159,33 +135,29 @@
 
     .section h2 {
       margin: 0 0 14px;
-
       font-size: 42px;
       line-height: 1.15;
       font-weight: 800;
-      color: var(--text);
+    }
+
+    .section h3 {
+      font-size: 26px;
+      margin: 34px 0 12px;
     }
 
     .section-intro {
       max-width: 920px;
       margin-bottom: 26px;
-
       font-size: 18px;
       color: var(--muted);
     }
 
-    /* =========================================================
-       Figures
-       ========================================================= */
-
     .figure-card {
       margin: 22px 0 30px;
-
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-
       overflow: hidden;
     }
 
@@ -198,29 +170,21 @@
 
     .caption {
       padding: 14px 18px 18px;
-
       font-size: 15px;
       color: var(--muted);
-
       border-top: 1px solid var(--line);
       background: #fcfcfd;
     }
-
-    /* =========================================================
-       Cards
-       ========================================================= */
 
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
-
       margin-top: 14px;
     }
 
     .card {
       padding: 22px;
-
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -229,56 +193,70 @@
 
     .card h3 {
       margin: 0 0 10px;
-
       font-size: 24px;
-      line-height: 1.2;
     }
 
     .card p {
       margin: 0;
-
       color: var(--muted);
       font-size: 16px;
     }
 
-    /* =========================================================
-       Placeholders
-       ========================================================= */
+    /* Rider gallery */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .gallery-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+      background: #ffffff;
+    }
+
+    .gallery-caption {
+      padding: 12px 15px 15px;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
     .placeholder {
       margin-top: 18px;
       padding: 26px;
-
       background: var(--surface);
       border: 2px dashed var(--line);
       border-radius: var(--radius);
-
       color: var(--muted);
       font-size: 17px;
     }
 
     .placeholder strong {
       display: block;
-
       color: var(--text);
       margin-bottom: 8px;
       font-size: 18px;
     }
 
-    /* =========================================================
-       Quotes
-       ========================================================= */
-
     .quote-block {
       margin-top: 18px;
       padding: 18px 20px;
-
       background: var(--surface);
-
       border: 1px solid var(--line);
       border-left: 5px solid var(--accent);
       border-radius: 14px;
-
       color: var(--muted);
       box-shadow: var(--shadow);
     }
@@ -288,18 +266,9 @@
       font-size: 17px;
     }
 
-    .quote-block + .quote-block {
-      margin-top: 14px;
-    }
-
-    /* =========================================================
-       Lists
-       ========================================================= */
-
     .list {
       margin: 8px 0 0;
       padding-left: 22px;
-
       color: var(--muted);
       font-size: 17px;
     }
@@ -308,49 +277,30 @@
       margin-top: 8px;
     }
 
-    /* =========================================================
-       BibTeX
-       ========================================================= */
-
     .bibtex {
       margin-top: 20px;
       padding: 22px;
-
       background: #eeeeee;
       border: 1px solid var(--line);
       border-radius: 12px;
-
       overflow-x: auto;
-
       font-family: Consolas, Monaco, "Courier New", monospace;
       font-size: 14px;
       line-height: 1.55;
-      color: #333333;
-
+      color: #333;
       white-space: pre;
     }
-
-    /* =========================================================
-       Footer
-       ========================================================= */
 
     .footer {
       margin-top: 60px;
       padding-top: 22px;
-
       border-top: 1px solid var(--line);
-
       text-align: center;
       color: var(--muted);
       font-size: 14px;
     }
 
-    /* =========================================================
-       Mobile
-       ========================================================= */
-
     @media (max-width: 900px) {
-
       .topbar-inner {
         flex-direction: column;
         align-items: flex-start;
@@ -360,8 +310,13 @@
         justify-content: flex-start;
       }
 
-      .grid-3 {
+      .grid-3,
+      .gallery-grid {
         grid-template-columns: 1fr;
+      }
+
+      .gallery-card img {
+        height: auto;
       }
 
       .hero h1 {
@@ -379,19 +334,11 @@
   </style>
 </head>
 
-
 <body>
-
-  <!-- =========================================================
-       Navigation
-       ========================================================= -->
 
   <header class="topbar">
     <div class="topbar-inner">
-
-      <div class="brand">
-        CyFI
-      </div>
+      <div class="brand">CyFI</div>
 
       <nav class="nav">
         <a href="#overview">Overview</a>
@@ -402,16 +349,12 @@
         <a href="#videos">Videos</a>
         <a href="#paper">Paper</a>
       </nav>
-
     </div>
   </header>
 
-
   <main class="container">
 
-    <!-- =========================================================
-         Hero
-         ========================================================= -->
+    <!-- Hero -->
 
     <section class="hero">
 
@@ -424,362 +367,290 @@
       </div>
 
       <p class="description">
-        CyFI is a semi-autonomous, human-powered recumbent tricycle
-        designed to support blind and low-vision riders through onboard
-        sensing, autonomous steering, safety braking, multimodal feedback,
-        and environmental awareness.
+        CyFI is a semi-autonomous, human-powered recumbent tricycle designed
+        to support blind and low-vision riders through onboard sensing,
+        autonomous steering, safety braking, multimodal feedback, and
+        environmental awareness.
       </p>
 
-
       <figure class="figure-card">
-
         <img
           src="rideon-teaser.png"
           alt="Annotated overview of the CyFI semi-autonomous cycling platform">
 
         <figcaption class="caption">
-
           <strong>CyFI platform overview.</strong>
-
           Annotated view of the semi-autonomous cycling platform with onboard
           sensing, computation, steering and braking actuation, rider controls,
           and multimodal feedback.
-
         </figcaption>
-
       </figure>
 
     </section>
 
-
-    <!-- =========================================================
-         Overview
-         ========================================================= -->
+    <!-- Overview -->
 
     <section id="overview" class="section">
 
       <h2>Overview</h2>
 
       <p class="section-intro">
-
         Cycling provides transportation, exercise, recreation, and independent
         exploration, but visually demanding tasks such as steering and obstacle
-        avoidance can limit access for blind and low-vision riders.
-
-        CyFI investigates how shared autonomy can support these tasks while
-        preserving rider propulsion, agency, and active participation in the
-        control loop.
-
+        avoidance can limit access for blind and low-vision riders. CyFI explores
+        how shared autonomy can support these tasks while preserving rider
+        propulsion, agency, and active participation in the control loop.
       </p>
-
 
       <div class="grid-3">
 
         <div class="card">
-
           <h3>Shared Autonomy</h3>
-
           <p>
             The rider provides propulsion and retains manual braking while
             CyFI can autonomously steer and initiate safety braking.
           </p>
-
         </div>
 
-
         <div class="card">
-
           <h3>Multimodal Feedback</h3>
-
           <p>
             Audio and vibrotactile feedback communicate upcoming autonomous
             actions, while riders can request spoken descriptions of their
             surroundings.
           </p>
-
         </div>
 
-
         <div class="card">
-
           <h3>Real-World Evaluation</h3>
-
           <p>
             CyFI was developed through longitudinal co-design and iterative
             evaluations with blind and low-vision riders across increasingly
             realistic cycling environments.
           </p>
-
         </div>
 
       </div>
 
     </section>
 
-
-    <!-- =========================================================
-         System
-         ========================================================= -->
+    <!-- System -->
 
     <section id="system" class="section">
 
       <h2>System</h2>
 
       <p class="section-intro">
-
         CyFI integrates sensing, onboard computation, actuated steering and
         braking, rider input, and multimodal feedback into a semi-autonomous
-        recumbent cycle.
-
-        The diagram below summarizes the hardware architecture and the major
-        sensing, computing, actuation, and rider-interface components.
-
+        recumbent cycle. The diagram below summarizes the hardware architecture
+        and major sensing, computing, actuation, and rider-interface components.
       </p>
 
-
       <figure class="figure-card">
-
         <img
           src="system-architecture.png"
-          alt="CyFI hardware architecture showing sensing, onboard computation, actuation, power, and rider-interface components">
+          alt="CyFI hardware architecture">
 
         <figcaption class="caption">
-
           <strong>System architecture.</strong>
-
           Hardware overview of CyFI, including onboard sensing and computation,
           power conversion, steering and braking actuation, rider controls,
           and audio output components.
-
         </figcaption>
-
       </figure>
 
     </section>
 
-
-    <!-- =========================================================
-         Study
-         ========================================================= -->
+    <!-- Study -->
 
     <section id="study" class="section">
 
       <h2>Study</h2>
 
       <p class="section-intro">
-
         CyFI emerged through a longitudinal and iterative co-design process,
         progressing from formative design activities to evaluations in
         increasingly realistic riding environments.
-
-        The timeline below summarizes this progression across design,
-        campus, community, and neighborhood riding scenarios.
-
       </p>
 
-
       <figure class="figure-card">
-
         <img
           src="study-timeline-cropped-pad30.png"
-          alt="Timeline showing the formative and evaluation progression of the CyFI project">
+          alt="Timeline showing the formative and evaluation progression of CyFI">
 
         <figcaption class="caption">
-
           <strong>Study progression timeline.</strong>
-
           Overview of the formative and evaluation process across design
           activities, campus tests, community settings, and neighborhood
           riding scenarios.
-
         </figcaption>
-
       </figure>
 
+      <!-- Rider gallery -->
+
+      <h3>Selected Riding Scenarios</h3>
+
+      <p class="section-intro">
+        Representative study scenes illustrating CyFI operation across
+        different riders, environments, and riding conditions.
+      </p>
+
+      <div class="gallery-grid">
+
+        <figure class="gallery-card">
+          <img
+            src="rider-07.png"
+            alt="Participant operating CyFI in a low-light riding scenario">
+          <figcaption class="gallery-caption">
+            Low-light evaluation scenario.
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img
+            src="rider-08.png"
+            alt="Rear-view of participant riding CyFI with onboard equipment visible">
+          <figcaption class="gallery-caption">
+            Participant riding with the onboard sensing and compute platform visible.
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img
+            src="rider-10.png"
+            alt="Rear-view of CyFI during an outdoor riding evaluation">
+          <figcaption class="gallery-caption">
+            Outdoor riding scenario with full rear-mounted instrumentation.
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card">
+          <img
+            src="rider-12.png"
+            alt="Participant operating CyFI during an outdoor evaluation">
+          <figcaption class="gallery-caption">
+            Representative outdoor evaluation scenario.
+          </figcaption>
+        </figure>
+
+      </div>
 
       <div class="placeholder">
-
         <strong>Participant table</strong>
-
-        The anonymized participant table will be added here after the final
-        paper version and anonymity review are complete.
-
+        The anonymized participant table will be added here after final
+        paper synchronization and anonymity review.
       </div>
-
-
-      <div class="placeholder">
-
-        <strong>Selected riding scenarios</strong>
-
-        Representative participant images from study sessions will be added
-        here after final selection and anonymity review.
-
-      </div>
-
 
       <div class="quote-block">
-
         <p>
           <strong>Participant quote placeholder.</strong><br>
           Selected anonymized participant feedback will be added here.
         </p>
-
       </div>
 
     </section>
 
-
-    <!-- =========================================================
-         Evaluation
-         ========================================================= -->
+    <!-- Evaluation -->
 
     <section id="evaluation" class="section">
 
       <h2>Evaluation</h2>
 
       <p class="section-intro">
-
         Quantitative and qualitative evaluation examines rider interaction,
         system behavior, participant experience, and real-world operation.
-
         Final plots and quantitative results will be synchronized with the
         submission-ready manuscript.
-
       </p>
 
-
       <div class="placeholder">
-
         <strong>Participant-level system performance</strong>
-
-        Add the final participant-level quantitative figure here after the
-        analysis and figure values are finalized.
-
+        Add the final participant-level quantitative figure here after
+        analysis values are finalized.
       </div>
 
-
       <div class="placeholder">
-
         <strong>Participant experience</strong>
-
         Add the final safety, trust, usability, or related participant-level
         results here.
-
       </div>
 
-
       <div class="placeholder">
-
         <strong>Neighborhood evaluation</strong>
-
         Add representative results or supporting evidence from the sustained
         neighborhood ride here.
-
       </div>
 
     </section>
 
-
-    <!-- =========================================================
-         Additional Analysis
-         ========================================================= -->
+    <!-- Additional Analysis -->
 
     <section id="analysis" class="section">
 
       <h2>Additional Analysis & Ablations</h2>
 
       <p class="section-intro">
-
         This section provides supplementary analyses, implementation details,
         and ablations that complement the main paper.
-
       </p>
 
-
       <ul class="list">
-
         <li>Additional quantitative results and ablations</li>
-
         <li>System behavior under different operating conditions</li>
-
         <li>Supplementary implementation and design details</li>
-
         <li>Additional participant-level analysis</li>
-
       </ul>
 
-
       <div class="placeholder">
-
         <strong>Supplementary analysis</strong>
-
         Additional plots, tables, and ablations will be added here.
-
       </div>
 
     </section>
 
-
-    <!-- =========================================================
-         Videos
-         ========================================================= -->
+    <!-- Videos -->
 
     <section id="videos" class="section">
 
       <h2>Videos</h2>
 
       <p class="section-intro">
-
         Representative study clips will illustrate CyFI operating across
         diverse riders, environments, roadway conditions, and autonomy
         interactions.
-
       </p>
 
-
       <div class="placeholder">
-
         <strong>Study videos</strong>
-
         Selected anonymized videos will be embedded here after final review.
-
       </div>
 
     </section>
 
-
-    <!-- =========================================================
-         Paper
-         ========================================================= -->
+    <!-- Paper -->
 
     <section id="paper" class="section">
 
       <h2>Paper</h2>
 
       <p class="section-intro">
-
         The anonymous manuscript will be linked here once the
         submission-ready version is finalized.
-
       </p>
 
-
       <div class="placeholder">
-
         <strong>
           CyFI: Semiautonomous Cycling for Blind and Low-Vision Riders
         </strong>
 
         Anonymous Authors<br>
         Under Review
-
       </div>
-
 
       <h2 style="font-size: 30px; margin-top: 40px;">
         BibTeX
       </h2>
-
 
       <div class="bibtex">@misc{anonymous2026cyfi,
   title  = {CyFI: Semiautonomous Cycling for Blind and Low-Vision Riders},
@@ -789,11 +660,6 @@
 }</div>
 
     </section>
-
-
-    <!-- =========================================================
-         Footer
-         ========================================================= -->
 
     <footer class="footer">
       Anonymous research project website.

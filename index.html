@@ -83,7 +83,6 @@
       flex-wrap: wrap;
       gap: 20px;
       justify-content: flex-end;
-
       font-size: 14px;
     }
 
@@ -98,7 +97,7 @@
     }
 
     /* =========================================================
-       Main layout
+       Layout
        ========================================================= */
 
     .container {
@@ -110,13 +109,11 @@
     .section {
       padding: 54px 0 8px;
       margin-top: 42px;
-
       border-top: 1px solid var(--line);
     }
 
     .section h2 {
       margin: 0 0 14px;
-
       font-size: 42px;
       line-height: 1.15;
       font-weight: 800;
@@ -124,7 +121,6 @@
 
     .section h3 {
       margin: 34px 0 12px;
-
       font-size: 26px;
       line-height: 1.25;
     }
@@ -132,7 +128,6 @@
     .section-intro {
       max-width: 920px;
       margin: 0 0 26px;
-
       font-size: 18px;
       color: var(--muted);
     }
@@ -165,14 +160,13 @@
     }
 
     /* =========================================================
-       Overview cards
+       Overview
        ========================================================= */
 
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
-
       margin-top: 18px;
     }
 
@@ -187,19 +181,17 @@
 
     .card h3 {
       margin: 0 0 10px;
-
       font-size: 23px;
     }
 
     .card p {
       margin: 0;
-
       color: var(--muted);
       font-size: 16px;
     }
 
     /* =========================================================
-       Study timeline
+       Study figure
        ========================================================= */
 
     .figure-card {
@@ -215,10 +207,8 @@
 
     .figure-card img {
       display: block;
-
       width: 100%;
       height: auto;
-
       background: #ffffff;
     }
 
@@ -240,7 +230,6 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
-
       margin-top: 18px;
     }
 
@@ -262,6 +251,7 @@
       height: 350px;
 
       object-fit: cover;
+      object-position: center;
       background: #ffffff;
     }
 
@@ -300,9 +290,8 @@
 
     .video-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 22px;
-
       margin-top: 22px;
     }
 
@@ -321,7 +310,8 @@
       display: block;
 
       width: 100%;
-      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
 
       background: #000000;
     }
@@ -336,7 +326,10 @@
     }
 
     .video-caption strong {
+      display: block;
+      margin-bottom: 5px;
       color: var(--text);
+      font-size: 16px;
     }
 
     /* =========================================================
@@ -371,7 +364,7 @@
     }
 
     /* =========================================================
-       Mobile
+       Responsive
        ========================================================= */
 
     @media (max-width: 900px) {
@@ -386,7 +379,8 @@
       }
 
       .grid-3,
-      .gallery-grid {
+      .gallery-grid,
+      .video-grid {
         grid-template-columns: 1fr;
       }
 
@@ -641,9 +635,9 @@
 
       <p class="section-intro">
 
-        The evaluation examines rider experience, rider-system interaction,
-        autonomous steering behavior, safety-related events, and sustained
-        operation in realistic cycling environments.
+        CyFI was evaluated across progressively more realistic riding
+        conditions, including structured riding courses, community settings,
+        and sustained neighborhood operation.
 
       </p>
 
@@ -652,10 +646,10 @@
 
         <strong>Real-world operation.</strong>
 
-        CyFI was evaluated across progressively more realistic riding scenarios,
-        including structured courses, community environments, and sustained
-        neighborhood riding involving intersections, vehicles, stop signs,
-        and changing roadway geometry.
+        Evaluation scenarios included continuous riding, turns, intersections,
+        interactions with roadway infrastructure and vehicles, and changing
+        roadway geometry. These settings expose challenges associated with
+        deploying semi-autonomous navigation in realistic cycling environments.
 
       </div>
 
@@ -672,13 +666,15 @@
 
       <p class="section-intro">
 
-        Representative study videos illustrate CyFI operating during real
-        riding sessions and capture rider interaction and feedback.
+        Representative clips illustrate CyFI during both sustained
+        neighborhood operation and participant evaluation sessions.
 
       </p>
 
 
       <div class="video-grid">
+
+        <!-- Dan long-route video -->
 
         <figure class="video-card">
 
@@ -688,7 +684,7 @@
             playsinline>
 
             <source
-              src="cyfi-participant-interaction-feedback.mp4"
+              src="Dan_long-route_clip.mp4"
               type="video/mp4">
 
             Your browser does not support HTML5 video.
@@ -698,11 +694,40 @@
 
           <figcaption class="video-caption">
 
-            <strong>Georgia participant interaction and feedback.</strong>
+            <strong>Long-Route Evaluation</strong>
 
-            Representative riding session showing CyFI operating during an
-            evaluation together with real-time participant interaction and
-            verbal feedback.
+            Representative clip from a sustained real-world riding route,
+            illustrating CyFI operation in a less constrained environment.
+
+          </figcaption>
+
+        </figure>
+
+
+        <!-- Georgia video -->
+
+        <figure class="video-card">
+
+          <video
+            controls
+            preload="metadata"
+            playsinline>
+
+            <source
+              src="Georgia_clip.mp4"
+              type="video/mp4">
+
+            Your browser does not support HTML5 video.
+
+          </video>
+
+
+          <figcaption class="video-caption">
+
+            <strong>Georgia Participant Evaluation</strong>
+
+            Representative participant riding session demonstrating CyFI
+            operation during an outdoor evaluation.
 
           </figcaption>
 
@@ -725,10 +750,8 @@
 
       <p class="section-intro">
 
-        Beyond the main paper, we provide participant-level analyses of riding
-        behavior, rider-system interaction, and safety-related events, together
-        with the definitions and quality-control procedures used to compute
-        these metrics.
+        Beyond the main paper, supplementary analyses examine participant-level
+        riding behavior, rider-system interaction, and safety-related events.
 
       </p>
 

@@ -36,27 +36,12 @@
       line-height: 1.65;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* =========================================================
-       Navigation
-       ========================================================= */
-
     .topbar {
       position: sticky;
       top: 0;
       z-index: 1000;
-
       background: rgba(247, 247, 247, 0.95);
       backdrop-filter: blur(10px);
-
       border-bottom: 1px solid var(--line);
     }
 
@@ -64,7 +49,6 @@
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 12px 20px;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -75,7 +59,6 @@
       font-size: 24px;
       font-weight: 700;
       color: var(--text);
-      white-space: nowrap;
     }
 
     .nav {
@@ -89,16 +72,12 @@
     .nav a {
       color: var(--muted);
       font-weight: 600;
+      text-decoration: none;
     }
 
     .nav a:hover {
       color: var(--accent);
-      text-decoration: none;
     }
-
-    /* =========================================================
-       Layout
-       ========================================================= */
 
     .container {
       max-width: var(--maxw);
@@ -128,14 +107,9 @@
     .section-intro {
       max-width: 920px;
       margin: 0 0 26px;
-
       font-size: 18px;
       color: var(--muted);
     }
-
-    /* =========================================================
-       Hero
-       ========================================================= */
 
     .hero {
       text-align: center;
@@ -145,7 +119,6 @@
     .hero h1 {
       max-width: 1000px;
       margin: 0 auto;
-
       font-size: clamp(40px, 5vw, 64px);
       line-height: 1.08;
       font-weight: 800;
@@ -155,14 +128,9 @@
     .hero-description {
       max-width: 850px;
       margin: 24px auto 0;
-
       font-size: 20px;
       color: var(--muted);
     }
-
-    /* =========================================================
-       Overview
-       ========================================================= */
 
     .grid-3 {
       display: grid;
@@ -173,7 +141,6 @@
 
     .card {
       padding: 22px;
-
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -191,14 +158,11 @@
       font-size: 16px;
     }
 
-    /* =========================================================
-       Participant table
-       ========================================================= */
+    /* Participant tables */
 
     .table-wrapper {
-      margin: 24px 0 42px;
+      margin: 20px 0 42px;
       overflow-x: auto;
-
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -208,7 +172,6 @@
     .participant-table {
       width: 100%;
       min-width: 900px;
-
       border-collapse: collapse;
       font-size: 14px;
     }
@@ -216,11 +179,9 @@
     .participant-table caption {
       padding: 18px 20px;
       text-align: left;
-
       font-size: 16px;
       font-weight: 700;
       color: var(--text);
-
       border-bottom: 1px solid var(--line);
     }
 
@@ -228,14 +189,12 @@
     .participant-table td {
       padding: 9px 12px;
       text-align: left;
-
       border-bottom: 1px solid #e5e7eb;
       white-space: nowrap;
     }
 
     .participant-table th {
       background: #f3f4f6;
-      color: var(--text);
       font-weight: 700;
     }
 
@@ -246,17 +205,12 @@
     .participant-table .site-row td {
       padding-top: 14px;
       padding-bottom: 10px;
-
       background: #ffffff;
-      color: var(--text);
       font-weight: 700;
-
       border-top: 2px solid var(--line);
     }
 
-    /* =========================================================
-       Riding gallery
-       ========================================================= */
+    /* Gallery */
 
     .gallery-grid {
       display: grid;
@@ -267,48 +221,37 @@
 
     .gallery-card {
       margin: 0;
-
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-
       overflow: hidden;
     }
 
     .gallery-card img {
       display: block;
-
       width: 100%;
       height: 350px;
-
       object-fit: cover;
       object-position: center;
-
-      background: #ffffff;
     }
 
     .gallery-caption {
       padding: 12px 15px 15px;
-
       font-size: 14px;
       color: var(--muted);
     }
 
-    /* =========================================================
-       Evaluation
-       ========================================================= */
+    /* Evaluation */
 
     .evaluation-card {
       margin-top: 18px;
       padding: 24px;
-
       background: var(--surface);
       border: 1px solid var(--line);
       border-left: 5px solid var(--accent);
       border-radius: 14px;
       box-shadow: var(--shadow);
-
       color: var(--muted);
       font-size: 17px;
     }
@@ -317,9 +260,7 @@
       color: var(--text);
     }
 
-    /* =========================================================
-       Videos
-       ========================================================= */
+    /* Videos */
 
     .video-grid {
       display: grid;
@@ -330,28 +271,23 @@
 
     .video-card {
       margin: 0;
-
       background: #000000;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-
       overflow: hidden;
     }
 
     .video-card video {
       display: block;
-
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: contain;
-
       background: #000000;
     }
 
     .video-caption {
       padding: 16px 18px 18px;
-
       background: var(--surface);
       color: var(--muted);
       font-size: 15px;
@@ -360,29 +296,18 @@
     .video-caption strong {
       display: block;
       margin-bottom: 5px;
-
       color: var(--text);
       font-size: 16px;
     }
 
-    /* =========================================================
-       Footer
-       ========================================================= */
-
     .footer {
       margin-top: 60px;
       padding-top: 22px;
-
       border-top: 1px solid var(--line);
-
       text-align: center;
       color: var(--muted);
       font-size: 14px;
     }
-
-    /* =========================================================
-       Responsive
-       ========================================================= */
 
     @media (max-width: 900px) {
 
@@ -405,10 +330,6 @@
         height: auto;
       }
 
-      .hero {
-        padding-top: 40px;
-      }
-
       .hero h1 {
         font-size: 42px;
       }
@@ -422,10 +343,6 @@
 
 
 <body>
-
-  <!-- =========================================================
-       Navigation
-       ========================================================= -->
 
   <header class="topbar">
 
@@ -449,9 +366,7 @@
 
   <main class="container">
 
-    <!-- =========================================================
-         Hero
-         ========================================================= -->
+    <!-- HERO -->
 
     <section class="hero">
 
@@ -460,73 +375,55 @@
       </h1>
 
       <p class="hero-description">
-
         CyFI is a semi-autonomous, human-powered recumbent tricycle designed
         to support blind and low-vision riders through shared autonomy,
         multimodal feedback, and real-world cycling evaluation.
-
       </p>
 
     </section>
 
 
-    <!-- =========================================================
-         Overview
-         ========================================================= -->
+    <!-- OVERVIEW -->
 
     <section id="overview" class="section">
 
       <h2>Overview</h2>
 
       <p class="section-intro">
-
         Cycling provides transportation, exercise, recreation, and independent
         exploration, but visually demanding tasks such as steering and obstacle
-        avoidance can limit access for blind and low-vision riders.
-
-        CyFI explores how shared autonomy can support these tasks while
-        preserving rider propulsion, agency, and active participation.
-
+        avoidance can limit access for blind and low-vision riders. CyFI explores
+        how shared autonomy can support these tasks while preserving rider
+        propulsion, agency, and active participation.
       </p>
 
 
       <div class="grid-3">
 
         <div class="card">
-
           <h3>Shared Autonomy</h3>
-
           <p>
             The rider provides propulsion and retains manual braking while
             CyFI can autonomously steer and initiate safety braking.
           </p>
-
         </div>
 
-
         <div class="card">
-
           <h3>Multimodal Feedback</h3>
-
           <p>
             Audio and vibrotactile feedback communicate upcoming autonomous
             actions, while riders can request spoken descriptions of their
             surroundings.
           </p>
-
         </div>
 
-
         <div class="card">
-
           <h3>Real-World Evaluation</h3>
-
           <p>
             CyFI was developed through longitudinal co-design and iterative
             evaluations with blind and low-vision riders across increasingly
             realistic cycling environments.
           </p>
-
         </div>
 
       </div>
@@ -534,48 +431,31 @@
     </section>
 
 
-    <!-- =========================================================
-         Study
-         ========================================================= -->
+    <!-- STUDY -->
 
     <section id="study" class="section">
 
       <h2>Study</h2>
 
       <p class="section-intro">
-
-        CyFI emerged through a longitudinal and iterative co-design process,
-        progressing from formative design activities to evaluations in
-        increasingly realistic riding environments.
-
+        Participant characteristics are reported separately for the formative
+        studies and subsequent evaluation studies.
       </p>
 
 
-      <!-- Participant Characteristics -->
+      <!-- FORMATIVE PARTICIPANTS -->
 
-      <h3>
-        Participant Characteristics
-      </h3>
-
-      <p class="section-intro">
-
-        Participant demographics, blindness, prior cycling experience, and
-        self-reported physical activity across the two study sites.
-
-      </p>
-
+      <h3>Formative Study Participants</h3>
 
       <div class="table-wrapper">
 
         <table class="participant-table">
 
           <caption>
-            Participant characteristics across the Community Convention and
-            Community Organization study sites.
+            Participant demographics in formative studies.
           </caption>
 
           <thead>
-
             <tr>
               <th>ID</th>
               <th>Age</th>
@@ -586,16 +466,70 @@
               <th>Physical Activity</th>
               <th>Days / week</th>
             </tr>
-
           </thead>
-
 
           <tbody>
 
             <tr class="site-row">
-              <td colspan="8">
-                Site 1: Community Convention (n = 20)
-              </td>
+              <td colspan="8">Site 1: Campus (n = 9)</td>
+            </tr>
+
+            <tr><td>P26</td><td>64</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+            <tr><td>P27</td><td>26</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
+            <tr><td>P28</td><td>29</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+            <tr><td>P29</td><td>52</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+            <tr><td>P30</td><td>64</td><td>Woman</td><td>White</td><td>Legally blind</td><td>Yes</td><td>High</td><td>1–2</td></tr>
+            <tr><td>P31</td><td>52</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
+            <tr><td>P32</td><td>36</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+            <tr><td>P33</td><td>73</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+            <tr><td>P34</td><td>63</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
+
+            <tr class="site-row">
+              <td colspan="8">Site 2: Community Organization (n = 5)</td>
+            </tr>
+
+            <tr><td>P35</td><td>67</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+            <tr><td>P36</td><td>64</td><td>Man</td><td>Hispanic</td><td>Legally blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+            <tr><td>P37</td><td>63</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+            <tr><td>P38</td><td>52</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
+            <tr><td>P39</td><td>21</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+
+      <!-- EVALUATION PARTICIPANTS -->
+
+      <h3>Evaluation Participants</h3>
+
+      <div class="table-wrapper">
+
+        <table class="participant-table">
+
+          <caption>
+            Participant characteristics in evaluation studies.
+          </caption>
+
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Race / Ethnicity</th>
+              <th>Blindness</th>
+              <th>Prior Cycling</th>
+              <th>Physical Activity</th>
+              <th>Days / week</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr class="site-row">
+              <td colspan="8">Site 1: Community Convention (n = 20)</td>
             </tr>
 
             <tr><td>P1</td><td>78</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
@@ -620,9 +554,7 @@
             <tr><td>P20</td><td>65</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>None</td><td>1–2</td></tr>
 
             <tr class="site-row">
-              <td colspan="8">
-                Site 2: Community Organization (n = 5)
-              </td>
+              <td colspan="8">Site 2: Community Organization (n = 5)</td>
             </tr>
 
             <tr><td>P21</td><td>19</td><td>Woman</td><td>White</td><td>Blind</td><td>–</td><td>High</td><td>1–2</td></tr>
@@ -638,74 +570,48 @@
       </div>
 
 
-      <!-- =====================================================
-           Selected Riding Scenarios
-           ===================================================== -->
+      <!-- RIDING SCENARIOS -->
 
-      <h3>
-        Selected Riding Scenarios
-      </h3>
+      <h3>Selected Riding Scenarios</h3>
 
       <p class="section-intro">
-
         Representative study scenes illustrate CyFI operation across different
-        riders, environments, lighting conditions, and real-world evaluation
-        scenarios.
-
+        riders and real-world evaluation scenarios.
       </p>
 
 
       <div class="gallery-grid">
 
         <figure class="gallery-card">
-
-          <img
-            src="rider-07.png"
-            alt="Participant operating CyFI during a low-light riding evaluation">
-
+          <img src="rider-07.png"
+               alt="Participant operating CyFI during an outdoor evaluation">
           <figcaption class="gallery-caption">
-            Low-light riding evaluation.
+            Representative outdoor riding evaluation.
           </figcaption>
-
         </figure>
 
-
         <figure class="gallery-card">
-
-          <img
-            src="rider-08.png"
-            alt="Participant riding CyFI during an outdoor evaluation">
-
+          <img src="rider-08.png"
+               alt="Participant riding CyFI during an outdoor evaluation">
           <figcaption class="gallery-caption">
             Representative outdoor riding session.
           </figcaption>
-
         </figure>
 
-
         <figure class="gallery-card">
-
-          <img
-            src="rider-10.png"
-            alt="Participant riding CyFI during an outdoor evaluation">
-
+          <img src="rider-10.png"
+               alt="Participant riding CyFI during an outdoor evaluation">
           <figcaption class="gallery-caption">
             Outdoor riding evaluation.
           </figcaption>
-
         </figure>
 
-
         <figure class="gallery-card">
-
-          <img
-            src="rider-12.png"
-            alt="Participant operating CyFI during an outdoor evaluation">
-
+          <img src="rider-12.png"
+               alt="Participant operating CyFI during an outdoor evaluation">
           <figcaption class="gallery-caption">
             Representative outdoor evaluation scenario.
           </figcaption>
-
         </figure>
 
       </div>
@@ -713,22 +619,17 @@
     </section>
 
 
-    <!-- =========================================================
-         Evaluation
-         ========================================================= -->
+    <!-- EVALUATION -->
 
     <section id="evaluation" class="section">
 
       <h2>Evaluation</h2>
 
       <p class="section-intro">
-
         CyFI was evaluated across progressively more realistic riding
         conditions, including structured riding courses, community settings,
         and sustained neighborhood operation.
-
       </p>
-
 
       <div class="evaluation-card">
 
@@ -736,87 +637,51 @@
 
         Evaluation scenarios included continuous riding, turns, intersections,
         interactions with roadway infrastructure and vehicles, and changing
-        roadway geometry. These settings expose challenges associated with
-        deploying semi-autonomous navigation in realistic cycling environments.
+        roadway geometry.
 
       </div>
 
     </section>
 
 
-    <!-- =========================================================
-         Videos
-         ========================================================= -->
+    <!-- VIDEOS -->
 
     <section id="videos" class="section">
 
       <h2>Videos</h2>
 
       <p class="section-intro">
-
-        Representative clips illustrate CyFI during both sustained
-        neighborhood operation and participant evaluation sessions.
-
+        Representative clips illustrate CyFI during sustained real-world riding
+        and participant evaluation sessions.
       </p>
-
 
       <div class="video-grid">
 
-        <!-- Long-route video -->
-
         <figure class="video-card">
 
-          <video
-            controls
-            preload="metadata"
-            playsinline>
-
-            <source
-              src="Dan_long-route_clip.mp4"
-              type="video/mp4">
-
+          <video controls preload="metadata" playsinline>
+            <source src="Dan_long-route_clip.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
-
           </video>
 
-
           <figcaption class="video-caption">
-
             <strong>Long-Route Evaluation</strong>
-
-            Representative clip from a sustained real-world riding route,
-            illustrating CyFI operation in a less constrained environment.
-
+            Representative clip from a sustained real-world riding route.
           </figcaption>
 
         </figure>
 
 
-        <!-- Georgia video -->
-
         <figure class="video-card">
 
-          <video
-            controls
-            preload="metadata"
-            playsinline>
-
-            <source
-              src="Georgia_clip.mp4"
-              type="video/mp4">
-
+          <video controls preload="metadata" playsinline>
+            <source src="Georgia_clip.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
-
           </video>
 
-
           <figcaption class="video-caption">
-
-            <strong>Georgia Participant Evaluation</strong>
-
-            Representative participant riding session demonstrating CyFI
-            operation during an outdoor evaluation.
-
+            <strong>Participant Evaluation</strong>
+            Representative participant riding session during an outdoor evaluation.
           </figcaption>
 
         </figure>
@@ -826,14 +691,9 @@
     </section>
 
 
-    <!-- =========================================================
-         Footer
-         ========================================================= -->
-
     <footer class="footer">
       CyFI supplementary project website.
     </footer>
-
 
   </main>
 

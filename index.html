@@ -117,22 +117,20 @@
     .nav-brand img {
       width: 34px;
       height: 34px;
+
       object-fit: contain;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 19px;
+
+      gap: 22px;
 
       color: var(--text-soft);
 
-      font-size: 0.83rem;
+      font-size: 0.84rem;
       font-weight: 600;
-    }
-
-    .nav-links a {
-      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
@@ -213,13 +211,14 @@
 
       border: 1px solid var(--border);
 
-      box-shadow: var(--shadow);
-
       background: #eee;
+
+      box-shadow: var(--shadow);
     }
 
     .hero-image img {
       width: 100%;
+
       aspect-ratio: 16 / 9;
 
       object-fit: cover;
@@ -334,9 +333,6 @@
       background: white;
 
       border: 1px solid var(--border);
-
-      box-shadow:
-        0 6px 18px rgba(24, 39, 58, 0.025);
     }
 
     .feature-number {
@@ -351,7 +347,6 @@
       border-radius: 50%;
 
       background: var(--blue-soft);
-
       color: var(--navy);
 
       font-weight: 800;
@@ -369,6 +364,65 @@
       color: var(--text-soft);
 
       font-size: 0.92rem;
+    }
+
+
+    /* ==========================
+       PROMPT BOX
+    ========================== */
+
+    .prompt-box {
+      margin-top: 30px;
+
+      padding: 28px 30px;
+
+      border-radius: var(--radius-md);
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #f4f8fc 100%
+        );
+
+      border: 1px solid #cfddec;
+
+      box-shadow:
+        0 8px 24px rgba(24, 39, 58, 0.045);
+    }
+
+    .prompt-box-header {
+      margin-bottom: 18px;
+    }
+
+    .prompt-box-header h3 {
+      margin: 0;
+
+      color: var(--navy);
+
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .prompt-box-header p {
+      margin: 5px 0 0;
+
+      color: var(--text-soft);
+
+      font-size: 0.86rem;
+    }
+
+    .prompt-text {
+      margin: 0;
+
+      padding-left: 20px;
+
+      border-left: 4px solid var(--blue);
+
+      color: #2c3948;
+
+      font-size: 0.98rem;
+      line-height: 1.8;
     }
 
 
@@ -403,11 +457,13 @@
 
     .media-card img {
       aspect-ratio: 4 / 3;
+
       object-fit: cover;
     }
 
     .media-card video {
       aspect-ratio: 16 / 9;
+
       object-fit: cover;
 
       background: #111;
@@ -460,6 +516,7 @@
 
     .gallery-card img {
       aspect-ratio: 16 / 10;
+
       object-fit: cover;
 
       transition: transform 0.3s ease;
@@ -541,7 +598,7 @@
 
 
     /* ==========================
-       TABLES
+       TABLE
     ========================== */
 
     .table-wrapper {
@@ -598,146 +655,6 @@
 
 
     /* ==========================
-       PROMPT BOX
-    ========================== */
-
-    .prompt-box {
-      margin-top: 40px;
-
-      overflow: hidden;
-
-      border-radius: var(--radius-lg);
-
-      border: 1px solid #cfddec;
-
-      background:
-        linear-gradient(
-          145deg,
-          #ffffff,
-          #f3f8fc
-        );
-
-      box-shadow:
-        0 12px 32px rgba(24, 39, 58, 0.07);
-    }
-
-    .prompt-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 20px;
-
-      padding: 22px 26px;
-
-      border-bottom: 1px solid var(--border);
-    }
-
-    .prompt-header-left {
-      display: flex;
-      align-items: center;
-
-      gap: 14px;
-    }
-
-    .prompt-icon {
-      width: 44px;
-      height: 44px;
-
-      display: grid;
-      place-items: center;
-
-      border-radius: 13px;
-
-      background: var(--navy);
-      color: white;
-
-      font-size: 0.92rem;
-      font-weight: 800;
-
-      box-shadow:
-        0 5px 14px rgba(18, 62, 112, 0.18);
-    }
-
-    .prompt-header h3 {
-      margin: 0;
-
-      font-size: 1.2rem;
-      letter-spacing: -0.025em;
-    }
-
-    .prompt-header p {
-      margin: 4px 0 0;
-
-      color: var(--text-soft);
-
-      font-size: 0.84rem;
-    }
-
-    .prompt-trigger {
-      flex-shrink: 0;
-
-      padding: 7px 12px;
-
-      border-radius: 999px;
-
-      background: var(--blue-soft);
-      color: var(--navy);
-
-      font-size: 0.76rem;
-      font-weight: 800;
-    }
-
-    .prompt-flow {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-
-      gap: 8px;
-
-      margin-bottom: 22px;
-    }
-
-    .prompt-flow-item {
-      padding: 6px 10px;
-
-      border-radius: 999px;
-
-      background: #ffffff;
-
-      border: 1px solid var(--border);
-
-      color: var(--navy);
-
-      font-size: 0.75rem;
-      font-weight: 700;
-    }
-
-    .prompt-flow-arrow {
-      color: var(--blue);
-
-      font-weight: 800;
-    }
-
-    .prompt-content {
-      padding: 28px 30px 30px;
-    }
-
-    .prompt-content blockquote {
-      margin: 0;
-
-      padding-left: 22px;
-
-      border-left: 4px solid var(--blue);
-
-      color: #29384a;
-
-      font-size: 1rem;
-      line-height: 1.8;
-    }
-
-
-    /* ==========================
        EVALUATION
     ========================== */
 
@@ -779,7 +696,7 @@
 
 
     /* ==========================
-       FEATURED VIDEOS
+       FEATURED VIDEO
     ========================== */
 
     .featured-video {
@@ -868,8 +785,7 @@
     footer {
       padding: 32px 0 42px;
 
-      border-top:
-        1px solid var(--border);
+      border-top: 1px solid var(--border);
 
       color: var(--text-soft);
 
@@ -956,21 +872,16 @@
         padding: 28px 24px;
       }
 
+      .prompt-box {
+        padding: 24px 22px;
+      }
+
       .study-box {
         padding: 18px;
       }
 
       .study-box-header {
         flex-direction: column;
-      }
-
-      .prompt-header {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .prompt-content {
-        padding: 22px;
       }
 
       .featured-video-content {
@@ -1017,7 +928,6 @@
       <a href="#prototype">Prototype</a>
       <a href="#simulation">Simulation</a>
       <a href="#study">Participants</a>
-      <a href="#feedback">Feedback</a>
       <a href="#evaluation">Evaluation</a>
       <a href="#videos">Videos</a>
 
@@ -1099,7 +1009,7 @@
 
 
 <!-- ==========================
-     ABSTRACT
+     OVERVIEW / ABSTRACT
 ========================== -->
 
 <section
@@ -1128,6 +1038,7 @@
 
 
     <div class="feature-grid">
+
 
       <article class="feature-card">
 
@@ -1183,7 +1094,36 @@
 
       </article>
 
+
     </div>
+
+
+
+    <!-- ==========================
+         SCENE DESCRIPTION PROMPT
+    ========================== -->
+
+    <div class="prompt-box">
+
+      <div class="prompt-box-header">
+
+        <h3>
+          Scene Description Prompt
+        </h3>
+
+        <p>
+          Prompt for scene description audio feedback initiated via the handle button.
+        </p>
+
+      </div>
+
+
+      <p class="prompt-text">
+        You are describing the surrounding scene for a blind person riding an autonomous tricycle. Provide a concise description that helps the rider quickly understand the most important parts of the environment. Mention only the most relevant nearby objects and features, such as pedestrians, cyclists, vehicles, obstacles, roads, sidewalks, intersections, crossings, and entrances. Use clear relative positions such as “on the left,” “ahead,” and “on the right.” Mention distance only when it can be estimated reliably. Avoid unnecessary visual details and do not speculate about uncertain objects. Keep the description to 1–2 short sentences.
+      </p>
+
+    </div>
+
 
   </div>
 
@@ -1690,114 +1630,11 @@
 
 
 <!-- ==========================
-     MULTIMODAL FEEDBACK
-========================== -->
-
-<section
-  class="section"
-  id="feedback"
->
-
-  <div class="container">
-
-    <div class="section-label">
-      Multimodal Feedback
-    </div>
-
-    <h2>
-      On-demand scene description.
-    </h2>
-
-    <p class="section-intro">
-      Riders can initiate spoken scene descriptions through
-      a handle-mounted button.
-    </p>
-
-
-    <div class="prompt-box">
-
-
-      <div class="prompt-header">
-
-        <div class="prompt-header-left">
-
-          <div class="prompt-icon">
-            AI
-          </div>
-
-
-          <div>
-
-            <h3>
-              Scene Description Prompt
-            </h3>
-
-            <p>
-              Prompt for scene description audio feedback initiated via the handle button.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <span class="prompt-trigger">
-          Handle Button
-        </span>
-
-      </div>
-
-
-      <div class="prompt-content">
-
-
-        <div class="prompt-flow">
-
-          <span class="prompt-flow-item">
-            Handle Button
-          </span>
-
-          <span class="prompt-flow-arrow">
-            →
-          </span>
-
-          <span class="prompt-flow-item">
-            Scene Description
-          </span>
-
-          <span class="prompt-flow-arrow">
-            →
-          </span>
-
-          <span class="prompt-flow-item">
-            Audio Feedback
-          </span>
-
-        </div>
-
-
-        <blockquote>
-          You are describing the surrounding scene for a blind person riding an autonomous tricycle. Provide a concise description that helps the rider quickly understand the most important parts of the environment. Mention only the most relevant nearby objects and features, such as pedestrians, cyclists, vehicles, obstacles, roads, sidewalks, intersections, crossings, and entrances. Use clear relative positions such as “on the left,” “ahead,” and “on the right.” Mention distance only when it can be estimated reliably. Avoid unnecessary visual details and do not speculate about uncertain objects. Keep the description to 1–2 short sentences.
-        </blockquote>
-
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- ==========================
      EVALUATION
 ========================== -->
 
 <section
-  class="section section-soft"
+  class="section"
   id="evaluation"
 >
 
@@ -1979,11 +1816,11 @@
 
 
 <!-- ==========================
-     SHORT VIDEOS
+     VIDEOS
 ========================== -->
 
 <section
-  class="section"
+  class="section section-soft"
   id="videos"
 >
 

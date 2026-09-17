@@ -1348,9 +1348,7 @@
 <main id="top">
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -1362,30 +1360,22 @@
       class="project-logo"
     />
 
-
     <h1>
       CyFI: Semiautonomous Cycling
       for Blind and Low-Vision Riders
     </h1>
 
-
     <p class="hero-subtitle">
-
       A human-centered shared-autonomy cycling platform supporting
       accessible outdoor mobility through autonomous steering,
       emergency braking, and multimodal rider feedback.
-
     </p>
 
-
     <div class="hero-tags">
-
       <span class="hero-tag">Shared Autonomy</span>
       <span class="hero-tag">Accessible Mobility</span>
       <span class="hero-tag">Real-World Cycling</span>
-
     </div>
-
 
     <figure class="hero-image">
 
@@ -1406,26 +1396,17 @@
 
 
 
-<!-- =========================================================
-     OVERVIEW
-========================================================= -->
+<!-- OVERVIEW -->
 
-<section
-  class="section section-soft"
-  id="overview"
->
+<section class="section section-soft" id="overview">
 
   <div class="container">
 
-    <div class="section-label">
-      Abstract
-    </div>
-
+    <div class="section-label">Abstract</div>
 
     <h2>
       Human-powered cycling with shared autonomy.
     </h2>
-
 
     <div class="abstract-box">
 
@@ -1498,21 +1479,13 @@
 
 
 
-<!-- =========================================================
-     SYSTEM DESIGN
-========================================================= -->
+<!-- SYSTEM DESIGN -->
 
-<section
-  class="section"
-  id="system"
->
+<section class="section" id="system">
 
   <div class="container">
 
-    <div class="section-label">
-      System Design
-    </div>
-
+    <div class="section-label">System Design</div>
 
     <h2>
       From early prototypes to an integrated shared-autonomy platform.
@@ -1522,7 +1495,6 @@
     <h3 class="subheading">
       Initial Prototype
     </h3>
-
 
     <p class="subtext">
       Early prototypes supported iterative development of the
@@ -1543,9 +1515,7 @@
 
         <figcaption class="media-caption">
 
-          <strong>
-            First-Generation Prototype
-          </strong>
+          <strong>First-Generation Prototype</strong>
 
           <span>
             Early physical platform used during formative development.
@@ -1566,9 +1536,7 @@
 
         <figcaption class="media-caption">
 
-          <strong>
-            First-Generation Prototype
-          </strong>
+          <strong>First-Generation Prototype</strong>
 
           <span>
             Rider-interface and cockpit configuration.
@@ -1597,7 +1565,6 @@
       Data Collection for Evaluation
     </h3>
 
-
     <p class="subtext">
       Instrumented sensing and logging setup used during
       real-world evaluation and bicycle-navigation dataset collection.
@@ -1615,7 +1582,6 @@
         />
 
       </div>
-
 
       <figcaption class="system-caption">
 
@@ -1640,7 +1606,6 @@
         Vibrotactile and Auditory Feedback Policy
       </summary>
 
-
       <div class="details-content">
 
         <p class="feedback-note">
@@ -1648,7 +1613,6 @@
           using directional vibrotactile feedback and auditory cues.
           A default 10 s cooldown follows vibration events.
         </p>
-
 
         <div class="table-wrapper">
 
@@ -1712,12 +1676,10 @@
 
 
       <div class="prompt-meta">
-
         <span>NVIDIA Cosmos Reason 2</span>
         <span>First sentence ≈ 0.9 s</span>
         <span>Speech onset ≈ 1 s</span>
         <span>Center OAK-D RGB input</span>
-
       </div>
 
 
@@ -1746,26 +1708,17 @@
 
 
 
-<!-- =========================================================
-     DATASET
-========================================================= -->
+<!-- DATASET -->
 
-<section
-  class="section section-soft"
-  id="dataset"
->
+<section class="section section-soft" id="dataset">
 
   <div class="container">
 
-    <div class="section-label">
-      Dataset Construction
-    </div>
-
+    <div class="section-label">Dataset Construction</div>
 
     <h2>
       Synchronized observations and future-trajectory supervision.
     </h2>
-
 
     <p class="section-intro">
       Real-world bicycle sensor streams are synchronized to construct
@@ -1809,13 +1762,11 @@
           Sensor Synchronization
         </div>
 
-
         <p>
           For model ablations, we record sensor streams to obtain
           synchronized RGB observations and frame-level trajectory
           labels from high-precision GNSS/IMU.
         </p>
-
 
         <p>
           RTK-fixed solutions provide centimeter-level position
@@ -1824,7 +1775,6 @@
           dense frame-level positions are obtained by integrating
           velocity measurements.
         </p>
-
 
         <p>
           GNSS latitude, longitude, and height measurements are
@@ -1843,13 +1793,11 @@
           Future Trajectory Labels
         </div>
 
-
         <p>
           For each RGB frame at time <em>t</em>, an 8-waypoint
           future trajectory is sampled at 3 Hz following the
           OmniVLA setting.
         </p>
-
 
         <p>
           Let Δ<em>n</em> and Δ<em>e</em> denote future displacement
@@ -1904,26 +1852,17 @@
 
 
 
-<!-- =========================================================
-     MODEL
-========================================================= -->
+<!-- MODEL -->
 
-<section
-  class="section"
-  id="model"
->
+<section class="section" id="model">
 
   <div class="container">
 
-    <div class="section-label">
-      Model Development
-    </div>
-
+    <div class="section-label">Model Development</div>
 
     <h2>
       Bicycle navigation model evaluation in interactive simulation.
     </h2>
-
 
     <p class="section-intro">
       Navigation models are evaluated in closed-loop interactive
@@ -1955,28 +1894,13 @@
         <div class="model-metrics">
 
           <div class="model-metric">
-
-            <strong>
-              0.00%
-            </strong>
-
-            <span>
-              Success Rate
-            </span>
-
+            <strong>0.00%</strong>
+            <span>Success Rate</span>
           </div>
 
-
           <div class="model-metric">
-
-            <strong>
-              25.50%
-            </strong>
-
-            <span>
-              Route Completion
-            </span>
-
+            <strong>25.50%</strong>
+            <span>Route Completion</span>
           </div>
 
         </div>
@@ -2003,28 +1927,13 @@
         <div class="model-metrics">
 
           <div class="model-metric">
-
-            <strong>
-              66.67%
-            </strong>
-
-            <span>
-              Success Rate
-            </span>
-
+            <strong>66.67%</strong>
+            <span>Success Rate</span>
           </div>
 
-
           <div class="model-metric">
-
-            <strong>
-              71.05%
-            </strong>
-
-            <span>
-              Route Completion
-            </span>
-
+            <strong>71.05%</strong>
+            <span>Route Completion</span>
           </div>
 
         </div>
@@ -2053,11 +1962,7 @@
 
       <figure class="media-card">
 
-        <video
-          controls
-          preload="metadata"
-          playsinline
-        >
+        <video controls preload="metadata" playsinline>
 
           <source
             src="alpamayo.mp4"
@@ -2065,7 +1970,6 @@
           />
 
         </video>
-
 
         <figcaption class="media-caption">
 
@@ -2085,11 +1989,7 @@
 
       <figure class="media-card">
 
-        <video
-          controls
-          preload="metadata"
-          playsinline
-        >
+        <video controls preload="metadata" playsinline>
 
           <source
             src="omnivla_edge_FT.mp4"
@@ -2097,7 +1997,6 @@
           />
 
         </video>
-
 
         <figcaption class="media-caption">
 
@@ -2131,7 +2030,6 @@
           Open-Loop Trajectory Prediction
         </h3>
 
-
         <div class="table-wrapper">
 
           <table>
@@ -2149,40 +2047,11 @@
 
             <tbody>
 
-              <tr>
-                <td>Alpamayo 1.5</td>
-                <td>10B</td>
-                <td>1.62</td>
-                <td>3.86</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-Edge</td>
-                <td>50M</td>
-                <td>1.59</td>
-                <td>2.84</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA</td>
-                <td>7.5B</td>
-                <td>1.41</td>
-                <td>3.62</td>
-              </tr>
-
-              <tr>
-                <td>Modular Pipeline</td>
-                <td>5M</td>
-                <td>1.37</td>
-                <td>2.70</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-FT</td>
-                <td>7.5B</td>
-                <td>1.22</td>
-                <td>1.85</td>
-              </tr>
+              <tr><td>Alpamayo 1.5</td><td>10B</td><td>1.62</td><td>3.86</td></tr>
+              <tr><td>OmniVLA-Edge</td><td>50M</td><td>1.59</td><td>2.84</td></tr>
+              <tr><td>OmniVLA</td><td>7.5B</td><td>1.41</td><td>3.62</td></tr>
+              <tr><td>Modular Pipeline</td><td>5M</td><td>1.37</td><td>2.70</td></tr>
+              <tr><td>OmniVLA-FT</td><td>7.5B</td><td>1.22</td><td>1.85</td></tr>
 
               <tr class="primary-row">
                 <td>OmniVLA-Edge-FT</td>
@@ -2203,7 +2072,6 @@
           Closed-Loop Navigation
         </h3>
 
-
         <div class="table-wrapper">
 
           <table>
@@ -2221,47 +2089,12 @@
 
             <tbody>
 
-              <tr>
-                <td>Alpamayo 1.5</td>
-                <td>10B</td>
-                <td>0.00%</td>
-                <td>25.50%</td>
-              </tr>
-
-              <tr>
-                <td>NaVILA</td>
-                <td>8B</td>
-                <td>33.33%</td>
-                <td>64.14%</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-Edge</td>
-                <td>50M</td>
-                <td>11.10%</td>
-                <td>38.16%</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA</td>
-                <td>7.5B</td>
-                <td>33.33%</td>
-                <td>46.31%</td>
-              </tr>
-
-              <tr>
-                <td>Modular Pipeline</td>
-                <td>5M</td>
-                <td>55.56%</td>
-                <td>68.46%</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-FT</td>
-                <td>7.5B</td>
-                <td>66.67%</td>
-                <td>73.32%</td>
-              </tr>
+              <tr><td>Alpamayo 1.5</td><td>10B</td><td>0.00%</td><td>25.50%</td></tr>
+              <tr><td>NaVILA</td><td>8B</td><td>33.33%</td><td>64.14%</td></tr>
+              <tr><td>OmniVLA-Edge</td><td>50M</td><td>11.10%</td><td>38.16%</td></tr>
+              <tr><td>OmniVLA</td><td>7.5B</td><td>33.33%</td><td>46.31%</td></tr>
+              <tr><td>Modular Pipeline</td><td>5M</td><td>55.56%</td><td>68.46%</td></tr>
+              <tr><td>OmniVLA-FT</td><td>7.5B</td><td>66.67%</td><td>73.32%</td></tr>
 
               <tr class="primary-row">
                 <td>OmniVLA-Edge-FT</td>
@@ -2287,26 +2120,17 @@
 
 
 
-<!-- =========================================================
-     PARTICIPANTS
-========================================================= -->
+<!-- PARTICIPANTS -->
 
-<section
-  class="section section-soft"
-  id="participants"
->
+<section class="section section-soft" id="participants">
 
   <div class="container">
 
-    <div class="section-label">
-      Participants
-    </div>
-
+    <div class="section-label">Participants</div>
 
     <h2>
       Participant demographics.
     </h2>
-
 
     <p class="section-intro">
       CyFI was developed and evaluated with blind and low-vision
@@ -2331,7 +2155,6 @@
           </span>
 
         </span>
-
 
         <span class="study-count">
           n = 14
@@ -2421,7 +2244,6 @@
 
         </span>
 
-
         <span class="study-count">
           n = 25
         </span>
@@ -2510,14 +2332,9 @@
 
 
 
-<!-- =========================================================
-     REAL-WORLD EVALUATION
-========================================================= -->
+<!-- REAL-WORLD EVALUATION -->
 
-<section
-  class="section"
-  id="evaluation"
->
+<section class="section" id="evaluation">
 
   <div class="container">
 
@@ -2525,11 +2342,9 @@
       Real-World Evaluation
     </div>
 
-
     <h2>
       From participant sessions to sustained neighborhood riding.
     </h2>
-
 
     <p class="section-intro">
       All 25 final-evaluation participants completed their routes.
@@ -2587,7 +2402,6 @@
 
 
     <div class="compact-gallery">
-
 
       <figure>
 
@@ -2648,7 +2462,6 @@
 
       </figure>
 
-
     </div>
 
 
@@ -2658,11 +2471,7 @@
 
       <figure class="featured-video">
 
-        <video
-          controls
-          preload="metadata"
-          playsinline
-        >
+        <video controls preload="metadata" playsinline>
 
           <source
             src="CyFI_anonymized_web.mp4"
@@ -2678,25 +2487,20 @@
             Real-World Evaluation
           </div>
 
-
           <h3>
             Real-World Navigation Visualization
           </h3>
-
 
           <p>
             An anonymized forward-facing visualization of CyFI
             operating in a real roadway environment.
           </p>
 
-
           <div class="scenario-tags">
-
             <span class="scenario-tag">Intersections</span>
             <span class="scenario-tag">Vehicles</span>
             <span class="scenario-tag">Road Geometry</span>
             <span class="scenario-tag">Sustained Operation</span>
-
           </div>
 
         </figcaption>
@@ -2707,11 +2511,7 @@
 
       <figure class="featured-video">
 
-        <video
-          controls
-          preload="metadata"
-          playsinline
-        >
+        <video controls preload="metadata" playsinline>
 
           <source
             src="final_route_anonymized.mp4"
@@ -2727,11 +2527,9 @@
             Neighborhood Deployment
           </div>
 
-
           <h3>
             1.2 km Final-Route Evaluation
           </h3>
-
 
           <p>
             An anonymized third-person view of CyFI during
@@ -2739,14 +2537,11 @@
             neighborhood route.
           </p>
 
-
           <div class="scenario-tags">
-
             <span class="scenario-tag">1.2 km</span>
             <span class="scenario-tag">Intersections</span>
             <span class="scenario-tag">Parked & Moving Vehicles</span>
             <span class="scenario-tag">Stop Signs</span>
-
           </div>
 
         </figcaption>
@@ -2776,12 +2571,11 @@
         >
 
           <source
-            src="Dan_long-route_clip_backup.mp4"
+            src="Dan_long-route_clip.mp4"
             type="video/mp4"
           />
 
         </video>
-
 
         <figcaption class="media-caption">
 
@@ -2809,12 +2603,11 @@
         >
 
           <source
-            src="Georgia_clip_backup.mp4"
+            src="Georgia_clip.mp4"
             type="video/mp4"
           />
 
         </video>
-
 
         <figcaption class="media-caption">
 
@@ -2857,7 +2650,6 @@
       <span>CyFI</span>
 
     </div>
-
 
     <span>
       Supplementary project website.

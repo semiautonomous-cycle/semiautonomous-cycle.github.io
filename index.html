@@ -72,9 +72,9 @@
       margin: 0 auto;
     }
 
-    /* =========================
+    /* =========================================================
        NAVIGATION
-    ========================= */
+    ========================================================= */
 
     .topbar {
       position: sticky;
@@ -94,7 +94,7 @@
       align-items: center;
       justify-content: space-between;
 
-      gap: 24px;
+      gap: 20px;
     }
 
     .nav-brand {
@@ -115,11 +115,11 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 17px;
+      gap: 15px;
 
       color: var(--text-soft);
 
-      font-size: 0.81rem;
+      font-size: 0.79rem;
       font-weight: 600;
     }
 
@@ -131,9 +131,9 @@
       color: var(--navy);
     }
 
-    /* =========================
+    /* =========================================================
        HERO
-    ========================= */
+    ========================================================= */
 
     .hero {
       padding: 72px 0 58px;
@@ -145,6 +145,7 @@
       height: 108px;
 
       margin: 0 auto 26px;
+
       object-fit: contain;
     }
 
@@ -199,7 +200,8 @@
       border-radius: var(--radius-lg);
       border: 1px solid var(--border);
 
-      background: #eeeeee;
+      background: #eee;
+
       box-shadow: var(--shadow);
     }
 
@@ -219,9 +221,9 @@
       font-size: 0.82rem;
     }
 
-    /* =========================
+    /* =========================================================
        GENERAL
-    ========================= */
+    ========================================================= */
 
     .section {
       padding: 72px 0;
@@ -254,7 +256,7 @@
     }
 
     .section-intro {
-      max-width: 800px;
+      max-width: 820px;
       margin: 18px 0 0;
 
       color: var(--text-soft);
@@ -262,9 +264,9 @@
       font-size: 1.02rem;
     }
 
-    /* =========================
+    /* =========================================================
        ABSTRACT
-    ========================= */
+    ========================================================= */
 
     .abstract-box {
       margin-top: 34px;
@@ -289,9 +291,9 @@
       line-height: 1.85;
     }
 
-    /* =========================
+    /* =========================================================
        FEATURES
-    ========================= */
+    ========================================================= */
 
     .feature-grid {
       display: grid;
@@ -330,6 +332,7 @@
 
     .feature-card h3 {
       margin: 0 0 8px;
+
       font-size: 1.14rem;
     }
 
@@ -341,9 +344,9 @@
       font-size: 0.92rem;
     }
 
-    /* =========================
+    /* =========================================================
        MEDIA CARDS
-    ========================= */
+    ========================================================= */
 
     .media-grid {
       display: grid;
@@ -377,7 +380,7 @@
       aspect-ratio: 16 / 9;
       object-fit: cover;
 
-      background: #111111;
+      background: #111;
     }
 
     .media-caption {
@@ -398,9 +401,9 @@
       font-size: 0.85rem;
     }
 
-    /* =========================
+    /* =========================================================
        SYSTEM COMPONENTS
-    ========================= */
+    ========================================================= */
 
     .system-card {
       margin-top: 36px;
@@ -419,7 +422,7 @@
     .system-image-wrap {
       padding: 28px;
 
-      background: #ffffff;
+      background: white;
     }
 
     .system-image-wrap img {
@@ -454,9 +457,9 @@
       font-size: 0.88rem;
     }
 
-    /* =========================
+    /* =========================================================
        PROMPT BOX
-    ========================= */
+    ========================================================= */
 
     .prompt-box {
       margin-top: 28px;
@@ -487,11 +490,7 @@
     .prompt-box-header h3 {
       margin: 0;
 
-      color: var(--text);
-
       font-size: 1.18rem;
-      font-weight: 750;
-
       letter-spacing: -0.02em;
     }
 
@@ -520,9 +519,114 @@
       line-height: 1.8;
     }
 
-    /* =========================
+    /* =========================================================
+       DATASET CONSTRUCTION
+    ========================================================= */
+
+    .dataset-box {
+      margin-top: 34px;
+
+      padding: 30px 32px;
+
+      border-radius: var(--radius-lg);
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+
+      box-shadow:
+        0 10px 28px rgba(24, 39, 58, 0.05);
+    }
+
+    .dataset-box p {
+      margin: 0 0 18px;
+
+      color: #334051;
+
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .dataset-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .dataset-subtitle {
+      margin: 28px 0 10px;
+
+      color: var(--navy);
+
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .equation-box {
+      margin: 22px 0;
+
+      padding: 24px;
+
+      border-radius: var(--radius-md);
+
+      background: #f5f8fb;
+
+      border: 1px solid #dce5ed;
+
+      text-align: center;
+    }
+
+    .equation {
+      margin: 7px 0;
+
+      color: #172033;
+
+      font-family:
+        "Cambria Math",
+        "Times New Roman",
+        serif;
+
+      font-size: 1.16rem;
+    }
+
+    .equation-note {
+      margin-top: 14px !important;
+
+      color: var(--text-soft) !important;
+
+      font-size: 0.88rem !important;
+    }
+
+    .waypoint-box {
+      margin-top: 18px;
+
+      padding: 20px 22px;
+
+      border-radius: var(--radius-md);
+
+      background: var(--blue-soft);
+
+      color: var(--navy);
+
+      text-align: center;
+    }
+
+    .waypoint-box strong {
+      display: block;
+
+      margin-bottom: 8px;
+    }
+
+    .waypoint-equation {
+      font-family:
+        "Cambria Math",
+        "Times New Roman",
+        serif;
+
+      font-size: 1.15rem;
+    }
+
+    /* =========================================================
        GALLERY
-    ========================= */
+    ========================================================= */
 
     .gallery {
       display: grid;
@@ -564,9 +668,9 @@
       font-size: 0.83rem;
     }
 
-    /* =========================
+    /* =========================================================
        STUDY BOXES
-    ========================= */
+    ========================================================= */
 
     .study-box {
       margin-top: 32px;
@@ -624,9 +728,9 @@
       font-weight: 800;
     }
 
-    /* =========================
+    /* =========================================================
        TABLES
-    ========================= */
+    ========================================================= */
 
     .table-wrapper {
       overflow-x: auto;
@@ -658,8 +762,7 @@
 
       text-align: left;
 
-      border-bottom:
-        1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
     th {
@@ -680,9 +783,9 @@
       font-weight: 800;
     }
 
-    /* =========================
+    /* =========================================================
        EVALUATION
-    ========================= */
+    ========================================================= */
 
     .evaluation-grid {
       display: grid;
@@ -718,9 +821,9 @@
       font-size: 0.91rem;
     }
 
-    /* =========================
-       FEATURED VIDEO
-    ========================= */
+    /* =========================================================
+       FEATURED VIDEOS
+    ========================================================= */
 
     .featured-video {
       margin-top: 48px;
@@ -800,9 +903,9 @@
       font-weight: 700;
     }
 
-    /* =========================
+    /* =========================================================
        FOOTER
-    ========================= */
+    ========================================================= */
 
     footer {
       padding: 32px 0 42px;
@@ -839,9 +942,18 @@
       object-fit: contain;
     }
 
-    /* =========================
+    /* =========================================================
        RESPONSIVE
-    ========================= */
+    ========================================================= */
+
+    @media (max-width: 980px) {
+
+      .nav-links {
+        gap: 11px;
+        font-size: 0.75rem;
+      }
+
+    }
 
     @media (max-width: 900px) {
 
@@ -857,14 +969,18 @@
 
     }
 
+    @media (max-width: 760px) {
+
+      .nav-links {
+        display: none;
+      }
+
+    }
+
     @media (max-width: 680px) {
 
       .container {
         width: calc(100% - 24px);
-      }
-
-      .nav-links {
-        display: none;
       }
 
       .hero {
@@ -904,6 +1020,10 @@
         padding: 22px;
       }
 
+      .dataset-box {
+        padding: 24px 22px;
+      }
+
       .study-box {
         padding: 18px;
       }
@@ -930,9 +1050,9 @@
 <body>
 
 
-<!-- =========================
-     NAV
-========================= -->
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
 <header class="topbar">
 
@@ -956,6 +1076,7 @@
       <a href="#prototype">Prototype</a>
       <a href="#system">System</a>
       <a href="#simulation">Simulation</a>
+      <a href="#dataset">Dataset</a>
       <a href="#action">In Action</a>
       <a href="#study">Participants</a>
       <a href="#evaluation">Evaluation</a>
@@ -972,9 +1093,9 @@
 <main id="top">
 
 
-<!-- =========================
+<!-- =========================================================
      HERO
-========================= -->
+========================================================= -->
 
 <section class="hero">
 
@@ -986,12 +1107,10 @@
       class="project-logo"
     />
 
-
     <h1>
       CyFI: Semiautonomous Cycling
       for Blind and Low-Vision Riders
     </h1>
-
 
     <p class="hero-subtitle">
 
@@ -1039,9 +1158,9 @@
 
 
 
-<!-- =========================
+<!-- =========================================================
      OVERVIEW
-========================= -->
+========================================================= -->
 
 <section
   class="section section-soft"
@@ -1053,7 +1172,6 @@
     <div class="section-label">
       Abstract
     </div>
-
 
     <h2>
       Human-powered cycling with shared autonomy.
@@ -1129,9 +1247,9 @@
 
 
 
-<!-- =========================
+<!-- =========================================================
      INITIAL PROTOTYPE
-========================= -->
+========================================================= -->
 
 <section
   class="section"
@@ -1144,11 +1262,9 @@
       Design Evolution
     </div>
 
-
     <h2>
       Initial Prototype
     </h2>
-
 
     <p class="section-intro">
       Early CyFI prototypes supported iterative development
@@ -1213,9 +1329,9 @@
 
 
 
-<!-- =========================
-     CURRENT SYSTEM
-========================= -->
+<!-- =========================================================
+     CURRENT PLATFORM
+========================================================= -->
 
 <section
   class="section section-soft"
@@ -1228,11 +1344,9 @@
       Current Platform
     </div>
 
-
     <h2>
       CyFI system components.
     </h2>
-
 
     <p class="section-intro">
       Key sensing, computation, feedback, and control
@@ -1279,7 +1393,6 @@
           Scene Description Prompt
         </h3>
 
-
         <p>
           Prompt for scene description audio feedback initiated via the handle button.
         </p>
@@ -1290,9 +1403,7 @@
       <div class="prompt-box-content">
 
         <p class="prompt-text">
-
           You are describing the surrounding scene for a blind person riding an autonomous tricycle. Provide a concise description that helps the rider quickly understand the most important parts of the environment. Mention only the most relevant nearby objects and features, such as pedestrians, cyclists, vehicles, obstacles, roads, sidewalks, intersections, crossings, and entrances. Use clear relative positions such as “on the left,” “ahead,” and “on the right.” Mention distance only when it can be estimated reliably. Avoid unnecessary visual details and do not speculate about uncertain objects. Keep the description to 1–2 short sentences.
-
         </p>
 
       </div>
@@ -1306,9 +1417,9 @@
 
 
 
-<!-- =========================
+<!-- =========================================================
      SIMULATION
-========================= -->
+========================================================= -->
 
 <section
   class="section"
@@ -1321,11 +1432,9 @@
       Model Development
     </div>
 
-
     <h2>
       Simulation before real-world deployment.
     </h2>
-
 
     <p class="section-intro">
       Representative simulation rollouts illustrate the
@@ -1409,12 +1518,120 @@
 
 
 
-<!-- =========================
-     CYFI IN ACTION
-========================= -->
+<!-- =========================================================
+     DATASET CONSTRUCTION
+========================================================= -->
 
 <section
   class="section section-soft"
+  id="dataset"
+>
+
+  <div class="container">
+
+    <div class="section-label">
+      Dataset Construction
+    </div>
+
+    <h2>
+      Synchronized observations and future-trajectory labels.
+    </h2>
+
+    <p class="section-intro">
+      Sensor observations and navigation measurements are synchronized
+      to construct trajectory supervision for model ablations.
+    </p>
+
+
+    <div class="dataset-box">
+
+      <p>
+        For model ablations, we record sensor streams to obtain synchronized
+        RGB observations and frame-level trajectory labels from high-precision
+        GNSS/IMU. RTK-fixed solutions are used as centimeter-level position
+        anchors and are supplemented with validated PPK solutions when
+        available. Between the 5 Hz GNSS/PPK position anchors, dense
+        frame-level positions are obtained by integrating the VN-200 velocity
+        measurements. GNSS latitude, longitude, and height measurements are
+        transformed into a local East-North-Up (ENU) coordinate frame.
+      </p>
+
+      <p>
+        Camera frames are synchronized with navigation measurements in GPS time
+        using host-side timestamp logs. Camera capture timestamps are mapped
+        from the monotonic clock to GPS time by fitting a linear mapping using
+        minimum-latency INS packets.
+      </p>
+
+      <div class="dataset-subtitle">
+        Future trajectory labels
+      </div>
+
+      <p>
+        For each RGB frame at time <em>t</em>, an 8-waypoint future trajectory
+        is sampled at 3 Hz, following the OmniVLA setting. Let
+        Δ<em>n</em> and Δ<em>e</em> denote the future displacement in ENU
+        coordinates, and let θ<sub>t</sub> denote the bicycle travel heading
+        at time <em>t</em>. Each displacement is transformed into the bicycle
+        ego frame as:
+      </p>
+
+
+      <div class="equation-box">
+
+        <div class="equation">
+          x = Δe sin(θ<sub>t</sub>) + Δn cos(θ<sub>t</sub>)
+        </div>
+
+        <div class="equation">
+          y = −Δe cos(θ<sub>t</sub>) + Δn sin(θ<sub>t</sub>)
+        </div>
+
+        <p class="equation-note">
+          x and y denote the forward and left directions, respectively.
+        </p>
+
+      </div>
+
+
+      <p>
+        Each waypoint is then represented using its position and local
+        trajectory heading.
+      </p>
+
+
+      <div class="waypoint-box">
+
+        <strong>
+          Waypoint representation
+        </strong>
+
+        <div class="waypoint-equation">
+          a<sub>t</sub> = [x, y, cos(ψ), sin(ψ)]
+        </div>
+
+      </div>
+
+
+      <p style="margin-top:18px;">
+        Here, ψ denotes the local trajectory heading computed from consecutive
+        future waypoints.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CYFI IN ACTION
+========================================================= -->
+
+<section
+  class="section"
   id="action"
 >
 
@@ -1424,11 +1641,9 @@
       CyFI in Action
     </div>
 
-
     <h2>
       Riding across real-world environments.
     </h2>
-
 
     <p class="section-intro">
       Selected scenes illustrate CyFI operating with
@@ -1507,12 +1722,12 @@
 
 
 
-<!-- =========================
+<!-- =========================================================
      PARTICIPANTS
-========================= -->
+========================================================= -->
 
 <section
-  class="section"
+  class="section section-soft"
   id="study"
 >
 
@@ -1522,11 +1737,9 @@
       Participants
     </div>
 
-
     <h2>
       Participant demographics.
     </h2>
-
 
     <p class="section-intro">
       CyFI was developed and evaluated with blind and
@@ -1721,12 +1934,12 @@
 
 
 
-<!-- =========================
+<!-- =========================================================
      EVALUATION
-========================= -->
+========================================================= -->
 
 <section
-  class="section section-soft"
+  class="section"
   id="evaluation"
 >
 
@@ -1736,11 +1949,9 @@
       Evaluation
     </div>
 
-
     <h2>
       Moving beyond controlled demonstrations.
     </h2>
-
 
     <p class="section-intro">
       CyFI was evaluated across progressively more realistic
@@ -1821,11 +2032,9 @@
           Real-World Evaluation
         </div>
 
-
         <h3>
           Real-World Navigation Visualization
         </h3>
-
 
         <p>
           An anonymized forward-facing visualization of CyFI
@@ -1884,11 +2093,9 @@
           Final Route
         </div>
 
-
         <h3>
           Final-Route Evaluation
         </h3>
-
 
         <p>
           An anonymized third-person view of CyFI during
@@ -1906,12 +2113,12 @@
 
 
 
-<!-- =========================
+<!-- =========================================================
      VIDEOS
-========================= -->
+========================================================= -->
 
 <section
-  class="section"
+  class="section section-soft"
   id="videos"
 >
 
@@ -1921,11 +2128,9 @@
       Videos
     </div>
 
-
     <h2>
       CyFI in motion.
     </h2>
-
 
     <p class="section-intro">
       Representative clips illustrate CyFI during sustained
@@ -2010,9 +2215,9 @@
 
 
 
-<!-- =========================
+<!-- =========================================================
      FOOTER
-========================= -->
+========================================================= -->
 
 <footer>
 
@@ -2030,7 +2235,6 @@
       </span>
 
     </div>
-
 
     <span>
       Supplementary project website.

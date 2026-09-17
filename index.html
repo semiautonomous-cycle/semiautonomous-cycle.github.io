@@ -18,22 +18,15 @@
     :root {
       --bg: #ffffff;
       --bg-soft: #f7f9fb;
-
       --text: #172033;
       --text-soft: #5f6978;
-
       --navy: #123e70;
       --blue: #3d86c6;
       --blue-soft: #eaf3fb;
-
       --border: #e2e7ec;
-
-      --shadow:
-        0 12px 32px rgba(24, 39, 58, 0.07);
-
+      --shadow: 0 12px 32px rgba(24, 39, 58, 0.07);
       --radius-md: 18px;
       --radius-lg: 28px;
-
       --max-width: 1100px;
     }
 
@@ -47,7 +40,6 @@
 
     body {
       margin: 0;
-
       background: var(--bg);
       color: var(--text);
 
@@ -118,14 +110,12 @@
     .nav-brand img {
       width: 34px;
       height: 34px;
-
       object-fit: contain;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-
       gap: 20px;
 
       color: var(--text-soft);
@@ -145,7 +135,6 @@
 
     .hero {
       padding: 72px 0 58px;
-
       text-align: center;
     }
 
@@ -163,9 +152,7 @@
 
       margin: 0 auto;
 
-      font-size:
-        clamp(2.5rem, 5vw, 4.8rem);
-
+      font-size: clamp(2.5rem, 5vw, 4.8rem);
       line-height: 1.03;
 
       letter-spacing: -0.055em;
@@ -221,7 +208,6 @@
 
     .hero-image img {
       width: 100%;
-
       aspect-ratio: 16 / 9;
 
       object-fit: cover;
@@ -268,9 +254,7 @@
 
       margin: 0;
 
-      font-size:
-        clamp(2rem, 4vw, 3.1rem);
-
+      font-size: clamp(2rem, 4vw, 3.1rem);
       line-height: 1.08;
 
       letter-spacing: -0.045em;
@@ -323,8 +307,7 @@
     .feature-grid {
       display: grid;
 
-      grid-template-columns:
-        repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
 
       gap: 18px;
 
@@ -381,8 +364,7 @@
     .media-grid {
       display: grid;
 
-      grid-template-columns:
-        repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
       gap: 20px;
 
@@ -442,8 +424,7 @@
     .gallery {
       display: grid;
 
-      grid-template-columns:
-        repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
       gap: 18px;
 
@@ -464,11 +445,9 @@
 
     .gallery-card img {
       aspect-ratio: 16 / 10;
-
       object-fit: cover;
 
-      transition:
-        transform 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .gallery-card:hover img {
@@ -485,12 +464,11 @@
 
 
     /* ==========================
-       STUDY BOXES
+       STUDY BOX
     ========================== */
 
     .study-box {
       margin-top: 32px;
-
       padding: 26px;
 
       background: #ffffff;
@@ -657,7 +635,7 @@
       background: var(--navy);
       color: white;
 
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 800;
     }
 
@@ -715,8 +693,7 @@
     .evaluation-grid {
       display: grid;
 
-      grid-template-columns:
-        repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
 
       gap: 18px;
 
@@ -879,7 +856,6 @@
     ========================== */
 
     @media (max-width: 900px) {
-
       .feature-grid,
       .evaluation-grid {
         grid-template-columns: 1fr;
@@ -889,12 +865,9 @@
       .gallery {
         grid-template-columns: 1fr;
       }
-
     }
 
-
     @media (max-width: 680px) {
-
       .container {
         width: calc(100% - 24px);
       }
@@ -914,10 +887,6 @@
 
       .hero h1 {
         font-size: 2.4rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1rem;
       }
 
       .section {
@@ -953,19 +922,13 @@
         flex-direction: column;
         align-items: flex-start;
       }
-
     }
-
   </style>
 </head>
 
 
 <body>
 
-
-<!-- ==========================
-     NAVIGATION
-========================== -->
 
 <header class="topbar">
 
@@ -1004,9 +967,7 @@
 <main id="top">
 
 
-<!-- ==========================
-     HERO
-========================== -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -1025,12 +986,10 @@
 
 
     <p class="hero-subtitle">
-
       A human-centered shared-autonomy cycling platform
       supporting accessible outdoor mobility through
       autonomous steering, emergency braking, and
       multimodal rider feedback.
-
     </p>
 
 
@@ -1070,9 +1029,7 @@
 
 
 
-<!-- ==========================
-     ABSTRACT
-========================== -->
+<!-- ABSTRACT -->
 
 <section
   class="section section-soft"
@@ -1100,7 +1057,6 @@
 
 
     <div class="feature-grid">
-
 
       <article class="feature-card">
 
@@ -1156,7 +1112,6 @@
 
       </article>
 
-
     </div>
 
   </div>
@@ -1165,9 +1120,7 @@
 
 
 
-<!-- ==========================
-     INITIAL PROTOTYPE
-========================== -->
+<!-- INITIAL PROTOTYPE -->
 
 <section
   class="section"
@@ -1196,8 +1149,8 @@
       <figure class="media-card">
 
         <img
-          src="prototype_1.png"
-          alt="Initial CyFI prototype side view"
+          src="prototype_1_anonymized.png"
+          alt="Anonymized initial CyFI prototype side view"
         />
 
         <figcaption class="media-caption">
@@ -1218,8 +1171,8 @@
       <figure class="media-card">
 
         <img
-          src="prototype_2.png"
-          alt="Initial CyFI prototype cockpit view"
+          src="prototype_2_anonymized.png"
+          alt="Anonymized initial CyFI prototype cockpit view"
         />
 
         <figcaption class="media-caption">
@@ -1245,9 +1198,7 @@
 
 
 
-<!-- ==========================
-     SIMULATION
-========================== -->
+<!-- SIMULATION -->
 
 <section
   class="section section-soft"
@@ -1330,7 +1281,7 @@
           </strong>
 
           <span>
-            Representative navigation behavior under a controlled roadway scenario.
+            Representative model behavior under a controlled roadway scenario.
           </span>
 
         </figcaption>
@@ -1346,9 +1297,7 @@
 
 
 
-<!-- ==========================
-     CYFI IN ACTION
-========================== -->
+<!-- CYFI IN ACTION -->
 
 <section class="section">
 
@@ -1364,8 +1313,7 @@
 
     <p class="section-intro">
       Selected scenes illustrate CyFI operating with
-      participants across outdoor riding and evaluation
-      scenarios.
+      participants across outdoor riding and evaluation scenarios.
     </p>
 
 
@@ -1436,9 +1384,7 @@
 
 
 
-<!-- ==========================
-     STUDY
-========================== -->
+<!-- PARTICIPANTS -->
 
 <section
   class="section section-soft"
@@ -1457,15 +1403,11 @@
 
     <p class="section-intro">
       CyFI was developed and evaluated with blind and
-      low-vision participants across formative and final
-      evaluation studies.
+      low-vision participants across formative and final evaluation studies.
     </p>
 
 
-
-    <!-- ==========================
-         FORMATIVE STUDY
-    ========================== -->
+    <!-- FORMATIVE -->
 
     <div class="study-box">
 
@@ -1495,7 +1437,6 @@
         <table>
 
           <thead>
-
             <tr>
               <th>ID</th>
               <th>Age</th>
@@ -1506,12 +1447,10 @@
               <th>Physical Activity</th>
               <th>Days / week</th>
             </tr>
-
           </thead>
 
 
           <tbody>
-
 
             <tr class="site-row">
               <td colspan="8">
@@ -1519,106 +1458,15 @@
               </td>
             </tr>
 
-
-            <tr>
-              <td>P26</td>
-              <td>64</td>
-              <td>Man</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P27</td>
-              <td>26</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P28</td>
-              <td>29</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Moderate</td>
-              <td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P29</td>
-              <td>52</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Moderate</td>
-              <td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P30</td>
-              <td>64</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Legally blind</td>
-              <td>Yes</td>
-              <td>High</td>
-              <td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P31</td>
-              <td>52</td>
-              <td>Man</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Moderate</td>
-              <td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P32</td>
-              <td>36</td>
-              <td>Man</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Moderate</td>
-              <td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P33</td>
-              <td>73</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Moderate</td>
-              <td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P34</td>
-              <td>63</td>
-              <td>Woman</td>
-              <td>Black</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>3–4</td>
-            </tr>
-
+            <tr><td>P26</td><td>64</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+            <tr><td>P27</td><td>26</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
+            <tr><td>P28</td><td>29</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+            <tr><td>P29</td><td>52</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+            <tr><td>P30</td><td>64</td><td>Woman</td><td>White</td><td>Legally blind</td><td>Yes</td><td>High</td><td>1–2</td></tr>
+            <tr><td>P31</td><td>52</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
+            <tr><td>P32</td><td>36</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+            <tr><td>P33</td><td>73</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+            <tr><td>P34</td><td>63</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
 
             <tr class="site-row">
               <td colspan="8">
@@ -1626,62 +1474,11 @@
               </td>
             </tr>
 
-
-            <tr>
-              <td>P35</td>
-              <td>67</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P36</td>
-              <td>64</td>
-              <td>Man</td>
-              <td>Hispanic</td>
-              <td>Legally Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P37</td>
-              <td>63</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P38</td>
-              <td>52</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Moderate</td>
-              <td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P39</td>
-              <td>21</td>
-              <td>Woman</td>
-              <td>White</td>
-              <td>Blind</td>
-              <td>Yes</td>
-              <td>Low</td>
-              <td>3–4</td>
-            </tr>
-
+            <tr><td>P35</td><td>67</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+            <tr><td>P36</td><td>64</td><td>Man</td><td>Hispanic</td><td>Legally Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+            <tr><td>P37</td><td>63</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+            <tr><td>P38</td><td>52</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
+            <tr><td>P39</td><td>21</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
 
           </tbody>
 
@@ -1693,9 +1490,7 @@
 
 
 
-    <!-- ==========================
-         FINAL EVALUATION
-    ========================== -->
+    <!-- FINAL EVALUATION -->
 
     <div class="study-box">
 
@@ -1725,7 +1520,6 @@
         <table>
 
           <thead>
-
             <tr>
               <th>ID</th>
               <th>Age</th>
@@ -1736,12 +1530,10 @@
               <th>Physical Activity</th>
               <th>Days / week</th>
             </tr>
-
           </thead>
 
 
           <tbody>
-
 
             <tr class="site-row">
               <td colspan="8">
@@ -1749,87 +1541,26 @@
               </td>
             </tr>
 
-
-            <tr>
-              <td>P1</td><td>78</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>Low</td><td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P2</td><td>71</td><td>Man</td><td>Black</td><td>Blind</td><td>No</td><td>Moderate</td><td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P3</td><td>35</td><td>Man</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td>
-            </tr>
-
-            <tr>
-              <td>P4</td><td>36</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P5</td><td>72</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P6</td><td>38</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P7</td><td>50</td><td>Man</td><td>White</td><td>Blind</td><td>No</td><td>Moderate</td><td>Rarely</td>
-            </tr>
-
-            <tr>
-              <td>P8</td><td>50</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P9</td><td>49</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>5+</td>
-            </tr>
-
-            <tr>
-              <td>P10</td><td>56</td><td>Man</td><td>Black</td><td>Blind</td><td>No</td><td>Moderate</td><td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P11</td><td>42</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P12</td><td>17</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P13</td><td>35</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>5+</td>
-            </tr>
-
-            <tr>
-              <td>P14</td><td>47</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P15</td><td>46</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P16</td><td>69</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P17</td><td>50</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td>
-            </tr>
-
-            <tr>
-              <td>P18</td><td>37</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>5+</td>
-            </tr>
-
-            <tr>
-              <td>P19</td><td>46</td><td>Man</td><td>White</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td>
-            </tr>
-
-            <tr>
-              <td>P20</td><td>65</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>None</td><td>1–2</td>
-            </tr>
-
+            <tr><td>P1</td><td>78</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
+            <tr><td>P2</td><td>71</td><td>Man</td><td>Black</td><td>Blind</td><td>No</td><td>Moderate</td><td>1–2</td></tr>
+            <tr><td>P3</td><td>35</td><td>Man</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
+            <tr><td>P4</td><td>36</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
+            <tr><td>P5</td><td>72</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
+            <tr><td>P6</td><td>38</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+            <tr><td>P7</td><td>50</td><td>Man</td><td>White</td><td>Blind</td><td>No</td><td>Moderate</td><td>Rarely</td></tr>
+            <tr><td>P8</td><td>50</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
+            <tr><td>P9</td><td>49</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
+            <tr><td>P10</td><td>56</td><td>Man</td><td>Black</td><td>Blind</td><td>No</td><td>Moderate</td><td>3–4</td></tr>
+            <tr><td>P11</td><td>42</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
+            <tr><td>P12</td><td>17</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
+            <tr><td>P13</td><td>35</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>5+</td></tr>
+            <tr><td>P14</td><td>47</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
+            <tr><td>P15</td><td>46</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
+            <tr><td>P16</td><td>69</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
+            <tr><td>P17</td><td>50</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+            <tr><td>P18</td><td>37</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>5+</td></tr>
+            <tr><td>P19</td><td>46</td><td>Man</td><td>White</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
+            <tr><td>P20</td><td>65</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>None</td><td>1–2</td></tr>
 
             <tr class="site-row">
               <td colspan="8">
@@ -1837,27 +1568,11 @@
               </td>
             </tr>
 
-
-            <tr>
-              <td>P21</td><td>19</td><td>Woman</td><td>White</td><td>Blind</td><td>–</td><td>High</td><td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P22</td><td>31</td><td>Woman</td><td>Asian</td><td>Blind</td><td>No</td><td>High</td><td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P23</td><td>36</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P24</td><td>84</td><td>Woman</td><td>White</td><td>Legally blind</td><td>No</td><td>High</td><td>1–2</td>
-            </tr>
-
-            <tr>
-              <td>P25</td><td>41</td><td>Man</td><td>Hispanic</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td>
-            </tr>
-
+            <tr><td>P21</td><td>19</td><td>Woman</td><td>White</td><td>Blind</td><td>–</td><td>High</td><td>1–2</td></tr>
+            <tr><td>P22</td><td>31</td><td>Woman</td><td>Asian</td><td>Blind</td><td>No</td><td>High</td><td>1–2</td></tr>
+            <tr><td>P23</td><td>36</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+            <tr><td>P24</td><td>84</td><td>Woman</td><td>White</td><td>Legally blind</td><td>No</td><td>High</td><td>1–2</td></tr>
+            <tr><td>P25</td><td>41</td><td>Man</td><td>Hispanic</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
 
           </tbody>
 
@@ -1874,9 +1589,7 @@
 
 
 
-<!-- ==========================
-     SCENE DESCRIPTION FEEDBACK
-========================== -->
+<!-- FEEDBACK -->
 
 <section
   class="section"
@@ -1948,9 +1661,7 @@
 
 
 
-<!-- ==========================
-     EVALUATION
-========================== -->
+<!-- EVALUATION -->
 
 <section
   class="section section-soft"
@@ -2023,11 +1734,6 @@
     </div>
 
 
-
-    <!-- ==========================
-         NAVIGATION VISUALIZATION
-    ========================== -->
-
     <figure class="featured-video">
 
       <video
@@ -2088,10 +1794,6 @@
 
 
 
-    <!-- ==========================
-         FINAL ROUTE
-    ========================== -->
-
     <figure class="featured-video">
 
       <video
@@ -2135,9 +1837,7 @@
 
 
 
-<!-- ==========================
-     SHORT VIDEOS
-========================== -->
+<!-- VIDEOS -->
 
 <section
   class="section"
@@ -2236,10 +1936,6 @@
 </main>
 
 
-
-<!-- ==========================
-     FOOTER
-========================== -->
 
 <footer>
 

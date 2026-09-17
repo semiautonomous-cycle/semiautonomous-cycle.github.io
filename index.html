@@ -143,7 +143,6 @@
 
     .hero {
       padding: 42px 0 34px;
-
       text-align: center;
     }
 
@@ -216,7 +215,6 @@
 
     .hero-image img {
       aspect-ratio: 16 / 7.8;
-
       object-fit: cover;
     }
 
@@ -362,7 +360,6 @@
 
     .feature-card h3 {
       margin: 0 0 5px;
-
       font-size: 0.98rem;
     }
 
@@ -403,13 +400,11 @@
 
     .media-card img {
       aspect-ratio: 16 / 9.5;
-
       object-fit: cover;
     }
 
     .media-card video {
       aspect-ratio: 16 / 9;
-
       object-fit: cover;
 
       background: #111;
@@ -452,17 +447,22 @@
     }
 
     .system-image-wrap {
-      padding: 14px;
+      padding: 10px;
 
       background: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .system-image-wrap img {
       width: 100%;
       height: auto;
-      max-height: 480px;
+      max-height: 430px;
 
       object-fit: contain;
+      object-position: center;
 
       margin: 0 auto;
     }
@@ -546,7 +546,7 @@
     }
 
     /* =========================================================
-       DATASET CONSTRUCTION — TWO COLUMN
+       DATASET
     ========================================================= */
 
     .dataset-layout {
@@ -823,7 +823,7 @@
     }
 
     /* =========================================================
-       COMPACT GALLERY
+       GALLERY
     ========================================================= */
 
     .compact-gallery {
@@ -850,7 +850,6 @@
 
     .compact-gallery img {
       aspect-ratio: 4 / 3;
-
       object-fit: cover;
     }
 
@@ -863,7 +862,7 @@
     }
 
     /* =========================================================
-       MAIN EVALUATION VIDEOS — TWO COLUMN
+       FEATURED VIDEOS
     ========================================================= */
 
     .featured-grid {
@@ -1059,7 +1058,7 @@
       }
 
       .system-image-wrap {
-        padding: 8px;
+        padding: 6px;
       }
 
       .compact-gallery {
@@ -1272,6 +1271,7 @@
       System Design
     </div>
 
+
     <h2>
       From initial prototype to the current CyFI platform.
     </h2>
@@ -1280,6 +1280,7 @@
     <h3 class="subheading">
       Initial Prototype
     </h3>
+
 
     <p class="subtext">
       Early prototypes supported iterative development of the
@@ -1311,6 +1312,7 @@
       </figure>
 
 
+
       <figure class="media-card">
 
         <img
@@ -1339,6 +1341,7 @@
     <h3 class="subheading">
       Current Platform
     </h3>
+
 
     <p class="subtext">
       Key sensing, computation, feedback, and control components
@@ -1409,7 +1412,7 @@
 
 
 <!-- =========================================================
-     DATASET CONSTRUCTION
+     DATASET
 ========================================================= -->
 
 <section
@@ -1545,7 +1548,7 @@
 
 
 <!-- =========================================================
-     MODEL DEVELOPMENT
+     MODEL
 ========================================================= -->
 
 <section
@@ -1580,7 +1583,6 @@
           controls
           preload="metadata"
           playsinline
-          muted
         >
 
           <source
@@ -1613,7 +1615,6 @@
           controls
           preload="metadata"
           playsinline
-          muted
         >
 
           <source
@@ -1724,7 +1725,6 @@
 
             <tbody>
 
-
               <tr class="site-row">
                 <td colspan="8">
                   Site 1: Campus (n = 9)
@@ -1753,7 +1753,6 @@
               <tr><td>P37</td><td>63</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
               <tr><td>P38</td><td>52</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
               <tr><td>P39</td><td>21</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
-
 
             </tbody>
 
@@ -1815,7 +1814,6 @@
 
             <tbody>
 
-
               <tr class="site-row">
                 <td colspan="8">
                   Site 1: Community Convention (n = 20)
@@ -1855,7 +1853,6 @@
               <tr><td>P23</td><td>36</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
               <tr><td>P24</td><td>84</td><td>Woman</td><td>White</td><td>Legally blind</td><td>No</td><td>High</td><td>1–2</td></tr>
               <tr><td>P25</td><td>41</td><td>Man</td><td>Hispanic</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
-
 
             </tbody>
 
@@ -2018,8 +2015,6 @@
 
 
 
-    <!-- MAIN REAL-WORLD VIDEOS -->
-
     <div class="featured-grid">
 
 
@@ -2078,7 +2073,6 @@
           controls
           preload="metadata"
           playsinline
-          muted
         >
 
           <source

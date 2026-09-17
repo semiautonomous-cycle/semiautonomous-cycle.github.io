@@ -18,6 +18,7 @@
     :root {
       --bg: #ffffff;
       --bg-soft: #f7f9fb;
+
       --text: #172033;
       --text-soft: #5f6978;
 
@@ -89,18 +90,20 @@
       top: 0;
       z-index: 100;
 
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(16px);
 
       border-bottom: 1px solid var(--border);
     }
 
     .nav {
-      height: 64px;
+      min-height: 64px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      gap: 24px;
     }
 
     .nav-brand {
@@ -122,11 +125,12 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 26px;
+
+      gap: 22px;
 
       color: var(--text-soft);
 
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       font-weight: 600;
     }
 
@@ -228,15 +232,15 @@
 
       text-align: left;
 
-      color: var(--text-soft);
       background: white;
+      color: var(--text-soft);
 
       font-size: 0.82rem;
     }
 
 
     /* ==========================
-       GENERAL SECTION
+       GENERAL
     ========================== */
 
     .section {
@@ -371,10 +375,10 @@
 
 
     /* ==========================
-       INITIAL PROTOTYPE
+       TWO COLUMN MEDIA
     ========================== */
 
-    .prototype-grid {
+    .media-grid {
       display: grid;
 
       grid-template-columns:
@@ -385,7 +389,7 @@
       margin-top: 36px;
     }
 
-    .prototype-card {
+    .media-card {
       margin: 0;
 
       overflow: hidden;
@@ -400,25 +404,41 @@
         0 8px 24px rgba(20, 40, 60, 0.04);
     }
 
-    .prototype-card img {
-      width: 100%;
-
+    .media-card img {
       aspect-ratio: 4 / 3;
 
       object-fit: cover;
     }
 
-    .prototype-card figcaption {
-      padding: 15px 17px;
+    .media-card video {
+      aspect-ratio: 16 / 9;
 
+      object-fit: cover;
+
+      background: #111;
+    }
+
+    .media-caption {
+      padding: 16px 18px 19px;
+    }
+
+    .media-caption strong {
+      display: block;
+
+      margin-bottom: 5px;
+
+      font-size: 0.98rem;
+    }
+
+    .media-caption span {
       color: var(--text-soft);
 
-      font-size: 0.84rem;
+      font-size: 0.85rem;
     }
 
 
     /* ==========================
-       RIDING GALLERY
+       GALLERY
     ========================== */
 
     .gallery {
@@ -547,8 +567,7 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
     }
 
     .evaluation-card h3 {
@@ -569,7 +588,7 @@
 
 
     /* ==========================
-       FEATURED NAVIGATION VIDEO
+       FEATURED VIDEO
     ========================== */
 
     .featured-video {
@@ -616,10 +635,11 @@
       margin: 0;
 
       font-size: 1.45rem;
+      letter-spacing: -0.02em;
     }
 
     .featured-video-content p {
-      max-width: 800px;
+      max-width: 820px;
 
       margin: 9px 0 0;
 
@@ -647,63 +667,6 @@
 
       font-size: 0.75rem;
       font-weight: 700;
-    }
-
-
-    /* ==========================
-       SHORT VIDEOS
-    ========================== */
-
-    .video-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(2, 1fr);
-
-      gap: 22px;
-
-      margin-top: 34px;
-    }
-
-    .video-card {
-      margin: 0;
-
-      overflow: hidden;
-
-      border-radius: var(--radius-md);
-
-      background: white;
-
-      border:
-        1px solid var(--border);
-    }
-
-    .video-card video {
-      width: 100%;
-
-      aspect-ratio: 16 / 9;
-
-      object-fit: cover;
-
-      background: #111;
-    }
-
-    .video-caption {
-      padding: 17px 18px 19px;
-    }
-
-    .video-caption strong {
-      display: block;
-
-      margin-bottom: 4px;
-
-      font-size: 0.98rem;
-    }
-
-    .video-caption span {
-      color: var(--text-soft);
-
-      font-size: 0.85rem;
     }
 
 
@@ -752,22 +715,22 @@
        RESPONSIVE
     ========================== */
 
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
 
       .feature-grid,
       .evaluation-grid {
         grid-template-columns: 1fr;
       }
 
-      .prototype-grid,
-      .gallery,
-      .video-grid {
+      .media-grid,
+      .gallery {
         grid-template-columns: 1fr;
       }
+
     }
 
 
-    @media (max-width: 650px) {
+    @media (max-width: 680px) {
 
       .container {
         width: calc(100% - 24px);
@@ -787,7 +750,7 @@
       }
 
       .hero h1 {
-        font-size: 2.45rem;
+        font-size: 2.4rem;
       }
 
       .hero-subtitle {
@@ -810,6 +773,7 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
     }
 
   </style>
@@ -847,6 +811,10 @@
 
       <a href="#prototype">
         Prototype
+      </a>
+
+      <a href="#simulation">
+        Simulation
       </a>
 
       <a href="#study">
@@ -890,6 +858,7 @@
       CyFI: Semiautonomous Cycling
       for Blind and Low-Vision Riders
     </h1>
+
 
     <p class="hero-subtitle">
 
@@ -1057,32 +1026,153 @@
     </p>
 
 
-    <div class="prototype-grid">
+    <div class="media-grid">
 
 
-      <figure class="prototype-card">
+      <figure class="media-card">
 
         <img
           src="prototype_1.png"
           alt="Initial CyFI prototype side view"
         />
 
-        <figcaption>
-          Initial prototype — side view.
+        <figcaption class="media-caption">
+
+          <strong>
+            Initial Prototype
+          </strong>
+
+          <span>
+            Side view of the early physical platform.
+          </span>
+
         </figcaption>
 
       </figure>
 
 
-      <figure class="prototype-card">
+      <figure class="media-card">
 
         <img
           src="prototype_2.png"
           alt="Initial CyFI prototype cockpit view"
         />
 
-        <figcaption>
-          Initial prototype — cockpit and rider interface.
+        <figcaption class="media-caption">
+
+          <strong>
+            Initial Prototype
+          </strong>
+
+          <span>
+            Cockpit and rider-interface view.
+          </span>
+
+        </figcaption>
+
+      </figure>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================
+     SIMULATION
+========================== -->
+
+<section
+  class="section section-soft"
+  id="simulation"
+>
+
+  <div class="container">
+
+    <div class="section-label">
+      Model Development
+    </div>
+
+    <h2>
+      Simulation before real-world deployment.
+    </h2>
+
+    <p class="section-intro">
+      Representative simulation rollouts illustrate the
+      development and evaluation of navigation behavior
+      in controlled roadway scenarios.
+    </p>
+
+
+    <div class="media-grid">
+
+
+      <figure class="media-card">
+
+        <video
+          controls
+          preload="metadata"
+          playsinline
+          muted
+        >
+
+          <source
+            src="alpamayo.mp4"
+            type="video/mp4"
+          />
+
+          Your browser does not support HTML5 video.
+
+        </video>
+
+
+        <figcaption class="media-caption">
+
+          <strong>
+            Simulation Rollout
+          </strong>
+
+          <span>
+            Representative navigation behavior in simulation.
+          </span>
+
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="media-card">
+
+        <video
+          controls
+          preload="metadata"
+          playsinline
+          muted
+        >
+
+          <source
+            src="omnivla_edge_FT.mp4"
+            type="video/mp4"
+          />
+
+          Your browser does not support HTML5 video.
+
+        </video>
+
+
+        <figcaption class="media-caption">
+
+          <strong>
+            Simulation Rollout
+          </strong>
+
+          <span>
+            Representative model behavior under a controlled roadway scenario.
+          </span>
+
         </figcaption>
 
       </figure>
@@ -1100,7 +1190,7 @@
      CYFI IN ACTION
 ========================== -->
 
-<section class="section section-soft">
+<section class="section">
 
   <div class="container">
 
@@ -1191,7 +1281,7 @@
 ========================== -->
 
 <section
-  class="section"
+  class="section section-soft"
   id="study"
 >
 
@@ -1308,6 +1398,13 @@
 
     </div>
 
+
+    <!--
+      FINAL EVALUATION PARTICIPANT TABLE
+      WILL BE ADDED HERE NEXT.
+    -->
+
+
   </div>
 
 </section>
@@ -1319,7 +1416,7 @@
 ========================== -->
 
 <section
-  class="section section-soft"
+  class="section"
   id="evaluation"
 >
 
@@ -1389,6 +1486,11 @@
     </div>
 
 
+
+    <!-- ==========================
+         NAVIGATION VISUALIZATION
+    ========================== -->
+
     <figure class="featured-video">
 
       <video
@@ -1450,6 +1552,56 @@
     </figure>
 
 
+
+    <!-- ==========================
+         FINAL ROUTE
+    ========================== -->
+
+    <figure class="featured-video">
+
+      <video
+        controls
+        preload="metadata"
+        playsinline
+        muted
+      >
+
+        <source
+          src="final_route_anonymized.mp4"
+          type="video/mp4"
+        />
+
+        Your browser does not support HTML5 video.
+
+      </video>
+
+
+      <figcaption class="featured-video-content">
+
+        <div class="featured-video-kicker">
+          Final Route
+        </div>
+
+        <h3>
+          Final-Route Evaluation
+        </h3>
+
+        <p>
+          An anonymized third-person view of CyFI during
+          sustained real-world riding on the final evaluation route.
+        </p>
+
+      </figcaption>
+
+    </figure>
+
+
+    <!--
+      SCENE DESCRIPTION PROMPT
+      WILL BE ADDED HERE NEXT.
+    -->
+
+
   </div>
 
 </section>
@@ -1461,7 +1613,7 @@
 ========================== -->
 
 <section
-  class="section"
+  class="section section-soft"
   id="videos"
 >
 
@@ -1481,10 +1633,10 @@
     </p>
 
 
-    <div class="video-grid">
+    <div class="media-grid">
 
 
-      <figure class="video-card">
+      <figure class="media-card">
 
         <video
           controls
@@ -1502,7 +1654,7 @@
         </video>
 
 
-        <figcaption class="video-caption">
+        <figcaption class="media-caption">
 
           <strong>
             Long-Route Evaluation
@@ -1518,7 +1670,7 @@
       </figure>
 
 
-      <figure class="video-card">
+      <figure class="media-card">
 
         <video
           controls
@@ -1536,7 +1688,7 @@
         </video>
 
 
-        <figcaption class="video-caption">
+        <figcaption class="media-caption">
 
           <strong>
             Participant Evaluation
@@ -1561,6 +1713,10 @@
 </main>
 
 
+
+<!-- ==========================
+     FOOTER
+========================== -->
 
 <footer>
 

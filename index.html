@@ -28,7 +28,8 @@
 
       --border: #e2e7ec;
 
-      --shadow: 0 12px 32px rgba(24, 39, 58, 0.07);
+      --shadow:
+        0 12px 32px rgba(24, 39, 58, 0.07);
 
       --radius-md: 18px;
       --radius-lg: 28px;
@@ -117,7 +118,6 @@
     .nav-brand img {
       width: 34px;
       height: 34px;
-
       object-fit: contain;
     }
 
@@ -144,7 +144,6 @@
 
     .hero {
       padding: 72px 0 58px;
-
       text-align: center;
     }
 
@@ -162,7 +161,9 @@
 
       margin: 0 auto;
 
-      font-size: clamp(2.5rem, 5vw, 4.8rem);
+      font-size:
+        clamp(2.5rem, 5vw, 4.8rem);
+
       line-height: 1.03;
 
       letter-spacing: -0.055em;
@@ -211,14 +212,13 @@
 
       border: 1px solid var(--border);
 
-      background: #eee;
-
       box-shadow: var(--shadow);
+
+      background: #eee;
     }
 
     .hero-image img {
       width: 100%;
-
       aspect-ratio: 16 / 9;
 
       object-fit: cover;
@@ -265,7 +265,9 @@
 
       margin: 0;
 
-      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-size:
+        clamp(2rem, 4vw, 3.1rem);
+
       line-height: 1.08;
 
       letter-spacing: -0.045em;
@@ -318,7 +320,8 @@
     .feature-grid {
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(3, 1fr);
 
       gap: 18px;
 
@@ -374,7 +377,7 @@
     .prompt-box {
       margin-top: 30px;
 
-      padding: 28px 30px;
+      overflow: hidden;
 
       border-radius: var(--radius-md);
 
@@ -382,25 +385,30 @@
         linear-gradient(
           135deg,
           #ffffff 0%,
-          #f4f8fc 100%
+          #f5f9fc 100%
         );
 
-      border: 1px solid #cfddec;
+      border: 1px solid #d5e1ec;
 
       box-shadow:
         0 8px 24px rgba(24, 39, 58, 0.045);
     }
 
     .prompt-box-header {
-      margin-bottom: 18px;
+      padding: 22px 26px;
+
+      border-bottom:
+        1px solid var(--border);
     }
 
     .prompt-box-header h3 {
       margin: 0;
 
-      color: var(--navy);
+      color: var(--text);
 
-      font-size: 1.15rem;
+      font-size: 1.18rem;
+      font-weight: 750;
+
       letter-spacing: -0.02em;
     }
 
@@ -412,12 +420,17 @@
       font-size: 0.86rem;
     }
 
+    .prompt-box-content {
+      padding: 26px 28px 28px;
+    }
+
     .prompt-text {
       margin: 0;
 
       padding-left: 20px;
 
-      border-left: 4px solid var(--blue);
+      border-left:
+        4px solid var(--blue);
 
       color: #2c3948;
 
@@ -427,13 +440,14 @@
 
 
     /* ==========================
-       MEDIA CARDS
+       MEDIA
     ========================== */
 
     .media-grid {
       display: grid;
 
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns:
+        repeat(2, 1fr);
 
       gap: 20px;
 
@@ -495,7 +509,8 @@
     .gallery {
       display: grid;
 
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns:
+        repeat(2, 1fr);
 
       gap: 18px;
 
@@ -519,7 +534,8 @@
 
       object-fit: cover;
 
-      transition: transform 0.3s ease;
+      transition:
+        transform 0.3s ease;
     }
 
     .gallery-card:hover img {
@@ -546,8 +562,11 @@
 
       background: #ffffff;
 
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius-lg);
 
       box-shadow:
         0 10px 28px rgba(24, 39, 58, 0.055);
@@ -604,11 +623,13 @@
     .table-wrapper {
       overflow-x: auto;
 
-      border-radius: var(--radius-md);
+      border-radius:
+        var(--radius-md);
 
       background: white;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
     }
 
     table {
@@ -661,7 +682,8 @@
     .evaluation-grid {
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(3, 1fr);
 
       gap: 18px;
 
@@ -671,11 +693,13 @@
     .evaluation-card {
       padding: 26px;
 
-      border-radius: var(--radius-md);
+      border-radius:
+        var(--radius-md);
 
       background: white;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
     }
 
     .evaluation-card h3 {
@@ -704,27 +728,33 @@
 
       overflow: hidden;
 
-      border-radius: var(--radius-lg);
+      border-radius:
+        var(--radius-lg);
 
       background: white;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
-      box-shadow: var(--shadow);
+      box-shadow:
+        var(--shadow);
     }
 
     .featured-video video {
       width: 100%;
 
-      aspect-ratio: 16 / 9;
+      aspect-ratio:
+        16 / 9;
 
       object-fit: cover;
 
-      background: #0b0d10;
+      background:
+        #0b0d10;
     }
 
     .featured-video-content {
-      padding: 26px 30px 30px;
+      padding:
+        26px 30px 30px;
     }
 
     .featured-video-kicker {
@@ -785,7 +815,8 @@
     footer {
       padding: 32px 0 42px;
 
-      border-top: 1px solid var(--border);
+      border-top:
+        1px solid var(--border);
 
       color: var(--text-soft);
 
@@ -840,7 +871,8 @@
     @media (max-width: 680px) {
 
       .container {
-        width: calc(100% - 24px);
+        width:
+          calc(100% - 24px);
       }
 
       .nav-links {
@@ -860,10 +892,6 @@
         font-size: 2.4rem;
       }
 
-      .hero-subtitle {
-        font-size: 1rem;
-      }
-
       .section {
         padding: 54px 0;
       }
@@ -872,8 +900,12 @@
         padding: 28px 24px;
       }
 
-      .prompt-box {
-        padding: 24px 22px;
+      .prompt-box-header {
+        padding: 20px 22px;
+      }
+
+      .prompt-box-content {
+        padding: 22px;
       }
 
       .study-box {
@@ -902,10 +934,6 @@
 <body>
 
 
-<!-- ==========================
-     NAVIGATION
-========================== -->
-
 <header class="topbar">
 
   <div class="container nav">
@@ -924,12 +952,29 @@
 
     <nav class="nav-links">
 
-      <a href="#overview">Overview</a>
-      <a href="#prototype">Prototype</a>
-      <a href="#simulation">Simulation</a>
-      <a href="#study">Participants</a>
-      <a href="#evaluation">Evaluation</a>
-      <a href="#videos">Videos</a>
+      <a href="#overview">
+        Overview
+      </a>
+
+      <a href="#prototype">
+        Prototype
+      </a>
+
+      <a href="#simulation">
+        Simulation
+      </a>
+
+      <a href="#study">
+        Participants
+      </a>
+
+      <a href="#evaluation">
+        Evaluation
+      </a>
+
+      <a href="#videos">
+        Videos
+      </a>
 
     </nav>
 
@@ -997,7 +1042,9 @@
       />
 
       <figcaption class="hero-caption">
+
         CyFI operating during an outdoor riding evaluation.
+
       </figcaption>
 
     </figure>
@@ -1009,7 +1056,7 @@
 
 
 <!-- ==========================
-     OVERVIEW / ABSTRACT
+     OVERVIEW
 ========================== -->
 
 <section
@@ -1118,9 +1165,13 @@
       </div>
 
 
-      <p class="prompt-text">
-        You are describing the surrounding scene for a blind person riding an autonomous tricycle. Provide a concise description that helps the rider quickly understand the most important parts of the environment. Mention only the most relevant nearby objects and features, such as pedestrians, cyclists, vehicles, obstacles, roads, sidewalks, intersections, crossings, and entrances. Use clear relative positions such as “on the left,” “ahead,” and “on the right.” Mention distance only when it can be estimated reliably. Avoid unnecessary visual details and do not speculate about uncertain objects. Keep the description to 1–2 short sentences.
-      </p>
+      <div class="prompt-box-content">
+
+        <p class="prompt-text">
+          You are describing the surrounding scene for a blind person riding an autonomous tricycle. Provide a concise description that helps the rider quickly understand the most important parts of the environment. Mention only the most relevant nearby objects and features, such as pedestrians, cyclists, vehicles, obstacles, roads, sidewalks, intersections, crossings, and entrances. Use clear relative positions such as “on the left,” “ahead,” and “on the right.” Mention distance only when it can be estimated reliably. Avoid unnecessary visual details and do not speculate about uncertain objects. Keep the description to 1–2 short sentences.
+        </p>
+
+      </div>
 
     </div>
 
@@ -1437,7 +1488,7 @@
 
 
 
-    <!-- FORMATIVE STUDY -->
+    <!-- FORMATIVE -->
 
     <div class="study-box">
 
@@ -1680,7 +1731,8 @@
 
         <p>
           Riding scenarios included turns, intersections,
-          roadway infrastructure, vehicles, and changing road geometry.
+          roadway infrastructure, vehicles, and changing
+          road geometry.
         </p>
 
       </article>
@@ -1704,7 +1756,9 @@
 
 
 
-    <!-- NAVIGATION VISUALIZATION -->
+    <!-- ==========================
+         NAVIGATION VISUALIZATION
+    ========================== -->
 
     <figure class="featured-video">
 
@@ -1768,7 +1822,9 @@
 
 
 
-    <!-- FINAL ROUTE -->
+    <!-- ==========================
+         FINAL ROUTE
+    ========================== -->
 
     <figure class="featured-video">
 
@@ -1868,7 +1924,8 @@
           </strong>
 
           <span>
-            Representative clip from a sustained real-world riding route.
+            Representative clip from a sustained
+            real-world riding route.
           </span>
 
         </figcaption>
@@ -1919,10 +1976,6 @@
 </main>
 
 
-
-<!-- ==========================
-     FOOTER
-========================== -->
 
 <footer>
 

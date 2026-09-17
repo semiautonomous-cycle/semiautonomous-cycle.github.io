@@ -18,15 +18,21 @@
     :root {
       --bg: #ffffff;
       --bg-soft: #f7f9fb;
+
       --text: #172033;
       --text-soft: #5f6978;
+
       --navy: #123e70;
       --blue: #3d86c6;
       --blue-soft: #eaf3fb;
+
       --border: #e2e7ec;
+
       --shadow: 0 12px 32px rgba(24, 39, 58, 0.07);
+
       --radius-md: 18px;
       --radius-lg: 28px;
+
       --max-width: 1100px;
     }
 
@@ -40,6 +46,7 @@
 
     body {
       margin: 0;
+
       background: var(--bg);
       color: var(--text);
 
@@ -116,12 +123,16 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 19px;
 
       color: var(--text-soft);
 
-      font-size: 0.84rem;
+      font-size: 0.83rem;
       font-weight: 600;
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
@@ -135,6 +146,7 @@
 
     .hero {
       padding: 72px 0 58px;
+
       text-align: center;
     }
 
@@ -322,6 +334,9 @@
       background: white;
 
       border: 1px solid var(--border);
+
+      box-shadow:
+        0 6px 18px rgba(24, 39, 58, 0.025);
     }
 
     .feature-number {
@@ -358,7 +373,7 @@
 
 
     /* ==========================
-       TWO-COLUMN MEDIA
+       MEDIA CARDS
     ========================== */
 
     .media-grid {
@@ -464,11 +479,12 @@
 
 
     /* ==========================
-       STUDY BOX
+       STUDY BOXES
     ========================== */
 
     .study-box {
       margin-top: 32px;
+
       padding: 26px;
 
       background: #ffffff;
@@ -505,6 +521,7 @@
       margin: 0;
 
       color: var(--text-soft);
+
       font-size: 0.9rem;
     }
 
@@ -524,7 +541,7 @@
 
 
     /* ==========================
-       TABLE
+       TABLES
     ========================== */
 
     .table-wrapper {
@@ -597,7 +614,7 @@
         linear-gradient(
           145deg,
           #ffffff,
-          #f4f8fc
+          #f3f8fc
         );
 
       box-shadow:
@@ -620,23 +637,26 @@
       display: flex;
       align-items: center;
 
-      gap: 13px;
+      gap: 14px;
     }
 
     .prompt-icon {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
 
       display: grid;
       place-items: center;
 
-      border-radius: 12px;
+      border-radius: 13px;
 
       background: var(--navy);
       color: white;
 
-      font-size: 1rem;
+      font-size: 0.92rem;
       font-weight: 800;
+
+      box-shadow:
+        0 5px 14px rgba(18, 62, 112, 0.18);
     }
 
     .prompt-header h3 {
@@ -647,7 +667,7 @@
     }
 
     .prompt-header p {
-      margin: 3px 0 0;
+      margin: 4px 0 0;
 
       color: var(--text-soft);
 
@@ -665,6 +685,37 @@
       color: var(--navy);
 
       font-size: 0.76rem;
+      font-weight: 800;
+    }
+
+    .prompt-flow {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-bottom: 22px;
+    }
+
+    .prompt-flow-item {
+      padding: 6px 10px;
+
+      border-radius: 999px;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+
+      color: var(--navy);
+
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .prompt-flow-arrow {
+      color: var(--blue);
+
       font-weight: 800;
     }
 
@@ -728,7 +779,7 @@
 
 
     /* ==========================
-       FEATURED VIDEO
+       FEATURED VIDEOS
     ========================== */
 
     .featured-video {
@@ -856,6 +907,7 @@
     ========================== */
 
     @media (max-width: 900px) {
+
       .feature-grid,
       .evaluation-grid {
         grid-template-columns: 1fr;
@@ -865,9 +917,12 @@
       .gallery {
         grid-template-columns: 1fr;
       }
+
     }
 
+
     @media (max-width: 680px) {
+
       .container {
         width: calc(100% - 24px);
       }
@@ -887,6 +942,10 @@
 
       .hero h1 {
         font-size: 2.4rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
       }
 
       .section {
@@ -922,13 +981,19 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
     }
+
   </style>
 </head>
 
 
 <body>
 
+
+<!-- ==========================
+     NAVIGATION
+========================== -->
 
 <header class="topbar">
 
@@ -951,7 +1016,7 @@
       <a href="#overview">Overview</a>
       <a href="#prototype">Prototype</a>
       <a href="#simulation">Simulation</a>
-      <a href="#study">Study</a>
+      <a href="#study">Participants</a>
       <a href="#feedback">Feedback</a>
       <a href="#evaluation">Evaluation</a>
       <a href="#videos">Videos</a>
@@ -967,7 +1032,9 @@
 <main id="top">
 
 
-<!-- HERO -->
+<!-- ==========================
+     HERO
+========================== -->
 
 <section class="hero">
 
@@ -986,10 +1053,12 @@
 
 
     <p class="hero-subtitle">
+
       A human-centered shared-autonomy cycling platform
       supporting accessible outdoor mobility through
       autonomous steering, emergency braking, and
       multimodal rider feedback.
+
     </p>
 
 
@@ -1029,7 +1098,9 @@
 
 
 
-<!-- ABSTRACT -->
+<!-- ==========================
+     ABSTRACT
+========================== -->
 
 <section
   class="section section-soft"
@@ -1120,7 +1191,9 @@
 
 
 
-<!-- INITIAL PROTOTYPE -->
+<!-- ==========================
+     INITIAL PROTOTYPE
+========================== -->
 
 <section
   class="section"
@@ -1151,6 +1224,7 @@
         <img
           src="prototype_1_anonymized.png"
           alt="Anonymized initial CyFI prototype side view"
+          loading="lazy"
         />
 
         <figcaption class="media-caption">
@@ -1173,6 +1247,7 @@
         <img
           src="prototype_2_anonymized.png"
           alt="Anonymized initial CyFI prototype cockpit view"
+          loading="lazy"
         />
 
         <figcaption class="media-caption">
@@ -1198,7 +1273,9 @@
 
 
 
-<!-- SIMULATION -->
+<!-- ==========================
+     SIMULATION
+========================== -->
 
 <section
   class="section section-soft"
@@ -1239,6 +1316,8 @@
             type="video/mp4"
           />
 
+          Your browser does not support HTML5 video.
+
         </video>
 
 
@@ -1271,6 +1350,8 @@
             type="video/mp4"
           />
 
+          Your browser does not support HTML5 video.
+
         </video>
 
 
@@ -1297,7 +1378,9 @@
 
 
 
-<!-- CYFI IN ACTION -->
+<!-- ==========================
+     CYFI IN ACTION
+========================== -->
 
 <section class="section">
 
@@ -1325,6 +1408,7 @@
         <img
           src="rider-07.png"
           alt="CyFI outdoor riding session"
+          loading="lazy"
         />
 
         <figcaption>
@@ -1339,6 +1423,7 @@
         <img
           src="rider-08.png"
           alt="CyFI participant riding outdoors"
+          loading="lazy"
         />
 
         <figcaption>
@@ -1353,6 +1438,7 @@
         <img
           src="rider-10.png"
           alt="CyFI operating on a roadway"
+          loading="lazy"
         />
 
         <figcaption>
@@ -1367,6 +1453,7 @@
         <img
           src="rider-12.png"
           alt="CyFI outdoor evaluation"
+          loading="lazy"
         />
 
         <figcaption>
@@ -1384,7 +1471,9 @@
 
 
 
-<!-- PARTICIPANTS -->
+<!-- ==========================
+     PARTICIPANTS
+========================== -->
 
 <section
   class="section section-soft"
@@ -1407,7 +1496,8 @@
     </p>
 
 
-    <!-- FORMATIVE -->
+
+    <!-- FORMATIVE STUDY -->
 
     <div class="study-box">
 
@@ -1437,6 +1527,7 @@
         <table>
 
           <thead>
+
             <tr>
               <th>ID</th>
               <th>Age</th>
@@ -1447,10 +1538,12 @@
               <th>Physical Activity</th>
               <th>Days / week</th>
             </tr>
+
           </thead>
 
 
           <tbody>
+
 
             <tr class="site-row">
               <td colspan="8">
@@ -1468,6 +1561,7 @@
             <tr><td>P33</td><td>73</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
             <tr><td>P34</td><td>63</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
 
+
             <tr class="site-row">
               <td colspan="8">
                 Site 2: Community Organization (n = 5)
@@ -1479,6 +1573,7 @@
             <tr><td>P37</td><td>63</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
             <tr><td>P38</td><td>52</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
             <tr><td>P39</td><td>21</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
+
 
           </tbody>
 
@@ -1520,6 +1615,7 @@
         <table>
 
           <thead>
+
             <tr>
               <th>ID</th>
               <th>Age</th>
@@ -1530,10 +1626,12 @@
               <th>Physical Activity</th>
               <th>Days / week</th>
             </tr>
+
           </thead>
 
 
           <tbody>
+
 
             <tr class="site-row">
               <td colspan="8">
@@ -1562,6 +1660,7 @@
             <tr><td>P19</td><td>46</td><td>Man</td><td>White</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
             <tr><td>P20</td><td>65</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>None</td><td>1–2</td></tr>
 
+
             <tr class="site-row">
               <td colspan="8">
                 Site 2: Community Organization (n = 5)
@@ -1573,6 +1672,7 @@
             <tr><td>P23</td><td>36</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
             <tr><td>P24</td><td>84</td><td>Woman</td><td>White</td><td>Legally blind</td><td>No</td><td>High</td><td>1–2</td></tr>
             <tr><td>P25</td><td>41</td><td>Man</td><td>Hispanic</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
+
 
           </tbody>
 
@@ -1589,7 +1689,9 @@
 
 
 
-<!-- FEEDBACK -->
+<!-- ==========================
+     MULTIMODAL FEEDBACK
+========================== -->
 
 <section
   class="section"
@@ -1614,6 +1716,7 @@
 
     <div class="prompt-box">
 
+
       <div class="prompt-header">
 
         <div class="prompt-header-left">
@@ -1622,6 +1725,7 @@
             AI
           </div>
 
+
           <div>
 
             <h3>
@@ -1629,7 +1733,7 @@
             </h3>
 
             <p>
-              Prompt for scene-description audio feedback.
+              Prompt for scene description audio feedback initiated via the handle button.
             </p>
 
           </div>
@@ -1646,9 +1750,36 @@
 
       <div class="prompt-content">
 
+
+        <div class="prompt-flow">
+
+          <span class="prompt-flow-item">
+            Handle Button
+          </span>
+
+          <span class="prompt-flow-arrow">
+            →
+          </span>
+
+          <span class="prompt-flow-item">
+            Scene Description
+          </span>
+
+          <span class="prompt-flow-arrow">
+            →
+          </span>
+
+          <span class="prompt-flow-item">
+            Audio Feedback
+          </span>
+
+        </div>
+
+
         <blockquote>
           You are describing the surrounding scene for a blind person riding an autonomous tricycle. Provide a concise description that helps the rider quickly understand the most important parts of the environment. Mention only the most relevant nearby objects and features, such as pedestrians, cyclists, vehicles, obstacles, roads, sidewalks, intersections, crossings, and entrances. Use clear relative positions such as “on the left,” “ahead,” and “on the right.” Mention distance only when it can be estimated reliably. Avoid unnecessary visual details and do not speculate about uncertain objects. Keep the description to 1–2 short sentences.
         </blockquote>
+
 
       </div>
 
@@ -1661,7 +1792,9 @@
 
 
 
-<!-- EVALUATION -->
+<!-- ==========================
+     EVALUATION
+========================== -->
 
 <section
   class="section section-soft"
@@ -1710,8 +1843,7 @@
 
         <p>
           Riding scenarios included turns, intersections,
-          roadway infrastructure, vehicles, and changing
-          road geometry.
+          roadway infrastructure, vehicles, and changing road geometry.
         </p>
 
       </article>
@@ -1734,6 +1866,9 @@
     </div>
 
 
+
+    <!-- NAVIGATION VISUALIZATION -->
+
     <figure class="featured-video">
 
       <video
@@ -1746,6 +1881,8 @@
           src="CyFI_anonymized_web.mp4"
           type="video/mp4"
         />
+
+        Your browser does not support HTML5 video.
 
       </video>
 
@@ -1794,6 +1931,8 @@
 
 
 
+    <!-- FINAL ROUTE -->
+
     <figure class="featured-video">
 
       <video
@@ -1807,6 +1946,8 @@
           src="final_route_anonymized.mp4"
           type="video/mp4"
         />
+
+        Your browser does not support HTML5 video.
 
       </video>
 
@@ -1837,7 +1978,9 @@
 
 
 
-<!-- VIDEOS -->
+<!-- ==========================
+     SHORT VIDEOS
+========================== -->
 
 <section
   class="section"
@@ -1876,6 +2019,8 @@
             type="video/mp4"
           />
 
+          Your browser does not support HTML5 video.
+
         </video>
 
 
@@ -1886,8 +2031,7 @@
           </strong>
 
           <span>
-            Representative clip from a sustained
-            real-world riding route.
+            Representative clip from a sustained real-world riding route.
           </span>
 
         </figcaption>
@@ -1907,6 +2051,8 @@
             src="Georgia_clip.mp4"
             type="video/mp4"
           />
+
+          Your browser does not support HTML5 video.
 
         </video>
 
@@ -1936,6 +2082,10 @@
 </main>
 
 
+
+<!-- ==========================
+     FOOTER
+========================== -->
 
 <footer>
 

@@ -28,12 +28,12 @@
 
       --border: #e2e7ec;
 
-      --shadow: 0 10px 28px rgba(24, 39, 58, 0.06);
+      --shadow: 0 8px 24px rgba(24, 39, 58, 0.055);
 
-      --radius-md: 16px;
-      --radius-lg: 24px;
+      --radius-md: 15px;
+      --radius-lg: 22px;
 
-      --max-width: 1100px;
+      --max-width: 1080px;
     }
 
     * {
@@ -46,6 +46,7 @@
 
     body {
       margin: 0;
+
       background: var(--bg);
       color: var(--text);
 
@@ -59,7 +60,7 @@
         Arial,
         sans-serif;
 
-      line-height: 1.65;
+      line-height: 1.6;
     }
 
     img,
@@ -87,14 +88,14 @@
       top: 0;
       z-index: 100;
 
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(14px);
 
       border-bottom: 1px solid var(--border);
     }
 
     .nav {
-      min-height: 62px;
+      min-height: 58px;
 
       display: flex;
       align-items: center;
@@ -107,15 +108,15 @@
       display: flex;
       align-items: center;
 
-      gap: 9px;
+      gap: 8px;
 
       font-weight: 800;
       letter-spacing: -0.02em;
     }
 
     .nav-brand img {
-      width: 32px;
-      height: 32px;
+      width: 30px;
+      height: 30px;
 
       object-fit: contain;
     }
@@ -124,11 +125,11 @@
       display: flex;
       align-items: center;
 
-      gap: 22px;
+      gap: 20px;
 
       color: var(--text-soft);
 
-      font-size: 0.83rem;
+      font-size: 0.8rem;
       font-weight: 650;
     }
 
@@ -141,41 +142,41 @@
     ========================================================= */
 
     .hero {
-      padding: 58px 0 46px;
+      padding: 42px 0 34px;
 
       text-align: center;
     }
 
     .project-logo {
-      width: 88px;
-      height: 88px;
+      width: 74px;
+      height: 74px;
 
-      margin: 0 auto 21px;
+      margin: 0 auto 16px;
 
       object-fit: contain;
     }
 
     .hero h1 {
-      max-width: 900px;
+      max-width: 860px;
 
       margin: 0 auto;
 
-      font-size: clamp(2.4rem, 5vw, 4.5rem);
-      line-height: 1.04;
+      font-size: clamp(2.25rem, 4.7vw, 4rem);
+      line-height: 1.03;
 
       letter-spacing: -0.05em;
       font-weight: 800;
     }
 
     .hero-subtitle {
-      max-width: 760px;
+      max-width: 740px;
 
-      margin: 18px auto 0;
+      margin: 15px auto 0;
 
       color: var(--text-soft);
 
-      font-size: 1.05rem;
-      line-height: 1.7;
+      font-size: 1rem;
+      line-height: 1.65;
     }
 
     .hero-tags {
@@ -183,25 +184,25 @@
       flex-wrap: wrap;
       justify-content: center;
 
-      gap: 9px;
+      gap: 8px;
 
-      margin-top: 22px;
+      margin-top: 17px;
     }
 
     .hero-tag {
-      padding: 6px 12px;
+      padding: 5px 11px;
 
       border-radius: 999px;
 
       background: var(--blue-soft);
       color: var(--navy);
 
-      font-size: 0.77rem;
+      font-size: 0.74rem;
       font-weight: 750;
     }
 
     .hero-image {
-      margin-top: 34px;
+      margin-top: 26px;
 
       overflow: hidden;
 
@@ -214,20 +215,20 @@
     }
 
     .hero-image img {
-      aspect-ratio: 16 / 8.5;
+      aspect-ratio: 16 / 7.8;
 
       object-fit: cover;
     }
 
     .hero-caption {
-      padding: 11px 16px;
+      padding: 9px 14px;
 
       text-align: left;
 
       background: white;
       color: var(--text-soft);
 
-      font-size: 0.8rem;
+      font-size: 0.76rem;
     }
 
     /* =========================================================
@@ -235,7 +236,7 @@
     ========================================================= */
 
     .section {
-      padding: 58px 0;
+      padding: 44px 0;
     }
 
     .section-soft {
@@ -243,11 +244,11 @@
     }
 
     .section-label {
-      margin-bottom: 7px;
+      margin-bottom: 5px;
 
       color: var(--blue);
 
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 800;
 
       text-transform: uppercase;
@@ -255,30 +256,30 @@
     }
 
     .section h2 {
-      max-width: 850px;
+      max-width: 820px;
 
       margin: 0;
 
-      font-size: clamp(1.9rem, 4vw, 2.8rem);
-      line-height: 1.1;
+      font-size: clamp(1.8rem, 3.7vw, 2.55rem);
+      line-height: 1.08;
 
       letter-spacing: -0.04em;
     }
 
     .section-intro {
-      max-width: 820px;
+      max-width: 800px;
 
-      margin: 14px 0 0;
+      margin: 10px 0 0;
 
       color: var(--text-soft);
 
-      font-size: 0.98rem;
+      font-size: 0.92rem;
     }
 
     .subheading {
-      margin: 38px 0 8px;
+      margin: 28px 0 6px;
 
-      font-size: 1.35rem;
+      font-size: 1.2rem;
       letter-spacing: -0.025em;
     }
 
@@ -289,7 +290,7 @@
 
       color: var(--text-soft);
 
-      font-size: 0.92rem;
+      font-size: 0.86rem;
     }
 
     /* =========================================================
@@ -297,18 +298,15 @@
     ========================================================= */
 
     .abstract-box {
-      margin-top: 28px;
+      margin-top: 22px;
 
-      padding: 30px 34px;
+      padding: 24px 28px;
 
       border-radius: var(--radius-lg);
 
       background: white;
 
       border: 1px solid var(--border);
-
-      box-shadow:
-        0 6px 18px rgba(24, 39, 58, 0.03);
     }
 
     .abstract-box p {
@@ -316,8 +314,8 @@
 
       color: #2f3947;
 
-      font-size: 1rem;
-      line-height: 1.82;
+      font-size: 0.94rem;
+      line-height: 1.72;
     }
 
     /* =========================================================
@@ -329,13 +327,13 @@
 
       grid-template-columns: repeat(3, 1fr);
 
-      gap: 16px;
+      gap: 14px;
 
-      margin-top: 26px;
+      margin-top: 20px;
     }
 
     .feature-card {
-      padding: 22px;
+      padding: 18px;
 
       border-radius: var(--radius-md);
 
@@ -345,27 +343,27 @@
     }
 
     .feature-number {
-      width: 34px;
-      height: 34px;
+      width: 30px;
+      height: 30px;
 
       display: grid;
       place-items: center;
 
-      margin-bottom: 18px;
+      margin-bottom: 13px;
 
       border-radius: 50%;
 
       background: var(--blue-soft);
       color: var(--navy);
 
-      font-size: 0.82rem;
+      font-size: 0.75rem;
       font-weight: 800;
     }
 
     .feature-card h3 {
-      margin: 0 0 6px;
+      margin: 0 0 5px;
 
-      font-size: 1.05rem;
+      font-size: 0.98rem;
     }
 
     .feature-card p {
@@ -373,11 +371,12 @@
 
       color: var(--text-soft);
 
-      font-size: 0.87rem;
+      font-size: 0.81rem;
+      line-height: 1.55;
     }
 
     /* =========================================================
-       MEDIA
+       GENERIC MEDIA
     ========================================================= */
 
     .media-grid {
@@ -385,9 +384,9 @@
 
       grid-template-columns: repeat(2, 1fr);
 
-      gap: 18px;
+      gap: 16px;
 
-      margin-top: 25px;
+      margin-top: 20px;
     }
 
     .media-card {
@@ -403,7 +402,7 @@
     }
 
     .media-card img {
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 16 / 9.5;
 
       object-fit: cover;
     }
@@ -417,21 +416,21 @@
     }
 
     .media-caption {
-      padding: 13px 15px 15px;
+      padding: 11px 13px 13px;
     }
 
     .media-caption strong {
       display: block;
 
-      margin-bottom: 3px;
+      margin-bottom: 2px;
 
-      font-size: 0.94rem;
+      font-size: 0.88rem;
     }
 
     .media-caption span {
       color: var(--text-soft);
 
-      font-size: 0.81rem;
+      font-size: 0.76rem;
     }
 
     /* =========================================================
@@ -439,7 +438,7 @@
     ========================================================= */
 
     .system-card {
-      margin-top: 26px;
+      margin-top: 20px;
 
       overflow: hidden;
 
@@ -453,7 +452,7 @@
     }
 
     .system-image-wrap {
-      padding: 20px;
+      padding: 14px;
 
       background: white;
     }
@@ -461,7 +460,7 @@
     .system-image-wrap img {
       width: 100%;
       height: auto;
-      max-height: 650px;
+      max-height: 480px;
 
       object-fit: contain;
 
@@ -469,7 +468,7 @@
     }
 
     .system-caption {
-      padding: 15px 20px 18px;
+      padding: 12px 16px 14px;
 
       border-top: 1px solid var(--border);
     }
@@ -477,15 +476,15 @@
     .system-caption strong {
       display: block;
 
-      margin-bottom: 3px;
+      margin-bottom: 2px;
 
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
     .system-caption span {
       color: var(--text-soft);
 
-      font-size: 0.83rem;
+      font-size: 0.78rem;
     }
 
     /* =========================================================
@@ -493,7 +492,7 @@
     ========================================================= */
 
     .prompt-box {
-      margin-top: 20px;
+      margin-top: 16px;
 
       overflow: hidden;
 
@@ -510,7 +509,7 @@
     }
 
     .prompt-box-header {
-      padding: 18px 22px;
+      padding: 14px 18px;
 
       border-bottom: 1px solid var(--border);
     }
@@ -518,42 +517,50 @@
     .prompt-box-header h3 {
       margin: 0;
 
-      font-size: 1.05rem;
+      font-size: 0.98rem;
     }
 
     .prompt-box-header p {
-      margin: 4px 0 0;
+      margin: 3px 0 0;
 
       color: var(--text-soft);
 
-      font-size: 0.82rem;
+      font-size: 0.76rem;
     }
 
     .prompt-box-content {
-      padding: 21px 24px;
+      padding: 17px 20px;
     }
 
     .prompt-text {
       margin: 0;
 
-      padding-left: 18px;
+      padding-left: 15px;
 
       border-left: 3px solid var(--blue);
 
       color: #2c3948;
 
-      font-size: 0.92rem;
-      line-height: 1.75;
+      font-size: 0.84rem;
+      line-height: 1.65;
     }
 
     /* =========================================================
-       DATASET
+       DATASET CONSTRUCTION — TWO COLUMN
     ========================================================= */
 
-    .dataset-box {
-      margin-top: 26px;
+    .dataset-layout {
+      display: grid;
 
-      padding: 27px 30px;
+      grid-template-columns: 1.05fr 0.95fr;
+
+      gap: 18px;
+
+      margin-top: 22px;
+    }
+
+    .dataset-panel {
+      padding: 22px 24px;
 
       border-radius: var(--radius-lg);
 
@@ -562,34 +569,34 @@
       border: 1px solid var(--border);
     }
 
-    .dataset-box p {
-      margin: 0 0 15px;
+    .dataset-panel p {
+      margin: 0 0 13px;
 
       color: #334051;
 
-      font-size: 0.93rem;
-      line-height: 1.76;
+      font-size: 0.84rem;
+      line-height: 1.66;
     }
 
-    .dataset-box p:last-child {
+    .dataset-panel p:last-child {
       margin-bottom: 0;
     }
 
     .dataset-subtitle {
-      margin: 23px 0 9px;
+      margin: 0 0 9px;
 
       color: var(--navy);
 
-      font-size: 0.98rem;
+      font-size: 0.94rem;
       font-weight: 800;
     }
 
     .equation-box {
-      margin: 18px 0;
+      margin: 14px 0;
 
-      padding: 19px;
+      padding: 16px;
 
-      border-radius: var(--radius-md);
+      border-radius: 13px;
 
       background: #f5f8fb;
 
@@ -599,30 +606,30 @@
     }
 
     .equation {
-      margin: 5px 0;
+      margin: 4px 0;
 
       font-family:
         "Cambria Math",
         "Times New Roman",
         serif;
 
-      font-size: 1.08rem;
+      font-size: 1rem;
     }
 
     .equation-note {
-      margin-top: 11px !important;
+      margin-top: 9px !important;
 
       color: var(--text-soft) !important;
 
-      font-size: 0.83rem !important;
+      font-size: 0.75rem !important;
     }
 
     .waypoint-box {
-      margin-top: 15px;
+      margin-top: 12px;
 
-      padding: 17px 20px;
+      padding: 14px 16px;
 
-      border-radius: var(--radius-md);
+      border-radius: 13px;
 
       background: var(--blue-soft);
       color: var(--navy);
@@ -633,9 +640,9 @@
     .waypoint-box strong {
       display: block;
 
-      margin-bottom: 6px;
+      margin-bottom: 5px;
 
-      font-size: 0.9rem;
+      font-size: 0.82rem;
     }
 
     .waypoint-equation {
@@ -644,7 +651,7 @@
         "Times New Roman",
         serif;
 
-      font-size: 1.08rem;
+      font-size: 1rem;
     }
 
     /* =========================================================
@@ -652,7 +659,7 @@
     ========================================================= */
 
     details.study-details {
-      margin-top: 18px;
+      margin-top: 13px;
 
       overflow: hidden;
 
@@ -668,9 +675,9 @@
       align-items: center;
       justify-content: space-between;
 
-      gap: 20px;
+      gap: 16px;
 
-      padding: 18px 22px;
+      padding: 14px 18px;
 
       cursor: pointer;
 
@@ -688,7 +695,7 @@
 
       color: var(--blue);
 
-      font-size: 1.35rem;
+      font-size: 1.15rem;
       font-weight: 500;
     }
 
@@ -699,53 +706,53 @@
     .study-summary-left strong {
       display: block;
 
-      font-size: 1rem;
+      font-size: 0.92rem;
     }
 
     .study-summary-left span {
       display: block;
 
-      margin-top: 2px;
+      margin-top: 1px;
 
       color: var(--text-soft);
 
-      font-size: 0.82rem;
+      font-size: 0.76rem;
       font-weight: 500;
     }
 
     .study-count {
       margin-left: auto;
 
-      padding: 5px 10px;
+      padding: 4px 9px;
 
       border-radius: 999px;
 
       background: var(--blue-soft);
       color: var(--navy);
 
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 800;
     }
 
     .details-content {
-      padding: 0 20px 20px;
+      padding: 0 16px 16px;
     }
 
     .table-wrapper {
       overflow-x: auto;
 
-      border-radius: 12px;
+      border-radius: 11px;
 
       border: 1px solid var(--border);
     }
 
     table {
       width: 100%;
-      min-width: 880px;
+      min-width: 860px;
 
       border-collapse: collapse;
 
-      font-size: 0.82rem;
+      font-size: 0.77rem;
     }
 
     thead {
@@ -755,7 +762,7 @@
 
     th,
     td {
-      padding: 9px 11px;
+      padding: 8px 10px;
 
       text-align: left;
 
@@ -763,7 +770,7 @@
     }
 
     th {
-      font-size: 0.74rem;
+      font-size: 0.7rem;
     }
 
     .site-row {
@@ -775,7 +782,48 @@
     }
 
     /* =========================================================
-       GALLERY
+       EVALUATION
+    ========================================================= */
+
+    .evaluation-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 13px;
+
+      margin-top: 20px;
+    }
+
+    .evaluation-card {
+      padding: 17px;
+
+      border-radius: var(--radius-md);
+
+      background: white;
+
+      border: 1px solid var(--border);
+    }
+
+    .evaluation-card h3 {
+      margin: 0 0 5px;
+
+      color: var(--navy);
+
+      font-size: 0.9rem;
+    }
+
+    .evaluation-card p {
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-size: 0.78rem;
+      line-height: 1.52;
+    }
+
+    /* =========================================================
+       COMPACT GALLERY
     ========================================================= */
 
     .compact-gallery {
@@ -783,9 +831,9 @@
 
       grid-template-columns: repeat(4, 1fr);
 
-      gap: 12px;
+      gap: 10px;
 
-      margin-top: 28px;
+      margin-top: 20px;
     }
 
     .compact-gallery figure {
@@ -793,7 +841,7 @@
 
       overflow: hidden;
 
-      border-radius: 13px;
+      border-radius: 12px;
 
       background: white;
 
@@ -807,59 +855,29 @@
     }
 
     .compact-gallery figcaption {
-      padding: 9px 11px;
+      padding: 7px 9px;
 
       color: var(--text-soft);
 
-      font-size: 0.76rem;
+      font-size: 0.7rem;
     }
 
     /* =========================================================
-       EVALUATION
+       MAIN EVALUATION VIDEOS — TWO COLUMN
     ========================================================= */
 
-    .evaluation-grid {
+    .featured-grid {
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
-      gap: 15px;
+      gap: 16px;
 
-      margin-top: 26px;
+      margin-top: 22px;
     }
-
-    .evaluation-card {
-      padding: 21px;
-
-      border-radius: var(--radius-md);
-
-      background: white;
-
-      border: 1px solid var(--border);
-    }
-
-    .evaluation-card h3 {
-      margin: 0 0 6px;
-
-      color: var(--navy);
-
-      font-size: 0.98rem;
-    }
-
-    .evaluation-card p {
-      margin: 0;
-
-      color: var(--text-soft);
-
-      font-size: 0.85rem;
-    }
-
-    /* =========================================================
-       FEATURED VIDEOS
-    ========================================================= */
 
     .featured-video {
-      margin-top: 30px;
+      margin: 0;
 
       overflow: hidden;
 
@@ -873,7 +891,9 @@
     }
 
     .featured-video video {
-      aspect-ratio: 16 / 8.5;
+      width: 100%;
+
+      aspect-ratio: 16 / 9;
 
       object-fit: cover;
 
@@ -881,56 +901,55 @@
     }
 
     .featured-video-content {
-      padding: 18px 22px 21px;
+      padding: 14px 16px 16px;
     }
 
     .featured-video-kicker {
-      margin-bottom: 5px;
+      margin-bottom: 4px;
 
       color: var(--blue);
 
-      font-size: 0.69rem;
+      font-size: 0.64rem;
       font-weight: 800;
 
       text-transform: uppercase;
-      letter-spacing: 0.13em;
+      letter-spacing: 0.12em;
     }
 
     .featured-video-content h3 {
       margin: 0;
 
-      font-size: 1.22rem;
+      font-size: 1.05rem;
       letter-spacing: -0.02em;
     }
 
     .featured-video-content p {
-      max-width: 820px;
-
-      margin: 7px 0 0;
+      margin: 6px 0 0;
 
       color: var(--text-soft);
 
-      font-size: 0.87rem;
+      font-size: 0.79rem;
+      line-height: 1.5;
     }
 
     .scenario-tags {
       display: flex;
       flex-wrap: wrap;
 
-      gap: 7px;
+      gap: 6px;
 
-      margin-top: 13px;
+      margin-top: 10px;
     }
 
     .scenario-tag {
-      padding: 5px 9px;
+      padding: 4px 7px;
 
       border-radius: 999px;
 
       background: var(--blue-soft);
       color: var(--navy);
 
-      font-size: 0.7rem;
+      font-size: 0.63rem;
       font-weight: 700;
     }
 
@@ -939,13 +958,13 @@
     ========================================================= */
 
     footer {
-      padding: 28px 0 36px;
+      padding: 22px 0 28px;
 
       border-top: 1px solid var(--border);
 
       color: var(--text-soft);
 
-      font-size: 0.8rem;
+      font-size: 0.74rem;
     }
 
     .footer-inner {
@@ -960,7 +979,7 @@
       display: flex;
       align-items: center;
 
-      gap: 8px;
+      gap: 7px;
 
       color: var(--navy);
 
@@ -968,8 +987,8 @@
     }
 
     .footer-brand img {
-      width: 26px;
-      height: 26px;
+      width: 24px;
+      height: 24px;
 
       object-fit: contain;
     }
@@ -982,6 +1001,14 @@
 
       .feature-grid,
       .evaluation-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dataset-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1010,29 +1037,29 @@
       }
 
       .hero {
-        padding-top: 44px;
+        padding-top: 34px;
       }
 
       .project-logo {
-        width: 76px;
-        height: 76px;
+        width: 66px;
+        height: 66px;
       }
 
       .hero h1 {
-        font-size: 2.25rem;
+        font-size: 2.1rem;
       }
 
       .section {
-        padding: 46px 0;
+        padding: 38px 0;
       }
 
       .abstract-box,
-      .dataset-box {
-        padding: 23px 20px;
+      .dataset-panel {
+        padding: 19px 18px;
       }
 
       .system-image-wrap {
-        padding: 10px;
+        padding: 8px;
       }
 
       .compact-gallery {
@@ -1103,6 +1130,7 @@
       class="project-logo"
     />
 
+
     <h1>
       CyFI: Semiautonomous Cycling
       for Blind and Low-Vision Riders
@@ -1160,6 +1188,7 @@
     <div class="section-label">
       Abstract
     </div>
+
 
     <h2>
       Human-powered cycling with shared autonomy.
@@ -1394,9 +1423,11 @@
       Dataset Construction
     </div>
 
+
     <h2>
       Synchronized observations and trajectory supervision.
     </h2>
+
 
     <p class="section-intro">
       Sensor streams are synchronized to construct frame-level
@@ -1404,83 +1435,106 @@
     </p>
 
 
-    <div class="dataset-box">
+    <div class="dataset-layout">
 
 
-      <p>
-        For model ablations, we record sensor streams to obtain synchronized
-        RGB observations and frame-level trajectory labels from high-precision
-        GNSS/IMU. We use RTK-fixed solutions as centimeter-level position
-        anchors and supplement them with validated PPK solutions when
-        available. Between the 5 Hz GNSS/PPK position anchors, we obtain
-        dense frame-level positions by integrating the VN-200 velocity
-        measurements. GNSS latitude, longitude, and height measurements are
-        transformed into a local East-North-Up (ENU) coordinate frame.
-      </p>
+      <div class="dataset-panel">
 
-
-      <p>
-        Camera frames are synchronized with navigation measurements in GPS
-        time using host-side timestamp logs. Camera capture timestamps are
-        mapped from the monotonic clock to GPS time by fitting a linear
-        mapping using minimum-latency INS packets.
-      </p>
-
-
-      <div class="dataset-subtitle">
-        Future trajectory labels
-      </div>
-
-
-      <p>
-        For each RGB frame at time <em>t</em>, we sample an 8-waypoint
-        future trajectory at 3 Hz, following the OmniVLA setting.
-        Let Δ<em>n</em> and Δ<em>e</em> denote future displacement
-        in ENU coordinates, and let θ<sub>t</sub> denote bicycle
-        travel heading at time <em>t</em>. Each displacement is
-        transformed into the bicycle ego frame as:
-      </p>
-
-
-      <div class="equation-box">
-
-        <div class="equation">
-          x = Δe sin(θ<sub>t</sub>) + Δn cos(θ<sub>t</sub>)
+        <div class="dataset-subtitle">
+          Sensor synchronization
         </div>
 
-        <div class="equation">
-          y = −Δe cos(θ<sub>t</sub>) + Δn sin(θ<sub>t</sub>)
-        </div>
 
-        <p class="equation-note">
-          x and y denote the forward and left directions, respectively.
+        <p>
+          For model ablations, we record sensor streams to obtain synchronized
+          RGB observations and frame-level trajectory labels from high-precision
+          GNSS/IMU. We use RTK-fixed solutions as centimeter-level position
+          anchors and supplement them with validated PPK solutions when available.
+        </p>
+
+
+        <p>
+          Between the 5 Hz GNSS/PPK position anchors, we obtain dense frame-level
+          positions by integrating the VN-200 velocity measurements. GNSS latitude,
+          longitude, and height measurements are transformed into a local
+          East-North-Up (ENU) coordinate frame.
+        </p>
+
+
+        <p>
+          Camera frames are synchronized with navigation measurements in GPS time
+          using host-side timestamp logs. Camera capture timestamps are mapped
+          from the monotonic clock to GPS time by fitting a linear mapping using
+          minimum-latency INS packets.
         </p>
 
       </div>
 
 
-      <p>
-        Each waypoint is represented using its position and local trajectory heading.
-      </p>
 
+      <div class="dataset-panel">
 
-      <div class="waypoint-box">
-
-        <strong>
-          Waypoint representation
-        </strong>
-
-        <div class="waypoint-equation">
-          a<sub>t</sub> = [x, y, cos(ψ), sin(ψ)]
+        <div class="dataset-subtitle">
+          Future trajectory labels
         </div>
+
+
+        <p>
+          For each RGB frame at time <em>t</em>, we sample an 8-waypoint
+          future trajectory at 3 Hz, following the OmniVLA setting.
+          Let Δ<em>n</em> and Δ<em>e</em> denote future displacement
+          in ENU coordinates, and let θ<sub>t</sub> denote bicycle
+          travel heading at time <em>t</em>.
+        </p>
+
+
+        <p>
+          Each displacement is transformed into the bicycle ego frame as:
+        </p>
+
+
+        <div class="equation-box">
+
+          <div class="equation">
+            x = Δe sin(θ<sub>t</sub>) + Δn cos(θ<sub>t</sub>)
+          </div>
+
+          <div class="equation">
+            y = −Δe cos(θ<sub>t</sub>) + Δn sin(θ<sub>t</sub>)
+          </div>
+
+          <p class="equation-note">
+            x and y denote the forward and left directions, respectively.
+          </p>
+
+        </div>
+
+
+        <p>
+          Each waypoint is represented using its position and local trajectory heading.
+        </p>
+
+
+        <div class="waypoint-box">
+
+          <strong>
+            Waypoint representation
+          </strong>
+
+          <div class="waypoint-equation">
+            a<sub>t</sub> = [x, y, cos(ψ), sin(ψ)]
+          </div>
+
+        </div>
+
+
+        <p style="margin-top:12px;">
+          ψ denotes the local trajectory heading computed from consecutive
+          future waypoints.
+        </p>
 
       </div>
 
-
-      <p style="margin-top:15px;">
-        ψ denotes the local trajectory heading computed from consecutive
-        future waypoints.
-      </p>
 
     </div>
 
@@ -1505,9 +1559,11 @@
       Model Development
     </div>
 
+
     <h2>
       Navigation model development in simulation.
     </h2>
+
 
     <p class="section-intro">
       Representative simulation rollouts used during navigation
@@ -1548,6 +1604,7 @@
         </figcaption>
 
       </figure>
+
 
 
       <figure class="media-card">
@@ -1605,9 +1662,11 @@
       Participants
     </div>
 
+
     <h2>
       Participant demographics.
     </h2>
+
 
     <p class="section-intro">
       CyFI was developed and evaluated with blind and low-vision
@@ -1632,6 +1691,7 @@
           </span>
 
         </span>
+
 
         <span class="study-count">
           n = 14
@@ -1664,6 +1724,7 @@
 
             <tbody>
 
+
               <tr class="site-row">
                 <td colspan="8">
                   Site 1: Campus (n = 9)
@@ -1693,6 +1754,7 @@
               <tr><td>P38</td><td>52</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
               <tr><td>P39</td><td>21</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
 
+
             </tbody>
 
           </table>
@@ -1720,6 +1782,7 @@
           </span>
 
         </span>
+
 
         <span class="study-count">
           n = 25
@@ -1751,6 +1814,7 @@
 
 
             <tbody>
+
 
               <tr class="site-row">
                 <td colspan="8">
@@ -1792,6 +1856,7 @@
               <tr><td>P24</td><td>84</td><td>Woman</td><td>White</td><td>Legally blind</td><td>No</td><td>High</td><td>1–2</td></tr>
               <tr><td>P25</td><td>41</td><td>Man</td><td>Hispanic</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
 
+
             </tbody>
 
           </table>
@@ -1824,9 +1889,11 @@
       Real-World Evaluation
     </div>
 
+
     <h2>
       From participant sessions to sustained neighborhood riding.
     </h2>
+
 
     <p class="section-intro">
       CyFI was evaluated across progressively more realistic
@@ -1951,88 +2018,100 @@
 
 
 
-    <figure class="featured-video">
+    <!-- MAIN REAL-WORLD VIDEOS -->
 
-      <video
-        controls
-        preload="metadata"
-        playsinline
-      >
-
-        <source
-          src="CyFI_anonymized_web.mp4"
-          type="video/mp4"
-        />
-
-      </video>
+    <div class="featured-grid">
 
 
-      <figcaption class="featured-video-content">
+      <figure class="featured-video">
 
-        <div class="featured-video-kicker">
-          Real-World Evaluation
-        </div>
+        <video
+          controls
+          preload="metadata"
+          playsinline
+        >
 
-        <h3>
-          Real-World Navigation Visualization
-        </h3>
+          <source
+            src="CyFI_anonymized_web.mp4"
+            type="video/mp4"
+          />
 
-        <p>
-          An anonymized forward-facing visualization of CyFI
-          operating in a real roadway environment.
-        </p>
-
-
-        <div class="scenario-tags">
-
-          <span class="scenario-tag">Intersections</span>
-          <span class="scenario-tag">Vehicles</span>
-          <span class="scenario-tag">Road Geometry</span>
-          <span class="scenario-tag">Sustained Operation</span>
-
-        </div>
-
-      </figcaption>
-
-    </figure>
+        </video>
 
 
+        <figcaption class="featured-video-content">
 
-    <figure class="featured-video">
-
-      <video
-        controls
-        preload="metadata"
-        playsinline
-        muted
-      >
-
-        <source
-          src="final_route_anonymized.mp4"
-          type="video/mp4"
-        />
-
-      </video>
+          <div class="featured-video-kicker">
+            Real-World Evaluation
+          </div>
 
 
-      <figcaption class="featured-video-content">
+          <h3>
+            Real-World Navigation Visualization
+          </h3>
 
-        <div class="featured-video-kicker">
-          Final Route
-        </div>
 
-        <h3>
-          Final-Route Evaluation
-        </h3>
+          <p>
+            An anonymized forward-facing visualization of CyFI
+            operating in a real roadway environment.
+          </p>
 
-        <p>
-          An anonymized third-person view of CyFI during
-          sustained real-world riding on the final evaluation route.
-        </p>
 
-      </figcaption>
+          <div class="scenario-tags">
 
-    </figure>
+            <span class="scenario-tag">Intersections</span>
+            <span class="scenario-tag">Vehicles</span>
+            <span class="scenario-tag">Road Geometry</span>
+            <span class="scenario-tag">Sustained Operation</span>
+
+          </div>
+
+        </figcaption>
+
+      </figure>
+
+
+
+      <figure class="featured-video">
+
+        <video
+          controls
+          preload="metadata"
+          playsinline
+          muted
+        >
+
+          <source
+            src="final_route_anonymized.mp4"
+            type="video/mp4"
+          />
+
+        </video>
+
+
+        <figcaption class="featured-video-content">
+
+          <div class="featured-video-kicker">
+            Final Route
+          </div>
+
+
+          <h3>
+            Final-Route Evaluation
+          </h3>
+
+
+          <p>
+            An anonymized third-person view of CyFI during
+            sustained real-world riding on the final evaluation route.
+          </p>
+
+        </figcaption>
+
+      </figure>
+
+
+    </div>
 
 
 
@@ -2073,6 +2152,7 @@
         </figcaption>
 
       </figure>
+
 
 
       <figure class="media-card">
@@ -2132,6 +2212,7 @@
       <span>CyFI</span>
 
     </div>
+
 
     <span>
       Supplementary project website.

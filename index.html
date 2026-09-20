@@ -631,6 +631,62 @@
 
 
     /* =========================================================
+       STEERING CALIBRATION
+    ========================================================= */
+
+    .control-description {
+      margin: 0 0 14px;
+
+      color: #334051;
+
+      font-size: 0.82rem;
+      line-height: 1.65;
+    }
+
+    .control-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 9px;
+
+      margin-top: 14px;
+    }
+
+    .control-card {
+      padding: 12px;
+
+      border-radius: 11px;
+
+      background: var(--bg-soft);
+
+      border: 1px solid var(--border);
+
+      text-align: center;
+    }
+
+    .control-value {
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 1.02rem;
+      font-weight: 850;
+    }
+
+    .control-label {
+      display: block;
+
+      margin-top: 3px;
+
+      color: var(--text-soft);
+
+      font-size: 0.67rem;
+      line-height: 1.35;
+    }
+
+
+    /* =========================================================
        PROMPT BOX
     ========================================================= */
 
@@ -817,6 +873,67 @@
         serif;
 
       font-size: 1rem;
+    }
+
+
+    /* =========================================================
+       FULL-WIDTH DATA VIDEO
+    ========================================================= */
+
+    .data-video-card {
+      margin: 20px 0 0;
+
+      overflow: hidden;
+
+      border-radius: var(--radius-lg);
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow);
+    }
+
+    .data-video-card video {
+      width: 100%;
+
+      aspect-ratio: 16 / 9;
+
+      object-fit: cover;
+
+      background: #0b0d10;
+    }
+
+    .data-video-content {
+      padding: 14px 16px 16px;
+    }
+
+    .data-video-kicker {
+      margin-bottom: 4px;
+
+      color: var(--blue);
+
+      font-size: 0.64rem;
+      font-weight: 800;
+
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .data-video-content h3 {
+      margin: 0;
+
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+
+    .data-video-content p {
+      margin: 6px 0 0;
+
+      color: var(--text-soft);
+
+      font-size: 0.79rem;
+      line-height: 1.5;
     }
 
 
@@ -1227,6 +1344,10 @@
         grid-template-columns: 1fr;
       }
 
+      .control-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .compact-gallery {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1277,7 +1398,8 @@
         padding: 6px;
       }
 
-      .metric-grid {
+      .metric-grid,
+      .control-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -1621,6 +1743,75 @@
 
 
 
+    <details class="info-details">
+
+      <summary>
+        Steering Calibration and Control
+      </summary>
+
+
+      <div class="details-content">
+
+        <p class="control-description">
+          Steering was empirically calibrated by determining actuator position
+          in relation to vehicle curvature. With the tricycle positioned on a
+          square reference surface, the front wheels were first aligned with
+          the vehicle's longitudinal axis. Across the actuator range, actuator
+          position was stepped in 5% increments and the front-wheel angles
+          relative to the reference surface were measured using a goniometer.
+          These measurements were combined with the tricycle's wheelbase and
+          track width to compute the corresponding Ackermann steering curvature,
+          producing a mapping from desired curvature to actuator position.
+        </p>
+
+        <p class="control-description">
+          The implemented steering controller combines proportional feedback
+          with a feedforward term and a deadband in the controller's native
+          potentiometer units. Commands are updated at 50 Hz, with steering
+          limited to ±30° and a maximum steering rate of 10°/s.
+        </p>
+
+
+        <div class="control-grid">
+
+          <div class="control-card">
+            <span class="control-value">5%</span>
+            <span class="control-label">Calibration actuator increment</span>
+          </div>
+
+          <div class="control-card">
+            <span class="control-value">5</span>
+            <span class="control-label">Proportional gain</span>
+          </div>
+
+          <div class="control-card">
+            <span class="control-value">57</span>
+            <span class="control-label">Feedforward term</span>
+          </div>
+
+          <div class="control-card">
+            <span class="control-value">8</span>
+            <span class="control-label">Deadband, native potentiometer units</span>
+          </div>
+
+          <div class="control-card">
+            <span class="control-value">50 Hz</span>
+            <span class="control-label">Command update rate</span>
+          </div>
+
+          <div class="control-card">
+            <span class="control-value">±30° / 10°/s</span>
+            <span class="control-label">Steering angle / maximum steering rate</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+
     <div class="prompt-box">
 
       <div class="prompt-box-header">
@@ -1722,6 +1913,43 @@
       </div>
 
     </div>
+
+
+
+    <figure class="data-video-card">
+
+      <video
+        controls
+        preload="metadata"
+        playsinline
+      >
+
+        <source
+          src="CyFI_anonymized_web.mp4"
+          type="video/mp4"
+        />
+
+      </video>
+
+
+      <figcaption class="data-video-content">
+
+        <div class="data-video-kicker">
+          Real-World Data
+        </div>
+
+        <h3>
+          Real-World Data Visualization
+        </h3>
+
+        <p>
+          An anonymized forward-facing visualization of synchronized
+          real-world riding data with future-trajectory waypoint annotations.
+        </p>
+
+      </figcaption>
+
+    </figure>
 
 
 
@@ -2578,6 +2806,66 @@
 
 
 
+    <h3 class="subheading">
+      Participant Evaluation Sessions
+    </h3>
+
+
+    <p class="subtext">
+      Representative participant riding sessions from the final evaluation.
+    </p>
+
+
+    <div class="media-grid">
+
+
+      <figure class="media-card">
+
+        <video
+          controls
+          preload="metadata"
+          playsinline
+          muted
+        >
+
+          <source
+            src="Georgia_clip.mp4"
+            type="video/mp4"
+          />
+
+        </video>
+
+
+        <figcaption class="media-caption">
+
+          <strong>
+            Participant Evaluation Session
+          </strong>
+
+          <span>
+            Representative outdoor participant riding session.
+          </span>
+
+        </figcaption>
+
+      </figure>
+
+
+    </div>
+
+
+
+    <h3 class="subheading">
+      Sustained Neighborhood Riding
+    </h3>
+
+
+    <p class="subtext">
+      Longer-route evaluations examine sustained operation beyond
+      the shorter participant sessions.
+    </p>
+
+
     <div class="featured-grid">
 
 
@@ -2587,10 +2875,11 @@
           controls
           preload="metadata"
           playsinline
+          muted
         >
 
           <source
-            src="CyFI_anonymized_web.mp4"
+            src="Dan_long-route_clip.mp4"
             type="video/mp4"
           />
 
@@ -2600,29 +2889,19 @@
         <figcaption class="featured-video-content">
 
           <div class="featured-video-kicker">
-            Real-World Evaluation
+            Neighborhood Riding
           </div>
 
 
           <h3>
-            Real-World Navigation Visualization
+            Long-Route Evaluation
           </h3>
 
 
           <p>
-            An anonymized forward-facing visualization of CyFI
-            operating in a real roadway environment.
+            Representative sustained neighborhood riding during
+            an extended real-world route.
           </p>
-
-
-          <div class="scenario-tags">
-
-            <span class="scenario-tag">Intersections</span>
-            <span class="scenario-tag">Vehicles</span>
-            <span class="scenario-tag">Road Geometry</span>
-            <span class="scenario-tag">Sustained Operation</span>
-
-          </div>
 
         </figcaption>
 
@@ -2659,9 +2938,8 @@
 
 
           <p>
-            An anonymized third-person view of CyFI during
-            sustained real-world riding across a residential
-            neighborhood route.
+            An anonymized third-person view of CyFI during sustained
+            real-world riding across a residential neighborhood route.
           </p>
 
 
@@ -2673,83 +2951,6 @@
             <span class="scenario-tag">Stop Signs</span>
 
           </div>
-
-        </figcaption>
-
-      </figure>
-
-
-    </div>
-
-
-
-    <h3 class="subheading">
-      Participant Evaluation Sessions
-    </h3>
-
-
-    <div class="media-grid">
-
-
-      <figure class="media-card">
-
-        <video
-          controls
-          preload="metadata"
-          playsinline
-          muted
-        >
-
-          <source
-            src="Dan_long-route_clip.mp4"
-            type="video/mp4"
-          />
-
-        </video>
-
-
-        <figcaption class="media-caption">
-
-          <strong>
-            Long-Route Evaluation
-          </strong>
-
-          <span>
-            Representative sustained real-world riding clip.
-          </span>
-
-        </figcaption>
-
-      </figure>
-
-
-
-      <figure class="media-card">
-
-        <video
-          controls
-          preload="metadata"
-          playsinline
-          muted
-        >
-
-          <source
-            src="Georgia_clip.mp4"
-            type="video/mp4"
-          />
-
-        </video>
-
-
-        <figcaption class="media-caption">
-
-          <strong>
-            Participant Evaluation
-          </strong>
-
-          <span>
-            Representative outdoor participant riding session.
-          </span>
 
         </figcaption>
 

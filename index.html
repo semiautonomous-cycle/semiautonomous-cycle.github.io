@@ -179,45 +179,10 @@
       box-shadow: var(--shadow);
     }
 
-    .hero-image-wrap {
-      position: relative;
-      overflow: hidden;
+    .hero-image img {
       aspect-ratio: 16 / 7.8;
-      background: #eee;
-    }
-
-    .hero-image-wrap img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
-
-      /*
-        Slight zoom/crop trims the far-right rear part of the trike.
-        Fine-tune object-position if needed after browser inspection.
-      */
-      object-position: 48% center;
-      transform: scale(1.04);
-      transform-origin: center center;
-    }
-
-    .blind-rider-label {
-      position: absolute;
-      right: 5.5%;
-      top: 46%;
-      z-index: 2;
-
-      padding: 5px 9px;
-
-      background: rgba(0, 0, 0, 0.70);
-      color: #ffffff;
-
-      border-radius: 3px;
-
-      font-size: 0.72rem;
-      font-weight: 750;
-      line-height: 1.2;
-
-      pointer-events: none;
+      object-position: center;
     }
 
     .hero-caption {
@@ -444,7 +409,7 @@
     }
 
     /* =========================================================
-       SYSTEM FIGURE
+       SYSTEM
     ========================================================= */
 
     .system-card {
@@ -688,12 +653,7 @@
 
     .equation {
       margin: 4px 0;
-
-      font-family:
-        "Cambria Math",
-        "Times New Roman",
-        serif;
-
+      font-family: "Cambria Math", "Times New Roman", serif;
       font-size: 1rem;
     }
 
@@ -719,11 +679,7 @@
     }
 
     .waypoint-equation {
-      font-family:
-        "Cambria Math",
-        "Times New Roman",
-        serif;
-
+      font-family: "Cambria Math", "Times New Roman", serif;
       font-size: 1rem;
     }
 
@@ -794,13 +750,7 @@
 
     .model-card.primary {
       border-color: #b8d2e8;
-
-      background:
-        linear-gradient(
-          135deg,
-          #ffffff,
-          #f3f8fc
-        );
+      background: linear-gradient(135deg, #ffffff, #f3f8fc);
     }
 
     .model-badge {
@@ -910,10 +860,8 @@
 
       overflow-x: auto;
       overscroll-behavior-inline: contain;
-
       scroll-snap-type: inline mandatory;
       scroll-padding-inline: 2px;
-
       scrollbar-width: thin;
     }
 
@@ -1276,13 +1224,6 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .blind-rider-label {
-        right: 4%;
-        top: 45%;
-        font-size: 0.62rem;
-        padding: 4px 7px;
-      }
-
       .footer-inner {
         flex-direction: column;
         align-items: flex-start;
@@ -1353,11 +1294,9 @@
 
 
     <p class="hero-subtitle">
-
       A human-centered shared-autonomy cycling platform supporting
       accessible outdoor mobility through autonomous steering,
       emergency braking, and multimodal rider feedback.
-
     </p>
 
 
@@ -1372,19 +1311,10 @@
 
     <figure class="hero-image">
 
-      <div class="hero-image-wrap">
-
-        <img
-          src="new_hero.png"
-          alt="CyFI operating during an outdoor riding session"
-        />
-
-        <div class="blind-rider-label">
-          Blind Rider
-        </div>
-
-      </div>
-
+      <img
+        src="new_hero.png"
+        alt="CyFI operating during an outdoor riding session"
+      />
 
       <figcaption class="hero-caption">
         CyFI operating during an outdoor riding evaluation.
@@ -1442,44 +1372,32 @@
     <div class="feature-grid">
 
       <article class="feature-card">
-
         <div class="feature-number">01</div>
-
         <h3>Shared Autonomy</h3>
-
         <p>
           The rider remains physically engaged while CyFI assists
           with navigation steering and emergency braking.
         </p>
-
       </article>
 
 
       <article class="feature-card">
-
         <div class="feature-number">02</div>
-
         <h3>Multimodal Feedback</h3>
-
         <p>
           Audio and vibrotactile feedback communicate system
           actions and environmental information during riding.
         </p>
-
       </article>
 
 
       <article class="feature-card">
-
         <div class="feature-number">03</div>
-
         <h3>Real-World Evaluation</h3>
-
         <p>
           Evaluation progressed from structured riding environments
           toward community and sustained neighborhood operation.
         </p>
-
       </article>
 
     </div>
@@ -1524,7 +1442,6 @@
 
     <div class="media-grid">
 
-
       <figure class="media-card">
 
         <img
@@ -1534,15 +1451,10 @@
         />
 
         <figcaption class="media-caption">
-
-          <strong>
-            First-Generation Prototype
-          </strong>
-
+          <strong>First-Generation Prototype</strong>
           <span>
             Early physical platform used during formative development.
           </span>
-
         </figcaption>
 
       </figure>
@@ -1557,19 +1469,13 @@
         />
 
         <figcaption class="media-caption">
-
-          <strong>
-            First-Generation Prototype
-          </strong>
-
+          <strong>First-Generation Prototype</strong>
           <span>
             Rider-interface and cockpit configuration.
           </span>
-
         </figcaption>
 
       </figure>
-
 
     </div>
 
@@ -2055,6 +1961,10 @@
 
 
 
+    <!-- =====================================================
+         QUALITATIVE SIMULATION RESULTS
+    ====================================================== -->
+
     <div class="qualitative-section">
 
 
@@ -2067,8 +1977,9 @@
           </h3>
 
           <p>
-            Synchronized short rollouts from the same simulated scenario
-            enable rapid visual comparison of different navigation policies.
+            Synchronized Route 2 rollouts provide a direct visual comparison
+            between the base edge model, its fine-tuned counterpart,
+            and the fine-tuned full OmniVLA model.
           </p>
 
         </div>
@@ -2084,7 +1995,7 @@
 
       <div
         class="qualitative-carousel"
-        aria-label="Qualitative simulation comparison"
+        aria-label="Route 2 qualitative simulation comparison"
       >
 
 
@@ -2099,7 +2010,7 @@
           >
 
             <source
-              src="qualitative_policy_A.mp4"
+              src="qualitative/route2_edge.mp4"
               type="video/mp4"
             />
 
@@ -2109,21 +2020,27 @@
           <figcaption class="qualitative-content">
 
             <div class="qualitative-kicker">
-              Same Scenario · Policy A
+              Route 2 · Base Model
             </div>
 
             <h4>
-              Qualitative Rollout A
+              OmniVLA-Edge
             </h4>
 
             <p>
-              Synchronized 12-second closed-loop rollout.
+              Closed-loop rollout from the 50M-parameter edge model
+              before bicycle-specific fine-tuning.
             </p>
+
 
             <div class="qualitative-tags">
 
               <span class="qualitative-tag">
-                12 s
+                50M
+              </span>
+
+              <span class="qualitative-tag">
+                No Fine-Tuning
               </span>
 
               <span class="qualitative-tag">
@@ -2149,7 +2066,7 @@
           >
 
             <source
-              src="qualitative_policy_B.mp4"
+              src="qualitative/route2_edge_ft.mp4"
               type="video/mp4"
             />
 
@@ -2159,21 +2076,27 @@
           <figcaption class="qualitative-content">
 
             <div class="qualitative-kicker">
-              Same Scenario · Policy B
+              Route 2 · Fine-Tuned Edge
             </div>
 
             <h4>
-              Qualitative Rollout B
+              OmniVLA-Edge-FT
             </h4>
 
             <p>
-              Synchronized 12-second closed-loop rollout.
+              Same-scenario rollout after bicycle-specific fine-tuning
+              of the 50M-parameter edge model.
             </p>
+
 
             <div class="qualitative-tags">
 
               <span class="qualitative-tag">
-                12 s
+                50M
+              </span>
+
+              <span class="qualitative-tag">
+                Fine-Tuned
               </span>
 
               <span class="qualitative-tag">
@@ -2199,7 +2122,7 @@
           >
 
             <source
-              src="qualitative_policy_C.mp4"
+              src="qualitative/route2_omnivla_ft.mp4"
               type="video/mp4"
             />
 
@@ -2209,21 +2132,27 @@
           <figcaption class="qualitative-content">
 
             <div class="qualitative-kicker">
-              Same Scenario · Policy C
+              Route 2 · Fine-Tuned Full Model
             </div>
 
             <h4>
-              Qualitative Rollout C
+              OmniVLA-FT
             </h4>
 
             <p>
-              Synchronized 12-second closed-loop rollout.
+              Same-scenario rollout from the fine-tuned
+              7.5B-parameter full OmniVLA model.
             </p>
+
 
             <div class="qualitative-tags">
 
               <span class="qualitative-tag">
-                12 s
+                7.5B
+              </span>
+
+              <span class="qualitative-tag">
+                Fine-Tuned
               </span>
 
               <span class="qualitative-tag">
@@ -2811,66 +2740,52 @@
 
     <div class="compact-gallery">
 
-
       <figure>
-
         <img
           src="rider-07.png"
           alt="CyFI outdoor riding session"
           loading="lazy"
         />
-
         <figcaption>
           Outdoor riding evaluation.
         </figcaption>
-
       </figure>
 
 
       <figure>
-
         <img
           src="rider-08.png"
           alt="CyFI participant riding outdoors"
           loading="lazy"
         />
-
         <figcaption>
           Participant riding session.
         </figcaption>
-
       </figure>
 
 
       <figure>
-
         <img
           src="rider-10.png"
           alt="CyFI real-world cycling environment"
           loading="lazy"
         />
-
         <figcaption>
           Real-world cycling environment.
         </figcaption>
-
       </figure>
 
 
       <figure>
-
         <img
           src="rider-12.png"
           alt="CyFI community riding scenario"
           loading="lazy"
         />
-
         <figcaption>
           Community riding scenario.
         </figcaption>
-
       </figure>
-
 
     </div>
 
@@ -2887,7 +2802,6 @@
 
 
     <div class="media-grid single">
-
 
       <figure class="media-card">
 
@@ -2919,7 +2833,6 @@
         </figcaption>
 
       </figure>
-
 
     </div>
 

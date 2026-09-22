@@ -286,6 +286,15 @@
       font-size: 0.86rem;
     }
 
+    .note {
+      margin-top: 12px;
+
+      color: var(--text-soft);
+
+      font-size: 0.76rem;
+      line-height: 1.55;
+    }
+
     /* =========================================================
        ABSTRACT
     ========================================================= */
@@ -450,6 +459,7 @@
 
     .media-card img {
       aspect-ratio: 16 / 9.5;
+
       object-fit: cover;
     }
 
@@ -685,11 +695,12 @@
 
       border-radius: var(--radius-md);
 
-      background: linear-gradient(
-        135deg,
-        #ffffff,
-        #f5f9fc
-      );
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #f5f9fc
+        );
 
       border: 1px solid #d5e1ec;
     }
@@ -950,11 +961,12 @@
     .model-card.primary {
       border-color: #b8d2e8;
 
-      background: linear-gradient(
-        135deg,
-        #ffffff,
-        #f3f8fc
-      );
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #f3f8fc
+        );
     }
 
     .model-badge {
@@ -1513,9 +1525,7 @@
       }
     }
   </style>
-
 </head>
-
 
 <body>
 
@@ -1646,6 +1656,7 @@
     <div class="abstract-box">
 
       <p>
+
         CyFI is an accessible semiautonomous cycle designed to enable blind and
         low-vision riders to cycle independently. The rider provides propulsion
         and retains manual braking, while CyFI guides navigation steering and
@@ -1658,6 +1669,7 @@
         1.2 km neighborhood ride examined sustained operation across intersections,
         parked and moving vehicles, stop signs, and changing roadway geometry,
         while revealing remaining limitations in current robot navigation models.
+
       </p>
 
     </div>
@@ -1900,80 +1912,33 @@
         <div class="control-grid">
 
           <div class="control-card">
-
-            <span class="control-value">
-              5%
-            </span>
-
-            <span class="control-label">
-              Calibration actuator increment
-            </span>
-
+            <span class="control-value">5%</span>
+            <span class="control-label">Calibration actuator increment</span>
           </div>
 
-
           <div class="control-card">
-
-            <span class="control-value">
-              5
-            </span>
-
-            <span class="control-label">
-              Proportional gain
-            </span>
-
+            <span class="control-value">5</span>
+            <span class="control-label">Proportional gain</span>
           </div>
 
-
           <div class="control-card">
-
-            <span class="control-value">
-              57
-            </span>
-
-            <span class="control-label">
-              Feedforward term
-            </span>
-
+            <span class="control-value">57</span>
+            <span class="control-label">Feedforward term</span>
           </div>
 
-
           <div class="control-card">
-
-            <span class="control-value">
-              8
-            </span>
-
-            <span class="control-label">
-              Deadband, native potentiometer units
-            </span>
-
+            <span class="control-value">8</span>
+            <span class="control-label">Deadband, native potentiometer units</span>
           </div>
 
-
           <div class="control-card">
-
-            <span class="control-value">
-              50 Hz
-            </span>
-
-            <span class="control-label">
-              Command update rate
-            </span>
-
+            <span class="control-value">50 Hz</span>
+            <span class="control-label">Command update rate</span>
           </div>
 
-
           <div class="control-card">
-
-            <span class="control-value">
-              ±30° / 10°/s
-            </span>
-
-            <span class="control-label">
-              Steering angle / maximum steering rate
-            </span>
-
+            <span class="control-value">±30° / 10°/s</span>
+            <span class="control-label">Steering angle / maximum steering rate</span>
           </div>
 
         </div>
@@ -2001,21 +1966,10 @@
 
       <div class="prompt-meta">
 
-        <span>
-          NVIDIA Cosmos Reason 2
-        </span>
-
-        <span>
-          First sentence ≈ 0.9 s
-        </span>
-
-        <span>
-          Speech onset ≈ 1 s
-        </span>
-
-        <span>
-          Center OAK-D RGB input
-        </span>
+        <span>NVIDIA Cosmos Reason 2</span>
+        <span>First sentence ≈ 0.9 s</span>
+        <span>Speech onset ≈ 1 s</span>
+        <span>Center OAK-D RGB input</span>
 
       </div>
 
@@ -2079,54 +2033,23 @@
     <div class="metric-grid">
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          46.4 min
-        </span>
-
-        <span class="metric-label">
-          Training riding data
-        </span>
-
+        <span class="metric-value">46.4 min</span>
+        <span class="metric-label">Training riding data</span>
       </div>
 
-
       <div class="metric-card">
-
-        <span class="metric-value">
-          45.2 min
-        </span>
-
-        <span class="metric-label">
-          Testing riding data
-        </span>
-
+        <span class="metric-value">45.2 min</span>
+        <span class="metric-label">Testing riding data</span>
       </div>
 
-
       <div class="metric-card">
-
-        <span class="metric-value">
-          8 × 3 Hz
-        </span>
-
-        <span class="metric-label">
-          Future waypoints
-        </span>
-
+        <span class="metric-value">8 × 3 Hz</span>
+        <span class="metric-label">Future waypoints</span>
       </div>
 
-
       <div class="metric-card">
-
-        <span class="metric-value">
-          2.4 s
-        </span>
-
-        <span class="metric-label">
-          Prediction horizon
-        </span>
-
+        <span class="metric-value">2.4 s</span>
+        <span class="metric-label">Prediction horizon</span>
       </div>
 
     </div>
@@ -2351,26 +2274,16 @@
 
           <div class="model-metric">
 
-            <strong>
-              0.00%
-            </strong>
-
-            <span>
-              Success Rate
-            </span>
+            <strong>0.00%</strong>
+            <span>Success Rate</span>
 
           </div>
 
 
           <div class="model-metric">
 
-            <strong>
-              25.50%
-            </strong>
-
-            <span>
-              Route Completion
-            </span>
+            <strong>25.50%</strong>
+            <span>Route Completion</span>
 
           </div>
 
@@ -2399,26 +2312,16 @@
 
           <div class="model-metric">
 
-            <strong>
-              66.67%
-            </strong>
-
-            <span>
-              Success Rate
-            </span>
+            <strong>66.67%</strong>
+            <span>Success Rate</span>
 
           </div>
 
 
           <div class="model-metric">
 
-            <strong>
-              71.05%
-            </strong>
-
-            <span>
-              Route Completion
-            </span>
+            <strong>71.05%</strong>
+            <span>Route Completion</span>
 
           </div>
 
@@ -2507,17 +2410,9 @@
 
             <div class="qualitative-tags">
 
-              <span class="qualitative-tag">
-                50M
-              </span>
-
-              <span class="qualitative-tag">
-                No Fine-Tuning
-              </span>
-
-              <span class="qualitative-tag">
-                Closed Loop
-              </span>
+              <span class="qualitative-tag">50M</span>
+              <span class="qualitative-tag">No Fine-Tuning</span>
+              <span class="qualitative-tag">Closed Loop</span>
 
             </div>
 
@@ -2565,17 +2460,9 @@
 
             <div class="qualitative-tags">
 
-              <span class="qualitative-tag">
-                50M
-              </span>
-
-              <span class="qualitative-tag">
-                Fine-Tuned
-              </span>
-
-              <span class="qualitative-tag">
-                Closed Loop
-              </span>
+              <span class="qualitative-tag">50M</span>
+              <span class="qualitative-tag">Fine-Tuned</span>
+              <span class="qualitative-tag">Closed Loop</span>
 
             </div>
 
@@ -2623,17 +2510,9 @@
 
             <div class="qualitative-tags">
 
-              <span class="qualitative-tag">
-                7.5B
-              </span>
-
-              <span class="qualitative-tag">
-                Fine-Tuned
-              </span>
-
-              <span class="qualitative-tag">
-                Closed Loop
-              </span>
+              <span class="qualitative-tag">7.5B</span>
+              <span class="qualitative-tag">Fine-Tuned</span>
+              <span class="qualitative-tag">Closed Loop</span>
 
             </div>
 
@@ -2811,7 +2690,6 @@
       </div>
 
     </details>
-
 
   </div>
 
@@ -3079,132 +2957,73 @@
     <div class="metric-grid">
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          94%
-        </span>
-
+        <span class="metric-value">94%</span>
         <span class="metric-label">
           Rated the ride toward the safe end of the scale
         </span>
-
       </div>
 
-
       <div class="metric-card">
-
-        <span class="metric-value">
-          76%
-        </span>
-
+        <span class="metric-value">76%</span>
         <span class="metric-label">
           Trusted autonomous steering
         </span>
-
       </div>
 
-
       <div class="metric-card">
-
-        <span class="metric-value">
-          76%
-        </span>
-
+        <span class="metric-value">76%</span>
         <span class="metric-label">
           Confident using a guidance-enabled trike around their neighborhood
         </span>
-
       </div>
 
-
       <div class="metric-card">
-
-        <span class="metric-value">
-          82%
-        </span>
-
+        <span class="metric-value">82%</span>
         <span class="metric-label">
           Found CyFI's actions toward the easy end of understandability
         </span>
-
       </div>
 
-
       <div class="metric-card">
-
-        <span class="metric-value">
-          78%
-        </span>
-
+        <span class="metric-value">78%</span>
         <span class="metric-label">
           Found vibrotactile feedback useful for anticipating movement
         </span>
-
       </div>
 
-
       <div class="metric-card">
-
-        <span class="metric-value">
-          93%
-        </span>
-
+        <span class="metric-value">93%</span>
         <span class="metric-label">
           Felt safe receiving vibrotactile feedback
         </span>
-
       </div>
 
-
       <div class="metric-card">
-
-        <span class="metric-value">
-          141.59 m
-        </span>
-
+        <span class="metric-value">141.59 m</span>
         <span class="metric-label">
           Median ride distance · IQR 155.87 m
         </span>
-
       </div>
 
-
       <div class="metric-card">
-
-        <span class="metric-value">
-          0.50 m/s
-        </span>
-
+        <span class="metric-value">0.50 m/s</span>
         <span class="metric-label">
           Median riding speed · IQR 0.29 m/s
         </span>
-
       </div>
 
-
       <div class="metric-card">
-
-        <span class="metric-value">
-          +≈8 BPM
-        </span>
-
+        <span class="metric-value">+≈8 BPM</span>
         <span class="metric-label">
           Mean heart-rate increase from before to during riding
         </span>
-
       </div>
 
-
       <div class="metric-card">
-
-        <span class="metric-value">
-          3×
-        </span>
-
+        <span class="metric-value">3×</span>
         <span class="metric-label">
           Median description-button requests per ride
         </span>
-
       </div>
 
     </div>
@@ -3310,6 +3129,14 @@
           </table>
 
         </div>
+
+
+        <p class="note">
+
+          Heart-rate changes are reported descriptively and are not
+          interpreted as evidence of a particular exercise intensity.
+
+        </p>
 
       </div>
 
@@ -3455,7 +3282,7 @@
         >
 
           <source
-            src="Dan_highlight_final.mp4"
+            src="Dan_highlight_anonymized_review.mp4"
             type="video/mp4"
           />
 
@@ -3476,10 +3303,27 @@
 
           <p>
 
-            Representative sustained neighborhood riding during
-            an extended real-world route.
+            A short anonymized highlight from sustained
+            neighborhood riding with CyFI.
 
           </p>
+
+
+          <div class="scenario-tags">
+
+            <span class="scenario-tag">
+              25 s Highlight
+            </span>
+
+            <span class="scenario-tag">
+              Anonymized
+            </span>
+
+            <span class="scenario-tag">
+              Real-World Ride
+            </span>
+
+          </div>
 
         </figcaption>
 

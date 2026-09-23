@@ -148,7 +148,6 @@
 
     .hero h1 {
       max-width: 860px;
-
       margin: 0 auto;
 
       font-size: clamp(2.25rem, 4.7vw, 4rem);
@@ -453,7 +452,6 @@
 
     .media-card img {
       aspect-ratio: 16 / 9.5;
-
       object-fit: cover;
     }
 
@@ -506,12 +504,13 @@
     }
 
     /* =========================================================
-       SYSTEM
+       SYSTEM / FIGURES
     ========================================================= */
 
     .system-card,
     .architecture-card,
-    .trajectory-card {
+    .trajectory-card,
+    .ablation-figure {
       margin-top: 20px;
 
       overflow: hidden;
@@ -526,7 +525,8 @@
     }
 
     .system-image-wrap,
-    .architecture-image-wrap {
+    .architecture-image-wrap,
+    .ablation-image-wrap {
       padding: 10px;
 
       background: white;
@@ -534,6 +534,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .ablation-image-wrap {
+      padding: 18px;
     }
 
     .system-image-wrap img {
@@ -546,18 +550,23 @@
       margin: 0 auto;
     }
 
-    .architecture-image-wrap img {
+    .architecture-image-wrap img,
+    .ablation-image-wrap img,
+    .trajectory-card img {
       width: 100%;
       height: auto;
 
       object-fit: contain;
+
+      background: white;
 
       margin: 0 auto;
     }
 
     .system-caption,
     .architecture-caption,
-    .trajectory-caption {
+    .trajectory-caption,
+    .ablation-figure-caption {
       padding: 12px 16px 14px;
 
       border-top: 1px solid var(--border);
@@ -565,7 +574,8 @@
 
     .system-caption strong,
     .architecture-caption strong,
-    .trajectory-caption strong {
+    .trajectory-caption strong,
+    .ablation-figure-caption strong {
       display: block;
 
       margin-bottom: 3px;
@@ -575,22 +585,14 @@
 
     .system-caption span,
     .architecture-caption span,
-    .trajectory-caption span {
+    .trajectory-caption span,
+    .ablation-figure-caption span {
       display: block;
 
       color: var(--text-soft);
 
       font-size: 0.77rem;
       line-height: 1.5;
-    }
-
-    .trajectory-card img {
-      width: 100%;
-      height: auto;
-
-      object-fit: contain;
-
-      background: white;
     }
 
     /* =========================================================
@@ -1074,7 +1076,7 @@
     }
 
     /* =========================================================
-       QUALITATIVE
+       QUALITATIVE SIMULATION — HORIZONTAL SCROLLER
     ========================================================= */
 
     .qualitative-section {
@@ -1103,16 +1105,58 @@
       line-height: 1.55;
     }
 
+    .qualitative-scroll-hint {
+      margin: 8px 0 0 !important;
+
+      color: var(--blue) !important;
+
+      font-size: 0.72rem !important;
+
+      font-weight: 700;
+    }
+
     .qualitative-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      display: flex;
 
       gap: 14px;
 
       margin-top: 14px;
+
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      padding: 2px 2px 14px;
+
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
+    }
+
+    .qualitative-grid::-webkit-scrollbar {
+      height: 7px;
+    }
+
+    .qualitative-grid::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .qualitative-grid::-webkit-scrollbar-thumb {
+      background: #cbd5df;
+
+      border-radius: 999px;
+    }
+
+    .qualitative-grid::-webkit-scrollbar-thumb:hover {
+      background: #aebdca;
     }
 
     .qualitative-card {
+      flex: 0 0 320px;
+
+      scroll-snap-align: start;
+
       margin: 0;
 
       overflow: hidden;
@@ -1181,7 +1225,7 @@
     }
 
     /* =========================================================
-       TABLES / ABLATIONS
+       TABLES
     ========================================================= */
 
     .table-wrapper {
@@ -1219,8 +1263,7 @@
       font-size: 0.7rem;
     }
 
-    .site-row,
-    .condition-row {
+    .site-row {
       background: #eef4f8;
 
       color: var(--navy);
@@ -1228,41 +1271,10 @@
       font-weight: 800;
     }
 
-    .condition-row td {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-
     .primary-row {
       background: #eef6fc;
 
       font-weight: 700;
-    }
-
-    .best {
-      font-weight: 850;
-      color: var(--navy);
-    }
-
-    .ablation-card {
-      margin-top: 20px;
-
-      padding: 20px;
-
-      border-radius: var(--radius-lg);
-
-      background: white;
-
-      border: 1px solid var(--border);
-    }
-
-    .ablation-caption {
-      margin: 0 0 15px;
-
-      color: var(--text-soft);
-
-      font-size: 0.82rem;
-      line-height: 1.55;
     }
 
     /* =========================================================
@@ -1327,7 +1339,6 @@
 
     .compact-gallery img {
       aspect-ratio: 4 / 3;
-
       object-fit: cover;
     }
 
@@ -1497,8 +1508,8 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .qualitative-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .qualitative-card {
+        flex-basis: 300px;
       }
     }
 
@@ -1554,8 +1565,8 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .qualitative-grid {
-        grid-template-columns: 1fr;
+      .qualitative-card {
+        flex-basis: 82vw;
       }
 
       .footer-inner {
@@ -1669,10 +1680,7 @@
      OVERVIEW
 ========================================================= -->
 
-<section
-  class="section section-soft"
-  id="overview"
->
+<section class="section section-soft" id="overview">
 
   <div class="container">
 
@@ -1763,10 +1771,7 @@
      SYSTEM DESIGN
 ========================================================= -->
 
-<section
-  class="section"
-  id="system"
->
+<section class="section" id="system">
 
   <div class="container">
 
@@ -1984,7 +1989,9 @@
 
           <div class="control-card">
             <span class="control-value">8</span>
-            <span class="control-label">Deadband, native potentiometer units</span>
+            <span class="control-label">
+              Deadband, native potentiometer units
+            </span>
           </div>
 
           <div class="control-card">
@@ -1994,7 +2001,9 @@
 
           <div class="control-card">
             <span class="control-value">±30° / 10°/s</span>
-            <span class="control-label">Steering angle / maximum steering rate</span>
+            <span class="control-label">
+              Steering angle / maximum steering rate
+            </span>
           </div>
 
         </div>
@@ -2058,10 +2067,7 @@
      DATASET
 ========================================================= -->
 
-<section
-  class="section section-soft"
-  id="dataset"
->
+<section class="section section-soft" id="dataset">
 
   <div class="container">
 
@@ -2138,10 +2144,8 @@
         </h3>
 
         <p>
-
           An anonymized forward-facing visualization of synchronized
           real-world riding data with future-trajectory waypoint annotations.
-
         </p>
 
       </figcaption>
@@ -2268,10 +2272,7 @@
      MODEL DEVELOPMENT
 ========================================================= -->
 
-<section
-  class="section"
-  id="model"
->
+<section class="section" id="model">
 
   <div class="container">
 
@@ -2372,6 +2373,10 @@
 
 
 
+    <!-- =====================================================
+         QUALITATIVE SIMULATION RESULTS
+    ====================================================== -->
+
     <div class="qualitative-section">
 
       <div class="qualitative-heading-row">
@@ -2388,6 +2393,10 @@
 
         </p>
 
+        <p class="qualitative-scroll-hint">
+          Scroll or swipe horizontally to compare all seven policies →
+        </p>
+
       </div>
 
 
@@ -2400,8 +2409,18 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
-            <source src="alpamayo.mp4" type="video/mp4" />
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
+            <source
+              src="alpamayo.mp4"
+              type="video/mp4"
+            />
           </video>
 
           <figcaption class="qualitative-content">
@@ -2426,8 +2445,18 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
-            <source src="NaVILA.mp4" type="video/mp4" />
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
+            <source
+              src="NaVILA.mp4"
+              type="video/mp4"
+            />
           </video>
 
           <figcaption class="qualitative-content">
@@ -2452,8 +2481,18 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
-            <source src="omnivla_edge.mp4" type="video/mp4" />
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
+            <source
+              src="omnivla_edge.mp4"
+              type="video/mp4"
+            />
           </video>
 
           <figcaption class="qualitative-content">
@@ -2478,8 +2517,18 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
-            <source src="omnivla.mp4" type="video/mp4" />
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
+            <source
+              src="omnivla.mp4"
+              type="video/mp4"
+            />
           </video>
 
           <figcaption class="qualitative-content">
@@ -2504,8 +2553,18 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
-            <source src="modular.mp4" type="video/mp4" />
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
+            <source
+              src="modular.mp4"
+              type="video/mp4"
+            />
           </video>
 
           <figcaption class="qualitative-content">
@@ -2530,8 +2589,18 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
-            <source src="omnivla_FT.mp4" type="video/mp4" />
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
+            <source
+              src="omnivla_FT.mp4"
+              type="video/mp4"
+            />
           </video>
 
           <figcaption class="qualitative-content">
@@ -2556,8 +2625,18 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
-            <source src="omnivla_edge_FT.mp4" type="video/mp4" />
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
+            <source
+              src="omnivla_edge_FT.mp4"
+              type="video/mp4"
+            />
           </video>
 
           <figcaption class="qualitative-content">
@@ -2584,6 +2663,10 @@
     </div>
 
 
+
+    <!-- =====================================================
+         FULL RESULTS
+    ====================================================== -->
 
     <details class="info-details">
 
@@ -2688,12 +2771,47 @@
 
             <tbody>
 
-              <tr><td>Alpamayo 1.5</td><td>10B</td><td>0.00%</td><td>25.50%</td></tr>
-              <tr><td>NaVILA</td><td>8B</td><td>33.33%</td><td>64.14%</td></tr>
-              <tr><td>OmniVLA-Edge</td><td>50M</td><td>11.10%</td><td>38.16%</td></tr>
-              <tr><td>OmniVLA</td><td>7.5B</td><td>33.33%</td><td>46.31%</td></tr>
-              <tr><td>Modular Pipeline</td><td>5M</td><td>55.56%</td><td>68.46%</td></tr>
-              <tr><td>OmniVLA-FT</td><td>7.5B</td><td>66.67%</td><td>73.32%</td></tr>
+              <tr>
+                <td>Alpamayo 1.5</td>
+                <td>10B</td>
+                <td>0.00%</td>
+                <td>25.50%</td>
+              </tr>
+
+              <tr>
+                <td>NaVILA</td>
+                <td>8B</td>
+                <td>33.33%</td>
+                <td>64.14%</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-Edge</td>
+                <td>50M</td>
+                <td>11.10%</td>
+                <td>38.16%</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA</td>
+                <td>7.5B</td>
+                <td>33.33%</td>
+                <td>46.31%</td>
+              </tr>
+
+              <tr>
+                <td>Modular Pipeline</td>
+                <td>5M</td>
+                <td>55.56%</td>
+                <td>68.46%</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-FT</td>
+                <td>7.5B</td>
+                <td>66.67%</td>
+                <td>73.32%</td>
+              </tr>
 
               <tr class="primary-row">
                 <td>OmniVLA-Edge-FT</td>
@@ -2722,10 +2840,7 @@
      ABLATIONS
 ========================================================= -->
 
-<section
-  class="section section-soft"
-  id="ablations"
->
+<section class="section section-soft" id="ablations">
 
   <div class="container">
 
@@ -2743,170 +2858,39 @@
 
       We compare open-loop trajectory prediction with and without
       target points as input on BikeScenes and our held-out test split.
-      ADE and FDE are reported below; lower is better.
 
     </p>
 
 
-    <div class="ablation-card">
 
-      <p class="ablation-caption">
+    <figure class="ablation-figure">
 
-        <strong>
-          Open-Loop Trajectory Prediction on BikeScenes and Our Dataset.
-        </strong>
+      <div class="ablation-image-wrap">
 
-        We compare models with and without target points as input.
-        ADE and FDE are reported on BikeScenes and our held-out test split.
-        Lower is better.
-
-      </p>
-
-
-      <div class="table-wrapper">
-
-        <table>
-
-          <thead>
-
-            <tr>
-              <th rowspan="2">Model</th>
-              <th rowspan="2">Size</th>
-              <th colspan="2">BikeScenes</th>
-              <th colspan="2">Our Dataset</th>
-            </tr>
-
-            <tr>
-              <th>ADE ↓</th>
-              <th>FDE ↓</th>
-              <th>ADE ↓</th>
-              <th>FDE ↓</th>
-            </tr>
-
-          </thead>
-
-
-          <tbody>
-
-            <tr class="condition-row">
-              <td colspan="6">
-                Without Target Point
-              </td>
-            </tr>
-
-            <tr>
-              <td>Alpamayo 1.5</td>
-              <td>10B</td>
-              <td>6.53</td>
-              <td>15.99</td>
-              <td>3.24</td>
-              <td>6.69</td>
-            </tr>
-
-            <tr>
-              <td>OmniVLA</td>
-              <td>7.5B</td>
-              <td>1.41</td>
-              <td>3.62</td>
-              <td>2.31</td>
-              <td>3.31</td>
-            </tr>
-
-            <tr>
-              <td>OmniVLA-Edge</td>
-              <td>50M</td>
-              <td>1.59</td>
-              <td>2.84</td>
-              <td>2.80</td>
-              <td>6.67</td>
-            </tr>
-
-            <tr>
-              <td>OmniVLA-FT</td>
-              <td>7.5B</td>
-              <td class="best">1.22</td>
-              <td class="best">1.75</td>
-              <td class="best">1.70</td>
-              <td class="best">3.01</td>
-            </tr>
-
-            <tr>
-              <td>OmniVLA-Edge-FT</td>
-              <td>50M</td>
-              <td>1.31</td>
-              <td>1.97</td>
-              <td>1.89</td>
-              <td>3.34</td>
-            </tr>
-
-
-            <tr class="condition-row">
-              <td colspan="6">
-                With Target Point
-              </td>
-            </tr>
-
-            <tr>
-              <td>Alpamayo 1.5</td>
-              <td>10B</td>
-              <td>6.58</td>
-              <td>16.15</td>
-              <td>3.01</td>
-              <td>6.17</td>
-            </tr>
-
-            <tr>
-              <td>OmniVLA</td>
-              <td>7.5B</td>
-              <td>1.20</td>
-              <td>2.91</td>
-              <td>2.00</td>
-              <td>2.61</td>
-            </tr>
-
-            <tr>
-              <td>OmniVLA-Edge</td>
-              <td>50M</td>
-              <td>1.17</td>
-              <td>1.99</td>
-              <td>2.25</td>
-              <td>4.22</td>
-            </tr>
-
-            <tr>
-              <td>Modular Pipeline</td>
-              <td>5M</td>
-              <td>1.40</td>
-              <td>2.74</td>
-              <td>2.15</td>
-              <td>3.23</td>
-            </tr>
-
-            <tr class="primary-row">
-              <td>OmniVLA-FT</td>
-              <td>7.5B</td>
-              <td class="best">0.46</td>
-              <td class="best">0.70</td>
-              <td class="best">1.25</td>
-              <td class="best">2.16</td>
-            </tr>
-
-            <tr>
-              <td>OmniVLA-Edge-FT</td>
-              <td>50M</td>
-              <td>0.83</td>
-              <td>1.49</td>
-              <td>1.48</td>
-              <td>2.56</td>
-            </tr>
-
-          </tbody>
-
-        </table>
+        <img
+          src="open_loop_eval.png"
+          alt="Open-loop trajectory prediction results on BikeScenes and our dataset comparing models with and without target points"
+          loading="lazy"
+        />
 
       </div>
 
-    </div>
+
+      <figcaption class="ablation-figure-caption">
+
+        <strong>
+          Open-Loop Trajectory Prediction on BikeScenes and Our Dataset
+        </strong>
+
+        <span>
+          We compare models with and without target points as input.
+          ADE and FDE are reported on BikeScenes and our held-out test split.
+          Lower is better.
+        </span>
+
+      </figcaption>
+
+    </figure>
 
   </div>
 
@@ -2918,10 +2902,7 @@
      PARTICIPANTS
 ========================================================= -->
 
-<section
-  class="section"
-  id="participants"
->
+<section class="section" id="participants">
 
   <div class="container">
 
@@ -3137,10 +3118,7 @@
      REAL-WORLD EVALUATION
 ========================================================= -->
 
-<section
-  class="section section-soft"
-  id="evaluation"
->
+<section class="section section-soft" id="evaluation">
 
   <div class="container">
 

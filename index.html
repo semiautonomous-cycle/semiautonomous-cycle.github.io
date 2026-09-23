@@ -159,7 +159,6 @@
 
     .hero-subtitle {
       max-width: 740px;
-
       margin: 15px auto 0;
 
       color: var(--text-soft);
@@ -504,7 +503,7 @@
     }
 
     /* =========================================================
-       SYSTEM / FIGURES
+       FIGURES
     ========================================================= */
 
     .system-card,
@@ -526,7 +525,8 @@
 
     .system-image-wrap,
     .architecture-image-wrap,
-    .ablation-image-wrap {
+    .ablation-image-wrap,
+    .trajectory-image-wrap {
       padding: 10px;
 
       background: white;
@@ -538,6 +538,10 @@
 
     .ablation-image-wrap {
       padding: 18px;
+    }
+
+    .trajectory-image-wrap {
+      padding: 14px;
     }
 
     .system-image-wrap img {
@@ -552,7 +556,7 @@
 
     .architecture-image-wrap img,
     .ablation-image-wrap img,
-    .trajectory-card img {
+    .trajectory-image-wrap img {
       width: 100%;
       height: auto;
 
@@ -593,6 +597,35 @@
 
       font-size: 0.77rem;
       line-height: 1.5;
+    }
+
+    /* =========================================================
+       TRAJECTORY SITES
+    ========================================================= */
+
+    .trajectory-site-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      margin-top: 20px;
+    }
+
+    .trajectory-site-heading {
+      margin: 0 0 8px;
+
+      color: var(--navy);
+
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .trajectory-site-description {
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-size: 0.8rem;
+      line-height: 1.55;
     }
 
     /* =========================================================
@@ -718,12 +751,11 @@
 
       border-radius: var(--radius-md);
 
-      background:
-        linear-gradient(
-          135deg,
-          #ffffff,
-          #f5f9fc
-        );
+      background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f5f9fc
+      );
 
       border: 1px solid #d5e1ec;
     }
@@ -982,12 +1014,11 @@
     .model-card.primary {
       border-color: #b8d2e8;
 
-      background:
-        linear-gradient(
-          135deg,
-          #ffffff,
-          #f3f8fc
-        );
+      background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f3f8fc
+      );
     }
 
     .model-badge {
@@ -1076,7 +1107,7 @@
     }
 
     /* =========================================================
-       QUALITATIVE SIMULATION — HORIZONTAL SCROLLER
+       QUALITATIVE SIMULATION
     ========================================================= */
 
     .qualitative-section {
@@ -1111,7 +1142,6 @@
       color: var(--blue) !important;
 
       font-size: 0.72rem !important;
-
       font-weight: 700;
     }
 
@@ -1144,12 +1174,7 @@
 
     .qualitative-grid::-webkit-scrollbar-thumb {
       background: #cbd5df;
-
       border-radius: 999px;
-    }
-
-    .qualitative-grid::-webkit-scrollbar-thumb:hover {
-      background: #aebdca;
     }
 
     .qualitative-card {
@@ -1200,7 +1225,6 @@
       margin: 0;
 
       font-size: 0.96rem;
-      letter-spacing: -0.015em;
     }
 
     .qualitative-tags {
@@ -1407,7 +1431,6 @@
       margin: 0;
 
       font-size: 1.05rem;
-      letter-spacing: -0.02em;
     }
 
     .featured-video-content p {
@@ -1587,10 +1610,7 @@
 
     <a href="#top" class="nav-brand">
 
-      <img
-        src="cyfi-logo.png"
-        alt="CyFI project icon"
-      />
+      <img src="cyfi-logo.png" alt="CyFI project icon" />
 
       <span>CyFI</span>
 
@@ -1989,9 +2009,7 @@
 
           <div class="control-card">
             <span class="control-value">8</span>
-            <span class="control-label">
-              Deadband, native potentiometer units
-            </span>
+            <span class="control-label">Deadband, native potentiometer units</span>
           </div>
 
           <div class="control-card">
@@ -2001,9 +2019,7 @@
 
           <div class="control-card">
             <span class="control-value">±30° / 10°/s</span>
-            <span class="control-label">
-              Steering angle / maximum steering rate
-            </span>
+            <span class="control-label">Steering angle / maximum steering rate</span>
           </div>
 
         </div>
@@ -2011,51 +2027,6 @@
       </div>
 
     </details>
-
-
-
-    <div class="prompt-box">
-
-      <div class="prompt-box-header">
-
-        <h3>Scene Description Prompt</h3>
-
-        <p>
-          Prompt for scene-description audio feedback initiated via the handle button.
-        </p>
-
-      </div>
-
-
-      <div class="prompt-meta">
-
-        <span>NVIDIA Cosmos Reason 2</span>
-        <span>First sentence ≈ 0.9 s</span>
-        <span>Speech onset ≈ 1 s</span>
-        <span>Center OAK-D RGB input</span>
-
-      </div>
-
-
-      <div class="prompt-box-content">
-
-        <p class="prompt-text">
-
-          You are describing the surrounding scene for a blind person riding an
-          autonomous tricycle. Provide a concise description that helps the rider
-          quickly understand the most important parts of the environment. Mention
-          only the most relevant nearby objects and features, such as pedestrians,
-          cyclists, vehicles, obstacles, roads, sidewalks, intersections, crossings,
-          and entrances. Use clear relative positions such as “on the left,” “ahead,”
-          and “on the right.” Mention distance only when it can be estimated reliably.
-          Avoid unnecessary visual details and do not speculate about uncertain
-          objects. Keep the description to 1–2 short sentences.
-
-        </p>
-
-      </div>
-
-    </div>
 
   </div>
 
@@ -2084,8 +2055,7 @@
     <p class="section-intro">
 
       Real-world bicycle sensor streams are synchronized to construct
-      RGB observations paired with frame-level future trajectories
-      for navigation-model adaptation and evaluation.
+      RGB observations paired with frame-level future trajectories.
 
     </p>
 
@@ -2118,12 +2088,7 @@
 
     <figure class="data-video-card">
 
-      <video
-        controls
-        preload="metadata"
-        playsinline
-        muted
-      >
+      <video controls preload="metadata" playsinline muted>
 
         <source
           src="cyfi-data-anonymized.mp4"
@@ -2153,9 +2118,7 @@
     </figure>
 
 
-
     <div class="dataset-layout">
-
 
       <div class="dataset-panel">
 
@@ -2163,38 +2126,17 @@
           Sensor Synchronization
         </div>
 
-
         <p>
-
-          For model ablations, we record sensor streams to obtain
-          synchronized RGB observations and frame-level trajectory
-          labels from high-precision GNSS/IMU.
-
+          Sensor streams provide synchronized RGB observations and
+          high-precision navigation measurements.
         </p>
 
-
         <p>
-
-          RTK-fixed solutions provide centimeter-level position
-          anchors and are supplemented with validated PPK solutions
-          when available. Between the 5 Hz GNSS/PPK position anchors,
-          dense frame-level positions are obtained by integrating
-          velocity measurements.
-
-        </p>
-
-
-        <p>
-
-          GNSS latitude, longitude, and height measurements are
-          transformed into a local East-North-Up (ENU) coordinate
-          frame. Camera frames are synchronized with navigation
-          measurements in GPS time using host-side timestamp logs.
-
+          RTK-fixed solutions provide centimeter-level position anchors
+          and are supplemented with validated PPK solutions when available.
         </p>
 
       </div>
-
 
 
       <div class="dataset-panel">
@@ -2203,41 +2145,9 @@
           Future Trajectory Labels
         </div>
 
-
         <p>
-
-          For each RGB frame at time <em>t</em>, an 8-waypoint
-          future trajectory is sampled at 3 Hz following the
-          OmniVLA setting.
-
+          For each RGB frame, eight future waypoints are sampled at 3 Hz.
         </p>
-
-
-        <p>
-
-          Let Δ<em>n</em> and Δ<em>e</em> denote future displacement
-          in ENU coordinates, and let θ<sub>t</sub> denote bicycle
-          travel heading at time <em>t</em>.
-
-        </p>
-
-
-        <div class="equation-box">
-
-          <div class="equation">
-            x = Δe sin(θ<sub>t</sub>) + Δn cos(θ<sub>t</sub>)
-          </div>
-
-          <div class="equation">
-            y = −Δe cos(θ<sub>t</sub>) + Δn sin(θ<sub>t</sub>)
-          </div>
-
-          <p class="equation-note">
-            x and y denote the forward and left directions, respectively.
-          </p>
-
-        </div>
-
 
         <div class="waypoint-box">
 
@@ -2249,16 +2159,7 @@
 
         </div>
 
-
-        <p style="margin-top:12px;">
-
-          ψ denotes local trajectory heading computed from consecutive
-          future waypoints. The eight waypoints span a 2.4 s prediction horizon.
-
-        </p>
-
       </div>
-
 
     </div>
 
@@ -2290,11 +2191,8 @@
 
       Navigation models are evaluated in closed-loop interactive
       environments reconstructed from bicycle-perspective observations.
-      Fine-tuning on the collected bicycle-navigation data substantially
-      improves closed-loop navigation performance.
 
     </p>
-
 
 
     <div class="model-grid">
@@ -2326,7 +2224,6 @@
         </div>
 
       </article>
-
 
 
       <article class="model-card primary">
@@ -2361,18 +2258,6 @@
 
 
 
-    <div class="model-summary">
-
-      Fine-tuned OmniVLA-Edge improves closed-loop success rate
-      from 11.10% to 66.67% and route completion from 38.16% to
-      71.05%. The 50M-parameter model achieves the same closed-loop
-      success rate as the 7.5B OmniVLA-FT model while using
-      approximately 150× fewer parameters.
-
-    </div>
-
-
-
     <div class="qualitative-section">
 
       <div class="qualitative-heading-row">
@@ -2382,11 +2267,8 @@
         </h3>
 
         <p>
-
           Closed-loop simulation rollouts across seven evaluated navigation
-          policies. Videos are displayed at 2× playback speed for faster
-          qualitative comparison while preserving the original rollout sequence.
-
+          policies. Videos are displayed at 2× playback speed.
         </p>
 
         <p class="qualitative-scroll-hint">
@@ -2396,287 +2278,81 @@
       </div>
 
 
-
-      <div
-        class="qualitative-grid"
-        aria-label="Qualitative simulation rollouts across seven evaluated navigation policies"
-      >
-
+      <div class="qualitative-grid">
 
         <figure class="qualitative-card">
-
           <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="alpamayo.mp4" type="video/mp4" />
           </video>
-
           <figcaption class="qualitative-content">
             <div class="qualitative-kicker">Closed-Loop Simulation</div>
             <h4>Alpamayo 1.5</h4>
-
-            <div class="qualitative-tags">
-              <span class="qualitative-tag">Base</span>
-              <span class="qualitative-tag">Closed Loop</span>
-              <span class="qualitative-tag">2× Playback</span>
-            </div>
           </figcaption>
-
         </figure>
 
-
-
         <figure class="qualitative-card">
-
           <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="NaVILA.mp4" type="video/mp4" />
           </video>
-
           <figcaption class="qualitative-content">
             <div class="qualitative-kicker">Closed-Loop Simulation</div>
             <h4>NaVILA</h4>
-
-            <div class="qualitative-tags">
-              <span class="qualitative-tag">Base</span>
-              <span class="qualitative-tag">Closed Loop</span>
-              <span class="qualitative-tag">2× Playback</span>
-            </div>
           </figcaption>
-
         </figure>
 
-
-
         <figure class="qualitative-card">
-
           <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="omnivla_edge.mp4" type="video/mp4" />
           </video>
-
           <figcaption class="qualitative-content">
             <div class="qualitative-kicker">Closed-Loop Simulation</div>
             <h4>OmniVLA-Edge</h4>
-
-            <div class="qualitative-tags">
-              <span class="qualitative-tag">Base</span>
-              <span class="qualitative-tag">Closed Loop</span>
-              <span class="qualitative-tag">2× Playback</span>
-            </div>
           </figcaption>
-
         </figure>
 
-
-
         <figure class="qualitative-card">
-
           <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="omnivla.mp4" type="video/mp4" />
           </video>
-
           <figcaption class="qualitative-content">
             <div class="qualitative-kicker">Closed-Loop Simulation</div>
             <h4>OmniVLA</h4>
-
-            <div class="qualitative-tags">
-              <span class="qualitative-tag">Base</span>
-              <span class="qualitative-tag">Closed Loop</span>
-              <span class="qualitative-tag">2× Playback</span>
-            </div>
           </figcaption>
-
         </figure>
 
-
-
         <figure class="qualitative-card">
-
           <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="modular.mp4" type="video/mp4" />
           </video>
-
           <figcaption class="qualitative-content">
             <div class="qualitative-kicker">Closed-Loop Simulation</div>
             <h4>Modular Pipeline</h4>
-
-            <div class="qualitative-tags">
-              <span class="qualitative-tag">Base</span>
-              <span class="qualitative-tag">Closed Loop</span>
-              <span class="qualitative-tag">2× Playback</span>
-            </div>
           </figcaption>
-
         </figure>
 
-
-
         <figure class="qualitative-card">
-
           <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="omnivla_FT.mp4" type="video/mp4" />
           </video>
-
           <figcaption class="qualitative-content">
             <div class="qualitative-kicker">Closed-Loop Simulation</div>
             <h4>OmniVLA-FT</h4>
-
-            <div class="qualitative-tags">
-              <span class="qualitative-tag">Fine-Tuned</span>
-              <span class="qualitative-tag">Closed Loop</span>
-              <span class="qualitative-tag">2× Playback</span>
-            </div>
           </figcaption>
-
         </figure>
 
-
-
         <figure class="qualitative-card">
-
           <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="omnivla_edge_FT.mp4" type="video/mp4" />
           </video>
-
           <figcaption class="qualitative-content">
             <div class="qualitative-kicker">Closed-Loop Simulation</div>
             <h4>OmniVLA-Edge-FT</h4>
-
-            <div class="qualitative-tags">
-              <span class="qualitative-tag">Fine-Tuned</span>
-              <span class="qualitative-tag">Closed Loop</span>
-              <span class="qualitative-tag">2× Playback</span>
-            </div>
           </figcaption>
-
         </figure>
-
 
       </div>
 
     </div>
-
-
-
-    <details class="info-details">
-
-      <summary>
-        Full Navigation Model Results
-      </summary>
-
-
-      <div class="details-content">
-
-        <h3 style="font-size:0.95rem; margin:4px 0 10px;">
-          Open-Loop Trajectory Prediction
-        </h3>
-
-
-        <div class="table-wrapper">
-
-          <table>
-
-            <thead>
-              <tr>
-                <th>Model</th>
-                <th>Size</th>
-                <th>ADE ↓</th>
-                <th>FDE ↓</th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              <tr>
-                <td>Alpamayo 1.5</td>
-                <td>10B</td>
-                <td>1.62</td>
-                <td>3.86</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-Edge</td>
-                <td>50M</td>
-                <td>1.59</td>
-                <td>2.84</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA</td>
-                <td>7.5B</td>
-                <td>1.41</td>
-                <td>3.62</td>
-              </tr>
-
-              <tr>
-                <td>Modular Pipeline</td>
-                <td>5M</td>
-                <td>1.37</td>
-                <td>2.70</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-FT</td>
-                <td>7.5B</td>
-                <td>1.22</td>
-                <td>1.85</td>
-              </tr>
-
-              <tr class="primary-row">
-                <td>OmniVLA-Edge-FT</td>
-                <td>50M</td>
-                <td>1.31</td>
-                <td>1.97</td>
-              </tr>
-
-            </tbody>
-
-          </table>
-
-        </div>
-
-
-
-        <h3 style="font-size:0.95rem; margin:20px 0 10px;">
-          Closed-Loop Navigation
-        </h3>
-
-
-        <div class="table-wrapper">
-
-          <table>
-
-            <thead>
-              <tr>
-                <th>Model</th>
-                <th>Size</th>
-                <th>Success Rate ↑</th>
-                <th>Route Completion ↑</th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              <tr><td>Alpamayo 1.5</td><td>10B</td><td>0.00%</td><td>25.50%</td></tr>
-              <tr><td>NaVILA</td><td>8B</td><td>33.33%</td><td>64.14%</td></tr>
-              <tr><td>OmniVLA-Edge</td><td>50M</td><td>11.10%</td><td>38.16%</td></tr>
-              <tr><td>OmniVLA</td><td>7.5B</td><td>33.33%</td><td>46.31%</td></tr>
-              <tr><td>Modular Pipeline</td><td>5M</td><td>55.56%</td><td>68.46%</td></tr>
-              <tr><td>OmniVLA-FT</td><td>7.5B</td><td>66.67%</td><td>73.32%</td></tr>
-
-              <tr class="primary-row">
-                <td>OmniVLA-Edge-FT</td>
-                <td>50M</td>
-                <td>66.67%</td>
-                <td>71.05%</td>
-              </tr>
-
-            </tbody>
-
-          </table>
-
-        </div>
-
-      </div>
-
-    </details>
 
   </div>
 
@@ -2710,14 +2386,13 @@
     </p>
 
 
-
     <figure class="ablation-figure">
 
       <div class="ablation-image-wrap">
 
         <img
           src="open_loop_eval.png"
-          alt="Open-loop trajectory prediction results on BikeScenes and our dataset comparing models with and without target points"
+          alt="Open-loop trajectory prediction results comparing models with and without target points"
           loading="lazy"
         />
 
@@ -2727,7 +2402,7 @@
       <figcaption class="ablation-figure-caption">
 
         <strong>
-          Open-Loop Trajectory Prediction on BikeScenes and Our Dataset
+          Open-Loop Trajectory Prediction on BikeScenes and Our Dataset.
         </strong>
 
         <span>
@@ -2770,191 +2445,6 @@
       participants across formative and final evaluation studies.
 
     </p>
-
-
-
-    <details class="study-details">
-
-      <summary>
-
-        <span class="study-summary-left">
-
-          <strong>
-            Formative Study Participants
-          </strong>
-
-          <span>
-            Participant demographics from formative evaluations.
-          </span>
-
-        </span>
-
-        <span class="study-count">
-          n = 14
-        </span>
-
-      </summary>
-
-
-      <div class="details-content">
-
-        <div class="table-wrapper">
-
-          <table>
-
-            <thead>
-
-              <tr>
-                <th>ID</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Race / Ethnicity</th>
-                <th>Blindness</th>
-                <th>Prior Cycling</th>
-                <th>Physical Activity</th>
-                <th>Days / week</th>
-              </tr>
-
-            </thead>
-
-            <tbody>
-
-              <tr class="site-row">
-                <td colspan="8">
-                  Site 1: Campus (n = 9)
-                </td>
-              </tr>
-
-              <tr><td>P26</td><td>64</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
-              <tr><td>P27</td><td>26</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
-              <tr><td>P28</td><td>29</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P29</td><td>52</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P30</td><td>64</td><td>Woman</td><td>White</td><td>Legally blind</td><td>Yes</td><td>High</td><td>1–2</td></tr>
-              <tr><td>P31</td><td>52</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
-              <tr><td>P32</td><td>36</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P33</td><td>73</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P34</td><td>63</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
-
-
-              <tr class="site-row">
-                <td colspan="8">
-                  Site 2: Community Organization (n = 5)
-                </td>
-              </tr>
-
-              <tr><td>P35</td><td>67</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
-              <tr><td>P36</td><td>64</td><td>Man</td><td>Hispanic</td><td>Legally Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
-              <tr><td>P37</td><td>63</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
-              <tr><td>P38</td><td>52</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
-              <tr><td>P39</td><td>21</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
-
-            </tbody>
-
-          </table>
-
-        </div>
-
-      </div>
-
-    </details>
-
-
-
-    <details class="study-details">
-
-      <summary>
-
-        <span class="study-summary-left">
-
-          <strong>
-            Final Evaluation Participants
-          </strong>
-
-          <span>
-            Participant demographics from the final evaluation.
-          </span>
-
-        </span>
-
-        <span class="study-count">
-          n = 25
-        </span>
-
-      </summary>
-
-
-      <div class="details-content">
-
-        <div class="table-wrapper">
-
-          <table>
-
-            <thead>
-
-              <tr>
-                <th>ID</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Race / Ethnicity</th>
-                <th>Blindness</th>
-                <th>Prior Cycling</th>
-                <th>Physical Activity</th>
-                <th>Days / week</th>
-              </tr>
-
-            </thead>
-
-            <tbody>
-
-              <tr class="site-row">
-                <td colspan="8">
-                  Site 1: Community Convention (n = 20)
-                </td>
-              </tr>
-
-              <tr><td>P1</td><td>78</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
-              <tr><td>P2</td><td>71</td><td>Man</td><td>Black</td><td>Blind</td><td>No</td><td>Moderate</td><td>1–2</td></tr>
-              <tr><td>P3</td><td>35</td><td>Man</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
-              <tr><td>P4</td><td>36</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
-              <tr><td>P5</td><td>72</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
-              <tr><td>P6</td><td>38</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P7</td><td>50</td><td>Man</td><td>White</td><td>Blind</td><td>No</td><td>Moderate</td><td>Rarely</td></tr>
-              <tr><td>P8</td><td>50</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
-              <tr><td>P9</td><td>49</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
-              <tr><td>P10</td><td>56</td><td>Man</td><td>Black</td><td>Blind</td><td>No</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P11</td><td>42</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
-              <tr><td>P12</td><td>17</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
-              <tr><td>P13</td><td>35</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>5+</td></tr>
-              <tr><td>P14</td><td>47</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
-              <tr><td>P15</td><td>46</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
-              <tr><td>P16</td><td>69</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
-              <tr><td>P17</td><td>50</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P18</td><td>37</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>5+</td></tr>
-              <tr><td>P19</td><td>46</td><td>Man</td><td>White</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
-              <tr><td>P20</td><td>65</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>None</td><td>1–2</td></tr>
-
-
-              <tr class="site-row">
-                <td colspan="8">
-                  Site 2: Community Organization (n = 5)
-                </td>
-              </tr>
-
-              <tr><td>P21</td><td>19</td><td>Woman</td><td>White</td><td>Blind</td><td>–</td><td>High</td><td>1–2</td></tr>
-              <tr><td>P22</td><td>31</td><td>Woman</td><td>Asian</td><td>Blind</td><td>No</td><td>High</td><td>1–2</td></tr>
-              <tr><td>P23</td><td>36</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
-              <tr><td>P24</td><td>84</td><td>Woman</td><td>White</td><td>Legally blind</td><td>No</td><td>High</td><td>1–2</td></tr>
-              <tr><td>P25</td><td>41</td><td>Man</td><td>Hispanic</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
-
-            </tbody>
-
-          </table>
-
-        </div>
-
-      </div>
-
-    </details>
 
   </div>
 
@@ -3009,58 +2499,16 @@
       </div>
 
       <div class="metric-card">
-        <span class="metric-value">76%</span>
-        <span class="metric-label">
-          Confident using a guidance-enabled trike around their neighborhood
-        </span>
-      </div>
-
-      <div class="metric-card">
-        <span class="metric-value">82%</span>
-        <span class="metric-label">
-          Found CyFI's actions toward the easy end of understandability
-        </span>
-      </div>
-
-      <div class="metric-card">
-        <span class="metric-value">78%</span>
-        <span class="metric-label">
-          Found vibrotactile feedback useful for anticipating movement
-        </span>
-      </div>
-
-      <div class="metric-card">
-        <span class="metric-value">93%</span>
-        <span class="metric-label">
-          Felt safe receiving vibrotactile feedback
-        </span>
-      </div>
-
-      <div class="metric-card">
         <span class="metric-value">141.59 m</span>
         <span class="metric-label">
-          Median ride distance · IQR 155.87 m
+          Median ride distance
         </span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">0.50 m/s</span>
         <span class="metric-label">
-          Median riding speed · IQR 0.29 m/s
-        </span>
-      </div>
-
-      <div class="metric-card">
-        <span class="metric-value">+≈8 BPM</span>
-        <span class="metric-label">
-          Mean heart-rate increase from before to during riding
-        </span>
-      </div>
-
-      <div class="metric-card">
-        <span class="metric-value">3×</span>
-        <span class="metric-label">
-          Median description-button requests per ride
+          Median riding speed
         </span>
       </div>
 
@@ -3068,141 +2516,124 @@
 
 
 
-    <details class="info-details">
-
-      <summary>
-        Riding and Heart-Rate Statistics
-      </summary>
-
-
-      <div class="details-content">
-
-        <div class="table-wrapper">
-
-          <table>
-
-            <thead>
-
-              <tr>
-                <th>Measure / Site</th>
-                <th>Before Ride</th>
-                <th>During Ride</th>
-                <th>After Ride</th>
-              </tr>
-
-            </thead>
-
-            <tbody>
-
-              <tr>
-                <td>Community Convention Heart Rate</td>
-                <td>88.15 ± 12.00 BPM</td>
-                <td>96.11 ± 14.34 BPM</td>
-                <td>97.61 ± 15.91 BPM</td>
-              </tr>
-
-              <tr>
-                <td>Community Organization Heart Rate</td>
-                <td>101.18 ± 12.39 BPM</td>
-                <td>109.95 ± 15.09 BPM</td>
-                <td>107.28 ± 11.93 BPM</td>
-              </tr>
-
-              <tr>
-                <td>Participant Ride Distance</td>
-                <td colspan="3">
-                  Median 141.59 m · IQR 155.87 m
-                </td>
-              </tr>
-
-              <tr>
-                <td>Participant Riding Speed</td>
-                <td colspan="3">
-                  Median 0.50 m/s · IQR 0.29 m/s
-                </td>
-              </tr>
-
-            </tbody>
-
-          </table>
-
-        </div>
-
-
-        <p class="note">
-
-          Heart-rate changes are reported descriptively and are not
-          interpreted as evidence of a particular exercise intensity.
-
-        </p>
-
-      </div>
-
-    </details>
-
-
+    <!-- =====================================================
+         PARTICIPANT TRAJECTORY OVERLAYS
+    ====================================================== -->
 
     <h3 class="subheading">
-      Participant Trajectory Overlay
+      Participant Trajectory Overlays
     </h3>
 
 
     <p class="subtext">
 
-      Georgia participant trajectories are direction-aligned to a common
+      Participant trajectories are direction-aligned to a common
       route frame and normalized relative to route displacement.
+      Site names are anonymized for the supplementary website.
 
     </p>
 
 
-    <figure class="trajectory-card">
-
-      <img
-        src="route_G_all_overlay_direction_aligned.png"
-        alt="Direction-aligned overlay of Georgia participant riding trajectories normalized relative to route displacement"
-        loading="lazy"
-      />
+    <div class="trajectory-site-grid">
 
 
-      <figcaption class="trajectory-caption">
+      <!-- SITE 1 -->
 
-        <strong>
-          Georgia Participant Trajectories
-        </strong>
+      <div>
 
-        <span>
-          Direction-aligned trajectories for G1–G20 normalized relative
-          to route displacement. G1 and G3 are indicated as incomplete
-          trajectories in the plot.
-        </span>
-
-      </figcaption>
-
-    </figure>
+        <h4 class="trajectory-site-heading">
+          Site 1: Community Convention (n = 20)
+        </h4>
 
 
+        <p class="trajectory-site-description">
 
-    <div class="compact-gallery">
+          Direction-aligned trajectories from the twenty participants
+          evaluated at Site 1.
 
-      <figure>
-        <img src="rider-07.png" alt="CyFI outdoor riding session" loading="lazy" />
-        <figcaption>Outdoor riding evaluation.</figcaption>
-      </figure>
+        </p>
 
-      <figure>
-        <img src="rider-08.png" alt="CyFI participant riding outdoors" loading="lazy" />
-        <figcaption>Participant riding session.</figcaption>
-      </figure>
 
-      <figure>
-        <img src="rider-10.png" alt="CyFI real-world cycling environment" loading="lazy" />
-        <figcaption>Real-world cycling environment.</figcaption>
-      </figure>
+        <figure class="trajectory-card">
 
-      <figure>
-        <img src="rider-12.png" alt="CyFI community riding scenario" loading="lazy" />
-        <figcaption>Community riding scenario.</figcaption>
-      </figure>
+          <div class="trajectory-image-wrap">
+
+            <img
+              src="site1_participant_trajectories.png"
+              alt="Participant trajectory overlay for Site 1 showing trajectories P1 through P20"
+              loading="lazy"
+            />
+
+          </div>
+
+
+          <figcaption class="trajectory-caption">
+
+            <strong>
+              Site 1 Participant Trajectories
+            </strong>
+
+            <span>
+              Direction-aligned trajectories for P1–P20 normalized
+              relative to route displacement. P1 and P3 are shown
+              as incomplete trajectories in the plot.
+            </span>
+
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+
+
+      <!-- SITE 2 -->
+
+      <div>
+
+        <h4 class="trajectory-site-heading">
+          Site 2: Community Organization (n = 5)
+        </h4>
+
+
+        <p class="trajectory-site-description">
+
+          Direction-aligned trajectories from the five participants
+          evaluated at Site 2.
+
+        </p>
+
+
+        <figure class="trajectory-card">
+
+          <div class="trajectory-image-wrap">
+
+            <img
+              src="site2_participant_trajectories.png"
+              alt="Participant trajectory overlay for Site 2 showing trajectories P21 through P25"
+              loading="lazy"
+            />
+
+          </div>
+
+
+          <figcaption class="trajectory-caption">
+
+            <strong>
+              Site 2 Participant Trajectories
+            </strong>
+
+            <span>
+              Direction-aligned trajectories for P21–P25 normalized
+              relative to route displacement.
+            </span>
+
+          </figcaption>
+
+        </figure>
+
+      </div>
+
 
     </div>
 
@@ -3213,21 +2644,11 @@
     </h3>
 
 
-    <p class="subtext">
-      Representative participant riding session from the final evaluation.
-    </p>
-
-
     <div class="media-grid single">
 
       <figure class="media-card">
 
-        <video
-          controls
-          preload="metadata"
-          playsinline
-          muted
-        >
+        <video controls preload="metadata" playsinline muted>
 
           <source
             src="Georgia_clip.mp4"
@@ -3260,25 +2681,12 @@
     </h3>
 
 
-    <p class="subtext">
-
-      Longer-route evaluations examine sustained operation beyond
-      the shorter participant sessions.
-
-    </p>
-
-
     <div class="featured-grid">
 
 
       <figure class="featured-video">
 
-        <video
-          controls
-          preload="metadata"
-          playsinline
-          muted
-        >
+        <video controls preload="metadata" playsinline muted>
 
           <source
             src="RIDE_SAMPLE_FOOTAGE_trimmed_more_anonymized.mp4"
@@ -3307,27 +2715,6 @@
 
           </p>
 
-
-          <div class="scenario-tags">
-
-            <span class="scenario-tag">
-              Short Highlight
-            </span>
-
-            <span class="scenario-tag">
-              Anonymized
-            </span>
-
-            <span class="scenario-tag">
-              Real-World Ride
-            </span>
-
-            <span class="scenario-tag">
-              Shared Autonomy
-            </span>
-
-          </div>
-
         </figcaption>
 
       </figure>
@@ -3336,12 +2723,7 @@
 
       <figure class="featured-video">
 
-        <video
-          controls
-          preload="metadata"
-          playsinline
-          muted
-        >
+        <video controls preload="metadata" playsinline muted>
 
           <source
             src="final_route_anonymized.mp4"
@@ -3370,16 +2752,6 @@
 
           </p>
 
-
-          <div class="scenario-tags">
-
-            <span class="scenario-tag">1.2 km</span>
-            <span class="scenario-tag">Intersections</span>
-            <span class="scenario-tag">Parked & Moving Vehicles</span>
-            <span class="scenario-tag">Stop Signs</span>
-
-          </div>
-
         </figcaption>
 
       </figure>
@@ -3402,14 +2774,9 @@
 
     <div class="footer-brand">
 
-      <img
-        src="cyfi-logo.png"
-        alt=""
-      />
+      <img src="cyfi-logo.png" alt="" />
 
-      <span>
-        CyFI
-      </span>
+      <span>CyFI</span>
 
     </div>
 
@@ -3424,33 +2791,38 @@
 
 
 
-<!-- =========================================================
-     2× SIMULATION PLAYBACK
-========================================================= -->
-
 <script>
+
   document.addEventListener("DOMContentLoaded", () => {
 
     const simulationVideos =
       document.querySelectorAll(".simulation-video");
+
 
     simulationVideos.forEach((video) => {
 
       video.defaultPlaybackRate = 2.0;
       video.playbackRate = 2.0;
 
+
       video.addEventListener("loadedmetadata", () => {
+
         video.defaultPlaybackRate = 2.0;
         video.playbackRate = 2.0;
+
       });
 
+
       video.addEventListener("play", () => {
+
         video.playbackRate = 2.0;
+
       });
 
     });
 
   });
+
 </script>
 
 

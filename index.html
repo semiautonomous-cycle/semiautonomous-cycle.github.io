@@ -15,6 +15,7 @@
   <link rel="icon" type="image/png" href="cyfi-logo.png" />
 
   <style>
+
     :root {
       --bg: #ffffff;
       --bg-soft: #f7f9fb;
@@ -116,6 +117,7 @@
     .nav-links {
       display: flex;
       align-items: center;
+
       gap: 18px;
 
       color: var(--text-soft);
@@ -516,8 +518,7 @@
     ========================================================= */
 
     .system-card,
-    .trajectory-card,
-    .ablation-figure {
+    .trajectory-card {
       margin-top: 20px;
 
       overflow: hidden;
@@ -532,7 +533,6 @@
     }
 
     .system-image-wrap,
-    .ablation-image-wrap,
     .trajectory-image-wrap {
       padding: 10px;
 
@@ -541,10 +541,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    .ablation-image-wrap {
-      padding: 18px;
     }
 
     .trajectory-image-wrap {
@@ -562,17 +558,6 @@
       margin: 0 auto;
     }
 
-    .ablation-image-wrap img {
-      width: 100%;
-      height: auto;
-
-      object-fit: contain;
-
-      background: white;
-
-      margin: 0 auto;
-    }
-
     .trajectory-image-wrap img {
       width: 100%;
       height: 365px;
@@ -585,16 +570,14 @@
     }
 
     .system-caption,
-    .trajectory-caption,
-    .ablation-figure-caption {
+    .trajectory-caption {
       padding: 12px 16px 14px;
 
       border-top: 1px solid var(--border);
     }
 
     .system-caption strong,
-    .trajectory-caption strong,
-    .ablation-figure-caption strong {
+    .trajectory-caption strong {
       display: block;
 
       margin-bottom: 3px;
@@ -603,8 +586,7 @@
     }
 
     .system-caption span,
-    .trajectory-caption span,
-    .ablation-figure-caption span {
+    .trajectory-caption span {
       display: block;
 
       color: var(--text-soft);
@@ -615,7 +597,7 @@
 
 
     /* =========================================================
-       TRAJECTORY SITES — TWO COLUMN DESKTOP
+       TRAJECTORY SITES
     ========================================================= */
 
     .trajectory-site-grid {
@@ -1041,22 +1023,27 @@
 
 
     /* =========================================================
-       MODEL
+       MODEL — COMPACT
     ========================================================= */
+
+    #model .section-intro {
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
 
     .model-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
-      gap: 14px;
+      gap: 12px;
 
-      margin-top: 20px;
+      margin-top: 16px;
     }
 
     .model-card {
       position: relative;
 
-      padding: 18px;
+      padding: 14px 16px;
 
       border-radius: var(--radius-md);
 
@@ -1079,16 +1066,16 @@
     .model-badge {
       display: inline-block;
 
-      margin-bottom: 9px;
+      margin-bottom: 6px;
 
-      padding: 4px 8px;
+      padding: 3px 7px;
 
       border-radius: 999px;
 
       background: var(--blue-soft);
       color: var(--navy);
 
-      font-size: 0.64rem;
+      font-size: 0.58rem;
       font-weight: 800;
 
       text-transform: uppercase;
@@ -1098,30 +1085,31 @@
     .model-card h3 {
       margin: 0;
 
-      font-size: 1.02rem;
+      font-size: 0.9rem;
+      line-height: 1.25;
     }
 
     .model-size {
-      margin-top: 3px;
+      margin-top: 2px;
 
       color: var(--text-soft);
 
-      font-size: 0.74rem;
+      font-size: 0.68rem;
     }
 
     .model-metrics {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
-      gap: 8px;
+      gap: 7px;
 
-      margin-top: 14px;
+      margin-top: 10px;
     }
 
     .model-metric {
-      padding: 10px;
+      padding: 8px;
 
-      border-radius: 11px;
+      border-radius: 10px;
 
       background: var(--bg-soft);
 
@@ -1133,7 +1121,8 @@
 
       color: var(--navy);
 
-      font-size: 1.04rem;
+      font-size: 0.92rem;
+      line-height: 1.1;
     }
 
     .model-metric span {
@@ -1143,13 +1132,13 @@
 
       color: var(--text-soft);
 
-      font-size: 0.65rem;
+      font-size: 0.6rem;
     }
 
     .model-summary {
-      margin-top: 14px;
+      margin-top: 10px;
 
-      padding: 14px 16px;
+      padding: 10px 14px;
 
       border-radius: var(--radius-md);
 
@@ -1157,17 +1146,17 @@
 
       color: #31485e;
 
-      font-size: 0.8rem;
-      line-height: 1.55;
+      font-size: 0.7rem;
+      line-height: 1.45;
     }
 
 
     /* =========================================================
-       QUALITATIVE SIMULATION
+       QUALITATIVE
     ========================================================= */
 
     .qualitative-section {
-      margin-top: 30px;
+      margin-top: 28px;
     }
 
     .qualitative-heading-row {
@@ -1177,7 +1166,7 @@
     .qualitative-heading-row h3 {
       margin: 0;
 
-      font-size: 1.2rem;
+      font-size: 1.12rem;
       letter-spacing: -0.025em;
     }
 
@@ -1188,8 +1177,8 @@
 
       color: var(--text-soft);
 
-      font-size: 0.82rem;
-      line-height: 1.55;
+      font-size: 0.78rem;
+      line-height: 1.5;
     }
 
     .qualitative-scroll-hint {
@@ -1197,7 +1186,7 @@
 
       color: var(--blue) !important;
 
-      font-size: 0.72rem !important;
+      font-size: 0.7rem !important;
       font-weight: 700;
     }
 
@@ -1357,6 +1346,108 @@
       background: #eef6fc;
 
       font-weight: 700;
+    }
+
+
+    /* =========================================================
+       ABLATION TABLES
+    ========================================================= */
+
+    .ablation-table-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      gap: 16px;
+
+      margin-top: 22px;
+
+      align-items: start;
+    }
+
+    .ablation-table-card {
+      min-width: 0;
+
+      overflow: hidden;
+
+      background: #fff;
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+
+      box-shadow: var(--shadow);
+    }
+
+    .ablation-table-header {
+      padding: 14px 16px 12px;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ablation-table-header h3 {
+      margin: 0;
+
+      color: var(--navy);
+
+      font-size: 0.94rem;
+      line-height: 1.25;
+
+      letter-spacing: -0.015em;
+    }
+
+    .ablation-table-header p {
+      margin: 6px 0 0;
+
+      color: var(--text-soft);
+
+      font-size: 0.68rem;
+      line-height: 1.5;
+    }
+
+    .ablation-table-wrapper {
+      border: 0;
+      border-radius: 0;
+    }
+
+    .ablation-table {
+      min-width: 470px;
+
+      font-size: 0.67rem;
+    }
+
+    .wide-ablation-table {
+      min-width: 540px;
+    }
+
+    .ablation-table th,
+    .ablation-table td {
+      padding: 6px 7px;
+
+      white-space: nowrap;
+    }
+
+    .ablation-table th {
+      font-size: 0.63rem;
+    }
+
+    .ablation-table th:not(:first-child),
+    .ablation-table td:not(:first-child) {
+      text-align: center;
+    }
+
+    .condition-row td {
+      padding: 6px 8px;
+
+      background: #f0f4f8;
+      color: var(--navy);
+
+      text-align: center !important;
+
+      font-style: italic;
+      font-weight: 750;
+    }
+
+    .ablation-table .primary-row {
+      background: #eef6fc;
     }
 
 
@@ -1582,11 +1673,9 @@
 
       .dataset-layout,
       .model-grid,
-      .featured-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .trajectory-site-grid {
+      .featured-grid,
+      .trajectory-site-grid,
+      .ablation-table-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1613,6 +1702,14 @@
 
       .qualitative-card {
         flex-basis: 300px;
+      }
+
+      .ablation-table {
+        font-size: 0.72rem;
+      }
+
+      .ablation-table-header p {
+        font-size: 0.72rem;
       }
     }
 
@@ -1677,6 +1774,7 @@
         align-items: flex-start;
       }
     }
+
   </style>
 </head>
 
@@ -1891,8 +1989,10 @@
 
 
     <p class="subtext">
+
       Early prototypes supported iterative development of the
       physical platform, autonomous steering, and rider interaction design.
+
     </p>
 
 
@@ -1907,8 +2007,13 @@
         />
 
         <figcaption class="media-caption">
+
           <strong>First-Generation Prototype</strong>
-          <span>Early physical platform used during formative development.</span>
+
+          <span>
+            Early physical platform used during formative development.
+          </span>
+
         </figcaption>
 
       </figure>
@@ -1923,8 +2028,13 @@
         />
 
         <figcaption class="media-caption">
+
           <strong>First-Generation Prototype</strong>
-          <span>Rider-interface and cockpit configuration.</span>
+
+          <span>
+            Rider-interface and cockpit configuration.
+          </span>
+
         </figcaption>
 
       </figure>
@@ -1950,8 +2060,10 @@
 
 
     <p class="subtext">
+
       Key sensing, computation, feedback, and control components
       integrated into the current CyFI platform.
+
     </p>
 
 
@@ -1970,7 +2082,9 @@
 
       <figcaption class="system-caption">
 
-        <strong>CyFI System Components</strong>
+        <strong>
+          CyFI System Components
+        </strong>
 
         <span>
           Integrated sensing, computation, rider feedback,
@@ -2061,7 +2175,9 @@
 
       <div class="prompt-box-header">
 
-        <h3>Scene Description Prompt</h3>
+        <h3>
+          Scene Description Prompt
+        </h3>
 
         <p>
           Prompt for scene-description audio feedback initiated via the handle button.
@@ -2161,7 +2277,12 @@
 
     <figure class="data-video-card">
 
-      <video controls preload="metadata" playsinline muted>
+      <video
+        controls
+        preload="metadata"
+        playsinline
+        muted
+      >
 
         <source
           src="cyfi-data-anonymized-v2.mp4"
@@ -2187,10 +2308,13 @@
         </p>
 
         <p class="anonymization-note">
+
           <strong>Note:</strong>
+
           Street and location-identifying signs are conservatively blurred using
           a low detection threshold to ensure anonymity while preserving
           trajectory waypoint visibility.
+
         </p>
 
       </figcaption>
@@ -2201,6 +2325,7 @@
 
     <div class="dataset-layout">
 
+
       <div class="dataset-panel">
 
         <div class="dataset-subtitle">
@@ -2209,26 +2334,32 @@
 
 
         <p>
+
           For model ablations, we record sensor streams to obtain
           synchronized RGB observations and frame-level trajectory
           labels from high-precision GNSS/IMU.
+
         </p>
 
 
         <p>
+
           RTK-fixed solutions provide centimeter-level position
           anchors and are supplemented with validated PPK solutions
           when available. Between the 5 Hz GNSS/PPK position anchors,
           dense frame-level positions are obtained by integrating
           velocity measurements.
+
         </p>
 
 
         <p>
+
           GNSS latitude, longitude, and height measurements are
           transformed into a local East-North-Up (ENU) coordinate
           frame. Camera frames are synchronized with navigation
           measurements in GPS time using host-side timestamp logs.
+
         </p>
 
       </div>
@@ -2243,16 +2374,20 @@
 
 
         <p>
+
           For each RGB frame at time <em>t</em>, an 8-waypoint
           future trajectory is sampled at 3 Hz following the
           OmniVLA setting.
+
         </p>
 
 
         <p>
+
           Let Δ<em>n</em> and Δ<em>e</em> denote future displacement
           in ENU coordinates, and let θ<sub>t</sub> denote bicycle
           travel heading at time <em>t</em>.
+
         </p>
 
 
@@ -2275,7 +2410,9 @@
 
         <div class="waypoint-box">
 
-          <strong>Waypoint Representation</strong>
+          <strong>
+            Waypoint Representation
+          </strong>
 
           <div class="waypoint-equation">
             a<sub>t</sub> = [x, y, cos(ψ), sin(ψ)]
@@ -2293,6 +2430,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -2302,7 +2440,7 @@
 
 
 <!-- =========================================================
-     MODEL
+     MODEL DEVELOPMENT
 ========================================================= -->
 
 <section class="section" id="model">
@@ -2338,7 +2476,9 @@
           Comparison Model
         </span>
 
-        <h3>Alpamayo 1.5</h3>
+        <h3>
+          Alpamayo 1.5
+        </h3>
 
         <div class="model-size">
           10B parameters
@@ -2368,7 +2508,9 @@
           Primary Navigation Model
         </span>
 
-        <h3>OmniVLA-Edge-FT</h3>
+        <h3>
+          OmniVLA-Edge-FT
+        </h3>
 
         <div class="model-size">
           50M parameters
@@ -2415,10 +2557,12 @@
         </h3>
 
         <p>
+
           Pseudo closed-loop simulation rollouts across seven evaluated
           navigation policies. Videos are displayed at 2× playback speed
           for faster qualitative comparison while preserving the original
           rollout sequence.
+
         </p>
 
         <p class="qualitative-scroll-hint">
@@ -2434,7 +2578,14 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
             <source src="alpamayo.mp4" type="video/mp4" />
           </video>
 
@@ -2444,7 +2595,9 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>Alpamayo 1.5</h4>
+            <h4>
+              Alpamayo 1.5
+            </h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Base</span>
@@ -2459,7 +2612,14 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
             <source src="NaVILA.mp4" type="video/mp4" />
           </video>
 
@@ -2469,7 +2629,9 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>NaVILA</h4>
+            <h4>
+              NaVILA
+            </h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Base</span>
@@ -2484,7 +2646,14 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
             <source src="omnivla_edge.mp4" type="video/mp4" />
           </video>
 
@@ -2494,7 +2663,9 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>OmniVLA-Edge</h4>
+            <h4>
+              OmniVLA-Edge
+            </h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Base</span>
@@ -2509,7 +2680,14 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
             <source src="omnivla.mp4" type="video/mp4" />
           </video>
 
@@ -2519,7 +2697,9 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>OmniVLA</h4>
+            <h4>
+              OmniVLA
+            </h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Base</span>
@@ -2534,7 +2714,14 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
             <source src="modular.mp4" type="video/mp4" />
           </video>
 
@@ -2544,7 +2731,9 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>Modular Pipeline</h4>
+            <h4>
+              Modular Pipeline
+            </h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Base</span>
@@ -2559,7 +2748,14 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
             <source src="omnivla_FT.mp4" type="video/mp4" />
           </video>
 
@@ -2569,7 +2765,9 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>OmniVLA-FT</h4>
+            <h4>
+              OmniVLA-FT
+            </h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Fine-Tuned</span>
@@ -2584,7 +2782,14 @@
 
         <figure class="qualitative-card">
 
-          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
+          <video
+            class="simulation-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
             <source src="omnivla_edge_FT.mp4" type="video/mp4" />
           </video>
 
@@ -2594,7 +2799,9 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>OmniVLA-Edge-FT</h4>
+            <h4>
+              OmniVLA-Edge-FT
+            </h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Fine-Tuned</span>
@@ -2801,47 +3008,576 @@
 
 
     <h2>
-      Target-point conditioning for trajectory prediction.
+      Target-point conditioning and simulated GPS noise.
     </h2>
 
 
     <p class="section-intro">
 
-      We compare open-loop trajectory prediction with and without
-      target points as input on BikeScenes and our held-out test split.
+      We evaluate the effect of target-point conditioning and
+      simulated GPS localization noise under both open-loop trajectory
+      prediction and pseudo closed-loop navigation.
 
     </p>
 
 
 
-    <figure class="ablation-figure">
-
-      <div class="ablation-image-wrap">
-
-        <img
-          src="open_loop_eval.png"
-          alt="Open-loop trajectory prediction results on BikeScenes and our dataset comparing models with and without target points"
-          loading="lazy"
-        />
-
-      </div>
+    <div class="ablation-table-grid">
 
 
-      <figcaption class="ablation-figure-caption">
+      <!-- =====================================================
+           TABLE 1
+      ====================================================== -->
 
-        <strong>
-          Open-Loop Trajectory Prediction on BikeScenes and Our Dataset.
-        </strong>
+      <article class="ablation-table-card">
 
-        <span>
-          We compare models with and without target points as input.
-          ADE and FDE are reported on BikeScenes and our held-out test split.
-          Lower is better.
-        </span>
+        <div class="ablation-table-header">
 
-      </figcaption>
+          <h3>
+            Open-Loop Target-Point Ablation
+          </h3>
 
-    </figure>
+          <p>
+
+            Open-Loop Trajectory Prediction on BikeScenes and Our Dataset.
+            We compare models with and without target points as input.
+            For all models, the target point is defined as the position
+            <strong>2.4 s ahead</strong>. ADE and FDE are reported on
+            BikeScenes and our held-out test split. Lower is better.
+
+          </p>
+
+        </div>
+
+
+        <div class="table-wrapper ablation-table-wrapper">
+
+          <table class="ablation-table wide-ablation-table">
+
+            <thead>
+
+              <tr>
+                <th rowspan="2">Model</th>
+                <th rowspan="2">Size</th>
+                <th colspan="2">BikeScenes</th>
+                <th colspan="2">Our Dataset</th>
+              </tr>
+
+              <tr>
+                <th>ADE ↓</th>
+                <th>FDE ↓</th>
+                <th>ADE ↓</th>
+                <th>FDE ↓</th>
+              </tr>
+
+            </thead>
+
+
+            <tbody>
+
+              <tr class="condition-row">
+                <td colspan="6">
+                  w/o Target Point
+                </td>
+              </tr>
+
+              <tr>
+                <td>Alpamayo 1.5</td>
+                <td>10B</td>
+                <td>6.53</td>
+                <td>15.99</td>
+                <td>3.24</td>
+                <td>6.69</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA</td>
+                <td>7.5B</td>
+                <td>1.41</td>
+                <td>3.62</td>
+                <td>2.31</td>
+                <td>3.31</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-Edge</td>
+                <td>50M</td>
+                <td>1.59</td>
+                <td>2.84</td>
+                <td>2.80</td>
+                <td>6.67</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-FT</td>
+                <td>7.5B</td>
+                <td><strong>1.22</strong></td>
+                <td><strong>1.75</strong></td>
+                <td><strong>1.70</strong></td>
+                <td><strong>3.01</strong></td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-Edge-FT</td>
+                <td>50M</td>
+                <td>1.31</td>
+                <td>1.97</td>
+                <td>1.89</td>
+                <td>3.34</td>
+              </tr>
+
+
+
+              <tr class="condition-row">
+                <td colspan="6">
+                  w/ Target Point
+                </td>
+              </tr>
+
+              <tr>
+                <td>Alpamayo 1.5</td>
+                <td>10B</td>
+                <td>6.58</td>
+                <td>16.15</td>
+                <td>3.01</td>
+                <td>6.17</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA</td>
+                <td>7.5B</td>
+                <td>1.20</td>
+                <td>2.91</td>
+                <td>2.00</td>
+                <td>2.61</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-Edge</td>
+                <td>50M</td>
+                <td>1.17</td>
+                <td>1.99</td>
+                <td>2.25</td>
+                <td>4.22</td>
+              </tr>
+
+              <tr>
+                <td>Modular Pipeline</td>
+                <td>5M</td>
+                <td>1.40</td>
+                <td>2.74</td>
+                <td>2.15</td>
+                <td>3.23</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-FT</td>
+                <td>7.5B</td>
+                <td>0.83</td>
+                <td>1.49</td>
+                <td><strong>1.25</strong></td>
+                <td><strong>2.16</strong></td>
+              </tr>
+
+              <tr class="primary-row">
+                <td>OmniVLA-Edge-FT</td>
+                <td>50M</td>
+                <td><strong>0.46</strong></td>
+                <td><strong>0.70</strong></td>
+                <td>1.48</td>
+                <td>2.56</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =====================================================
+           TABLE 2
+      ====================================================== -->
+
+      <article class="ablation-table-card">
+
+        <div class="ablation-table-header">
+
+          <h3>
+            Pseudo Closed-Loop Target-Point Ablation
+          </h3>
+
+          <p>
+
+            Pseudo Closed-Loop Evaluation. We evaluate models in interactive
+            environments reconstructed using Vid2Sim from BikeScenes and our
+            collected data. We compare models with and without target points
+            as input. For all models, the target point is defined as the
+            position <strong>3 m ahead</strong>. We report collision rate
+            (Collision) and route completion (RC).
+
+          </p>
+
+        </div>
+
+
+        <div class="table-wrapper ablation-table-wrapper">
+
+          <table class="ablation-table">
+
+            <thead>
+
+              <tr>
+                <th>Model</th>
+                <th>Size</th>
+                <th>Collision (%) ↓</th>
+                <th>RC (%) ↑</th>
+              </tr>
+
+            </thead>
+
+
+            <tbody>
+
+              <tr class="condition-row">
+                <td colspan="4">
+                  w/o Target Point
+                </td>
+              </tr>
+
+              <tr>
+                <td>Alpamayo 1.5</td>
+                <td>10B</td>
+                <td>4.01</td>
+                <td>55.64</td>
+              </tr>
+
+              <tr>
+                <td>NaVILA</td>
+                <td>8B</td>
+                <td>2.23</td>
+                <td>68.74</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA</td>
+                <td>7.5B</td>
+                <td>3.74</td>
+                <td>50.87</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-Edge</td>
+                <td>50M</td>
+                <td>3.92</td>
+                <td>50.18</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-FT</td>
+                <td>7.5B</td>
+                <td><strong>1.11</strong></td>
+                <td><strong>78.46</strong></td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-Edge-FT</td>
+                <td>50M</td>
+                <td>1.15</td>
+                <td>74.37</td>
+              </tr>
+
+
+
+              <tr class="condition-row">
+                <td colspan="4">
+                  w/ Target Point
+                </td>
+              </tr>
+
+              <tr>
+                <td>Alpamayo 1.5</td>
+                <td>10B</td>
+                <td>10.85</td>
+                <td>22.67</td>
+              </tr>
+
+              <tr>
+                <td>NaVILA</td>
+                <td>8B</td>
+                <td>2.35</td>
+                <td>68.75</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA</td>
+                <td>7.5B</td>
+                <td>1.21</td>
+                <td>76.20</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-Edge</td>
+                <td>50M</td>
+                <td>2.70</td>
+                <td>65.84</td>
+              </tr>
+
+              <tr>
+                <td>Modular Pipeline</td>
+                <td>5M</td>
+                <td>2.14</td>
+                <td>61.46</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-FT</td>
+                <td>7.5B</td>
+                <td>0.25</td>
+                <td>89.83</td>
+              </tr>
+
+              <tr class="primary-row">
+                <td>OmniVLA-Edge-FT</td>
+                <td>50M</td>
+                <td><strong>0.21</strong></td>
+                <td><strong>90.93</strong></td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =====================================================
+           TABLE 3
+      ====================================================== -->
+
+      <article class="ablation-table-card">
+
+        <div class="ablation-table-header">
+
+          <h3>
+            Open-Loop Simulated GPS Noise
+          </h3>
+
+          <p>
+
+            Ablation on Simulated GPS Noise under Open-Loop Setting.
+            We perturb the target points with zero-mean Gaussian noise
+            with a standard deviation of <strong>1 m</strong> to simulate
+            realistic GPS localization noise and evaluate model robustness.
+            For all models, the clean target point is defined as the position
+            <strong>2.4 s ahead</strong>. ADE and FDE are reported on
+            BikeScenes and our held-out test split. Lower is better.
+
+          </p>
+
+        </div>
+
+
+        <div class="table-wrapper ablation-table-wrapper">
+
+          <table class="ablation-table wide-ablation-table">
+
+            <thead>
+
+              <tr>
+                <th rowspan="2">Model</th>
+                <th rowspan="2">Size</th>
+                <th colspan="2">BikeScenes</th>
+                <th colspan="2">Our Dataset</th>
+              </tr>
+
+              <tr>
+                <th>ADE ↓</th>
+                <th>FDE ↓</th>
+                <th>ADE ↓</th>
+                <th>FDE ↓</th>
+              </tr>
+
+            </thead>
+
+
+            <tbody>
+
+              <tr>
+                <td>Alpamayo 1.5</td>
+                <td>10B</td>
+                <td>6.56</td>
+                <td>16.12</td>
+                <td>3.46</td>
+                <td>7.13</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA</td>
+                <td>7.5B</td>
+                <td>1.21</td>
+                <td>2.97</td>
+                <td>2.06</td>
+                <td>2.79</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-Edge</td>
+                <td>50M</td>
+                <td>1.20</td>
+                <td>2.01</td>
+                <td>2.35</td>
+                <td>4.70</td>
+              </tr>
+
+              <tr>
+                <td>Modular Pipeline</td>
+                <td>5M</td>
+                <td>1.58</td>
+                <td>2.79</td>
+                <td>2.36</td>
+                <td>3.43</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-FT</td>
+                <td>7.5B</td>
+                <td>1.08</td>
+                <td>1.96</td>
+                <td><strong>1.25</strong></td>
+                <td><strong>2.21</strong></td>
+              </tr>
+
+              <tr class="primary-row">
+                <td>OmniVLA-Edge-FT</td>
+                <td>50M</td>
+                <td><strong>0.85</strong></td>
+                <td><strong>1.43</strong></td>
+                <td>1.54</td>
+                <td>2.69</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =====================================================
+           TABLE 4
+      ====================================================== -->
+
+      <article class="ablation-table-card">
+
+        <div class="ablation-table-header">
+
+          <h3>
+            Pseudo Closed-Loop Simulated GPS Noise
+          </h3>
+
+          <p>
+
+            Ablation on Simulated GPS Noise under Pseudo Closed-Loop Setting.
+            We evaluate models in interactive environments reconstructed using
+            Vid2Sim from BikeScenes and our collected data. We perturb the target
+            points with zero-mean Gaussian noise with a standard deviation of
+            <strong>1 m</strong> to simulate GPS localization noise and evaluate
+            model robustness. For all models, the clean target point is defined
+            as the position <strong>3 m ahead</strong>. We report collision rate
+            (Collision) and route completion (RC).
+
+          </p>
+
+        </div>
+
+
+        <div class="table-wrapper ablation-table-wrapper">
+
+          <table class="ablation-table">
+
+            <thead>
+
+              <tr>
+                <th>Model</th>
+                <th>Size</th>
+                <th>Collision (%) ↓</th>
+                <th>RC (%) ↑</th>
+              </tr>
+
+            </thead>
+
+
+            <tbody>
+
+              <tr>
+                <td>Alpamayo 1.5</td>
+                <td>10B</td>
+                <td>11.62</td>
+                <td>19.85</td>
+              </tr>
+
+              <tr>
+                <td>NaVILA</td>
+                <td>8B</td>
+                <td>2.41</td>
+                <td>67.83</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA</td>
+                <td>7.5B</td>
+                <td>2.60</td>
+                <td>57.81</td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-Edge</td>
+                <td>50M</td>
+                <td>2.84</td>
+                <td>62.93</td>
+              </tr>
+
+              <tr>
+                <td>Modular Pipeline</td>
+                <td>5M</td>
+                <td>2.53</td>
+                <td>57.68</td>
+              </tr>
+
+              <tr class="primary-row">
+                <td>OmniVLA-FT</td>
+                <td>7.5B</td>
+                <td><strong>0.34</strong></td>
+                <td><strong>88.79</strong></td>
+              </tr>
+
+              <tr>
+                <td>OmniVLA-Edge-FT</td>
+                <td>50M</td>
+                <td>0.39</td>
+                <td>88.16</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </article>
+
+
+    </div>
 
   </div>
 
@@ -2906,6 +3642,7 @@
           <table>
 
             <thead>
+
               <tr>
                 <th>ID</th>
                 <th>Age</th>
@@ -2916,12 +3653,15 @@
                 <th>Physical Activity</th>
                 <th>Days / week</th>
               </tr>
+
             </thead>
 
             <tbody>
 
               <tr class="site-row">
-                <td colspan="8">Site 1: Campus (n = 9)</td>
+                <td colspan="8">
+                  Site 1: Campus (n = 9)
+                </td>
               </tr>
 
               <tr><td>P26</td><td>64</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
@@ -2936,7 +3676,9 @@
 
 
               <tr class="site-row">
-                <td colspan="8">Site 2: Community Organization (n = 5)</td>
+                <td colspan="8">
+                  Site 2: Community Organization (n = 5)
+                </td>
               </tr>
 
               <tr><td>P35</td><td>67</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
@@ -2987,6 +3729,7 @@
           <table>
 
             <thead>
+
               <tr>
                 <th>ID</th>
                 <th>Age</th>
@@ -2997,12 +3740,15 @@
                 <th>Physical Activity</th>
                 <th>Days / week</th>
               </tr>
+
             </thead>
 
             <tbody>
 
               <tr class="site-row">
-                <td colspan="8">Site 1: Community Convention (n = 20)</td>
+                <td colspan="8">
+                  Site 1: Community Convention (n = 20)
+                </td>
               </tr>
 
               <tr><td>P1</td><td>78</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
@@ -3028,7 +3774,9 @@
 
 
               <tr class="site-row">
-                <td colspan="8">Site 2: Community Organization (n = 5)</td>
+                <td colspan="8">
+                  Site 2: Community Organization (n = 5)
+                </td>
               </tr>
 
               <tr><td>P21</td><td>19</td><td>Woman</td><td>White</td><td>Blind</td><td>–</td><td>High</td><td>1–2</td></tr>
@@ -3153,12 +3901,14 @@
           <table>
 
             <thead>
+
               <tr>
                 <th>Measure / Site</th>
                 <th>Before Ride</th>
                 <th>During Ride</th>
                 <th>After Ride</th>
               </tr>
+
             </thead>
 
             <tbody>
@@ -3179,12 +3929,16 @@
 
               <tr>
                 <td>Participant Ride Distance</td>
-                <td colspan="3">Median 141.59 m · IQR 155.87 m</td>
+                <td colspan="3">
+                  Median 141.59 m · IQR 155.87 m
+                </td>
               </tr>
 
               <tr>
                 <td>Participant Riding Speed</td>
-                <td colspan="3">Median 0.50 m/s · IQR 0.29 m/s</td>
+                <td colspan="3">
+                  Median 0.50 m/s · IQR 0.29 m/s
+                </td>
               </tr>
 
             </tbody>
@@ -3208,7 +3962,7 @@
 
 
     <!-- =====================================================
-         PARTICIPANT TRAJECTORIES — SIDE BY SIDE
+         TRAJECTORIES
     ====================================================== -->
 
     <h3 class="subheading">
@@ -3226,8 +3980,6 @@
 
     <div class="trajectory-site-grid">
 
-
-      <!-- SITE 1 -->
 
       <div class="trajectory-site">
 
@@ -3276,8 +4028,6 @@
       </div>
 
 
-
-      <!-- SITE 2 -->
 
       <div class="trajectory-site">
 
@@ -3369,16 +4119,26 @@
 
       <figure class="media-card">
 
-        <video controls preload="metadata" playsinline muted>
+        <video
+          controls
+          preload="metadata"
+          playsinline
+          muted
+        >
 
-          <source src="Georgia_clip.mp4" type="video/mp4" />
+          <source
+            src="Georgia_clip.mp4"
+            type="video/mp4"
+          />
 
         </video>
 
 
         <figcaption class="media-caption">
 
-          <strong>Participant Evaluation Session</strong>
+          <strong>
+            Participant Evaluation Session
+          </strong>
 
           <span>
             Representative outdoor participant riding session.
@@ -3410,7 +4170,12 @@
 
       <figure class="featured-video">
 
-        <video controls preload="metadata" playsinline muted>
+        <video
+          controls
+          preload="metadata"
+          playsinline
+          muted
+        >
 
           <source
             src="RIDE_SAMPLE_FOOTAGE_trimmed_more_anonymized.mp4"
@@ -3457,7 +4222,12 @@
 
       <figure class="featured-video">
 
-        <video controls preload="metadata" playsinline muted>
+        <video
+          controls
+          preload="metadata"
+          playsinline
+          muted
+        >
 
           <source
             src="final_route_anonymized.mp4"
@@ -3518,9 +4288,14 @@
 
     <div class="footer-brand">
 
-      <img src="cyfi-logo.png" alt="" />
+      <img
+        src="cyfi-logo.png"
+        alt=""
+      />
 
-      <span>CyFI</span>
+      <span>
+        CyFI
+      </span>
 
     </div>
 
@@ -3571,4 +4346,5 @@
 
 
 </body>
+
 </html>

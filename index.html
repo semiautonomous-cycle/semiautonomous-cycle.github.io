@@ -19,39 +19,28 @@
     :root {
       --bg: #ffffff;
       --bg-soft: #f7f9fb;
-
       --text: #172033;
       --text-soft: #5f6978;
-
       --navy: #123e70;
       --blue: #3d86c6;
       --blue-soft: #eaf3fb;
-
       --border: #e2e7ec;
-
-      --shadow:
-        0 8px 24px rgba(24, 39, 58, 0.055);
-
+      --shadow: 0 8px 24px rgba(24, 39, 58, 0.055);
       --radius-md: 15px;
       --radius-lg: 22px;
-
       --max-width: 1120px;
     }
-
 
     * {
       box-sizing: border-box;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
 
-
     body {
       margin: 0;
-
       background: var(--bg);
       color: var(--text);
 
@@ -69,26 +58,19 @@
       line-height: 1.62;
     }
 
-
     img,
     video {
       display: block;
       width: 100%;
     }
 
-
     a {
       color: inherit;
       text-decoration: none;
     }
 
-
     .container {
-      width: min(
-        var(--max-width),
-        calc(100% - 40px)
-      );
-
+      width: min(var(--max-width), calc(100% - 40px));
       margin: 0 auto;
     }
 
@@ -101,17 +83,13 @@
     .topbar {
       position: sticky;
       top: 0;
-
       z-index: 100;
 
       background: rgba(255, 255, 255, 0.97);
-
       backdrop-filter: blur(14px);
 
-      border-bottom:
-        1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
-
 
     .nav {
       min-height: 62px;
@@ -123,7 +101,6 @@
       gap: 22px;
     }
 
-
     .nav-brand {
       display: flex;
       align-items: center;
@@ -132,18 +109,14 @@
 
       font-size: 0.94rem;
       font-weight: 800;
-
       letter-spacing: -0.02em;
     }
-
 
     .nav-brand img {
       width: 32px;
       height: 32px;
-
       object-fit: contain;
     }
-
 
     .nav-links {
       display: flex;
@@ -157,11 +130,9 @@
       font-weight: 700;
     }
 
-
     .nav-links a {
       transition: color 0.15s ease;
     }
-
 
     .nav-links a:hover {
       color: var(--navy);
@@ -175,10 +146,8 @@
 
     .hero {
       padding: 46px 0 36px;
-
       text-align: center;
     }
-
 
     .project-logo {
       width: 78px;
@@ -189,26 +158,17 @@
       object-fit: contain;
     }
 
-
     .hero h1 {
       max-width: 900px;
 
       margin: 0 auto;
 
-      font-size:
-        clamp(
-          2.35rem,
-          4.7vw,
-          4.1rem
-        );
+      font-size: clamp(2.35rem, 4.7vw, 4.1rem);
 
       line-height: 1.03;
-
       letter-spacing: -0.05em;
-
       font-weight: 800;
     }
-
 
     .hero-subtitle {
       max-width: 780px;
@@ -221,7 +181,6 @@
       line-height: 1.65;
     }
 
-
     .hero-tags {
       display: flex;
       flex-wrap: wrap;
@@ -231,7 +190,6 @@
 
       margin-top: 18px;
     }
-
 
     .hero-tag {
       padding: 6px 12px;
@@ -245,7 +203,6 @@
       font-weight: 750;
     }
 
-
     .hero-image {
       margin-top: 28px;
 
@@ -253,14 +210,12 @@
 
       border-radius: var(--radius-lg);
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
 
       background: #eeeeee;
 
       box-shadow: var(--shadow);
     }
-
 
     .hero-image img {
       aspect-ratio: 16 / 7.8;
@@ -268,7 +223,6 @@
       object-fit: cover;
       object-position: center;
     }
-
 
     .hero-caption {
       padding: 10px 15px;
@@ -285,18 +239,16 @@
 
 
     /* =========================================================
-       GENERAL SECTIONS
+       GENERAL
     ========================================================= */
 
     .section {
       padding: 50px 0;
     }
 
-
     .section-soft {
       background: var(--bg-soft);
     }
-
 
     .section-label {
       margin-bottom: 6px;
@@ -307,28 +259,19 @@
       font-weight: 850;
 
       text-transform: uppercase;
-
       letter-spacing: 0.13em;
     }
-
 
     .section h2 {
       max-width: 880px;
 
       margin: 0;
 
-      font-size:
-        clamp(
-          1.95rem,
-          3.7vw,
-          2.7rem
-        );
+      font-size: clamp(1.95rem, 3.7vw, 2.7rem);
 
       line-height: 1.08;
-
       letter-spacing: -0.04em;
     }
-
 
     .section-intro {
       max-width: 860px;
@@ -341,7 +284,6 @@
       line-height: 1.62;
     }
 
-
     .subheading {
       margin: 30px 0 7px;
 
@@ -349,7 +291,6 @@
 
       letter-spacing: -0.025em;
     }
-
 
     .subtext {
       max-width: 840px;
@@ -360,7 +301,6 @@
 
       font-size: 0.91rem;
     }
-
 
     .note {
       margin-top: 13px;
@@ -386,10 +326,8 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
     }
-
 
     .abstract-box p {
       margin: 0;
@@ -409,14 +347,12 @@
     .feature-grid {
       display: grid;
 
-      grid-template-columns:
-        repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
 
       gap: 15px;
 
       margin-top: 22px;
     }
-
 
     .feature-card {
       padding: 19px;
@@ -425,10 +361,8 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
     }
-
 
     .feature-number {
       width: 32px;
@@ -448,13 +382,11 @@
       font-weight: 800;
     }
 
-
     .feature-card h3 {
       margin: 0 0 6px;
 
       font-size: 1.02rem;
     }
-
 
     .feature-card p {
       margin: 0;
@@ -474,14 +406,12 @@
     .metric-grid {
       display: grid;
 
-      grid-template-columns:
-        repeat(4, 1fr);
+      grid-template-columns: repeat(4, 1fr);
 
       gap: 12px;
 
       margin-top: 22px;
     }
-
 
     .metric-card {
       padding: 17px 14px;
@@ -490,12 +420,10 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
 
       text-align: center;
     }
-
 
     .metric-value {
       display: block;
@@ -509,7 +437,6 @@
 
       letter-spacing: -0.035em;
     }
-
 
     .metric-label {
       display: block;
@@ -531,22 +458,18 @@
     .media-grid {
       display: grid;
 
-      grid-template-columns:
-        repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
       gap: 17px;
 
       margin-top: 21px;
     }
 
-
     .media-grid.single {
-      grid-template-columns:
-        minmax(0, 780px);
+      grid-template-columns: minmax(0, 780px);
 
       justify-content: center;
     }
-
 
     .media-card {
       margin: 0;
@@ -557,17 +480,14 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
     }
-
 
     .media-card img {
       aspect-ratio: 16 / 9.5;
 
       object-fit: cover;
     }
-
 
     .media-card video {
       aspect-ratio: 16 / 9;
@@ -577,11 +497,9 @@
       background: #111111;
     }
 
-
     .media-caption {
       padding: 12px 14px 14px;
     }
-
 
     .media-caption strong {
       display: block;
@@ -590,7 +508,6 @@
 
       font-size: 0.94rem;
     }
-
 
     .media-caption span {
       color: var(--text-soft);
@@ -601,7 +518,7 @@
 
 
     /* =========================================================
-       SYSTEM EVOLUTION
+       SYSTEM
     ========================================================= */
 
     .evolution-note {
@@ -619,16 +536,9 @@
       line-height: 1.6;
     }
 
-
     .evolution-note strong {
       color: var(--navy);
     }
-
-
-
-    /* =========================================================
-       FIGURES
-    ========================================================= */
 
     .system-card,
     .trajectory-card {
@@ -640,12 +550,10 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
 
       box-shadow: var(--shadow);
     }
-
 
     .system-image-wrap,
     .trajectory-image-wrap {
@@ -658,13 +566,11 @@
       justify-content: center;
     }
 
-
     .trajectory-image-wrap {
       padding: 13px;
 
       min-height: 390px;
     }
-
 
     .system-image-wrap img {
       width: 100%;
@@ -678,7 +584,6 @@
       margin: 0 auto;
     }
 
-
     .trajectory-image-wrap img {
       width: 100%;
 
@@ -691,15 +596,12 @@
       background: white;
     }
 
-
     .system-caption,
     .trajectory-caption {
       padding: 13px 17px 15px;
 
-      border-top:
-        1px solid var(--border);
+      border-top: 1px solid var(--border);
     }
-
 
     .system-caption strong,
     .trajectory-caption strong {
@@ -709,7 +611,6 @@
 
       font-size: 0.95rem;
     }
-
 
     .system-caption span,
     .trajectory-caption span {
@@ -730,8 +631,7 @@
     .trajectory-site-grid {
       display: grid;
 
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
 
       gap: 19px;
 
@@ -740,11 +640,9 @@
       align-items: start;
     }
 
-
     .trajectory-site {
       min-width: 0;
     }
-
 
     .trajectory-site-heading {
       margin: 0 0 6px;
@@ -754,7 +652,6 @@
       font-size: 1.04rem;
       font-weight: 800;
     }
-
 
     .trajectory-site-description {
       min-height: 44px;
@@ -766,7 +663,6 @@
       font-size: 0.84rem;
       line-height: 1.5;
     }
-
 
     .trajectory-site .trajectory-card {
       margin-top: 13px;
@@ -788,10 +684,8 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
     }
-
 
     details.info-details summary,
     details.study-details summary {
@@ -811,12 +705,10 @@
       font-weight: 750;
     }
 
-
     details.info-details summary::-webkit-details-marker,
     details.study-details summary::-webkit-details-marker {
       display: none;
     }
-
 
     details.info-details summary::after,
     details.study-details summary::after {
@@ -828,16 +720,13 @@
       font-weight: 500;
     }
 
-
     details.info-details[open] summary::after,
     details.study-details[open] summary::after {
       content: "−";
     }
 
-
     .details-content {
-      padding:
-        0 17px 17px;
+      padding: 0 17px 17px;
     }
 
 
@@ -855,18 +744,15 @@
       line-height: 1.67;
     }
 
-
     .control-grid {
       display: grid;
 
-      grid-template-columns:
-        repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
 
       gap: 10px;
 
       margin-top: 15px;
     }
-
 
     .control-card {
       padding: 13px;
@@ -875,12 +761,10 @@
 
       background: var(--bg-soft);
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
 
       text-align: center;
     }
-
 
     .control-value {
       display: block;
@@ -890,7 +774,6 @@
       font-size: 1.08rem;
       font-weight: 850;
     }
-
 
     .control-label {
       display: block;
@@ -923,25 +806,20 @@
           #f5f9fc
         );
 
-      border:
-        1px solid #d5e1ec;
+      border: 1px solid #d5e1ec;
     }
-
 
     .prompt-box-header {
       padding: 15px 19px;
 
-      border-bottom:
-        1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
-
 
     .prompt-box-header h3 {
       margin: 0;
 
       font-size: 1.04rem;
     }
-
 
     .prompt-box-header p {
       margin: 4px 0 0;
@@ -951,7 +829,6 @@
       font-size: 0.82rem;
     }
 
-
     .prompt-meta {
       display: flex;
       flex-wrap: wrap;
@@ -960,7 +837,6 @@
 
       padding: 13px 19px 0;
     }
-
 
     .prompt-meta span {
       padding: 5px 9px;
@@ -974,19 +850,16 @@
       font-weight: 750;
     }
 
-
     .prompt-box-content {
       padding: 15px 21px 18px;
     }
-
 
     .prompt-text {
       margin: 0;
 
       padding-left: 16px;
 
-      border-left:
-        3px solid var(--blue);
+      border-left: 3px solid var(--blue);
 
       color: #2c3948;
 
@@ -1006,7 +879,6 @@
       font-size: 0.98rem;
     }
 
-
     .study-summary-left span {
       display: block;
 
@@ -1017,7 +889,6 @@
       font-size: 0.81rem;
       font-weight: 500;
     }
-
 
     .study-count {
       margin-left: auto;
@@ -1042,14 +913,12 @@
     .dataset-layout {
       display: grid;
 
-      grid-template-columns:
-        1.05fr 0.95fr;
+      grid-template-columns: 1.05fr 0.95fr;
 
       gap: 19px;
 
       margin-top: 19px;
     }
-
 
     .dataset-panel {
       padding: 23px 25px;
@@ -1058,10 +927,8 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
     }
-
 
     .dataset-panel p {
       margin: 0 0 14px;
@@ -1072,11 +939,9 @@
       line-height: 1.68;
     }
 
-
     .dataset-panel p:last-child {
       margin-bottom: 0;
     }
-
 
     .dataset-subtitle {
       margin: 0 0 10px;
@@ -1087,7 +952,6 @@
       font-weight: 800;
     }
 
-
     .equation-box {
       margin: 15px 0;
 
@@ -1097,12 +961,10 @@
 
       background: #f5f8fb;
 
-      border:
-        1px solid #dce5ed;
+      border: 1px solid #dce5ed;
 
       text-align: center;
     }
-
 
     .equation {
       margin: 5px 0;
@@ -1115,7 +977,6 @@
       font-size: 1.06rem;
     }
 
-
     .equation-note {
       margin-top: 9px !important;
 
@@ -1123,7 +984,6 @@
 
       font-size: 0.8rem !important;
     }
-
 
     .waypoint-box {
       margin-top: 13px;
@@ -1138,7 +998,6 @@
       text-align: center;
     }
 
-
     .waypoint-box strong {
       display: block;
 
@@ -1146,7 +1005,6 @@
 
       font-size: 0.87rem;
     }
-
 
     .waypoint-equation {
       font-family:
@@ -1172,12 +1030,10 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
 
       box-shadow: var(--shadow);
     }
-
 
     .data-video-card video {
       width: 100%;
@@ -1189,11 +1045,9 @@
       background: #0b0d10;
     }
 
-
     .data-video-content {
       padding: 15px 17px 17px;
     }
-
 
     .data-video-kicker {
       margin-bottom: 4px;
@@ -1208,7 +1062,6 @@
       letter-spacing: 0.12em;
     }
 
-
     .data-video-content h3 {
       margin: 0;
 
@@ -1216,7 +1069,6 @@
 
       letter-spacing: -0.02em;
     }
-
 
     .data-video-content p {
       margin: 7px 0 0;
@@ -1226,7 +1078,6 @@
       font-size: 0.85rem;
       line-height: 1.55;
     }
-
 
     .anonymization-note {
       margin-top: 11px !important;
@@ -1243,7 +1094,6 @@
       line-height: 1.53 !important;
     }
 
-
     .anonymization-note strong {
       color: var(--navy);
     }
@@ -1251,20 +1101,18 @@
 
 
     /* =========================================================
-       EXPERIMENTS SUMMARY
+       MODEL SUMMARY
     ========================================================= */
 
     .model-grid {
       display: grid;
 
-      grid-template-columns:
-        repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
       gap: 13px;
 
       margin-top: 18px;
     }
-
 
     .model-card {
       position: relative;
@@ -1275,10 +1123,8 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
     }
-
 
     .model-card.primary {
       border-color: #b8d2e8;
@@ -1290,7 +1136,6 @@
           #f3f8fc
         );
     }
-
 
     .model-badge {
       display: inline-block;
@@ -1312,14 +1157,12 @@
       letter-spacing: 0.06em;
     }
 
-
     .model-card h3 {
       margin: 0;
 
       font-size: 1rem;
       line-height: 1.25;
     }
-
 
     .model-size {
       margin-top: 3px;
@@ -1329,18 +1172,15 @@
       font-size: 0.75rem;
     }
 
-
     .model-metrics {
       display: grid;
 
-      grid-template-columns:
-        repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
       gap: 8px;
 
       margin-top: 11px;
     }
-
 
     .model-metric {
       padding: 10px 8px;
@@ -1352,7 +1192,6 @@
       text-align: center;
     }
 
-
     .model-metric strong {
       display: block;
 
@@ -1361,7 +1200,6 @@
       font-size: 1.04rem;
       line-height: 1.1;
     }
-
 
     .model-metric span {
       display: block;
@@ -1372,7 +1210,6 @@
 
       font-size: 0.68rem;
     }
-
 
     .model-summary {
       margin-top: 12px;
@@ -1392,18 +1229,16 @@
 
 
     /* =========================================================
-       QUALITATIVE RESULTS
+       QUALITATIVE
     ========================================================= */
 
     .qualitative-section {
       margin-top: 31px;
     }
 
-
     .qualitative-heading-row {
       margin-bottom: 16px;
     }
-
 
     .qualitative-heading-row h3 {
       margin: 0;
@@ -1412,7 +1247,6 @@
 
       letter-spacing: -0.025em;
     }
-
 
     .qualitative-heading-row p {
       max-width: 850px;
@@ -1425,7 +1259,6 @@
       line-height: 1.53;
     }
 
-
     .qualitative-scroll-hint {
       margin: 9px 0 0 !important;
 
@@ -1434,7 +1267,6 @@
       font-size: 0.77rem !important;
       font-weight: 700;
     }
-
 
     .qualitative-grid {
       display: flex;
@@ -1456,23 +1288,19 @@
       overscroll-behavior-x: contain;
     }
 
-
     .qualitative-grid::-webkit-scrollbar {
       height: 8px;
     }
 
-
     .qualitative-grid::-webkit-scrollbar-track {
       background: transparent;
     }
-
 
     .qualitative-grid::-webkit-scrollbar-thumb {
       background: #cbd5df;
 
       border-radius: 999px;
     }
-
 
     .qualitative-card {
       flex: 0 0 340px;
@@ -1487,12 +1315,10 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
 
       box-shadow: var(--shadow);
     }
-
 
     .qualitative-card video {
       width: 100%;
@@ -1504,11 +1330,9 @@
       background: #0a0d11;
     }
 
-
     .qualitative-content {
       padding: 13px 15px 15px;
     }
-
 
     .qualitative-kicker {
       margin-bottom: 5px;
@@ -1523,13 +1347,11 @@
       letter-spacing: 0.1em;
     }
 
-
     .qualitative-content h4 {
       margin: 0;
 
       font-size: 1.02rem;
     }
-
 
     .qualitative-tags {
       display: flex;
@@ -1539,7 +1361,6 @@
 
       margin-top: 11px;
     }
-
 
     .qualitative-tag {
       padding: 4px 8px;
@@ -1564,10 +1385,8 @@
 
       border-radius: 11px;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
     }
-
 
     table {
       width: 100%;
@@ -1579,12 +1398,10 @@
       font-size: 0.84rem;
     }
 
-
     thead {
       background: var(--navy);
       color: white;
     }
-
 
     th,
     td {
@@ -1592,15 +1409,12 @@
 
       text-align: left;
 
-      border-bottom:
-        1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
-
 
     th {
       font-size: 0.77rem;
     }
-
 
     .site-row {
       background: #eef4f8;
@@ -1610,17 +1424,15 @@
       font-weight: 800;
     }
 
-
     .primary-row {
       background: #eef6fc;
-
-      font-weight: 700;
+      font-weight: 400;
     }
 
 
 
     /* =========================================================
-       EXPERIMENT RESULT TABLES
+       RESULT TABLES
     ========================================================= */
 
     .experiment-table-grid {
@@ -1636,7 +1448,6 @@
       align-items: start;
     }
 
-
     .experiment-table-card,
     .ablation-table-card {
       min-width: 0;
@@ -1645,23 +1456,19 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
 
       border-radius: var(--radius-md);
 
       box-shadow: var(--shadow);
     }
 
-
     .experiment-table-header,
     .ablation-table-header {
       padding: 17px 18px 14px;
 
-      border-bottom:
-        1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
-
 
     .experiment-table-header h3,
     .ablation-table-header h3 {
@@ -1675,7 +1482,6 @@
       letter-spacing: -0.015em;
     }
 
-
     .experiment-table-header p,
     .ablation-table-header p {
       margin: 7px 0 0;
@@ -1686,14 +1492,11 @@
       line-height: 1.55;
     }
 
-
     .experiment-table-wrapper,
     .ablation-table-wrapper {
       border: 0;
-
       border-radius: 0;
     }
-
 
     .experiment-table,
     .ablation-table {
@@ -1702,11 +1505,9 @@
       font-size: 0.77rem;
     }
 
-
     .wide-results-table {
       min-width: 570px;
     }
-
 
     .experiment-table th,
     .experiment-table td,
@@ -1717,12 +1518,10 @@
       white-space: nowrap;
     }
 
-
     .experiment-table th,
     .ablation-table th {
       font-size: 0.71rem;
     }
-
 
     .experiment-table th:not(:first-child),
     .experiment-table td:not(:first-child),
@@ -1730,7 +1529,6 @@
     .ablation-table td:not(:first-child) {
       text-align: center;
     }
-
 
     .condition-row td {
       padding: 7px 8px;
@@ -1741,19 +1539,68 @@
       text-align: center !important;
 
       font-style: italic;
-      font-weight: 750;
-    }
-
-
-    .experiment-table .primary-row,
-    .ablation-table .primary-row {
-      background: #eef6fc;
+      font-weight: 400;
     }
 
 
 
     /* =========================================================
-       ABLATIONS
+       IMPORTANT TABLE FONT-WEIGHT RULES
+
+       1. ALL body data normal by default.
+       2. ONLY ADE / FDE data cells in the two open-loop tables
+          are bold.
+       3. Collision / RC remain normal.
+       4. Model / Size remain normal.
+    ========================================================= */
+
+    .experiment-table tbody td,
+    .ablation-table tbody td,
+    .experiment-table .primary-row td,
+    .ablation-table .primary-row td,
+    .experiment-table .condition-row td,
+    .ablation-table .condition-row td {
+      font-weight: 400 !important;
+    }
+
+
+    /* Open-Loop Trajectory Prediction:
+       Columns 3-6 are ADE/FDE values */
+    .experiment-table.wide-results-table
+    tbody tr:not(.condition-row) td:nth-child(3),
+
+    .experiment-table.wide-results-table
+    tbody tr:not(.condition-row) td:nth-child(4),
+
+    .experiment-table.wide-results-table
+    tbody tr:not(.condition-row) td:nth-child(5),
+
+    .experiment-table.wide-results-table
+    tbody tr:not(.condition-row) td:nth-child(6) {
+      font-weight: 700 !important;
+    }
+
+
+    /* Open-Loop Simulated GPS Noise:
+       Columns 3-6 are ADE/FDE values */
+    .ablation-table.wide-results-table
+    tbody tr:not(.condition-row) td:nth-child(3),
+
+    .ablation-table.wide-results-table
+    tbody tr:not(.condition-row) td:nth-child(4),
+
+    .ablation-table.wide-results-table
+    tbody tr:not(.condition-row) td:nth-child(5),
+
+    .ablation-table.wide-results-table
+    tbody tr:not(.condition-row) td:nth-child(6) {
+      font-weight: 700 !important;
+    }
+
+
+
+    /* =========================================================
+       ABLATION
     ========================================================= */
 
     .ablation-table-grid {
@@ -1778,14 +1625,12 @@
     .compact-gallery {
       display: grid;
 
-      grid-template-columns:
-        repeat(4, 1fr);
+      grid-template-columns: repeat(4, 1fr);
 
       gap: 11px;
 
       margin-top: 22px;
     }
-
 
     .compact-gallery figure {
       margin: 0;
@@ -1796,17 +1641,14 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
     }
-
 
     .compact-gallery img {
       aspect-ratio: 4 / 3;
 
       object-fit: cover;
     }
-
 
     .compact-gallery figcaption {
       padding: 8px 10px;
@@ -1825,14 +1667,12 @@
     .featured-grid {
       display: grid;
 
-      grid-template-columns:
-        repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
       gap: 17px;
 
       margin-top: 23px;
     }
-
 
     .featured-video {
       margin: 0;
@@ -1843,12 +1683,10 @@
 
       background: white;
 
-      border:
-        1px solid var(--border);
+      border: 1px solid var(--border);
 
       box-shadow: var(--shadow);
     }
-
 
     .featured-video video {
       width: 100%;
@@ -1860,11 +1698,9 @@
       background: #0b0d10;
     }
 
-
     .featured-video-content {
       padding: 15px 17px 17px;
     }
-
 
     .featured-video-kicker {
       margin-bottom: 4px;
@@ -1879,13 +1715,11 @@
       letter-spacing: 0.12em;
     }
 
-
     .featured-video-content h3 {
       margin: 0;
 
       font-size: 1.12rem;
     }
-
 
     .featured-video-content p {
       margin: 7px 0 0;
@@ -1896,7 +1730,6 @@
       line-height: 1.53;
     }
 
-
     .scenario-tags {
       display: flex;
       flex-wrap: wrap;
@@ -1905,7 +1738,6 @@
 
       margin-top: 11px;
     }
-
 
     .scenario-tag {
       padding: 4px 8px;
@@ -1928,14 +1760,12 @@
     footer {
       padding: 24px 0 30px;
 
-      border-top:
-        1px solid var(--border);
+      border-top: 1px solid var(--border);
 
       color: var(--text-soft);
 
       font-size: 0.8rem;
     }
-
 
     .footer-inner {
       display: flex;
@@ -1944,7 +1774,6 @@
 
       gap: 20px;
     }
-
 
     .footer-brand {
       display: flex;
@@ -1956,7 +1785,6 @@
 
       font-weight: 800;
     }
-
 
     .footer-brand img {
       width: 26px;
@@ -1977,12 +1805,10 @@
         grid-template-columns: 1fr;
       }
 
-
       .metric-grid {
         grid-template-columns:
           repeat(2, 1fr);
       }
-
 
       .dataset-layout,
       .model-grid,
@@ -1993,11 +1819,9 @@
         grid-template-columns: 1fr;
       }
 
-
       .trajectory-image-wrap {
         min-height: auto;
       }
-
 
       .trajectory-image-wrap img {
         height: auto;
@@ -2005,34 +1829,28 @@
         max-height: 620px;
       }
 
-
       .trajectory-site-description {
         min-height: 0;
       }
-
 
       .control-grid {
         grid-template-columns:
           repeat(2, 1fr);
       }
 
-
       .compact-gallery {
         grid-template-columns:
           repeat(2, 1fr);
       }
 
-
       .qualitative-card {
         flex-basis: 310px;
       }
-
 
       .experiment-table,
       .ablation-table {
         font-size: 0.8rem;
       }
-
 
       .experiment-table-header p,
       .ablation-table-header p {
@@ -2048,11 +1866,9 @@
         display: none;
       }
 
-
       .media-grid {
         grid-template-columns: 1fr;
       }
-
 
       .media-grid.single {
         grid-template-columns: 1fr;
@@ -2067,39 +1883,31 @@
         font-size: 16px;
       }
 
-
       .container {
-        width:
-          calc(100% - 24px);
+        width: calc(100% - 24px);
       }
-
 
       .hero {
         padding-top: 36px;
       }
-
 
       .project-logo {
         width: 68px;
         height: 68px;
       }
 
-
       .hero h1 {
         font-size: 2.15rem;
       }
-
 
       .section {
         padding: 42px 0;
       }
 
-
       .abstract-box,
       .dataset-panel {
         padding: 20px 19px;
       }
-
 
       .metric-grid,
       .control-grid {
@@ -2107,17 +1915,14 @@
           repeat(2, 1fr);
       }
 
-
       .compact-gallery {
         grid-template-columns:
           1fr 1fr;
       }
 
-
       .qualitative-card {
         flex-basis: 84vw;
       }
-
 
       .footer-inner {
         flex-direction: column;
@@ -2139,7 +1944,6 @@
 <header class="topbar">
 
   <div class="container nav">
-
 
     <a
       href="#top"
@@ -2189,7 +1993,6 @@
       </a>
 
     </nav>
-
 
   </div>
 
@@ -2256,9 +2059,7 @@
       />
 
       <figcaption class="hero-caption">
-
         CyFI Operating During an Outdoor Riding Evaluation
-
       </figcaption>
 
     </figure>
@@ -2442,9 +2243,7 @@
           </strong>
 
           <span>
-
             Early physical platform used during formative development.
-
           </span>
 
         </figcaption>
@@ -2468,9 +2267,7 @@
           </strong>
 
           <span>
-
             Rider-interface and cockpit configuration.
-
           </span>
 
         </figcaption>
@@ -2782,9 +2579,7 @@
           </strong>
 
           <span>
-
             Participant demographics from formative evaluations.
-
           </span>
 
         </span>
@@ -2829,11 +2624,9 @@
 
 
               <tr class="site-row">
-
                 <td colspan="8">
                   Site 1: Campus (n = 9)
                 </td>
-
               </tr>
 
 
@@ -2849,11 +2642,9 @@
 
 
               <tr class="site-row">
-
                 <td colspan="8">
                   Site 2: Community Organization (n = 5)
                 </td>
-
               </tr>
 
 
@@ -2892,9 +2683,7 @@
           </strong>
 
           <span>
-
             Participant demographics from the final evaluation.
-
           </span>
 
         </span>
@@ -2939,11 +2728,9 @@
 
 
               <tr class="site-row">
-
                 <td colspan="8">
                   Site 1: Community Convention (n = 20)
                 </td>
-
               </tr>
 
 
@@ -2970,11 +2757,9 @@
 
 
               <tr class="site-row">
-
                 <td colspan="8">
                   Site 2: Community Organization (n = 5)
                 </td>
-
               </tr>
 
 
@@ -3329,10 +3114,6 @@
 
 
 
-    <!-- =====================================================
-         SUMMARY
-    ====================================================== -->
-
     <div class="model-grid">
 
 
@@ -3459,10 +3240,6 @@
 
 
 
-    <!-- =====================================================
-         QUALITATIVE
-    ====================================================== -->
-
     <div class="qualitative-section">
 
 
@@ -3509,10 +3286,7 @@
             preload="metadata"
           >
 
-            <source
-              src="alpamayo.mp4"
-              type="video/mp4"
-            />
+            <source src="alpamayo.mp4" type="video/mp4" />
 
           </video>
 
@@ -3555,10 +3329,7 @@
             preload="metadata"
           >
 
-            <source
-              src="NaVILA.mp4"
-              type="video/mp4"
-            />
+            <source src="NaVILA.mp4" type="video/mp4" />
 
           </video>
 
@@ -3601,10 +3372,7 @@
             preload="metadata"
           >
 
-            <source
-              src="omnivla_edge.mp4"
-              type="video/mp4"
-            />
+            <source src="omnivla_edge.mp4" type="video/mp4" />
 
           </video>
 
@@ -3647,10 +3415,7 @@
             preload="metadata"
           >
 
-            <source
-              src="omnivla.mp4"
-              type="video/mp4"
-            />
+            <source src="omnivla.mp4" type="video/mp4" />
 
           </video>
 
@@ -3693,10 +3458,7 @@
             preload="metadata"
           >
 
-            <source
-              src="modular.mp4"
-              type="video/mp4"
-            />
+            <source src="modular.mp4" type="video/mp4" />
 
           </video>
 
@@ -3739,10 +3501,7 @@
             preload="metadata"
           >
 
-            <source
-              src="omnivla_FT.mp4"
-              type="video/mp4"
-            />
+            <source src="omnivla_FT.mp4" type="video/mp4" />
 
           </video>
 
@@ -3785,10 +3544,7 @@
             preload="metadata"
           >
 
-            <source
-              src="omnivla_edge_FT.mp4"
-              type="video/mp4"
-            />
+            <source src="omnivla_edge_FT.mp4" type="video/mp4" />
 
           </video>
 
@@ -3827,14 +3583,11 @@
 
 
     <!-- =====================================================
-         EXPERIMENT TABLES
+         TABLE 1
     ====================================================== -->
 
     <div class="experiment-table-grid">
 
-
-
-      <!-- OPEN LOOP -->
 
       <article class="experiment-table-card">
 
@@ -3851,7 +3604,7 @@
 
             We compare models with and without target points as input on
             BikeScenes and our held-out test split. For all models, the target
-            point is defined as the position <strong>2.4 s ahead</strong>.
+            point is defined as the position 2.4 s ahead.
             ADE and FDE are reported for both datasets. Lower is better.
 
           </p>
@@ -3920,11 +3673,9 @@
 
 
               <tr class="condition-row">
-
                 <td colspan="6">
                   w/o Target Point
                 </td>
-
               </tr>
 
 
@@ -3961,10 +3712,10 @@
               <tr>
                 <td>OmniVLA-FT</td>
                 <td>7.5B</td>
-                <td><strong>1.22</strong></td>
-                <td><strong>1.75</strong></td>
-                <td><strong>1.70</strong></td>
-                <td><strong>3.01</strong></td>
+                <td>1.22</td>
+                <td>1.75</td>
+                <td>1.70</td>
+                <td>3.01</td>
               </tr>
 
 
@@ -3980,11 +3731,9 @@
 
 
               <tr class="condition-row">
-
                 <td colspan="6">
                   w/ Target Point
                 </td>
-
               </tr>
 
 
@@ -4033,37 +3782,18 @@
                 <td>7.5B</td>
                 <td>0.83</td>
                 <td>1.49</td>
-                <td><strong>1.25</strong></td>
-                <td><strong>2.16</strong></td>
+                <td>1.25</td>
+                <td>2.16</td>
               </tr>
 
 
               <tr class="primary-row">
-
-                <td>
-                  OmniVLA-Edge-FT
-                </td>
-
-                <td>
-                  50M
-                </td>
-
-                <td>
-                  <strong>0.46</strong>
-                </td>
-
-                <td>
-                  <strong>0.70</strong>
-                </td>
-
-                <td>
-                  1.48
-                </td>
-
-                <td>
-                  2.56
-                </td>
-
+                <td>OmniVLA-Edge-FT</td>
+                <td>50M</td>
+                <td>0.46</td>
+                <td>0.70</td>
+                <td>1.48</td>
+                <td>2.56</td>
               </tr>
 
 
@@ -4080,7 +3810,9 @@
 
 
 
-      <!-- PSEUDO CLOSED LOOP -->
+      <!-- =====================================================
+           TABLE 2
+      ====================================================== -->
 
       <article class="experiment-table-card">
 
@@ -4098,9 +3830,8 @@
             Models are evaluated in interactive environments reconstructed
             using Vid2Sim from BikeScenes and our collected data. We compare
             models with and without target points as input. For all models,
-            the target point is defined as the position
-            <strong>3 m ahead</strong>. We report collision rate and route
-            completion (RC).
+            the target point is defined as the position 3 m ahead.
+            We report collision rate and route completion (RC).
 
           </p>
 
@@ -4147,11 +3878,9 @@
 
 
               <tr class="condition-row">
-
                 <td colspan="4">
                   w/o Target Point
                 </td>
-
               </tr>
 
 
@@ -4190,8 +3919,8 @@
               <tr>
                 <td>OmniVLA-FT</td>
                 <td>7.5B</td>
-                <td><strong>1.11</strong></td>
-                <td><strong>78.46</strong></td>
+                <td>1.11</td>
+                <td>78.46</td>
               </tr>
 
 
@@ -4205,11 +3934,9 @@
 
 
               <tr class="condition-row">
-
                 <td colspan="4">
                   w/ Target Point
                 </td>
-
               </tr>
 
 
@@ -4262,23 +3989,10 @@
 
 
               <tr class="primary-row">
-
-                <td>
-                  OmniVLA-Edge-FT
-                </td>
-
-                <td>
-                  50M
-                </td>
-
-                <td>
-                  <strong>0.21</strong>
-                </td>
-
-                <td>
-                  <strong>90.93</strong>
-                </td>
-
+                <td>OmniVLA-Edge-FT</td>
+                <td>50M</td>
+                <td>0.21</td>
+                <td>90.93</td>
               </tr>
 
 
@@ -4340,7 +4054,7 @@
 
 
       <!-- =====================================================
-           GPS OPEN LOOP
+           TABLE 3
       ====================================================== -->
 
       <article class="ablation-table-card">
@@ -4357,11 +4071,10 @@
           <p>
 
             We perturb target points with zero-mean Gaussian noise with
-            a standard deviation of <strong>1 m</strong> to simulate
-            realistic GPS localization noise. For all models, the clean
-            target point is defined as the position
-            <strong>2.4 s ahead</strong>. ADE and FDE are reported on
-            BikeScenes and our held-out test split. Lower is better.
+            a standard deviation of 1 m to simulate realistic GPS localization
+            noise. For all models, the clean target point is defined as the
+            position 2.4 s ahead. ADE and FDE are reported on BikeScenes and
+            our held-out test split. Lower is better.
 
           </p>
 
@@ -4473,37 +4186,18 @@
                 <td>7.5B</td>
                 <td>1.08</td>
                 <td>1.96</td>
-                <td><strong>1.25</strong></td>
-                <td><strong>2.21</strong></td>
+                <td>1.25</td>
+                <td>2.21</td>
               </tr>
 
 
               <tr class="primary-row">
-
-                <td>
-                  OmniVLA-Edge-FT
-                </td>
-
-                <td>
-                  50M
-                </td>
-
-                <td>
-                  <strong>0.85</strong>
-                </td>
-
-                <td>
-                  <strong>1.43</strong>
-                </td>
-
-                <td>
-                  1.54
-                </td>
-
-                <td>
-                  2.69
-                </td>
-
+                <td>OmniVLA-Edge-FT</td>
+                <td>50M</td>
+                <td>0.85</td>
+                <td>1.43</td>
+                <td>1.54</td>
+                <td>2.69</td>
               </tr>
 
 
@@ -4521,7 +4215,7 @@
 
 
       <!-- =====================================================
-           GPS CLOSED LOOP
+           TABLE 4
       ====================================================== -->
 
       <article class="ablation-table-card">
@@ -4538,11 +4232,10 @@
           <p>
 
             Models are evaluated in interactive environments reconstructed
-            using Vid2Sim. Target points are perturbed with zero-mean
-            Gaussian noise with a standard deviation of
-            <strong>1 m</strong>. For all models, the clean target point
-            is defined as the position <strong>3 m ahead</strong>.
-            We report collision rate and route completion (RC).
+            using Vid2Sim. Target points are perturbed with zero-mean Gaussian
+            noise with a standard deviation of 1 m. For all models, the clean
+            target point is defined as the position 3 m ahead. We report
+            collision rate and route completion (RC).
 
           </p>
 
@@ -4629,44 +4322,18 @@
 
 
               <tr class="primary-row">
-
-                <td>
-                  OmniVLA-FT
-                </td>
-
-                <td>
-                  7.5B
-                </td>
-
-                <td>
-                  <strong>0.34</strong>
-                </td>
-
-                <td>
-                  <strong>88.79</strong>
-                </td>
-
+                <td>OmniVLA-FT</td>
+                <td>7.5B</td>
+                <td>0.34</td>
+                <td>88.79</td>
               </tr>
 
 
               <tr>
-
-                <td>
-                  OmniVLA-Edge-FT
-                </td>
-
-                <td>
-                  50M
-                </td>
-
-                <td>
-                  0.39
-                </td>
-
-                <td>
-                  88.16
-                </td>
-
+                <td>OmniVLA-Edge-FT</td>
+                <td>50M</td>
+                <td>0.39</td>
+                <td>88.16</td>
               </tr>
 
 
@@ -4959,9 +4626,7 @@
                 </td>
 
                 <td colspan="3">
-
                   Median 141.59 m · IQR 155.87 m
-
                 </td>
 
               </tr>
@@ -4974,9 +4639,7 @@
                 </td>
 
                 <td colspan="3">
-
                   Median 0.50 m/s · IQR 0.29 m/s
-
                 </td>
 
               </tr>
@@ -5005,10 +4668,6 @@
     </details>
 
 
-
-    <!-- =====================================================
-         TRAJECTORIES
-    ====================================================== -->
 
     <h3 class="subheading">
       Participant Trajectory Overlays
@@ -5140,10 +4799,6 @@
 
 
 
-    <!-- =====================================================
-         GALLERY
-    ====================================================== -->
-
     <div class="compact-gallery">
 
 
@@ -5211,10 +4866,6 @@
 
 
 
-    <!-- =====================================================
-         PARTICIPANT VIDEO
-    ====================================================== -->
-
     <h3 class="subheading">
       Participant Evaluation Sessions
     </h3>
@@ -5268,10 +4919,6 @@
     </div>
 
 
-
-    <!-- =====================================================
-         NEIGHBORHOOD
-    ====================================================== -->
 
     <h3 class="subheading">
       Sustained Neighborhood Riding
@@ -5498,7 +5145,6 @@
         (video) => {
 
           video.defaultPlaybackRate = 2.0;
-
           video.playbackRate = 2.0;
 
 
@@ -5507,7 +5153,6 @@
             () => {
 
               video.defaultPlaybackRate = 2.0;
-
               video.playbackRate = 2.0;
 
             }

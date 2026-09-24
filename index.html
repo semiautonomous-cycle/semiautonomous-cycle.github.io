@@ -219,7 +219,6 @@
 
     .hero-image img {
       aspect-ratio: 16 / 7.8;
-
       object-fit: cover;
       object-position: center;
     }
@@ -230,7 +229,6 @@
       text-align: left;
 
       background: white;
-
       color: var(--text-soft);
 
       font-size: 0.82rem;
@@ -288,7 +286,6 @@
       margin: 30px 0 7px;
 
       font-size: 1.3rem;
-
       letter-spacing: -0.025em;
     }
 
@@ -346,7 +343,6 @@
 
     .feature-grid {
       display: grid;
-
       grid-template-columns: repeat(3, 1fr);
 
       gap: 15px;
@@ -384,7 +380,6 @@
 
     .feature-card h3 {
       margin: 0 0 6px;
-
       font-size: 1.02rem;
     }
 
@@ -405,7 +400,6 @@
 
     .metric-grid {
       display: grid;
-
       grid-template-columns: repeat(4, 1fr);
 
       gap: 12px;
@@ -432,7 +426,6 @@
 
       font-size: 1.52rem;
       line-height: 1.05;
-
       font-weight: 850;
 
       letter-spacing: -0.035em;
@@ -457,7 +450,6 @@
 
     .media-grid {
       display: grid;
-
       grid-template-columns: repeat(2, 1fr);
 
       gap: 17px;
@@ -467,7 +459,6 @@
 
     .media-grid.single {
       grid-template-columns: minmax(0, 780px);
-
       justify-content: center;
     }
 
@@ -485,7 +476,6 @@
 
     .media-card img {
       aspect-ratio: 16 / 9.5;
-
       object-fit: cover;
     }
 
@@ -511,7 +501,6 @@
 
     .media-caption span {
       color: var(--text-soft);
-
       font-size: 0.82rem;
     }
 
@@ -529,7 +518,6 @@
       border-radius: var(--radius-md);
 
       background: var(--blue-soft);
-
       color: #30465d;
 
       font-size: 0.88rem;
@@ -568,13 +556,11 @@
 
     .trajectory-image-wrap {
       padding: 13px;
-
       min-height: 390px;
     }
 
     .system-image-wrap img {
       width: 100%;
-
       height: auto;
 
       max-height: 450px;
@@ -586,7 +572,6 @@
 
     .trajectory-image-wrap img {
       width: 100%;
-
       height: 365px;
 
       object-fit: contain;
@@ -630,7 +615,6 @@
 
     .trajectory-site-grid {
       display: grid;
-
       grid-template-columns: repeat(2, minmax(0, 1fr));
 
       gap: 19px;
@@ -746,7 +730,6 @@
 
     .control-grid {
       display: grid;
-
       grid-template-columns: repeat(3, 1fr);
 
       gap: 10px;
@@ -817,7 +800,6 @@
 
     .prompt-box-header h3 {
       margin: 0;
-
       font-size: 1.04rem;
     }
 
@@ -875,7 +857,6 @@
 
     .study-summary-left strong {
       display: block;
-
       font-size: 0.98rem;
     }
 
@@ -912,7 +893,6 @@
 
     .dataset-layout {
       display: grid;
-
       grid-template-columns: 1.05fr 0.95fr;
 
       gap: 19px;
@@ -1066,7 +1046,6 @@
       margin: 0;
 
       font-size: 1.12rem;
-
       letter-spacing: -0.02em;
     }
 
@@ -1106,7 +1085,6 @@
 
     .model-grid {
       display: grid;
-
       grid-template-columns: repeat(2, 1fr);
 
       gap: 13px;
@@ -1153,7 +1131,6 @@
       font-weight: 800;
 
       text-transform: uppercase;
-
       letter-spacing: 0.06em;
     }
 
@@ -1174,7 +1151,6 @@
 
     .model-metrics {
       display: grid;
-
       grid-template-columns: repeat(2, 1fr);
 
       gap: 8px;
@@ -1244,7 +1220,6 @@
       margin: 0;
 
       font-size: 1.22rem;
-
       letter-spacing: -0.025em;
     }
 
@@ -1298,7 +1273,6 @@
 
     .qualitative-grid::-webkit-scrollbar-thumb {
       background: #cbd5df;
-
       border-radius: 999px;
     }
 
@@ -1343,13 +1317,11 @@
       font-weight: 800;
 
       text-transform: uppercase;
-
       letter-spacing: 0.1em;
     }
 
     .qualitative-content h4 {
       margin: 0;
-
       font-size: 1.02rem;
     }
 
@@ -1390,7 +1362,6 @@
 
     table {
       width: 100%;
-
       min-width: 720px;
 
       border-collapse: collapse;
@@ -1432,7 +1403,7 @@
 
 
     /* =========================================================
-       RESULT TABLES
+       EXPERIMENT TABLES
     ========================================================= */
 
     .experiment-table-grid {
@@ -1539,68 +1510,34 @@
       text-align: center !important;
 
       font-style: italic;
-      font-weight: 400;
+      font-weight: 400 !important;
     }
 
 
 
     /* =========================================================
-       IMPORTANT TABLE FONT-WEIGHT RULES
+       RESULT EMPHASIS RULE
 
-       1. ALL body data normal by default.
-       2. ONLY ADE / FDE data cells in the two open-loop tables
-          are bold.
-       3. Collision / RC remain normal.
-       4. Model / Size remain normal.
+       Everything is normal by default.
+       ONLY manually marked <strong> best-result values are bold.
     ========================================================= */
 
     .experiment-table tbody td,
     .ablation-table tbody td,
     .experiment-table .primary-row td,
-    .ablation-table .primary-row td,
-    .experiment-table .condition-row td,
-    .ablation-table .condition-row td {
-      font-weight: 400 !important;
+    .ablation-table .primary-row td {
+      font-weight: 400;
     }
 
-
-    /* Open-Loop Trajectory Prediction:
-       Columns 3-6 are ADE/FDE values */
-    .experiment-table.wide-results-table
-    tbody tr:not(.condition-row) td:nth-child(3),
-
-    .experiment-table.wide-results-table
-    tbody tr:not(.condition-row) td:nth-child(4),
-
-    .experiment-table.wide-results-table
-    tbody tr:not(.condition-row) td:nth-child(5),
-
-    .experiment-table.wide-results-table
-    tbody tr:not(.condition-row) td:nth-child(6) {
-      font-weight: 700 !important;
-    }
-
-
-    /* Open-Loop Simulated GPS Noise:
-       Columns 3-6 are ADE/FDE values */
-    .ablation-table.wide-results-table
-    tbody tr:not(.condition-row) td:nth-child(3),
-
-    .ablation-table.wide-results-table
-    tbody tr:not(.condition-row) td:nth-child(4),
-
-    .ablation-table.wide-results-table
-    tbody tr:not(.condition-row) td:nth-child(5),
-
-    .ablation-table.wide-results-table
-    tbody tr:not(.condition-row) td:nth-child(6) {
-      font-weight: 700 !important;
+    .experiment-table tbody td strong,
+    .ablation-table tbody td strong {
+      font-weight: 700;
     }
 
 
 
     /* =========================================================
-       ABLATION
+       ABLATIONS
     ========================================================= */
 
     .ablation-table-grid {
@@ -1624,7 +1561,6 @@
 
     .compact-gallery {
       display: grid;
-
       grid-template-columns: repeat(4, 1fr);
 
       gap: 11px;
@@ -1646,7 +1582,6 @@
 
     .compact-gallery img {
       aspect-ratio: 4 / 3;
-
       object-fit: cover;
     }
 
@@ -1666,7 +1601,6 @@
 
     .featured-grid {
       display: grid;
-
       grid-template-columns: repeat(2, 1fr);
 
       gap: 17px;
@@ -1711,7 +1645,6 @@
       font-weight: 800;
 
       text-transform: uppercase;
-
       letter-spacing: 0.12em;
     }
 
@@ -1806,8 +1739,7 @@
       }
 
       .metric-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .dataset-layout,
@@ -1834,13 +1766,11 @@
       }
 
       .control-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .compact-gallery {
-        grid-template-columns:
-          repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .qualitative-card {
@@ -1859,7 +1789,6 @@
 
     }
 
-
     @media (max-width: 760px) {
 
       .nav-links {
@@ -1875,7 +1804,6 @@
       }
 
     }
-
 
     @media (max-width: 600px) {
 
@@ -1911,13 +1839,11 @@
 
       .metric-grid,
       .control-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .compact-gallery {
-        grid-template-columns:
-          1fr 1fr;
+        grid-template-columns: 1fr 1fr;
       }
 
       .qualitative-card {
@@ -1926,7 +1852,6 @@
 
       .footer-inner {
         flex-direction: column;
-
         align-items: flex-start;
       }
 
@@ -1945,10 +1870,7 @@
 
   <div class="container nav">
 
-    <a
-      href="#top"
-      class="nav-brand"
-    >
+    <a href="#top" class="nav-brand">
 
       <img
         src="cyfi-logo.png"
@@ -1964,33 +1886,13 @@
 
     <nav class="nav-links">
 
-      <a href="#overview">
-        Overview
-      </a>
-
-      <a href="#system">
-        System
-      </a>
-
-      <a href="#participants">
-        Participants
-      </a>
-
-      <a href="#dataset">
-        Dataset
-      </a>
-
-      <a href="#experiments">
-        Experiments
-      </a>
-
-      <a href="#ablations">
-        Ablations
-      </a>
-
-      <a href="#real-world-evaluation">
-        Real-World Evaluation
-      </a>
+      <a href="#overview">Overview</a>
+      <a href="#system">System</a>
+      <a href="#participants">Participants</a>
+      <a href="#dataset">Dataset</a>
+      <a href="#experiments">Experiments</a>
+      <a href="#ablations">Ablations</a>
+      <a href="#real-world-evaluation">Real-World Evaluation</a>
 
     </nav>
 
@@ -2036,17 +1938,9 @@
 
     <div class="hero-tags">
 
-      <span class="hero-tag">
-        Shared Autonomy
-      </span>
-
-      <span class="hero-tag">
-        Accessible Mobility
-      </span>
-
-      <span class="hero-tag">
-        Real-World Cycling
-      </span>
+      <span class="hero-tag">Shared Autonomy</span>
+      <span class="hero-tag">Accessible Mobility</span>
+      <span class="hero-tag">Real-World Cycling</span>
 
     </div>
 
@@ -2075,10 +1969,7 @@
      OVERVIEW
 ========================================================= -->
 
-<section
-  class="section section-soft"
-  id="overview"
->
+<section class="section section-soft" id="overview">
 
   <div class="container">
 
@@ -2120,9 +2011,7 @@
 
       <article class="feature-card">
 
-        <div class="feature-number">
-          01
-        </div>
+        <div class="feature-number">01</div>
 
         <h3>
           Shared Autonomy
@@ -2141,9 +2030,7 @@
 
       <article class="feature-card">
 
-        <div class="feature-number">
-          02
-        </div>
+        <div class="feature-number">02</div>
 
         <h3>
           Multimodal Feedback
@@ -2162,9 +2049,7 @@
 
       <article class="feature-card">
 
-        <div class="feature-number">
-          03
-        </div>
+        <div class="feature-number">03</div>
 
         <h3>
           Real-World Evaluation
@@ -2193,10 +2078,7 @@
      SYSTEM
 ========================================================= -->
 
-<section
-  class="section"
-  id="system"
->
+<section class="section" id="system">
 
   <div class="container">
 
@@ -2327,10 +2209,8 @@
         </strong>
 
         <span>
-
           Integrated sensing, computation, rider feedback,
           steering, and braking components.
-
         </span>
 
       </figcaption>
@@ -2380,80 +2260,38 @@
 
 
           <div class="control-card">
-
-            <span class="control-value">
-              5%
-            </span>
-
-            <span class="control-label">
-              Calibration Actuator Increment
-            </span>
-
+            <span class="control-value">5%</span>
+            <span class="control-label">Calibration Actuator Increment</span>
           </div>
 
 
           <div class="control-card">
-
-            <span class="control-value">
-              5
-            </span>
-
-            <span class="control-label">
-              Proportional Gain
-            </span>
-
+            <span class="control-value">5</span>
+            <span class="control-label">Proportional Gain</span>
           </div>
 
 
           <div class="control-card">
-
-            <span class="control-value">
-              57
-            </span>
-
-            <span class="control-label">
-              Feedforward Term
-            </span>
-
+            <span class="control-value">57</span>
+            <span class="control-label">Feedforward Term</span>
           </div>
 
 
           <div class="control-card">
-
-            <span class="control-value">
-              8
-            </span>
-
-            <span class="control-label">
-              Deadband, Native Potentiometer Units
-            </span>
-
+            <span class="control-value">8</span>
+            <span class="control-label">Deadband, Native Potentiometer Units</span>
           </div>
 
 
           <div class="control-card">
-
-            <span class="control-value">
-              50 Hz
-            </span>
-
-            <span class="control-label">
-              Command Update Rate
-            </span>
-
+            <span class="control-value">50 Hz</span>
+            <span class="control-label">Command Update Rate</span>
           </div>
 
 
           <div class="control-card">
-
-            <span class="control-value">
-              ±30° / 10°/s
-            </span>
-
-            <span class="control-label">
-              Steering Angle / Maximum Steering Rate
-            </span>
-
+            <span class="control-value">±30° / 10°/s</span>
+            <span class="control-label">Steering Angle / Maximum Steering Rate</span>
           </div>
 
 
@@ -2476,9 +2314,7 @@
         </h3>
 
         <p>
-
           Prompt for scene-description audio feedback initiated via the handle button.
-
         </p>
 
       </div>
@@ -2487,21 +2323,10 @@
 
       <div class="prompt-meta">
 
-        <span>
-          NVIDIA Cosmos Reason 2
-        </span>
-
-        <span>
-          First Sentence ≈ 0.9 s
-        </span>
-
-        <span>
-          Speech Onset ≈ 1 s
-        </span>
-
-        <span>
-          Center OAK-D RGB Input
-        </span>
+        <span>NVIDIA Cosmos Reason 2</span>
+        <span>First Sentence ≈ 0.9 s</span>
+        <span>Speech Onset ≈ 1 s</span>
+        <span>Center OAK-D RGB Input</span>
 
       </div>
 
@@ -2539,10 +2364,7 @@
      PARTICIPANTS
 ========================================================= -->
 
-<section
-  class="section section-soft"
-  id="participants"
->
+<section class="section section-soft" id="participants">
 
   <div class="container">
 
@@ -2624,9 +2446,11 @@
 
 
               <tr class="site-row">
+
                 <td colspan="8">
                   Site 1: Campus (n = 9)
                 </td>
+
               </tr>
 
 
@@ -2642,9 +2466,11 @@
 
 
               <tr class="site-row">
+
                 <td colspan="8">
                   Site 2: Community Organization (n = 5)
                 </td>
+
               </tr>
 
 
@@ -2728,9 +2554,11 @@
 
 
               <tr class="site-row">
+
                 <td colspan="8">
                   Site 1: Community Convention (n = 20)
                 </td>
+
               </tr>
 
 
@@ -2757,9 +2585,11 @@
 
 
               <tr class="site-row">
+
                 <td colspan="8">
                   Site 2: Community Organization (n = 5)
                 </td>
+
               </tr>
 
 
@@ -2794,10 +2624,7 @@
      DATASET
 ========================================================= -->
 
-<section
-  class="section"
-  id="dataset"
->
+<section class="section" id="dataset">
 
   <div class="container">
 
@@ -2826,54 +2653,26 @@
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          46.4 min
-        </span>
-
-        <span class="metric-label">
-          Training Riding Data
-        </span>
-
+        <span class="metric-value">46.4 min</span>
+        <span class="metric-label">Training Riding Data</span>
       </div>
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          45.2 min
-        </span>
-
-        <span class="metric-label">
-          Testing Riding Data
-        </span>
-
+        <span class="metric-value">45.2 min</span>
+        <span class="metric-label">Testing Riding Data</span>
       </div>
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          8 × 3 Hz
-        </span>
-
-        <span class="metric-label">
-          Future Waypoints
-        </span>
-
+        <span class="metric-value">8 × 3 Hz</span>
+        <span class="metric-label">Future Waypoints</span>
       </div>
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          2.4 s
-        </span>
-
-        <span class="metric-label">
-          Prediction Horizon
-        </span>
-
+        <span class="metric-value">2.4 s</span>
+        <span class="metric-label">Prediction Horizon</span>
       </div>
 
 
@@ -3017,23 +2816,17 @@
 
 
           <div class="equation">
-
             x = Δe sin(θ<sub>t</sub>) + Δn cos(θ<sub>t</sub>)
-
           </div>
 
 
           <div class="equation">
-
             y = −Δe cos(θ<sub>t</sub>) + Δn sin(θ<sub>t</sub>)
-
           </div>
 
 
           <p class="equation-note">
-
             x and y denote the forward and left directions, respectively.
-
           </p>
 
 
@@ -3085,10 +2878,7 @@
      EXPERIMENTS
 ========================================================= -->
 
-<section
-  class="section section-soft"
-  id="experiments"
->
+<section class="section section-soft" id="experiments">
 
   <div class="container">
 
@@ -3262,9 +3052,7 @@
 
 
         <p class="qualitative-scroll-hint">
-
           Scroll or Swipe Horizontally to Compare All Seven Policies →
-
         </p>
 
 
@@ -3301,15 +3089,8 @@
             </h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Base
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Base</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -3344,15 +3125,8 @@
             </h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Base
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Base</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -3387,15 +3161,8 @@
             </h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Base
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Base</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -3430,15 +3197,8 @@
             </h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Base
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Base</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -3473,15 +3233,8 @@
             </h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Base
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Base</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -3516,15 +3269,8 @@
             </h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Fine-Tuned
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Fine-Tuned</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -3559,15 +3305,8 @@
             </h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Fine-Tuned
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Fine-Tuned</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -3583,11 +3322,14 @@
 
 
     <!-- =====================================================
-         TABLE 1
+         TARGET-POINT EXPERIMENT TABLES
     ====================================================== -->
 
     <div class="experiment-table-grid">
 
+
+
+      <!-- TABLE 1 -->
 
       <article class="experiment-table-card">
 
@@ -3646,21 +3388,10 @@
 
               <tr>
 
-                <th>
-                  ADE ↓
-                </th>
-
-                <th>
-                  FDE ↓
-                </th>
-
-                <th>
-                  ADE ↓
-                </th>
-
-                <th>
-                  FDE ↓
-                </th>
+                <th>ADE ↓</th>
+                <th>FDE ↓</th>
+                <th>ADE ↓</th>
+                <th>FDE ↓</th>
 
               </tr>
 
@@ -3673,9 +3404,11 @@
 
 
               <tr class="condition-row">
+
                 <td colspan="6">
                   w/o Target Point
                 </td>
+
               </tr>
 
 
@@ -3709,31 +3442,72 @@
               </tr>
 
 
+              <!-- BEST VALUES: w/o Target Point -->
               <tr>
-                <td>OmniVLA-FT</td>
-                <td>7.5B</td>
-                <td>1.22</td>
-                <td>1.75</td>
-                <td>1.70</td>
-                <td>3.01</td>
+
+                <td>
+                  OmniVLA-FT
+                </td>
+
+                <td>
+                  7.5B
+                </td>
+
+                <td>
+                  <strong>1.22</strong>
+                </td>
+
+                <td>
+                  <strong>1.75</strong>
+                </td>
+
+                <td>
+                  <strong>1.70</strong>
+                </td>
+
+                <td>
+                  <strong>3.01</strong>
+                </td>
+
               </tr>
 
 
               <tr>
-                <td>OmniVLA-Edge-FT</td>
-                <td>50M</td>
-                <td>1.31</td>
-                <td>1.97</td>
-                <td>1.89</td>
-                <td>3.34</td>
+
+                <td>
+                  OmniVLA-Edge-FT
+                </td>
+
+                <td>
+                  50M
+                </td>
+
+                <td>
+                  1.31
+                </td>
+
+                <td>
+                  1.97
+                </td>
+
+                <td>
+                  1.89
+                </td>
+
+                <td>
+                  3.34
+                </td>
+
               </tr>
 
 
 
               <tr class="condition-row">
+
                 <td colspan="6">
                   w/ Target Point
                 </td>
+
               </tr>
 
 
@@ -3777,23 +3551,63 @@
               </tr>
 
 
+              <!-- BEST OUR DATASET -->
               <tr>
-                <td>OmniVLA-FT</td>
-                <td>7.5B</td>
-                <td>0.83</td>
-                <td>1.49</td>
-                <td>1.25</td>
-                <td>2.16</td>
+
+                <td>
+                  OmniVLA-FT
+                </td>
+
+                <td>
+                  7.5B
+                </td>
+
+                <td>
+                  0.83
+                </td>
+
+                <td>
+                  1.49
+                </td>
+
+                <td>
+                  <strong>1.25</strong>
+                </td>
+
+                <td>
+                  <strong>2.16</strong>
+                </td>
+
               </tr>
 
 
+              <!-- BEST BIKESCENES -->
               <tr class="primary-row">
-                <td>OmniVLA-Edge-FT</td>
-                <td>50M</td>
-                <td>0.46</td>
-                <td>0.70</td>
-                <td>1.48</td>
-                <td>2.56</td>
+
+                <td>
+                  OmniVLA-Edge-FT
+                </td>
+
+                <td>
+                  50M
+                </td>
+
+                <td>
+                  <strong>0.46</strong>
+                </td>
+
+                <td>
+                  <strong>0.70</strong>
+                </td>
+
+                <td>
+                  1.48
+                </td>
+
+                <td>
+                  2.56
+                </td>
+
               </tr>
 
 
@@ -3810,9 +3624,7 @@
 
 
 
-      <!-- =====================================================
-           TABLE 2
-      ====================================================== -->
+      <!-- TABLE 2 -->
 
       <article class="experiment-table-card">
 
@@ -3878,9 +3690,11 @@
 
 
               <tr class="condition-row">
+
                 <td colspan="4">
                   w/o Target Point
                 </td>
+
               </tr>
 
 
@@ -3916,27 +3730,56 @@
               </tr>
 
 
+              <!-- BEST w/o TARGET POINT -->
               <tr>
-                <td>OmniVLA-FT</td>
-                <td>7.5B</td>
-                <td>1.11</td>
-                <td>78.46</td>
+
+                <td>
+                  OmniVLA-FT
+                </td>
+
+                <td>
+                  7.5B
+                </td>
+
+                <td>
+                  <strong>1.11</strong>
+                </td>
+
+                <td>
+                  <strong>78.46</strong>
+                </td>
+
               </tr>
 
 
               <tr>
-                <td>OmniVLA-Edge-FT</td>
-                <td>50M</td>
-                <td>1.15</td>
-                <td>74.37</td>
+
+                <td>
+                  OmniVLA-Edge-FT
+                </td>
+
+                <td>
+                  50M
+                </td>
+
+                <td>
+                  1.15
+                </td>
+
+                <td>
+                  74.37
+                </td>
+
               </tr>
 
 
 
               <tr class="condition-row">
+
                 <td colspan="4">
                   w/ Target Point
                 </td>
+
               </tr>
 
 
@@ -3988,11 +3831,25 @@
               </tr>
 
 
+              <!-- BEST w/ TARGET POINT -->
               <tr class="primary-row">
-                <td>OmniVLA-Edge-FT</td>
-                <td>50M</td>
-                <td>0.21</td>
-                <td>90.93</td>
+
+                <td>
+                  OmniVLA-Edge-FT
+                </td>
+
+                <td>
+                  50M
+                </td>
+
+                <td>
+                  <strong>0.21</strong>
+                </td>
+
+                <td>
+                  <strong>90.93</strong>
+                </td>
+
               </tr>
 
 
@@ -4021,10 +3878,7 @@
      ABLATIONS
 ========================================================= -->
 
-<section
-  class="section"
-  id="ablations"
->
+<section class="section" id="ablations">
 
   <div class="container">
 
@@ -4053,9 +3907,7 @@
 
 
 
-      <!-- =====================================================
-           TABLE 3
-      ====================================================== -->
+      <!-- TABLE 3 -->
 
       <article class="ablation-table-card">
 
@@ -4115,21 +3967,10 @@
 
               <tr>
 
-                <th>
-                  ADE ↓
-                </th>
-
-                <th>
-                  FDE ↓
-                </th>
-
-                <th>
-                  ADE ↓
-                </th>
-
-                <th>
-                  FDE ↓
-                </th>
+                <th>ADE ↓</th>
+                <th>FDE ↓</th>
+                <th>ADE ↓</th>
+                <th>FDE ↓</th>
 
               </tr>
 
@@ -4181,23 +4022,63 @@
               </tr>
 
 
+              <!-- BEST OUR DATASET -->
               <tr>
-                <td>OmniVLA-FT</td>
-                <td>7.5B</td>
-                <td>1.08</td>
-                <td>1.96</td>
-                <td>1.25</td>
-                <td>2.21</td>
+
+                <td>
+                  OmniVLA-FT
+                </td>
+
+                <td>
+                  7.5B
+                </td>
+
+                <td>
+                  1.08
+                </td>
+
+                <td>
+                  1.96
+                </td>
+
+                <td>
+                  <strong>1.25</strong>
+                </td>
+
+                <td>
+                  <strong>2.21</strong>
+                </td>
+
               </tr>
 
 
+              <!-- BEST BIKESCENES -->
               <tr class="primary-row">
-                <td>OmniVLA-Edge-FT</td>
-                <td>50M</td>
-                <td>0.85</td>
-                <td>1.43</td>
-                <td>1.54</td>
-                <td>2.69</td>
+
+                <td>
+                  OmniVLA-Edge-FT
+                </td>
+
+                <td>
+                  50M
+                </td>
+
+                <td>
+                  <strong>0.85</strong>
+                </td>
+
+                <td>
+                  <strong>1.43</strong>
+                </td>
+
+                <td>
+                  1.54
+                </td>
+
+                <td>
+                  2.69
+                </td>
+
               </tr>
 
 
@@ -4214,9 +4095,7 @@
 
 
 
-      <!-- =====================================================
-           TABLE 4
-      ====================================================== -->
+      <!-- TABLE 4 -->
 
       <article class="ablation-table-card">
 
@@ -4321,19 +4200,46 @@
               </tr>
 
 
+              <!-- BEST GPS-NOISE PSEUDO CLOSED LOOP -->
               <tr class="primary-row">
-                <td>OmniVLA-FT</td>
-                <td>7.5B</td>
-                <td>0.34</td>
-                <td>88.79</td>
+
+                <td>
+                  OmniVLA-FT
+                </td>
+
+                <td>
+                  7.5B
+                </td>
+
+                <td>
+                  <strong>0.34</strong>
+                </td>
+
+                <td>
+                  <strong>88.79</strong>
+                </td>
+
               </tr>
 
 
               <tr>
-                <td>OmniVLA-Edge-FT</td>
-                <td>50M</td>
-                <td>0.39</td>
-                <td>88.16</td>
+
+                <td>
+                  OmniVLA-Edge-FT
+                </td>
+
+                <td>
+                  50M
+                </td>
+
+                <td>
+                  0.39
+                </td>
+
+                <td>
+                  88.16
+                </td>
+
               </tr>
 
 
@@ -4396,132 +4302,62 @@
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          94%
-        </span>
-
-        <span class="metric-label">
-          Rated the Ride Toward the Safe End of the Scale
-        </span>
-
+        <span class="metric-value">94%</span>
+        <span class="metric-label">Rated the Ride Toward the Safe End of the Scale</span>
       </div>
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          76%
-        </span>
-
-        <span class="metric-label">
-          Trusted Autonomous Steering
-        </span>
-
+        <span class="metric-value">76%</span>
+        <span class="metric-label">Trusted Autonomous Steering</span>
       </div>
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          76%
-        </span>
-
-        <span class="metric-label">
-          Confident Using a Guidance-Enabled Trike Around Their Neighborhood
-        </span>
-
+        <span class="metric-value">76%</span>
+        <span class="metric-label">Confident Using a Guidance-Enabled Trike Around Their Neighborhood</span>
       </div>
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          82%
-        </span>
-
-        <span class="metric-label">
-          Found CyFI's Actions Toward the Easy End of Understandability
-        </span>
-
+        <span class="metric-value">82%</span>
+        <span class="metric-label">Found CyFI's Actions Toward the Easy End of Understandability</span>
       </div>
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          78%
-        </span>
-
-        <span class="metric-label">
-          Found Vibrotactile Feedback Useful for Anticipating Movement
-        </span>
-
+        <span class="metric-value">78%</span>
+        <span class="metric-label">Found Vibrotactile Feedback Useful for Anticipating Movement</span>
       </div>
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          93%
-        </span>
-
-        <span class="metric-label">
-          Felt Safe Receiving Vibrotactile Feedback
-        </span>
-
+        <span class="metric-value">93%</span>
+        <span class="metric-label">Felt Safe Receiving Vibrotactile Feedback</span>
       </div>
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          141.59 m
-        </span>
-
-        <span class="metric-label">
-          Median Ride Distance · IQR 155.87 m
-        </span>
-
+        <span class="metric-value">141.59 m</span>
+        <span class="metric-label">Median Ride Distance · IQR 155.87 m</span>
       </div>
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          0.50 m/s
-        </span>
-
-        <span class="metric-label">
-          Median Riding Speed · IQR 0.29 m/s
-        </span>
-
+        <span class="metric-value">0.50 m/s</span>
+        <span class="metric-label">Median Riding Speed · IQR 0.29 m/s</span>
       </div>
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          +≈8 BPM
-        </span>
-
-        <span class="metric-label">
-          Mean Heart-Rate Increase from Before to During Riding
-        </span>
-
+        <span class="metric-value">+≈8 BPM</span>
+        <span class="metric-label">Mean Heart-Rate Increase from Before to During Riding</span>
       </div>
 
 
       <div class="metric-card">
-
-        <span class="metric-value">
-          3×
-        </span>
-
-        <span class="metric-label">
-          Median Description-Button Requests per Ride
-        </span>
-
+        <span class="metric-value">3×</span>
+        <span class="metric-label">Median Description-Button Requests per Ride</span>
       </div>
 
 
@@ -4979,26 +4815,10 @@
 
           <div class="scenario-tags">
 
-
-            <span class="scenario-tag">
-              Short Highlight
-            </span>
-
-
-            <span class="scenario-tag">
-              Anonymized
-            </span>
-
-
-            <span class="scenario-tag">
-              Real-World Ride
-            </span>
-
-
-            <span class="scenario-tag">
-              Shared Autonomy
-            </span>
-
+            <span class="scenario-tag">Short Highlight</span>
+            <span class="scenario-tag">Anonymized</span>
+            <span class="scenario-tag">Real-World Ride</span>
+            <span class="scenario-tag">Shared Autonomy</span>
 
           </div>
 
@@ -5051,26 +4871,10 @@
 
           <div class="scenario-tags">
 
-
-            <span class="scenario-tag">
-              1.2 km
-            </span>
-
-
-            <span class="scenario-tag">
-              Intersections
-            </span>
-
-
-            <span class="scenario-tag">
-              Parked & Moving Vehicles
-            </span>
-
-
-            <span class="scenario-tag">
-              Stop Signs
-            </span>
-
+            <span class="scenario-tag">1.2 km</span>
+            <span class="scenario-tag">Intersections</span>
+            <span class="scenario-tag">Parked & Moving Vehicles</span>
+            <span class="scenario-tag">Stop Signs</span>
 
           </div>
 

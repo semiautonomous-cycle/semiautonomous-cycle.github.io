@@ -117,12 +117,11 @@
     .nav-links {
       display: flex;
       align-items: center;
-
-      gap: 18px;
+      gap: 17px;
 
       color: var(--text-soft);
 
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 650;
     }
 
@@ -1023,10 +1022,10 @@
 
 
     /* =========================================================
-       MODEL — COMPACT
+       EXPERIMENTS
     ========================================================= */
 
-    #model .section-intro {
+    #experiments .section-intro {
       font-size: 0.82rem;
       line-height: 1.5;
     }
@@ -1713,6 +1712,7 @@
       }
     }
 
+
     @media (max-width: 760px) {
 
       .nav-links {
@@ -1727,6 +1727,7 @@
         grid-template-columns: 1fr;
       }
     }
+
 
     @media (max-width: 600px) {
 
@@ -1799,11 +1800,11 @@
 
       <a href="#overview">Overview</a>
       <a href="#system">System</a>
-      <a href="#dataset">Dataset</a>
-      <a href="#model">Model</a>
-      <a href="#ablations">Ablations</a>
       <a href="#participants">Participants</a>
-      <a href="#evaluation">Evaluation</a>
+      <a href="#dataset">Dataset</a>
+      <a href="#experiments">Experiments</a>
+      <a href="#ablations">Ablations</a>
+      <a href="#real-world-evaluation">Real-World Evaluation</a>
 
     </nav>
 
@@ -1832,16 +1833,15 @@
 
 
     <h1>
-      CyFI: Semiautonomous Cycling
-      for Blind and Low-Vision Riders
+      CyFI: Semiautonomous Cycling for Blind and Low-Vision Riders
     </h1>
 
 
     <p class="hero-subtitle">
 
-      A human-centered shared-autonomy cycling platform supporting
-      accessible outdoor mobility through autonomous steering,
-      emergency braking, and multimodal rider feedback.
+      A Human-Centered Shared-Autonomy Cycling Platform Supporting
+      Accessible Outdoor Mobility Through Autonomous Steering,
+      Emergency Braking, and Multimodal Rider Feedback.
 
     </p>
 
@@ -1863,7 +1863,7 @@
       />
 
       <figcaption class="hero-caption">
-        CyFI operating during an outdoor riding evaluation.
+        CyFI Operating During an Outdoor Riding Evaluation.
       </figcaption>
 
     </figure>
@@ -1883,12 +1883,12 @@
   <div class="container">
 
     <div class="section-label">
-      Abstract
+      Overview
     </div>
 
 
     <h2>
-      Human-powered cycling with shared autonomy.
+      Human-Powered Cycling with Shared Autonomy
     </h2>
 
 
@@ -1979,7 +1979,7 @@
 
 
     <h2>
-      From early prototypes to an integrated shared-autonomy platform.
+      From Early Prototypes to an Integrated Shared-Autonomy Platform
     </h2>
 
 
@@ -2044,7 +2044,7 @@
 
     <div class="evolution-note">
 
-      <strong>Prototype evolution.</strong>
+      <strong>Prototype Evolution.</strong>
 
       Formative evaluations of the first-generation platform motivated
       the transition to an open, adjustable recumbent tricycle,
@@ -2135,32 +2135,32 @@
 
           <div class="control-card">
             <span class="control-value">5%</span>
-            <span class="control-label">Calibration actuator increment</span>
+            <span class="control-label">Calibration Actuator Increment</span>
           </div>
 
           <div class="control-card">
             <span class="control-value">5</span>
-            <span class="control-label">Proportional gain</span>
+            <span class="control-label">Proportional Gain</span>
           </div>
 
           <div class="control-card">
             <span class="control-value">57</span>
-            <span class="control-label">Feedforward term</span>
+            <span class="control-label">Feedforward Term</span>
           </div>
 
           <div class="control-card">
             <span class="control-value">8</span>
-            <span class="control-label">Deadband, native potentiometer units</span>
+            <span class="control-label">Deadband, Native Potentiometer Units</span>
           </div>
 
           <div class="control-card">
             <span class="control-value">50 Hz</span>
-            <span class="control-label">Command update rate</span>
+            <span class="control-label">Command Update Rate</span>
           </div>
 
           <div class="control-card">
             <span class="control-value">±30° / 10°/s</span>
-            <span class="control-label">Steering angle / maximum steering rate</span>
+            <span class="control-label">Steering Angle / Maximum Steering Rate</span>
           </div>
 
         </div>
@@ -2189,9 +2189,9 @@
       <div class="prompt-meta">
 
         <span>NVIDIA Cosmos Reason 2</span>
-        <span>First sentence ≈ 0.9 s</span>
-        <span>Speech onset ≈ 1 s</span>
-        <span>Center OAK-D RGB input</span>
+        <span>First Sentence ≈ 0.9 s</span>
+        <span>Speech Onset ≈ 1 s</span>
+        <span>Center OAK-D RGB Input</span>
 
       </div>
 
@@ -2223,10 +2223,226 @@
 
 
 <!-- =========================================================
+     PARTICIPANTS
+========================================================= -->
+
+<section class="section section-soft" id="participants">
+
+  <div class="container">
+
+    <div class="section-label">
+      Participants
+    </div>
+
+
+    <h2>
+      Participant Demographics
+    </h2>
+
+
+    <p class="section-intro">
+
+      CyFI was developed and evaluated with blind and low-vision
+      participants across formative and final evaluation studies.
+
+    </p>
+
+
+
+    <details class="study-details">
+
+      <summary>
+
+        <span class="study-summary-left">
+
+          <strong>
+            Formative Study Participants
+          </strong>
+
+          <span>
+            Participant demographics from formative evaluations.
+          </span>
+
+        </span>
+
+        <span class="study-count">
+          n = 14
+        </span>
+
+      </summary>
+
+
+      <div class="details-content">
+
+        <div class="table-wrapper">
+
+          <table>
+
+            <thead>
+
+              <tr>
+                <th>ID</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Race / Ethnicity</th>
+                <th>Blindness</th>
+                <th>Prior Cycling</th>
+                <th>Physical Activity</th>
+                <th>Days / Week</th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              <tr class="site-row">
+                <td colspan="8">
+                  Site 1: Campus (n = 9)
+                </td>
+              </tr>
+
+              <tr><td>P26</td><td>64</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+              <tr><td>P27</td><td>26</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
+              <tr><td>P28</td><td>29</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+              <tr><td>P29</td><td>52</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+              <tr><td>P30</td><td>64</td><td>Woman</td><td>White</td><td>Legally blind</td><td>Yes</td><td>High</td><td>1–2</td></tr>
+              <tr><td>P31</td><td>52</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
+              <tr><td>P32</td><td>36</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+              <tr><td>P33</td><td>73</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+              <tr><td>P34</td><td>63</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
+
+
+              <tr class="site-row">
+                <td colspan="8">
+                  Site 2: Community Organization (n = 5)
+                </td>
+              </tr>
+
+              <tr><td>P35</td><td>67</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+              <tr><td>P36</td><td>64</td><td>Man</td><td>Hispanic</td><td>Legally Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+              <tr><td>P37</td><td>63</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+              <tr><td>P38</td><td>52</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
+              <tr><td>P39</td><td>21</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+
+    <details class="study-details">
+
+      <summary>
+
+        <span class="study-summary-left">
+
+          <strong>
+            Final Evaluation Participants
+          </strong>
+
+          <span>
+            Participant demographics from the final evaluation.
+          </span>
+
+        </span>
+
+        <span class="study-count">
+          n = 25
+        </span>
+
+      </summary>
+
+
+      <div class="details-content">
+
+        <div class="table-wrapper">
+
+          <table>
+
+            <thead>
+
+              <tr>
+                <th>ID</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Race / Ethnicity</th>
+                <th>Blindness</th>
+                <th>Prior Cycling</th>
+                <th>Physical Activity</th>
+                <th>Days / Week</th>
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              <tr class="site-row">
+                <td colspan="8">
+                  Site 1: Community Convention (n = 20)
+                </td>
+              </tr>
+
+              <tr><td>P1</td><td>78</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
+              <tr><td>P2</td><td>71</td><td>Man</td><td>Black</td><td>Blind</td><td>No</td><td>Moderate</td><td>1–2</td></tr>
+              <tr><td>P3</td><td>35</td><td>Man</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
+              <tr><td>P4</td><td>36</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
+              <tr><td>P5</td><td>72</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
+              <tr><td>P6</td><td>38</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+              <tr><td>P7</td><td>50</td><td>Man</td><td>White</td><td>Blind</td><td>No</td><td>Moderate</td><td>Rarely</td></tr>
+              <tr><td>P8</td><td>50</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
+              <tr><td>P9</td><td>49</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
+              <tr><td>P10</td><td>56</td><td>Man</td><td>Black</td><td>Blind</td><td>No</td><td>Moderate</td><td>3–4</td></tr>
+              <tr><td>P11</td><td>42</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
+              <tr><td>P12</td><td>17</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
+              <tr><td>P13</td><td>35</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>5+</td></tr>
+              <tr><td>P14</td><td>47</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
+              <tr><td>P15</td><td>46</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
+              <tr><td>P16</td><td>69</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
+              <tr><td>P17</td><td>50</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
+              <tr><td>P18</td><td>37</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>5+</td></tr>
+              <tr><td>P19</td><td>46</td><td>Man</td><td>White</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
+              <tr><td>P20</td><td>65</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>None</td><td>1–2</td></tr>
+
+
+              <tr class="site-row">
+                <td colspan="8">
+                  Site 2: Community Organization (n = 5)
+                </td>
+              </tr>
+
+              <tr><td>P21</td><td>19</td><td>Woman</td><td>White</td><td>Blind</td><td>–</td><td>High</td><td>1–2</td></tr>
+              <tr><td>P22</td><td>31</td><td>Woman</td><td>Asian</td><td>Blind</td><td>No</td><td>High</td><td>1–2</td></tr>
+              <tr><td>P23</td><td>36</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
+              <tr><td>P24</td><td>84</td><td>Woman</td><td>White</td><td>Legally blind</td><td>No</td><td>High</td><td>1–2</td></tr>
+              <tr><td>P25</td><td>41</td><td>Man</td><td>Hispanic</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </details>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
      DATASET
 ========================================================= -->
 
-<section class="section section-soft" id="dataset">
+<section class="section" id="dataset">
 
   <div class="container">
 
@@ -2236,7 +2452,7 @@
 
 
     <h2>
-      Synchronized observations and future-trajectory supervision.
+      Synchronized Observations and Future-Trajectory Supervision
     </h2>
 
 
@@ -2253,22 +2469,22 @@
 
       <div class="metric-card">
         <span class="metric-value">46.4 min</span>
-        <span class="metric-label">Training riding data</span>
+        <span class="metric-label">Training Riding Data</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">45.2 min</span>
-        <span class="metric-label">Testing riding data</span>
+        <span class="metric-label">Testing Riding Data</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">8 × 3 Hz</span>
-        <span class="metric-label">Future waypoints</span>
+        <span class="metric-label">Future Waypoints</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">2.4 s</span>
-        <span class="metric-label">Prediction horizon</span>
+        <span class="metric-label">Prediction Horizon</span>
       </div>
 
     </div>
@@ -2440,20 +2656,20 @@
 
 
 <!-- =========================================================
-     MODEL DEVELOPMENT
+     EXPERIMENTS
 ========================================================= -->
 
-<section class="section" id="model">
+<section class="section section-soft" id="experiments">
 
   <div class="container">
 
     <div class="section-label">
-      Model Development
+      Experiments
     </div>
 
 
     <h2>
-      Bicycle navigation model evaluation in interactive simulation.
+      Bicycle Navigation Model Evaluation in Interactive Simulation
     </h2>
 
 
@@ -2481,7 +2697,7 @@
         </h3>
 
         <div class="model-size">
-          10B parameters
+          10B Parameters
         </div>
 
         <div class="model-metrics">
@@ -2513,7 +2729,7 @@
         </h3>
 
         <div class="model-size">
-          50M parameters
+          50M Parameters
         </div>
 
         <div class="model-metrics">
@@ -2566,7 +2782,7 @@
         </p>
 
         <p class="qualitative-scroll-hint">
-          Scroll or swipe horizontally to compare all seven policies →
+          Scroll or Swipe Horizontally to Compare All Seven Policies →
         </p>
 
       </div>
@@ -2578,14 +2794,7 @@
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="alpamayo.mp4" type="video/mp4" />
           </video>
 
@@ -2595,9 +2804,7 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              Alpamayo 1.5
-            </h4>
+            <h4>Alpamayo 1.5</h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Base</span>
@@ -2612,14 +2819,7 @@
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="NaVILA.mp4" type="video/mp4" />
           </video>
 
@@ -2629,9 +2829,7 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              NaVILA
-            </h4>
+            <h4>NaVILA</h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Base</span>
@@ -2646,14 +2844,7 @@
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="omnivla_edge.mp4" type="video/mp4" />
           </video>
 
@@ -2663,9 +2854,7 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              OmniVLA-Edge
-            </h4>
+            <h4>OmniVLA-Edge</h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Base</span>
@@ -2680,14 +2869,7 @@
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="omnivla.mp4" type="video/mp4" />
           </video>
 
@@ -2697,9 +2879,7 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              OmniVLA
-            </h4>
+            <h4>OmniVLA</h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Base</span>
@@ -2714,14 +2894,7 @@
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="modular.mp4" type="video/mp4" />
           </video>
 
@@ -2731,9 +2904,7 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              Modular Pipeline
-            </h4>
+            <h4>Modular Pipeline</h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Base</span>
@@ -2748,14 +2919,7 @@
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="omnivla_FT.mp4" type="video/mp4" />
           </video>
 
@@ -2765,9 +2929,7 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              OmniVLA-FT
-            </h4>
+            <h4>OmniVLA-FT</h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Fine-Tuned</span>
@@ -2782,14 +2944,7 @@
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="omnivla_edge_FT.mp4" type="video/mp4" />
           </video>
 
@@ -2799,9 +2954,7 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              OmniVLA-Edge-FT
-            </h4>
+            <h4>OmniVLA-Edge-FT</h4>
 
             <div class="qualitative-tags">
               <span class="qualitative-tag">Fine-Tuned</span>
@@ -2998,7 +3151,7 @@
      ABLATIONS
 ========================================================= -->
 
-<section class="section section-soft" id="ablations">
+<section class="section" id="ablations">
 
   <div class="container">
 
@@ -3008,7 +3161,7 @@
 
 
     <h2>
-      Target-point conditioning and simulated GPS noise.
+      Target-Point Conditioning and Simulated GPS Noise
     </h2>
 
 
@@ -3025,9 +3178,7 @@
     <div class="ablation-table-grid">
 
 
-      <!-- =====================================================
-           TABLE 1
-      ====================================================== -->
+      <!-- TABLE 1 -->
 
       <article class="ablation-table-card">
 
@@ -3081,51 +3232,11 @@
                 </td>
               </tr>
 
-              <tr>
-                <td>Alpamayo 1.5</td>
-                <td>10B</td>
-                <td>6.53</td>
-                <td>15.99</td>
-                <td>3.24</td>
-                <td>6.69</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA</td>
-                <td>7.5B</td>
-                <td>1.41</td>
-                <td>3.62</td>
-                <td>2.31</td>
-                <td>3.31</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-Edge</td>
-                <td>50M</td>
-                <td>1.59</td>
-                <td>2.84</td>
-                <td>2.80</td>
-                <td>6.67</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-FT</td>
-                <td>7.5B</td>
-                <td><strong>1.22</strong></td>
-                <td><strong>1.75</strong></td>
-                <td><strong>1.70</strong></td>
-                <td><strong>3.01</strong></td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-Edge-FT</td>
-                <td>50M</td>
-                <td>1.31</td>
-                <td>1.97</td>
-                <td>1.89</td>
-                <td>3.34</td>
-              </tr>
-
+              <tr><td>Alpamayo 1.5</td><td>10B</td><td>6.53</td><td>15.99</td><td>3.24</td><td>6.69</td></tr>
+              <tr><td>OmniVLA</td><td>7.5B</td><td>1.41</td><td>3.62</td><td>2.31</td><td>3.31</td></tr>
+              <tr><td>OmniVLA-Edge</td><td>50M</td><td>1.59</td><td>2.84</td><td>2.80</td><td>6.67</td></tr>
+              <tr><td>OmniVLA-FT</td><td>7.5B</td><td><strong>1.22</strong></td><td><strong>1.75</strong></td><td><strong>1.70</strong></td><td><strong>3.01</strong></td></tr>
+              <tr><td>OmniVLA-Edge-FT</td><td>50M</td><td>1.31</td><td>1.97</td><td>1.89</td><td>3.34</td></tr>
 
 
               <tr class="condition-row">
@@ -3134,50 +3245,11 @@
                 </td>
               </tr>
 
-              <tr>
-                <td>Alpamayo 1.5</td>
-                <td>10B</td>
-                <td>6.58</td>
-                <td>16.15</td>
-                <td>3.01</td>
-                <td>6.17</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA</td>
-                <td>7.5B</td>
-                <td>1.20</td>
-                <td>2.91</td>
-                <td>2.00</td>
-                <td>2.61</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-Edge</td>
-                <td>50M</td>
-                <td>1.17</td>
-                <td>1.99</td>
-                <td>2.25</td>
-                <td>4.22</td>
-              </tr>
-
-              <tr>
-                <td>Modular Pipeline</td>
-                <td>5M</td>
-                <td>1.40</td>
-                <td>2.74</td>
-                <td>2.15</td>
-                <td>3.23</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-FT</td>
-                <td>7.5B</td>
-                <td>0.83</td>
-                <td>1.49</td>
-                <td><strong>1.25</strong></td>
-                <td><strong>2.16</strong></td>
-              </tr>
+              <tr><td>Alpamayo 1.5</td><td>10B</td><td>6.58</td><td>16.15</td><td>3.01</td><td>6.17</td></tr>
+              <tr><td>OmniVLA</td><td>7.5B</td><td>1.20</td><td>2.91</td><td>2.00</td><td>2.61</td></tr>
+              <tr><td>OmniVLA-Edge</td><td>50M</td><td>1.17</td><td>1.99</td><td>2.25</td><td>4.22</td></tr>
+              <tr><td>Modular Pipeline</td><td>5M</td><td>1.40</td><td>2.74</td><td>2.15</td><td>3.23</td></tr>
+              <tr><td>OmniVLA-FT</td><td>7.5B</td><td>0.83</td><td>1.49</td><td><strong>1.25</strong></td><td><strong>2.16</strong></td></tr>
 
               <tr class="primary-row">
                 <td>OmniVLA-Edge-FT</td>
@@ -3198,9 +3270,7 @@
 
 
 
-      <!-- =====================================================
-           TABLE 2
-      ====================================================== -->
+      <!-- TABLE 2 -->
 
       <article class="ablation-table-card">
 
@@ -3248,48 +3318,12 @@
                 </td>
               </tr>
 
-              <tr>
-                <td>Alpamayo 1.5</td>
-                <td>10B</td>
-                <td>4.01</td>
-                <td>55.64</td>
-              </tr>
-
-              <tr>
-                <td>NaVILA</td>
-                <td>8B</td>
-                <td>2.23</td>
-                <td>68.74</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA</td>
-                <td>7.5B</td>
-                <td>3.74</td>
-                <td>50.87</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-Edge</td>
-                <td>50M</td>
-                <td>3.92</td>
-                <td>50.18</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-FT</td>
-                <td>7.5B</td>
-                <td><strong>1.11</strong></td>
-                <td><strong>78.46</strong></td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-Edge-FT</td>
-                <td>50M</td>
-                <td>1.15</td>
-                <td>74.37</td>
-              </tr>
-
+              <tr><td>Alpamayo 1.5</td><td>10B</td><td>4.01</td><td>55.64</td></tr>
+              <tr><td>NaVILA</td><td>8B</td><td>2.23</td><td>68.74</td></tr>
+              <tr><td>OmniVLA</td><td>7.5B</td><td>3.74</td><td>50.87</td></tr>
+              <tr><td>OmniVLA-Edge</td><td>50M</td><td>3.92</td><td>50.18</td></tr>
+              <tr><td>OmniVLA-FT</td><td>7.5B</td><td><strong>1.11</strong></td><td><strong>78.46</strong></td></tr>
+              <tr><td>OmniVLA-Edge-FT</td><td>50M</td><td>1.15</td><td>74.37</td></tr>
 
 
               <tr class="condition-row">
@@ -3298,47 +3332,12 @@
                 </td>
               </tr>
 
-              <tr>
-                <td>Alpamayo 1.5</td>
-                <td>10B</td>
-                <td>10.85</td>
-                <td>22.67</td>
-              </tr>
-
-              <tr>
-                <td>NaVILA</td>
-                <td>8B</td>
-                <td>2.35</td>
-                <td>68.75</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA</td>
-                <td>7.5B</td>
-                <td>1.21</td>
-                <td>76.20</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-Edge</td>
-                <td>50M</td>
-                <td>2.70</td>
-                <td>65.84</td>
-              </tr>
-
-              <tr>
-                <td>Modular Pipeline</td>
-                <td>5M</td>
-                <td>2.14</td>
-                <td>61.46</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-FT</td>
-                <td>7.5B</td>
-                <td>0.25</td>
-                <td>89.83</td>
-              </tr>
+              <tr><td>Alpamayo 1.5</td><td>10B</td><td>10.85</td><td>22.67</td></tr>
+              <tr><td>NaVILA</td><td>8B</td><td>2.35</td><td>68.75</td></tr>
+              <tr><td>OmniVLA</td><td>7.5B</td><td>1.21</td><td>76.20</td></tr>
+              <tr><td>OmniVLA-Edge</td><td>50M</td><td>2.70</td><td>65.84</td></tr>
+              <tr><td>Modular Pipeline</td><td>5M</td><td>2.14</td><td>61.46</td></tr>
+              <tr><td>OmniVLA-FT</td><td>7.5B</td><td>0.25</td><td>89.83</td></tr>
 
               <tr class="primary-row">
                 <td>OmniVLA-Edge-FT</td>
@@ -3357,9 +3356,7 @@
 
 
 
-      <!-- =====================================================
-           TABLE 3
-      ====================================================== -->
+      <!-- TABLE 3 -->
 
       <article class="ablation-table-card">
 
@@ -3409,50 +3406,11 @@
 
             <tbody>
 
-              <tr>
-                <td>Alpamayo 1.5</td>
-                <td>10B</td>
-                <td>6.56</td>
-                <td>16.12</td>
-                <td>3.46</td>
-                <td>7.13</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA</td>
-                <td>7.5B</td>
-                <td>1.21</td>
-                <td>2.97</td>
-                <td>2.06</td>
-                <td>2.79</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-Edge</td>
-                <td>50M</td>
-                <td>1.20</td>
-                <td>2.01</td>
-                <td>2.35</td>
-                <td>4.70</td>
-              </tr>
-
-              <tr>
-                <td>Modular Pipeline</td>
-                <td>5M</td>
-                <td>1.58</td>
-                <td>2.79</td>
-                <td>2.36</td>
-                <td>3.43</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-FT</td>
-                <td>7.5B</td>
-                <td>1.08</td>
-                <td>1.96</td>
-                <td><strong>1.25</strong></td>
-                <td><strong>2.21</strong></td>
-              </tr>
+              <tr><td>Alpamayo 1.5</td><td>10B</td><td>6.56</td><td>16.12</td><td>3.46</td><td>7.13</td></tr>
+              <tr><td>OmniVLA</td><td>7.5B</td><td>1.21</td><td>2.97</td><td>2.06</td><td>2.79</td></tr>
+              <tr><td>OmniVLA-Edge</td><td>50M</td><td>1.20</td><td>2.01</td><td>2.35</td><td>4.70</td></tr>
+              <tr><td>Modular Pipeline</td><td>5M</td><td>1.58</td><td>2.79</td><td>2.36</td><td>3.43</td></tr>
+              <tr><td>OmniVLA-FT</td><td>7.5B</td><td>1.08</td><td>1.96</td><td><strong>1.25</strong></td><td><strong>2.21</strong></td></tr>
 
               <tr class="primary-row">
                 <td>OmniVLA-Edge-FT</td>
@@ -3473,9 +3431,7 @@
 
 
 
-      <!-- =====================================================
-           TABLE 4
-      ====================================================== -->
+      <!-- TABLE 4 -->
 
       <article class="ablation-table-card">
 
@@ -3519,40 +3475,11 @@
 
             <tbody>
 
-              <tr>
-                <td>Alpamayo 1.5</td>
-                <td>10B</td>
-                <td>11.62</td>
-                <td>19.85</td>
-              </tr>
-
-              <tr>
-                <td>NaVILA</td>
-                <td>8B</td>
-                <td>2.41</td>
-                <td>67.83</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA</td>
-                <td>7.5B</td>
-                <td>2.60</td>
-                <td>57.81</td>
-              </tr>
-
-              <tr>
-                <td>OmniVLA-Edge</td>
-                <td>50M</td>
-                <td>2.84</td>
-                <td>62.93</td>
-              </tr>
-
-              <tr>
-                <td>Modular Pipeline</td>
-                <td>5M</td>
-                <td>2.53</td>
-                <td>57.68</td>
-              </tr>
+              <tr><td>Alpamayo 1.5</td><td>10B</td><td>11.62</td><td>19.85</td></tr>
+              <tr><td>NaVILA</td><td>8B</td><td>2.41</td><td>67.83</td></tr>
+              <tr><td>OmniVLA</td><td>7.5B</td><td>2.60</td><td>57.81</td></tr>
+              <tr><td>OmniVLA-Edge</td><td>50M</td><td>2.84</td><td>62.93</td></tr>
+              <tr><td>Modular Pipeline</td><td>5M</td><td>2.53</td><td>57.68</td></tr>
 
               <tr class="primary-row">
                 <td>OmniVLA-FT</td>
@@ -3586,226 +3513,10 @@
 
 
 <!-- =========================================================
-     PARTICIPANTS
+     REAL-WORLD EVALUATION
 ========================================================= -->
 
-<section class="section" id="participants">
-
-  <div class="container">
-
-    <div class="section-label">
-      Participants
-    </div>
-
-
-    <h2>
-      Participant demographics.
-    </h2>
-
-
-    <p class="section-intro">
-
-      CyFI was developed and evaluated with blind and low-vision
-      participants across formative and final evaluation studies.
-
-    </p>
-
-
-
-    <details class="study-details">
-
-      <summary>
-
-        <span class="study-summary-left">
-
-          <strong>
-            Formative Study Participants
-          </strong>
-
-          <span>
-            Participant demographics from formative evaluations.
-          </span>
-
-        </span>
-
-        <span class="study-count">
-          n = 14
-        </span>
-
-      </summary>
-
-
-      <div class="details-content">
-
-        <div class="table-wrapper">
-
-          <table>
-
-            <thead>
-
-              <tr>
-                <th>ID</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Race / Ethnicity</th>
-                <th>Blindness</th>
-                <th>Prior Cycling</th>
-                <th>Physical Activity</th>
-                <th>Days / week</th>
-              </tr>
-
-            </thead>
-
-            <tbody>
-
-              <tr class="site-row">
-                <td colspan="8">
-                  Site 1: Campus (n = 9)
-                </td>
-              </tr>
-
-              <tr><td>P26</td><td>64</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
-              <tr><td>P27</td><td>26</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
-              <tr><td>P28</td><td>29</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P29</td><td>52</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P30</td><td>64</td><td>Woman</td><td>White</td><td>Legally blind</td><td>Yes</td><td>High</td><td>1–2</td></tr>
-              <tr><td>P31</td><td>52</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
-              <tr><td>P32</td><td>36</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P33</td><td>73</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P34</td><td>63</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
-
-
-              <tr class="site-row">
-                <td colspan="8">
-                  Site 2: Community Organization (n = 5)
-                </td>
-              </tr>
-
-              <tr><td>P35</td><td>67</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
-              <tr><td>P36</td><td>64</td><td>Man</td><td>Hispanic</td><td>Legally Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
-              <tr><td>P37</td><td>63</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
-              <tr><td>P38</td><td>52</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
-              <tr><td>P39</td><td>21</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
-
-            </tbody>
-
-          </table>
-
-        </div>
-
-      </div>
-
-    </details>
-
-
-
-    <details class="study-details">
-
-      <summary>
-
-        <span class="study-summary-left">
-
-          <strong>
-            Final Evaluation Participants
-          </strong>
-
-          <span>
-            Participant demographics from the final evaluation.
-          </span>
-
-        </span>
-
-        <span class="study-count">
-          n = 25
-        </span>
-
-      </summary>
-
-
-      <div class="details-content">
-
-        <div class="table-wrapper">
-
-          <table>
-
-            <thead>
-
-              <tr>
-                <th>ID</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Race / Ethnicity</th>
-                <th>Blindness</th>
-                <th>Prior Cycling</th>
-                <th>Physical Activity</th>
-                <th>Days / week</th>
-              </tr>
-
-            </thead>
-
-            <tbody>
-
-              <tr class="site-row">
-                <td colspan="8">
-                  Site 1: Community Convention (n = 20)
-                </td>
-              </tr>
-
-              <tr><td>P1</td><td>78</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
-              <tr><td>P2</td><td>71</td><td>Man</td><td>Black</td><td>Blind</td><td>No</td><td>Moderate</td><td>1–2</td></tr>
-              <tr><td>P3</td><td>35</td><td>Man</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
-              <tr><td>P4</td><td>36</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
-              <tr><td>P5</td><td>72</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
-              <tr><td>P6</td><td>38</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P7</td><td>50</td><td>Man</td><td>White</td><td>Blind</td><td>No</td><td>Moderate</td><td>Rarely</td></tr>
-              <tr><td>P8</td><td>50</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
-              <tr><td>P9</td><td>49</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
-              <tr><td>P10</td><td>56</td><td>Man</td><td>Black</td><td>Blind</td><td>No</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P11</td><td>42</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
-              <tr><td>P12</td><td>17</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
-              <tr><td>P13</td><td>35</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>5+</td></tr>
-              <tr><td>P14</td><td>47</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
-              <tr><td>P15</td><td>46</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>1–2</td></tr>
-              <tr><td>P16</td><td>69</td><td>Man</td><td>Black</td><td>Blind</td><td>Yes</td><td>High</td><td>3–4</td></tr>
-              <tr><td>P17</td><td>50</td><td>Woman</td><td>Black</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>3–4</td></tr>
-              <tr><td>P18</td><td>37</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Moderate</td><td>5+</td></tr>
-              <tr><td>P19</td><td>46</td><td>Man</td><td>White</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
-              <tr><td>P20</td><td>65</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>None</td><td>1–2</td></tr>
-
-
-              <tr class="site-row">
-                <td colspan="8">
-                  Site 2: Community Organization (n = 5)
-                </td>
-              </tr>
-
-              <tr><td>P21</td><td>19</td><td>Woman</td><td>White</td><td>Blind</td><td>–</td><td>High</td><td>1–2</td></tr>
-              <tr><td>P22</td><td>31</td><td>Woman</td><td>Asian</td><td>Blind</td><td>No</td><td>High</td><td>1–2</td></tr>
-              <tr><td>P23</td><td>36</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
-              <tr><td>P24</td><td>84</td><td>Woman</td><td>White</td><td>Legally blind</td><td>No</td><td>High</td><td>1–2</td></tr>
-              <tr><td>P25</td><td>41</td><td>Man</td><td>Hispanic</td><td>Legally blind</td><td>Yes</td><td>High</td><td>5+</td></tr>
-
-            </tbody>
-
-          </table>
-
-        </div>
-
-      </div>
-
-    </details>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     EVALUATION
-========================================================= -->
-
-<section class="section section-soft" id="evaluation">
+<section class="section section-soft" id="real-world-evaluation">
 
   <div class="container">
 
@@ -3815,7 +3526,7 @@
 
 
     <h2>
-      From participant sessions to sustained neighborhood riding.
+      From Participant Sessions to Sustained Neighborhood Riding
     </h2>
 
 
@@ -3835,52 +3546,52 @@
 
       <div class="metric-card">
         <span class="metric-value">94%</span>
-        <span class="metric-label">Rated the ride toward the safe end of the scale</span>
+        <span class="metric-label">Rated the Ride Toward the Safe End of the Scale</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">76%</span>
-        <span class="metric-label">Trusted autonomous steering</span>
+        <span class="metric-label">Trusted Autonomous Steering</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">76%</span>
-        <span class="metric-label">Confident using a guidance-enabled trike around their neighborhood</span>
+        <span class="metric-label">Confident Using a Guidance-Enabled Trike Around Their Neighborhood</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">82%</span>
-        <span class="metric-label">Found CyFI's actions toward the easy end of understandability</span>
+        <span class="metric-label">Found CyFI's Actions Toward the Easy End of Understandability</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">78%</span>
-        <span class="metric-label">Found vibrotactile feedback useful for anticipating movement</span>
+        <span class="metric-label">Found Vibrotactile Feedback Useful for Anticipating Movement</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">93%</span>
-        <span class="metric-label">Felt safe receiving vibrotactile feedback</span>
+        <span class="metric-label">Felt Safe Receiving Vibrotactile Feedback</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">141.59 m</span>
-        <span class="metric-label">Median ride distance · IQR 155.87 m</span>
+        <span class="metric-label">Median Ride Distance · IQR 155.87 m</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">0.50 m/s</span>
-        <span class="metric-label">Median riding speed · IQR 0.29 m/s</span>
+        <span class="metric-label">Median Riding Speed · IQR 0.29 m/s</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">+≈8 BPM</span>
-        <span class="metric-label">Mean heart-rate increase from before to during riding</span>
+        <span class="metric-label">Mean Heart-Rate Increase from Before to During Riding</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">3×</span>
-        <span class="metric-label">Median description-button requests per ride</span>
+        <span class="metric-label">Median Description-Button Requests per Ride</span>
       </div>
 
     </div>
@@ -3960,10 +3671,6 @@
     </details>
 
 
-
-    <!-- =====================================================
-         TRAJECTORIES
-    ====================================================== -->
 
     <h3 class="subheading">
       Participant Trajectory Overlays
@@ -4083,22 +3790,22 @@
 
       <figure>
         <img src="rider-07.png" alt="CyFI outdoor riding session" loading="lazy" />
-        <figcaption>Outdoor riding evaluation.</figcaption>
+        <figcaption>Outdoor Riding Evaluation</figcaption>
       </figure>
 
       <figure>
         <img src="rider-08.png" alt="CyFI participant riding outdoors" loading="lazy" />
-        <figcaption>Participant riding session.</figcaption>
+        <figcaption>Participant Riding Session</figcaption>
       </figure>
 
       <figure>
         <img src="rider-10.png" alt="CyFI real-world cycling environment" loading="lazy" />
-        <figcaption>Real-world cycling environment.</figcaption>
+        <figcaption>Real-World Cycling Environment</figcaption>
       </figure>
 
       <figure>
         <img src="rider-12.png" alt="CyFI community riding scenario" loading="lazy" />
-        <figcaption>Community riding scenario.</figcaption>
+        <figcaption>Community Riding Scenario</figcaption>
       </figure>
 
     </div>
@@ -4119,17 +3826,9 @@
 
       <figure class="media-card">
 
-        <video
-          controls
-          preload="metadata"
-          playsinline
-          muted
-        >
+        <video controls preload="metadata" playsinline muted>
 
-          <source
-            src="Georgia_clip.mp4"
-            type="video/mp4"
-          />
+          <source src="Georgia_clip.mp4" type="video/mp4" />
 
         </video>
 
@@ -4141,7 +3840,7 @@
           </strong>
 
           <span>
-            Representative outdoor participant riding session.
+            Representative Outdoor Participant Riding Session.
           </span>
 
         </figcaption>
@@ -4170,12 +3869,7 @@
 
       <figure class="featured-video">
 
-        <video
-          controls
-          preload="metadata"
-          playsinline
-          muted
-        >
+        <video controls preload="metadata" playsinline muted>
 
           <source
             src="RIDE_SAMPLE_FOOTAGE_trimmed_more_anonymized.mp4"
@@ -4222,12 +3916,7 @@
 
       <figure class="featured-video">
 
-        <video
-          controls
-          preload="metadata"
-          playsinline
-          muted
-        >
+        <video controls preload="metadata" playsinline muted>
 
           <source
             src="final_route_anonymized.mp4"
@@ -4293,15 +3982,13 @@
         alt=""
       />
 
-      <span>
-        CyFI
-      </span>
+      <span>CyFI</span>
 
     </div>
 
 
     <span>
-      Supplementary project website.
+      Supplementary Project Website
     </span>
 
   </div>

@@ -15,7 +15,6 @@
   <link rel="icon" type="image/png" href="cyfi-logo.png" />
 
   <style>
-
     :root {
       --bg: #ffffff;
       --bg-soft: #f7f9fb;
@@ -117,7 +116,6 @@
     .nav-links {
       display: flex;
       align-items: center;
-
       gap: 18px;
 
       color: var(--text-soft);
@@ -550,7 +548,8 @@
     }
 
     .trajectory-image-wrap {
-      padding: 14px;
+      padding: 12px;
+      min-height: 390px;
     }
 
     .system-image-wrap img {
@@ -563,10 +562,20 @@
       margin: 0 auto;
     }
 
-    .ablation-image-wrap img,
-    .trajectory-image-wrap img {
+    .ablation-image-wrap img {
       width: 100%;
       height: auto;
+
+      object-fit: contain;
+
+      background: white;
+
+      margin: 0 auto;
+    }
+
+    .trajectory-image-wrap img {
+      width: 100%;
+      height: 365px;
 
       object-fit: contain;
 
@@ -606,34 +615,45 @@
 
 
     /* =========================================================
-       TRAJECTORY SITES
+       TRAJECTORY SITES — TWO COLUMN DESKTOP
     ========================================================= */
 
     .trajectory-site-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
 
-      gap: 22px;
+      gap: 18px;
 
       margin-top: 20px;
+      align-items: start;
+    }
+
+    .trajectory-site {
+      min-width: 0;
     }
 
     .trajectory-site-heading {
-      margin: 0 0 8px;
+      margin: 0 0 6px;
 
       color: var(--navy);
 
-      font-size: 1rem;
+      font-size: 0.98rem;
       font-weight: 800;
     }
 
     .trajectory-site-description {
+      min-height: 42px;
+
       margin: 0;
 
       color: var(--text-soft);
 
-      font-size: 0.8rem;
-      line-height: 1.55;
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    .trajectory-site .trajectory-card {
+      margin-top: 12px;
     }
 
 
@@ -1000,6 +1020,25 @@
       line-height: 1.5;
     }
 
+    .anonymization-note {
+      margin-top: 10px !important;
+
+      padding: 10px 12px;
+
+      border-radius: 10px;
+
+      background: var(--blue-soft);
+
+      color: #40566c !important;
+
+      font-size: 0.73rem !important;
+      line-height: 1.5 !important;
+    }
+
+    .anonymization-note strong {
+      color: var(--navy);
+    }
+
 
     /* =========================================================
        MODEL
@@ -1195,10 +1234,6 @@
       border-radius: 999px;
     }
 
-    .qualitative-grid::-webkit-scrollbar-thumb:hover {
-      background: #aebdca;
-    }
-
     .qualitative-card {
       flex: 0 0 320px;
 
@@ -1247,7 +1282,6 @@
       margin: 0;
 
       font-size: 0.96rem;
-      letter-spacing: -0.015em;
     }
 
     .qualitative-tags {
@@ -1458,7 +1492,6 @@
       margin: 0;
 
       font-size: 1.05rem;
-      letter-spacing: -0.02em;
     }
 
     .featured-video-content p {
@@ -1553,6 +1586,23 @@
         grid-template-columns: 1fr;
       }
 
+      .trajectory-site-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trajectory-image-wrap {
+        min-height: auto;
+      }
+
+      .trajectory-image-wrap img {
+        height: auto;
+        max-height: 620px;
+      }
+
+      .trajectory-site-description {
+        min-height: 0;
+      }
+
       .control-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1627,7 +1677,6 @@
         align-items: flex-start;
       }
     }
-
   </style>
 </head>
 
@@ -1641,10 +1690,7 @@
 
     <a href="#top" class="nav-brand">
 
-      <img
-        src="cyfi-logo.png"
-        alt="CyFI project icon"
-      />
+      <img src="cyfi-logo.png" alt="CyFI project icon" />
 
       <span>CyFI</span>
 
@@ -1822,7 +1868,7 @@
 
 
 <!-- =========================================================
-     SYSTEM DESIGN
+     SYSTEM
 ========================================================= -->
 
 <section class="section" id="system">
@@ -1845,10 +1891,8 @@
 
 
     <p class="subtext">
-
       Early prototypes supported iterative development of the
       physical platform, autonomous steering, and rider interaction design.
-
     </p>
 
 
@@ -1863,13 +1907,8 @@
         />
 
         <figcaption class="media-caption">
-
           <strong>First-Generation Prototype</strong>
-
-          <span>
-            Early physical platform used during formative development.
-          </span>
-
+          <span>Early physical platform used during formative development.</span>
         </figcaption>
 
       </figure>
@@ -1884,13 +1923,8 @@
         />
 
         <figcaption class="media-caption">
-
           <strong>First-Generation Prototype</strong>
-
-          <span>
-            Rider-interface and cockpit configuration.
-          </span>
-
+          <span>Rider-interface and cockpit configuration.</span>
         </figcaption>
 
       </figure>
@@ -1916,10 +1950,8 @@
 
 
     <p class="subtext">
-
       Key sensing, computation, feedback, and control components
       integrated into the current CyFI platform.
-
     </p>
 
 
@@ -1938,9 +1970,7 @@
 
       <figcaption class="system-caption">
 
-        <strong>
-          CyFI System Components
-        </strong>
+        <strong>CyFI System Components</strong>
 
         <span>
           Integrated sensing, computation, rider feedback,
@@ -1950,12 +1980,6 @@
       </figcaption>
 
     </figure>
-
-
-
-    <!-- =====================================================
-         SYSTEM ARCHITECTURE REMOVED
-    ====================================================== -->
 
 
 
@@ -1997,44 +2021,32 @@
 
           <div class="control-card">
             <span class="control-value">5%</span>
-            <span class="control-label">
-              Calibration actuator increment
-            </span>
+            <span class="control-label">Calibration actuator increment</span>
           </div>
 
           <div class="control-card">
             <span class="control-value">5</span>
-            <span class="control-label">
-              Proportional gain
-            </span>
+            <span class="control-label">Proportional gain</span>
           </div>
 
           <div class="control-card">
             <span class="control-value">57</span>
-            <span class="control-label">
-              Feedforward term
-            </span>
+            <span class="control-label">Feedforward term</span>
           </div>
 
           <div class="control-card">
             <span class="control-value">8</span>
-            <span class="control-label">
-              Deadband, native potentiometer units
-            </span>
+            <span class="control-label">Deadband, native potentiometer units</span>
           </div>
 
           <div class="control-card">
             <span class="control-value">50 Hz</span>
-            <span class="control-label">
-              Command update rate
-            </span>
+            <span class="control-label">Command update rate</span>
           </div>
 
           <div class="control-card">
             <span class="control-value">±30° / 10°/s</span>
-            <span class="control-label">
-              Steering angle / maximum steering rate
-            </span>
+            <span class="control-label">Steering angle / maximum steering rate</span>
           </div>
 
         </div>
@@ -2049,9 +2061,7 @@
 
       <div class="prompt-box-header">
 
-        <h3>
-          Scene Description Prompt
-        </h3>
+        <h3>Scene Description Prompt</h3>
 
         <p>
           Prompt for scene-description audio feedback initiated via the handle button.
@@ -2151,15 +2161,10 @@
 
     <figure class="data-video-card">
 
-      <video
-        controls
-        preload="metadata"
-        playsinline
-        muted
-      >
+      <video controls preload="metadata" playsinline muted>
 
         <source
-          src="cyfi-data-anonymized.mp4"
+          src="cyfi-data-anonymized-v2.mp4"
           type="video/mp4"
         />
 
@@ -2181,6 +2186,13 @@
           real-world riding data with future-trajectory waypoint annotations.
         </p>
 
+        <p class="anonymization-note">
+          <strong>Note:</strong>
+          Street and location-identifying signs are conservatively blurred using
+          a low detection threshold to ensure anonymity while preserving
+          trajectory waypoint visibility.
+        </p>
+
       </figcaption>
 
     </figure>
@@ -2188,7 +2200,6 @@
 
 
     <div class="dataset-layout">
-
 
       <div class="dataset-panel">
 
@@ -2198,32 +2209,26 @@
 
 
         <p>
-
           For model ablations, we record sensor streams to obtain
           synchronized RGB observations and frame-level trajectory
           labels from high-precision GNSS/IMU.
-
         </p>
 
 
         <p>
-
           RTK-fixed solutions provide centimeter-level position
           anchors and are supplemented with validated PPK solutions
           when available. Between the 5 Hz GNSS/PPK position anchors,
           dense frame-level positions are obtained by integrating
           velocity measurements.
-
         </p>
 
 
         <p>
-
           GNSS latitude, longitude, and height measurements are
           transformed into a local East-North-Up (ENU) coordinate
           frame. Camera frames are synchronized with navigation
           measurements in GPS time using host-side timestamp logs.
-
         </p>
 
       </div>
@@ -2238,20 +2243,16 @@
 
 
         <p>
-
           For each RGB frame at time <em>t</em>, an 8-waypoint
           future trajectory is sampled at 3 Hz following the
           OmniVLA setting.
-
         </p>
 
 
         <p>
-
           Let Δ<em>n</em> and Δ<em>e</em> denote future displacement
           in ENU coordinates, and let θ<sub>t</sub> denote bicycle
           travel heading at time <em>t</em>.
-
         </p>
 
 
@@ -2274,9 +2275,7 @@
 
         <div class="waypoint-box">
 
-          <strong>
-            Waypoint Representation
-          </strong>
+          <strong>Waypoint Representation</strong>
 
           <div class="waypoint-equation">
             a<sub>t</sub> = [x, y, cos(ψ), sin(ψ)]
@@ -2294,7 +2293,6 @@
 
       </div>
 
-
     </div>
 
   </div>
@@ -2304,7 +2302,7 @@
 
 
 <!-- =========================================================
-     MODEL DEVELOPMENT
+     MODEL
 ========================================================= -->
 
 <section class="section" id="model">
@@ -2340,9 +2338,7 @@
           Comparison Model
         </span>
 
-        <h3>
-          Alpamayo 1.5
-        </h3>
+        <h3>Alpamayo 1.5</h3>
 
         <div class="model-size">
           10B parameters
@@ -2351,27 +2347,13 @@
         <div class="model-metrics">
 
           <div class="model-metric">
-
-            <strong>
-              4.01%
-            </strong>
-
-            <span>
-              Collision ↓
-            </span>
-
+            <strong>4.01%</strong>
+            <span>Collision ↓</span>
           </div>
 
           <div class="model-metric">
-
-            <strong>
-              55.64%
-            </strong>
-
-            <span>
-              Route Completion ↑
-            </span>
-
+            <strong>55.64%</strong>
+            <span>Route Completion ↑</span>
           </div>
 
         </div>
@@ -2386,9 +2368,7 @@
           Primary Navigation Model
         </span>
 
-        <h3>
-          OmniVLA-Edge-FT
-        </h3>
+        <h3>OmniVLA-Edge-FT</h3>
 
         <div class="model-size">
           50M parameters
@@ -2397,27 +2377,13 @@
         <div class="model-metrics">
 
           <div class="model-metric">
-
-            <strong>
-              1.15%
-            </strong>
-
-            <span>
-              Collision ↓
-            </span>
-
+            <strong>1.15%</strong>
+            <span>Collision ↓</span>
           </div>
 
           <div class="model-metric">
-
-            <strong>
-              74.37%
-            </strong>
-
-            <span>
-              Route Completion ↑
-            </span>
-
+            <strong>74.37%</strong>
+            <span>Route Completion ↑</span>
           </div>
 
         </div>
@@ -2440,10 +2406,6 @@
 
 
 
-    <!-- =====================================================
-         QUALITATIVE SIMULATION RESULTS
-    ====================================================== -->
-
     <div class="qualitative-section">
 
       <div class="qualitative-heading-row">
@@ -2453,12 +2415,10 @@
         </h3>
 
         <p>
-
           Pseudo closed-loop simulation rollouts across seven evaluated
           navigation policies. Videos are displayed at 2× playback speed
           for faster qualitative comparison while preserving the original
           rollout sequence.
-
         </p>
 
         <p class="qualitative-scroll-hint">
@@ -2469,22 +2429,12 @@
 
 
 
-      <div
-        class="qualitative-grid"
-        aria-label="Qualitative simulation rollouts across seven evaluated navigation policies"
-      >
+      <div class="qualitative-grid">
 
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="alpamayo.mp4" type="video/mp4" />
           </video>
 
@@ -2494,20 +2444,11 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              Alpamayo 1.5
-            </h4>
+            <h4>Alpamayo 1.5</h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Base
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Base</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -2518,14 +2459,7 @@
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="NaVILA.mp4" type="video/mp4" />
           </video>
 
@@ -2535,20 +2469,11 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              NaVILA
-            </h4>
+            <h4>NaVILA</h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Base
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Base</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -2559,14 +2484,7 @@
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="omnivla_edge.mp4" type="video/mp4" />
           </video>
 
@@ -2576,20 +2494,11 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              OmniVLA-Edge
-            </h4>
+            <h4>OmniVLA-Edge</h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Base
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Base</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -2600,14 +2509,7 @@
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="omnivla.mp4" type="video/mp4" />
           </video>
 
@@ -2617,20 +2519,11 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              OmniVLA
-            </h4>
+            <h4>OmniVLA</h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Base
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Base</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -2641,14 +2534,7 @@
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="modular.mp4" type="video/mp4" />
           </video>
 
@@ -2658,20 +2544,11 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              Modular Pipeline
-            </h4>
+            <h4>Modular Pipeline</h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Base
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Base</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -2682,14 +2559,7 @@
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="omnivla_FT.mp4" type="video/mp4" />
           </video>
 
@@ -2699,20 +2569,11 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              OmniVLA-FT
-            </h4>
+            <h4>OmniVLA-FT</h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Fine-Tuned
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Fine-Tuned</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -2723,14 +2584,7 @@
 
         <figure class="qualitative-card">
 
-          <video
-            class="simulation-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-          >
+          <video class="simulation-video" autoplay muted loop playsinline preload="metadata">
             <source src="omnivla_edge_FT.mp4" type="video/mp4" />
           </video>
 
@@ -2740,20 +2594,11 @@
               Pseudo Closed-Loop Simulation
             </div>
 
-            <h4>
-              OmniVLA-Edge-FT
-            </h4>
+            <h4>OmniVLA-Edge-FT</h4>
 
             <div class="qualitative-tags">
-
-              <span class="qualitative-tag">
-                Fine-Tuned
-              </span>
-
-              <span class="qualitative-tag">
-                2× Playback
-              </span>
-
+              <span class="qualitative-tag">Fine-Tuned</span>
+              <span class="qualitative-tag">2× Playback</span>
             </div>
 
           </figcaption>
@@ -2766,10 +2611,6 @@
     </div>
 
 
-
-    <!-- =====================================================
-         FULL NAVIGATION RESULTS
-    ====================================================== -->
 
     <details class="info-details">
 
@@ -2790,14 +2631,12 @@
           <table>
 
             <thead>
-
               <tr>
                 <th>Model</th>
                 <th>Size</th>
                 <th>ADE ↓</th>
                 <th>FDE ↓</th>
               </tr>
-
             </thead>
 
             <tbody>
@@ -2860,8 +2699,8 @@
         <p class="note" style="margin-bottom:12px;">
 
           Models are evaluated in interactive environments reconstructed
-          using Vid2Sim from BikeScenes and our collected bicycle-navigation
-          data. We report collision rate and route completion (RC).
+          using Vid2Sim from BikeScenes and our collected bicycle-navigation data.
+          We report collision rate and route completion (RC).
 
         </p>
 
@@ -3067,7 +2906,6 @@
           <table>
 
             <thead>
-
               <tr>
                 <th>ID</th>
                 <th>Age</th>
@@ -3078,15 +2916,12 @@
                 <th>Physical Activity</th>
                 <th>Days / week</th>
               </tr>
-
             </thead>
 
             <tbody>
 
               <tr class="site-row">
-                <td colspan="8">
-                  Site 1: Campus (n = 9)
-                </td>
+                <td colspan="8">Site 1: Campus (n = 9)</td>
               </tr>
 
               <tr><td>P26</td><td>64</td><td>Man</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
@@ -3101,9 +2936,7 @@
 
 
               <tr class="site-row">
-                <td colspan="8">
-                  Site 2: Community Organization (n = 5)
-                </td>
+                <td colspan="8">Site 2: Community Organization (n = 5)</td>
               </tr>
 
               <tr><td>P35</td><td>67</td><td>Woman</td><td>White</td><td>Blind</td><td>Yes</td><td>Low</td><td>1–2</td></tr>
@@ -3154,7 +2987,6 @@
           <table>
 
             <thead>
-
               <tr>
                 <th>ID</th>
                 <th>Age</th>
@@ -3165,15 +2997,12 @@
                 <th>Physical Activity</th>
                 <th>Days / week</th>
               </tr>
-
             </thead>
 
             <tbody>
 
               <tr class="site-row">
-                <td colspan="8">
-                  Site 1: Community Convention (n = 20)
-                </td>
+                <td colspan="8">Site 1: Community Convention (n = 20)</td>
               </tr>
 
               <tr><td>P1</td><td>78</td><td>Woman</td><td>Black</td><td>Legally blind</td><td>Yes</td><td>Low</td><td>3–4</td></tr>
@@ -3199,9 +3028,7 @@
 
 
               <tr class="site-row">
-                <td colspan="8">
-                  Site 2: Community Organization (n = 5)
-                </td>
+                <td colspan="8">Site 2: Community Organization (n = 5)</td>
               </tr>
 
               <tr><td>P21</td><td>19</td><td>Woman</td><td>White</td><td>Blind</td><td>–</td><td>High</td><td>1–2</td></tr>
@@ -3227,7 +3054,7 @@
 
 
 <!-- =========================================================
-     REAL-WORLD EVALUATION
+     EVALUATION
 ========================================================= -->
 
 <section class="section section-soft" id="evaluation">
@@ -3260,72 +3087,52 @@
 
       <div class="metric-card">
         <span class="metric-value">94%</span>
-        <span class="metric-label">
-          Rated the ride toward the safe end of the scale
-        </span>
+        <span class="metric-label">Rated the ride toward the safe end of the scale</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">76%</span>
-        <span class="metric-label">
-          Trusted autonomous steering
-        </span>
+        <span class="metric-label">Trusted autonomous steering</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">76%</span>
-        <span class="metric-label">
-          Confident using a guidance-enabled trike around their neighborhood
-        </span>
+        <span class="metric-label">Confident using a guidance-enabled trike around their neighborhood</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">82%</span>
-        <span class="metric-label">
-          Found CyFI's actions toward the easy end of understandability
-        </span>
+        <span class="metric-label">Found CyFI's actions toward the easy end of understandability</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">78%</span>
-        <span class="metric-label">
-          Found vibrotactile feedback useful for anticipating movement
-        </span>
+        <span class="metric-label">Found vibrotactile feedback useful for anticipating movement</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">93%</span>
-        <span class="metric-label">
-          Felt safe receiving vibrotactile feedback
-        </span>
+        <span class="metric-label">Felt safe receiving vibrotactile feedback</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">141.59 m</span>
-        <span class="metric-label">
-          Median ride distance · IQR 155.87 m
-        </span>
+        <span class="metric-label">Median ride distance · IQR 155.87 m</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">0.50 m/s</span>
-        <span class="metric-label">
-          Median riding speed · IQR 0.29 m/s
-        </span>
+        <span class="metric-label">Median riding speed · IQR 0.29 m/s</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">+≈8 BPM</span>
-        <span class="metric-label">
-          Mean heart-rate increase from before to during riding
-        </span>
+        <span class="metric-label">Mean heart-rate increase from before to during riding</span>
       </div>
 
       <div class="metric-card">
         <span class="metric-value">3×</span>
-        <span class="metric-label">
-          Median description-button requests per ride
-        </span>
+        <span class="metric-label">Median description-button requests per ride</span>
       </div>
 
     </div>
@@ -3346,14 +3153,12 @@
           <table>
 
             <thead>
-
               <tr>
                 <th>Measure / Site</th>
                 <th>Before Ride</th>
                 <th>During Ride</th>
                 <th>After Ride</th>
               </tr>
-
             </thead>
 
             <tbody>
@@ -3374,16 +3179,12 @@
 
               <tr>
                 <td>Participant Ride Distance</td>
-                <td colspan="3">
-                  Median 141.59 m · IQR 155.87 m
-                </td>
+                <td colspan="3">Median 141.59 m · IQR 155.87 m</td>
               </tr>
 
               <tr>
                 <td>Participant Riding Speed</td>
-                <td colspan="3">
-                  Median 0.50 m/s · IQR 0.29 m/s
-                </td>
+                <td colspan="3">Median 0.50 m/s · IQR 0.29 m/s</td>
               </tr>
 
             </tbody>
@@ -3407,7 +3208,7 @@
 
 
     <!-- =====================================================
-         PARTICIPANT TRAJECTORIES
+         PARTICIPANT TRAJECTORIES — SIDE BY SIDE
     ====================================================== -->
 
     <h3 class="subheading">
@@ -3426,7 +3227,9 @@
     <div class="trajectory-site-grid">
 
 
-      <div>
+      <!-- SITE 1 -->
+
+      <div class="trajectory-site">
 
         <h4 class="trajectory-site-heading">
           Site 1: Community Convention (n = 20)
@@ -3474,7 +3277,9 @@
 
 
 
-      <div>
+      <!-- SITE 2 -->
+
+      <div class="trajectory-site">
 
         <h4 class="trajectory-site-heading">
           Site 2: Community Organization (n = 5)
@@ -3527,62 +3332,23 @@
     <div class="compact-gallery">
 
       <figure>
-
-        <img
-          src="rider-07.png"
-          alt="CyFI outdoor riding session"
-          loading="lazy"
-        />
-
-        <figcaption>
-          Outdoor riding evaluation.
-        </figcaption>
-
+        <img src="rider-07.png" alt="CyFI outdoor riding session" loading="lazy" />
+        <figcaption>Outdoor riding evaluation.</figcaption>
       </figure>
 
-
       <figure>
-
-        <img
-          src="rider-08.png"
-          alt="CyFI participant riding outdoors"
-          loading="lazy"
-        />
-
-        <figcaption>
-          Participant riding session.
-        </figcaption>
-
+        <img src="rider-08.png" alt="CyFI participant riding outdoors" loading="lazy" />
+        <figcaption>Participant riding session.</figcaption>
       </figure>
 
-
       <figure>
-
-        <img
-          src="rider-10.png"
-          alt="CyFI real-world cycling environment"
-          loading="lazy"
-        />
-
-        <figcaption>
-          Real-world cycling environment.
-        </figcaption>
-
+        <img src="rider-10.png" alt="CyFI real-world cycling environment" loading="lazy" />
+        <figcaption>Real-world cycling environment.</figcaption>
       </figure>
 
-
       <figure>
-
-        <img
-          src="rider-12.png"
-          alt="CyFI community riding scenario"
-          loading="lazy"
-        />
-
-        <figcaption>
-          Community riding scenario.
-        </figcaption>
-
+        <img src="rider-12.png" alt="CyFI community riding scenario" loading="lazy" />
+        <figcaption>Community riding scenario.</figcaption>
       </figure>
 
     </div>
@@ -3603,26 +3369,16 @@
 
       <figure class="media-card">
 
-        <video
-          controls
-          preload="metadata"
-          playsinline
-          muted
-        >
+        <video controls preload="metadata" playsinline muted>
 
-          <source
-            src="Georgia_clip.mp4"
-            type="video/mp4"
-          />
+          <source src="Georgia_clip.mp4" type="video/mp4" />
 
         </video>
 
 
         <figcaption class="media-caption">
 
-          <strong>
-            Participant Evaluation Session
-          </strong>
+          <strong>Participant Evaluation Session</strong>
 
           <span>
             Representative outdoor participant riding session.
@@ -3654,12 +3410,7 @@
 
       <figure class="featured-video">
 
-        <video
-          controls
-          preload="metadata"
-          playsinline
-          muted
-        >
+        <video controls preload="metadata" playsinline muted>
 
           <source
             src="RIDE_SAMPLE_FOOTAGE_trimmed_more_anonymized.mp4"
@@ -3691,21 +3442,10 @@
 
           <div class="scenario-tags">
 
-            <span class="scenario-tag">
-              Short Highlight
-            </span>
-
-            <span class="scenario-tag">
-              Anonymized
-            </span>
-
-            <span class="scenario-tag">
-              Real-World Ride
-            </span>
-
-            <span class="scenario-tag">
-              Shared Autonomy
-            </span>
+            <span class="scenario-tag">Short Highlight</span>
+            <span class="scenario-tag">Anonymized</span>
+            <span class="scenario-tag">Real-World Ride</span>
+            <span class="scenario-tag">Shared Autonomy</span>
 
           </div>
 
@@ -3717,12 +3457,7 @@
 
       <figure class="featured-video">
 
-        <video
-          controls
-          preload="metadata"
-          playsinline
-          muted
-        >
+        <video controls preload="metadata" playsinline muted>
 
           <source
             src="final_route_anonymized.mp4"
@@ -3754,21 +3489,10 @@
 
           <div class="scenario-tags">
 
-            <span class="scenario-tag">
-              1.2 km
-            </span>
-
-            <span class="scenario-tag">
-              Intersections
-            </span>
-
-            <span class="scenario-tag">
-              Parked & Moving Vehicles
-            </span>
-
-            <span class="scenario-tag">
-              Stop Signs
-            </span>
+            <span class="scenario-tag">1.2 km</span>
+            <span class="scenario-tag">Intersections</span>
+            <span class="scenario-tag">Parked & Moving Vehicles</span>
+            <span class="scenario-tag">Stop Signs</span>
 
           </div>
 
@@ -3794,14 +3518,9 @@
 
     <div class="footer-brand">
 
-      <img
-        src="cyfi-logo.png"
-        alt=""
-      />
+      <img src="cyfi-logo.png" alt="" />
 
-      <span>
-        CyFI
-      </span>
+      <span>CyFI</span>
 
     </div>
 
@@ -3815,10 +3534,6 @@
 </footer>
 
 
-
-<!-- =========================================================
-     2× SIMULATION PLAYBACK
-========================================================= -->
 
 <script>
 
@@ -3856,5 +3571,4 @@
 
 
 </body>
-
 </html>
